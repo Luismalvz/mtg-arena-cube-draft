@@ -138,11 +138,19 @@ export function GetawayPlaza({
   };
 
   return (
-    <section className="w-full relative rounded-3xl p-4 sm:p-6 bg-[#0b0e14] border border-white/5 shadow-2xl font-manrope overflow-visible">
+    <section className="w-full relative rounded-3xl p-4 sm:p-6 bg-[#080a0f] border border-amber-500/25 shadow-[0_20px_60px_rgba(0,0,0,0.85)] font-manrope overflow-visible">
       
-      {/* Tabletop Felt Surface / Playmat POV Texture */}
-      <div className="absolute inset-0 rounded-3xl bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#181d28]/70 via-[#0d1017] to-[#08090d] pointer-events-none" />
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-32 bg-gradient-to-b from-amber-500/10 via-amber-700/5 to-transparent rounded-full blur-3xl pointer-events-none" />
+      {/* Gateway Plaza Thematic Art Background */}
+      <div className="absolute inset-0 rounded-3xl overflow-hidden pointer-events-none">
+        <img
+          src="/gateway-plaza-bg.jpg"
+          alt="Gateway Plaza"
+          className="w-full h-full object-cover object-center scale-105 opacity-40 filter brightness-90 saturate-110"
+        />
+        {/* Dark Vignette & Fantasy Lighting Overlays to ensure card contrast and legibility */}
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/85 via-slate-950/70 to-slate-950/92" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-amber-500/10 via-transparent to-black/80" />
+      </div>
 
       {/* Header bar */}
       <div className="relative z-10 flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6 pb-3 border-b border-white/5">
