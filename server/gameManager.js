@@ -1,4 +1,4 @@
-const cubeCards = require('./cube360.json');
+const cubeCards = require('./ravnicaCube.json');
 
 class GameManager {
   constructor() {
@@ -177,23 +177,62 @@ class GameManager {
     });
     room.seatingOrder = room.players.map(p => p.id);
 
-    // 2. Shuffle 360-card cube
+    // 2. Prepare card instances with unique instanceId
     let instId = 0;
     const makeInstance = (c) => ({
       ...c,
       instanceId: `inst_${c.id || 'card'}_${Date.now()}_${++instId}`
     });
 
-    const shuffledCube = [...cubeCards].sort(() => Math.random() - 0.5);
+    // 3. Separate Fixers (10 Signets + 20 Guildgates = 30 total) from General cards
+    const fixerCards = cubeCards.filter(c => c.isFixer).map(makeInstance);
+    const generalCards = cubeCards.filter(c => !c.isFixer).map(makeInstance);
 
-    // 3. Initialize Getaway Plaza with 5 face-up cards
-    room.getawayPlaza = [];
-    for (let i = 0; i < room.config.plazaSize; i++) {
-      room.getawayPlaza.push(makeInstance(shuffledCube.pop()));
+    const shuffledFixers = [...fixerCards].sort(() => Math.random() - 0.5);
+    const shuffledGeneral = [...generalCards].sort(() => Math.random() - 0.5);
+
+    // 4. Calculate total booster packs needed in this draft
+    const totalPacksNeeded = room.players.length * room.config.packCount;
+    const baseFixersPerPack = Math.floor(shuffledFixers.length / totalPacksNeeded);
+
+    // Initialize all pack slots
+    const packs = Array.from({ length: totalPacksNeeded }, () => []);
+
+    // Evenly distribute guaranteed fixers into each pack
+    for (let i = 0; i < totalPacksNeeded; i++) {
+      for (let f = 0; f < baseFixersPerPack; f++) {
+        if (shuffledFixers.length > 0) {
+          packs[i].push(shuffledFixers.pop());
+        }
+      }
     }
 
-    // 4. Deal packs to each player (15 cards per pack)
-    for (const player of room.players) {
+    // Remainder fixers that could not be divided evenly go back into the general pool to be randomly distributed
+    if (shuffledFixers.length > 0) {
+      shuffledGeneral.push(...shuffledFixers);
+      shuffledGeneral.sort(() => Math.random() - 0.5);
+    }
+
+    // 5. Initialize Getaway Plaza with 5 face-up cards
+    room.getawayPlaza = [];
+    for (let i = 0; i < room.config.plazaSize; i++) {
+      if (shuffledGeneral.length > 0) {
+        room.getawayPlaza.push(shuffledGeneral.pop());
+      }
+    }
+
+    // 6. Complete each pack up to 15 cards with the shuffled general pool
+    for (let i = 0; i < totalPacksNeeded; i++) {
+      while (packs[i].length < 15 && shuffledGeneral.length > 0) {
+        packs[i].push(shuffledGeneral.pop());
+      }
+      // Shuffle each pack so fixers are mixed randomly among the other cards
+      packs[i].sort(() => Math.random() - 0.5);
+    }
+
+    // 7. Deal packs to each player
+    for (let pIdx = 0; pIdx < room.players.length; pIdx++) {
+      const player = room.players[pIdx];
       player.draftPicks = [];
       player.activePack = [];
       player.unopenedPacks = [];
@@ -202,12 +241,7 @@ class GameManager {
       player.packOpened = player.isBot; // bots automatically opened
 
       for (let p = 0; p < room.config.packCount; p++) {
-        const pack = [];
-        for (let c = 0; c < 15; c++) {
-          if (shuffledCube.length > 0) {
-            pack.push(makeInstance(shuffledCube.pop()));
-          }
-        }
+        const pack = packs[pIdx * room.config.packCount + p];
         if (p === 0) {
           player.activePack = pack;
         } else {
