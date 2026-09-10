@@ -291,7 +291,7 @@ class GameManager {
       player.unopenedPacks = [];
       player.pendingDecision = null;
       player.isReady = false;
-      player.packOpened = player.isBot; // bots automatically opened
+      player.packOpened = true;
 
       for (let p = 0; p < room.config.packCount; p++) {
         const pack = packs[pIdx * room.config.packCount + p];
@@ -306,7 +306,10 @@ class GameManager {
     room.currentRound = 1; // Pack 1
     room.currentPickNumber = 1;
     room.passDirection = 'clockwise';
-    room.status = 'pack_opening';
+    room.status = 'decision_phase';
+    room.timerRemaining = room.config.timerSeconds;
+    this.processBotDecisions(room);
+
     room.activityLog = [
       {
         id: 'log_' + Date.now(),
@@ -656,10 +659,13 @@ class GameManager {
 
         for (const player of room.players) {
           player.activePack = player.unopenedPacks.shift() || [];
-          player.packOpened = player.isBot;
+          player.packOpened = true;
         }
 
-        room.status = 'pack_opening';
+        room.status = 'decision_phase';
+        room.timerRemaining = room.config.timerSeconds;
+        this.processBotDecisions(room);
+
         room.activityLog.unshift({
           id: 'log_' + Date.now(),
           type: 'round',

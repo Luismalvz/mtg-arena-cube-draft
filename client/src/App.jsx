@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import { io } from 'socket.io-client';
 import { AdminSetup } from './components/AdminSetup';
 import { PlayerLobby } from './components/PlayerLobby';
-import { BoosterWrapper } from './components/BoosterWrapper';
 import { GetawayPlaza } from './components/GetawayPlaza';
 import { TurnTimeline } from './components/TurnTimeline';
 import { DraftHand } from './components/DraftHand';
@@ -118,6 +117,17 @@ export default function App() {
       showToast('¡Asientos y orden de prioridad reorganizados!', 'info');
     });
 
+    s.on('room_not_found', ({ roomId }) => {
+      sound.playSelect();
+      showToast(`La sala [${roomId}] no fue encontrada o ha expirado.`, 'error');
+      setInitialRoomId('');
+      if (typeof window !== 'undefined') {
+        const url = new URL(window.location.href);
+        url.searchParams.delete('room');
+        window.history.replaceState({}, '', url.toString());
+      }
+    });
+
     s.on('error_notification', ({ message }) => {
       sound.playSelect();
       showToast(message, 'error');
@@ -129,6 +139,13 @@ export default function App() {
       s.disconnect();
     };
   }, []);
+
+  // Fetch room state directly if URL contains ?room=XYZ
+  useEffect(() => {
+    if (socket && isConnected && initialRoomId && (!roomState || roomState.id !== initialRoomId)) {
+      socket.emit('get_room_state', { roomId: initialRoomId });
+    }
+  }, [socket, isConnected, initialRoomId, roomState?.id]);
 
   // Synchronize URL bar with current Room ID
   useEffect(() => {
@@ -268,9 +285,10 @@ export default function App() {
 
   // State derivation
   const isLobby = !roomState || roomState.status === 'lobby';
-  const isPackOpening = roomState?.status === 'pack_opening';
   const isDecisionOrResolution =
-    roomState?.status === 'decision_phase' || roomState?.status === 'resolution_phase';
+    roomState?.status === 'decision_phase' ||
+    roomState?.status === 'resolution_phase' ||
+    roomState?.status === 'pack_opening';
   const isComplete = roomState?.status === 'complete';
 
   return (
@@ -343,18 +361,7 @@ export default function App() {
           />
         )}
 
-        {/* VIEW 3: Booster Opening Screen (status === 'pack_opening') */}
-        {isPackOpening && (
-          <BoosterWrapper
-            currentRound={roomState.currentRound || 1}
-            totalPacks={roomState.config?.packCount || 3}
-            hasOpened={roomState.me?.packOpened || false}
-            players={roomState.players || []}
-            onOpenPack={handleOpenPack}
-          />
-        )}
-
-        {/* VIEW 4: Active Drafting View (Decision & Resolution Phases) */}
+        {/* VIEW 3: Active Drafting View (Decision & Resolution Phases) */}
         {isDecisionOrResolution && (
           <div className="flex flex-col gap-4 md:gap-5">
             {/* ZONE 1 (Top Center): Getaway Plaza */}

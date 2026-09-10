@@ -26,12 +26,18 @@ function broadcastRoomState(roomId) {
   const room = gameManager.getRoom(roomId);
   if (!room) return;
 
+  const playerSockets = new Set();
   for (const player of room.players) {
     if (player.socketId) {
+      playerSockets.add(player.socketId);
       const clientState = gameManager.getClientState(room, player.socketId);
       io.to(player.socketId).emit('room_state_update', clientState);
     }
   }
+
+  // Also broadcast spectator/guest state to any connected sockets who haven't taken a seat yet
+  const spectatorState = gameManager.getClientState(room, null);
+  io.to(roomId).except(Array.from(playerSockets)).emit('room_state_update', spectatorState);
 }
 
 // Manage turn timer for active decision phase
@@ -134,6 +140,7 @@ function processNextResolutionStep(roomId, stepResult) {
   } else if (stepResult.type === 'round_advanced') {
     io.to(roomId).emit('round_advanced', { round: stepResult.round });
     broadcastRoomState(roomId);
+    startDecisionTimer(roomId);
   } else if (stepResult.type === 'draft_complete') {
     io.to(roomId).emit('draft_completed');
     broadcastRoomState(roomId);
@@ -217,6 +224,19 @@ io.on('connection', (socket) => {
     broadcastRoomState(roomId);
   });
 
+  // Get room state for direct invite links and lobby previews
+  socket.on('get_room_state', ({ roomId }) => {
+    const cleanRoomId = (roomId || '').toUpperCase().trim();
+    const room = gameManager.getRoom(cleanRoomId);
+    if (room) {
+      socket.join(cleanRoomId);
+      const clientState = gameManager.getClientState(room, socket.id);
+      socket.emit('room_state_update', clientState);
+    } else {
+      socket.emit('room_not_found', { roomId: cleanRoomId });
+    }
+  });
+
   // Start draft (Admin only)
   socket.on('start_draft', ({ roomId }) => {
     const result = gameManager.startDraft(roomId, socket.id);
@@ -226,6 +246,7 @@ io.on('connection', (socket) => {
     console.log(`[Getaway Draft] Draft iniciado en sala ${roomId}`);
     io.to(roomId).emit('draft_started');
     broadcastRoomState(roomId);
+    startDecisionTimer(roomId);
   });
 
   // Open booster pack wrapper

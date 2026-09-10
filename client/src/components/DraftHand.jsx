@@ -82,34 +82,24 @@ export function DraftHand({
   const midIndex = (totalCards - 1) / 2;
 
   return (
-    <section className="w-full bg-[#181b24] border border-[#272a33] rounded-2xl p-4 sm:p-5 shadow-2xl space-y-4 font-manrope relative overflow-hidden">
+    <section className="w-full bg-[#141721] border border-[#252936] rounded-2xl p-4 sm:p-5 shadow-2xl space-y-3 font-manrope relative overflow-visible">
       
-      {/* Hand Header & Mode Switcher */}
-      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border-b border-[#272a33] pb-3 relative z-20">
-        <div className="flex items-center gap-2.5">
-          <div className="w-8 h-8 rounded-xl bg-[#1c1f29] border border-[#272a33] flex items-center justify-center text-[#ffd580] shrink-0 font-bold">
-            <Hand className="w-4 h-4" />
+      {/* Hand Header & Mode Switcher (Archidekt Style) */}
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border-b border-[#252936] pb-3 relative z-20">
+        <div className="flex items-center gap-3">
+          <div className="text-xs sm:text-sm font-space text-slate-300 tracking-wide font-medium">
+            Cards in hand: <span className="text-[#ffd580] font-bold font-mono text-sm sm:text-base ml-1">{totalCards}</span>
           </div>
-          <div>
-            <div className="flex items-center gap-2">
-              <h3 className="font-cinzel font-bold text-sm sm:text-base uppercase tracking-wider text-white">
-                Tu Mano (Sobre Actual)
-              </h3>
-              <span className="px-2 py-0.5 rounded-full text-[10px] font-space font-bold bg-[#ffd580]/15 text-[#ffd580] border border-[#ffd580]/30">
-                {totalCards} Cartas
-              </span>
-            </div>
-            <p className="text-[11px] text-[#d2c5b1]/80">
-              {isReady
-                ? 'Elección confirmada. Esperando la resolución de la mesa...'
-                : 'Pasa el cursor sobre tus cartas para verlas como en la mesa de juego.'}
-            </p>
-          </div>
+          {isReady && (
+            <span className="px-2 py-0.5 rounded-full text-[10px] font-space font-bold bg-emerald-500/15 text-emerald-400 border border-emerald-500/30">
+              Listo / Bloqueado
+            </span>
+          )}
         </div>
 
         {/* Action A vs Action B Selector Buttons */}
         {!isReady && (
-          <div className="flex bg-[#10131c] p-1 rounded-xl border border-[#272a33] self-stretch sm:self-auto font-space text-xs">
+          <div className="flex bg-[#0d1017] p-1 rounded-xl border border-[#252936] self-stretch sm:self-auto font-space text-xs">
             <button
               onClick={() => handleSwitchMode('pick')}
               className={`flex-1 sm:flex-none px-3.5 py-1.5 rounded-lg font-bold transition-all flex items-center justify-center gap-1.5 cursor-pointer ${
@@ -119,7 +109,7 @@ export function DraftHand({
               }`}
             >
               <Check className="w-3.5 h-3.5" />
-              <span>Acción A: Pick Normal</span>
+              <span>Acción A: Pick</span>
             </button>
 
             <button
@@ -131,19 +121,19 @@ export function DraftHand({
               }`}
             >
               <ArrowLeftRight className="w-3.5 h-3.5" />
-              <span>Acción B: Getaway Swap</span>
+              <span>Acción B: Swap Plaza</span>
             </button>
           </div>
         )}
       </div>
 
-      {/* ================= TABLETOP SIMULATOR STYLE HAND FAN ================= */}
-      <div className="w-full relative h-[300px] sm:h-[340px] md:h-[370px] flex items-end justify-center overflow-visible py-4 select-none">
+      {/* ================= ARCHIDEKT PLAYTESTER STYLE HAND FAN ================= */}
+      <div className="w-full relative h-[210px] sm:h-[240px] md:h-[260px] flex items-end justify-center overflow-visible py-2 select-none">
         
-        {/* Soft felt ambient table glow under the hand */}
-        <div className="absolute bottom-0 w-3/4 h-28 bg-gradient-to-t from-[#ffd580]/5 via-amber-900/5 to-transparent rounded-full blur-2xl pointer-events-none" />
+        {/* Subtle felt table shadow */}
+        <div className="absolute bottom-0 w-3/4 h-16 bg-black/40 rounded-full blur-xl pointer-events-none" />
 
-        <div className="relative w-full max-w-4xl h-full flex items-end justify-center overflow-visible">
+        <div className="relative w-full max-w-5xl h-full flex items-end justify-center overflow-visible">
           {activePack.map((card, index) => {
             const isSelectedForPick =
               actionMode === 'pick' && selectedPickCard?.instanceId === card.instanceId;
@@ -151,38 +141,38 @@ export function DraftHand({
               actionMode === 'swap' && selectedOfferCard?.instanceId === card.instanceId;
             const isSelected = isSelectedForPick || isSelectedForSwapOffer;
 
-            // Geometry calculations for Tabletop Curved Fan Arc
-            const offset = index - midIndex; // e.g. -7, -6 ... 0 ... +6, +7
-            const angle = offset * (totalCards > 10 ? 2.5 : 3.4); // degrees of rotation
-            const arcY = Math.pow(offset, 2) * (totalCards > 10 ? 1.4 : 2.2); // parabolic curvature (px)
-            const xOffset = offset * (totalCards > 10 ? 38 : 52); // horizontal spacing overlap
+            // Geometry calculations for Archidekt Natural Hand Fan Arc
+            const offset = index - midIndex; // e.g. -7 to +7
+            const spacing = Math.min(52, Math.max(30, 560 / Math.max(1, totalCards)));
+            const xOffset = offset * spacing;
+            const angle = offset * Math.min(2.8, 30 / Math.max(1, totalCards));
+            const arcY = Math.pow(offset, 2) * 0.5; // Very subtle natural curve
 
             return (
               <motion.div
                 key={card.instanceId}
                 layout
-                initial={{ y: 80, opacity: 0 }}
                 animate={{
                   x: xOffset,
-                  y: isSelected ? arcY - 45 : arcY,
+                  y: isSelected ? -35 : arcY,
                   rotate: isSelected ? 0 : angle,
                   scale: isSelected ? 1.15 : 1,
-                  zIndex: isSelected ? 80 : 10 + index
+                  zIndex: isSelected ? 60 : 10 + index
                 }}
                 whileHover={
                   isReady
                     ? {}
                     : {
-                        y: arcY - 65,
+                        y: -50,
                         rotate: 0,
-                        scale: 1.25,
-                        zIndex: 120,
+                        scale: 1.22,
+                        zIndex: 100,
                         transition: { type: 'spring', stiffness: 450, damping: 25 }
                       }
                 }
                 transition={{ type: 'spring', stiffness: 350, damping: 30 }}
                 onClick={() => handleCardClick(card)}
-                className="absolute left-1/2 -translate-x-1/2 bottom-2 cursor-pointer origin-bottom transition-shadow"
+                className="absolute left-1/2 -translate-x-1/2 bottom-2 cursor-pointer origin-bottom"
                 style={{
                   transformOrigin: '50% 100%'
                 }}
