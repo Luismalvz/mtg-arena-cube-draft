@@ -1,0 +1,1266 @@
+[
+  {
+    "id": "b4e9c870-23c0-413a-ae39-265f09da16d1",
+    "name": "Swords to Plowshares",
+    "cmc": 1,
+    "mana_cost": "{W}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Exile target creature. Its controller gains life equal to its power.",
+    "power": null,
+    "toughness": null,
+    "rarity": "uncommon",
+    "image_url": "https://cards.scryfall.io/normal/front/b/4/b4e9c870-23c0-413a-ae39-265f09da16d1.jpg?1783903243"
+  },
+  {
+    "id": "537d2b05-3f52-45d6-8fe3-26282085d0c6",
+    "name": "Wrath of God",
+    "cmc": 4,
+    "mana_cost": "{2}{W}{W}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Destroy all creatures. They can't be regenerated.",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://cards.scryfall.io/normal/front/5/3/537d2b05-3f52-45d6-8fe3-26282085d0c6.jpg?1783915706"
+  },
+  {
+    "id": "f3537373-ef54-4578-9d05-6216420ee349",
+    "name": "Esper Sentinel",
+    "cmc": 1,
+    "mana_cost": "{W}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Artifact Creature \u2014 Human Soldier",
+    "oracle_text": "Whenever an opponent casts their first noncreature spell each turn, draw a card unless that player pays {X}, where X is this creature's power.",
+    "power": "1",
+    "toughness": "1",
+    "rarity": "rare",
+    "image_url": "https://cards.scryfall.io/normal/front/f/3/f3537373-ef54-4578-9d05-6216420ee349.jpg?1783926893"
+  },
+  {
+    "id": "95ca89ea-1200-4bb4-ae4b-af35d3ccd35b",
+    "name": "Path to Exile",
+    "cmc": 1,
+    "mana_cost": "{W}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Exile target creature. Its controller may search their library for a basic land card, put that card onto the battlefield tapped, then shuffle.",
+    "power": null,
+    "toughness": null,
+    "rarity": "uncommon",
+    "image_url": "https://cards.scryfall.io/normal/front/9/5/95ca89ea-1200-4bb4-ae4b-af35d3ccd35b.jpg?1783903242"
+  },
+  {
+    "id": "a5e19147-e459-43a6-8ef0-e37968a462e3",
+    "name": "Mother of Runes",
+    "cmc": 1,
+    "mana_cost": "{W}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Creature \u2014 Human Cleric",
+    "oracle_text": "{T}: Target creature you control gains protection from the color of your choice until end of turn.",
+    "power": "1",
+    "toughness": "1",
+    "rarity": "uncommon",
+    "image_url": "https://cards.scryfall.io/normal/front/a/5/a5e19147-e459-43a6-8ef0-e37968a462e3.jpg?1783922485"
+  },
+  {
+    "id": "959ce13f-519f-4472-bbd1-f26a972723d7",
+    "name": "Gideon of the Trials",
+    "cmc": 3,
+    "mana_cost": "{1}{W}{W}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Legendary Planeswalker \u2014 Gideon",
+    "oracle_text": "+1: Until your next turn, prevent all damage target permanent would deal.\n0: Until end of turn, Gideon becomes a 4/4 Human Soldier creature with indestructible that's still a planeswalker. Prevent all damage that would be dealt to him this turn.\n0: You get an emblem with \"As long as you control a Gideon planeswalker, you can't lose the game and your opponents can't win the game.\"",
+    "power": null,
+    "toughness": null,
+    "rarity": "mythic",
+    "image_url": "https://cards.scryfall.io/normal/front/9/5/959ce13f-519f-4472-bbd1-f26a972723d7.jpg?1783936539"
+  },
+  {
+    "id": "77f1f6ac-983f-4f3e-8906-47f774e8367b",
+    "name": "Armageddon",
+    "cmc": 4,
+    "mana_cost": "{3}{W}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Destroy all lands.",
+    "power": null,
+    "toughness": null,
+    "rarity": "mythic",
+    "image_url": "https://cards.scryfall.io/normal/front/7/7/77f1f6ac-983f-4f3e-8906-47f774e8367b.jpg?1783935202"
+  },
+  {
+    "id": "3a8c2a84-e0f2-4611-af3d-42f4578ad4e3",
+    "name": "Palace Jailer",
+    "cmc": 4,
+    "mana_cost": "{2}{W}{W}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Creature \u2014 Human Soldier",
+    "oracle_text": "When this creature enters, you become the monarch.\nWhen this creature enters, exile target creature an opponent controls until an opponent becomes the monarch.",
+    "power": "2",
+    "toughness": "2",
+    "rarity": "uncommon",
+    "image_url": "https://cards.scryfall.io/normal/front/3/a/3a8c2a84-e0f2-4611-af3d-42f4578ad4e3.jpg?1783903243"
+  },
+  {
+    "id": "15c34447-b0f4-4fcc-b557-23c92850b31b",
+    "name": "Archangel of Thune",
+    "cmc": 5,
+    "mana_cost": "{3}{W}{W}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Creature \u2014 Angel",
+    "oracle_text": "Flying\nLifelink (Damage dealt by this creature also causes you to gain that much life.)\nWhenever you gain life, put a +1/+1 counter on each creature you control.",
+    "power": "3",
+    "toughness": "4",
+    "rarity": "mythic",
+    "image_url": "https://cards.scryfall.io/normal/front/1/5/15c34447-b0f4-4fcc-b557-23c92850b31b.jpg?1783930222"
+  },
+  {
+    "id": "1de30c12-2011-495a-be25-f7a46b23e142",
+    "name": "Adeline, Resplendent Cathar",
+    "cmc": 3,
+    "mana_cost": "{1}{W}{W}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Legendary Creature \u2014 Human Knight",
+    "oracle_text": "Vigilance\nAdeline's power is equal to the number of creatures you control.\nWhenever you attack, for each opponent, create a 1/1 white Human creature token that's tapped and attacking that player or a planeswalker they control.",
+    "power": "*",
+    "toughness": "4",
+    "rarity": "rare",
+    "image_url": "https://cards.scryfall.io/normal/front/1/d/1de30c12-2011-495a-be25-f7a46b23e142.jpg?1783907131"
+  },
+  {
+    "id": "4f616706-ec97-4923-bb1e-11a69fbaa1f8",
+    "name": "Counterspell",
+    "cmc": 2,
+    "mana_cost": "{U}{U}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Counter target spell.",
+    "power": null,
+    "toughness": null,
+    "rarity": "uncommon",
+    "image_url": "https://cards.scryfall.io/normal/front/4/f/4f616706-ec97-4923-bb1e-11a69fbaa1f8.jpg?1783909630"
+  },
+  {
+    "id": "b5545882-6963-4729-b2c6-fb4bdc75ffcc",
+    "name": "Brainstorm",
+    "cmc": 1,
+    "mana_cost": "{U}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Draw three cards, then put two cards from your hand on top of your library in any order.",
+    "power": null,
+    "toughness": null,
+    "rarity": "common",
+    "image_url": "https://cards.scryfall.io/normal/front/b/5/b5545882-6963-4729-b2c6-fb4bdc75ffcc.jpg?1783904806"
+  },
+  {
+    "id": "2398892d-28e9-4009-81ec-0d544af79d2b",
+    "name": "Ancestral Recall",
+    "cmc": 1,
+    "mana_cost": "{U}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Target player draws three cards.",
+    "power": null,
+    "toughness": null,
+    "rarity": "bonus",
+    "image_url": "https://cards.scryfall.io/normal/front/2/3/2398892d-28e9-4009-81ec-0d544af79d2b.jpg?1783939333"
+  },
+  {
+    "id": "70901356-3266-4bd9-aacc-f06c27271de5",
+    "name": "Time Walk",
+    "cmc": 2,
+    "mana_cost": "{1}{U}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Take an extra turn after this one.",
+    "power": null,
+    "toughness": null,
+    "rarity": "bonus",
+    "image_url": "https://cards.scryfall.io/normal/front/7/0/70901356-3266-4bd9-aacc-f06c27271de5.jpg?1783939332"
+  },
+  {
+    "id": "22b36ad5-bf4d-436a-9c3c-fa4acd0052fe",
+    "name": "Snapcaster Mage",
+    "cmc": 2,
+    "mana_cost": "{1}{U}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Creature \u2014 Human Wizard",
+    "oracle_text": "Flash\nWhen this creature enters, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. (You may cast that card from your graveyard for its flashback cost. Then exile it.)",
+    "power": "2",
+    "toughness": "1",
+    "rarity": "mythic",
+    "image_url": "https://cards.scryfall.io/normal/front/2/2/22b36ad5-bf4d-436a-9c3c-fa4acd0052fe.jpg?1783907976"
+  },
+  {
+    "id": "3c429c40-2389-41e5-8681-4bb274e25eba",
+    "name": "Mana Drain",
+    "cmc": 2,
+    "mana_cost": "{U}{U}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Counter target spell. At the beginning of your next main phase, add an amount of {C} equal to that spell's mana value.",
+    "power": null,
+    "toughness": null,
+    "rarity": "mythic",
+    "image_url": "https://cards.scryfall.io/normal/front/3/c/3c429c40-2389-41e5-8681-4bb274e25eba.jpg?1783921913"
+  },
+  {
+    "id": "89f612d6-7c59-4a7b-a87d-45f789e88ba5",
+    "name": "Force of Will",
+    "cmc": 5,
+    "mana_cost": "{3}{U}{U}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "You may pay 1 life and exile a blue card from your hand rather than pay this spell's mana cost.\nCounter target spell.",
+    "power": null,
+    "toughness": null,
+    "rarity": "mythic",
+    "image_url": "https://cards.scryfall.io/normal/front/8/9/89f612d6-7c59-4a7b-a87d-45f789e88ba5.jpg?1783918494"
+  },
+  {
+    "id": "c8817585-0d32-4d56-9142-0d29512e86a9",
+    "name": "Jace, the Mind Sculptor",
+    "cmc": 4,
+    "mana_cost": "{2}{U}{U}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Legendary Planeswalker \u2014 Jace",
+    "oracle_text": "+2: Look at the top card of target player's library. You may put that card on the bottom of that player's library.\n0: Draw three cards, then put two cards from your hand on top of your library in any order.\n\u22121: Return target creature to its owner's hand.\n\u221212: Exile all cards from target player's library, then that player shuffles their hand into their library.",
+    "power": null,
+    "toughness": null,
+    "rarity": "mythic",
+    "image_url": "https://cards.scryfall.io/normal/front/c/8/c8817585-0d32-4d56-9142-0d29512e86a9.jpg?1783930196"
+  },
+  {
+    "id": "30f6fca9-003b-4f6b-9d6e-1e88adda4155",
+    "name": "Cryptic Command",
+    "cmc": 4,
+    "mana_cost": "{1}{U}{U}{U}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Choose two \u2014\n\u2022 Counter target spell.\n\u2022 Return target permanent to its owner's hand.\n\u2022 Tap all creatures your opponents control.\n\u2022 Draw a card.",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://cards.scryfall.io/normal/front/3/0/30f6fca9-003b-4f6b-9d6e-1e88adda4155.jpg?1783935549"
+  },
+  {
+    "id": "dfb7c4b9-f2f4-4d4e-baf2-86551c8150fe",
+    "name": "Cyclonic Rift",
+    "cmc": 2,
+    "mana_cost": "{1}{U}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Return target nonland permanent you don't control to its owner's hand.\nOverload {6}{U} (You may cast this spell for its overload cost. If you do, change \"target\" in its text to \"each.\")",
+    "power": null,
+    "toughness": null,
+    "rarity": "mythic",
+    "image_url": "https://cards.scryfall.io/normal/front/d/f/dfb7c4b9-f2f4-4d4e-baf2-86551c8150fe.jpg?1783913339"
+  },
+  {
+    "id": "11e12a84-e7be-4afc-a230-c2e644743fa8",
+    "name": "Dark Ritual",
+    "cmc": 1,
+    "mana_cost": "{B}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Add {B}{B}{B}.",
+    "power": null,
+    "toughness": null,
+    "rarity": "uncommon",
+    "image_url": "https://cards.scryfall.io/normal/front/1/1/11e12a84-e7be-4afc-a230-c2e644743fa8.jpg?1783903013"
+  },
+  {
+    "id": "a24b4cb6-cebb-428b-8654-74347a6a8d63",
+    "name": "Demonic Tutor",
+    "cmc": 2,
+    "mana_cost": "{1}{B}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Search your library for a card, put that card into your hand, then shuffle.",
+    "power": null,
+    "toughness": null,
+    "rarity": "mythic",
+    "image_url": "https://cards.scryfall.io/normal/front/a/2/a24b4cb6-cebb-428b-8654-74347a6a8d63.jpg?1783915679"
+  },
+  {
+    "id": "b281a308-ab6b-47b6-bec7-632c9aaecede",
+    "name": "Thoughtseize",
+    "cmc": 1,
+    "mana_cost": "{B}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Target player reveals their hand. You choose a nonland card from it. That player discards that card. You lose 2 life.",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://cards.scryfall.io/normal/front/b/2/b281a308-ab6b-47b6-bec7-632c9aaecede.jpg?1783930173"
+  },
+  {
+    "id": "368b6903-5fc4-43e7-bd44-46b8107c8bb4",
+    "name": "Reanimate",
+    "cmc": 1,
+    "mana_cost": "{B}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Put target creature card from a graveyard onto the battlefield under your control. You lose life equal to that card's mana value.",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://cards.scryfall.io/normal/front/3/6/368b6903-5fc4-43e7-bd44-46b8107c8bb4.jpg?1783909614"
+  },
+  {
+    "id": "c89c6895-b0f8-444a-9c89-c6b4fd027b3e",
+    "name": "Necropotence",
+    "cmc": 3,
+    "mana_cost": "{B}{B}{B}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Enchantment",
+    "oracle_text": "Skip your draw step.\nWhenever you discard a card, exile that card from your graveyard.\nPay 1 life: Exile the top card of your library face down. Put that card into your hand at the beginning of your next end step.",
+    "power": null,
+    "toughness": null,
+    "rarity": "mythic",
+    "image_url": "https://cards.scryfall.io/normal/front/c/8/c89c6895-b0f8-444a-9c89-c6b4fd027b3e.jpg?1783935537"
+  },
+  {
+    "id": "6e9d8fe4-fd9b-4923-92bf-7dd6b8fa02e7",
+    "name": "Fatal Push",
+    "cmc": 1,
+    "mana_cost": "{B}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Destroy target creature if it has mana value 2 or less.\nRevolt \u2014 Destroy that creature if it has mana value 4 or less instead if a permanent left the battlefield under your control this turn.",
+    "power": null,
+    "toughness": null,
+    "rarity": "uncommon",
+    "image_url": "https://cards.scryfall.io/normal/front/6/e/6e9d8fe4-fd9b-4923-92bf-7dd6b8fa02e7.jpg?1783930180"
+  },
+  {
+    "id": "efbb7256-9337-4183-8bda-a419f3f2c501",
+    "name": "Liliana of the Veil",
+    "cmc": 3,
+    "mana_cost": "{1}{B}{B}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Legendary Planeswalker \u2014 Liliana",
+    "oracle_text": "+1: Each player discards a card.\n\u22122: Target player sacrifices a creature.\n\u22126: Separate all permanents target player controls into two piles. That player sacrifices all permanents in the pile of their choice.",
+    "power": null,
+    "toughness": null,
+    "rarity": "mythic",
+    "image_url": "https://cards.scryfall.io/normal/front/e/f/efbb7256-9337-4183-8bda-a419f3f2c501.jpg?1783907977"
+  },
+  {
+    "id": "d3c0aac5-b9f1-4446-bfea-3e1dd1cf1f2f",
+    "name": "Damnation",
+    "cmc": 4,
+    "mana_cost": "{2}{B}{B}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Destroy all creatures. They can't be regenerated.",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://cards.scryfall.io/normal/front/d/3/d3c0aac5-b9f1-4446-bfea-3e1dd1cf1f2f.jpg?1783921909"
+  },
+  {
+    "id": "7aff07f9-9528-4149-9af0-f4e3c66c9dc5",
+    "name": "Vampire Nighthawk",
+    "cmc": 3,
+    "mana_cost": "{1}{B}{B}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Creature \u2014 Vampire Shaman",
+    "oracle_text": "Flying\nDeathtouch (Any amount of damage this deals to a creature is enough to destroy it.)\nLifelink (Damage dealt by this creature also causes you to gain that much life.)",
+    "power": "2",
+    "toughness": "3",
+    "rarity": "uncommon",
+    "image_url": "https://cards.scryfall.io/normal/front/7/a/7aff07f9-9528-4149-9af0-f4e3c66c9dc5.jpg?1787562825"
+  },
+  {
+    "id": "d67be074-cdd4-41d9-ac89-0a0456c4e4b2",
+    "name": "Sheoldred, the Apocalypse",
+    "cmc": 4,
+    "mana_cost": "{2}{B}{B}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Legendary Creature \u2014 Phyrexian Praetor",
+    "oracle_text": "Deathtouch\nWhenever you draw a card, you gain 2 life.\nWhenever an opponent draws a card, they lose 2 life.",
+    "power": "4",
+    "toughness": "5",
+    "rarity": "mythic",
+    "image_url": "https://cards.scryfall.io/normal/front/d/6/d67be074-cdd4-41d9-ac89-0a0456c4e4b2.jpg?1783921327"
+  },
+  {
+    "id": "7673784e-db4b-43a1-8d55-1bb9fc1e284f",
+    "name": "Lightning Bolt",
+    "cmc": 1,
+    "mana_cost": "{R}",
+    "colors": [
+      "R"
+    ],
+    "color_identity": [
+      "R"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+    "power": null,
+    "toughness": null,
+    "rarity": "uncommon",
+    "image_url": "https://cards.scryfall.io/normal/front/7/6/7673784e-db4b-43a1-8d55-1bb9fc1e284f.jpg?1783903008"
+  },
+  {
+    "id": "a9738cda-adb1-47fb-9f4c-ecd930228c4d",
+    "name": "Ragavan, Nimble Pilferer",
+    "cmc": 1,
+    "mana_cost": "{R}",
+    "colors": [
+      "R"
+    ],
+    "color_identity": [
+      "R"
+    ],
+    "type_line": "Legendary Creature \u2014 Monkey Pirate",
+    "oracle_text": "Whenever Ragavan deals combat damage to a player, create a Treasure token and exile the top card of that player's library. Until end of turn, you may cast that card.\nDash {1}{R} (You may cast this spell for its dash cost. If you do, it gains haste, and it's returned from the battlefield to its owner's hand at the beginning of the next end step.)",
+    "power": "2",
+    "toughness": "1",
+    "rarity": "mythic",
+    "image_url": "https://cards.scryfall.io/normal/front/a/9/a9738cda-adb1-47fb-9f4c-ecd930228c4d.jpg?1783926839"
+  },
+  {
+    "name": "Blood Moon",
+    "cmc": 3,
+    "mana_cost": "{2}{R}",
+    "colors": [
+      "R"
+    ],
+    "type_line": "Enchantment",
+    "oracle_text": "Nonbasic lands are Mountains.",
+    "image_url": "https://cards.scryfall.io/normal/front/d/0/d072e9ca-aae7-45dc-8025-3ce590bae63f.jpg",
+    "id": "card-101",
+    "rarity": "rare",
+    "color_identity": [
+      "R"
+    ],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Wheel of Fortune",
+    "cmc": 3,
+    "mana_cost": "{2}{R}",
+    "colors": [
+      "R"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Each player discards their hand, then draws seven cards.",
+    "image_url": "https://cards.scryfall.io/normal/front/2/5/2597050f-6b1b-474e-aa16-33fd154628ca.jpg",
+    "id": "card-102",
+    "rarity": "rare",
+    "color_identity": [
+      "R"
+    ],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Goblin Guide",
+    "cmc": 1,
+    "mana_cost": "{R}",
+    "colors": [
+      "R"
+    ],
+    "type_line": "Creature \u2014 Goblin Scout",
+    "oracle_text": "Haste. Whenever Goblin Guide attacks, defending player reveals the top card of their library. If it is a land card, that player puts it into their hand.",
+    "power": "2",
+    "toughness": "2",
+    "image_url": "https://cards.scryfall.io/normal/front/3/b/3b0e5411-1940-410f-96ce-6f92513f753a.jpg",
+    "id": "card-103",
+    "rarity": "rare",
+    "color_identity": [
+      "R"
+    ]
+  },
+  {
+    "name": "Chaos Warp",
+    "cmc": 3,
+    "mana_cost": "{2}{R}",
+    "colors": [
+      "R"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "The owner of target permanent shuffles it into their library, then reveals the top card of their library. If it is a permanent card, they put it onto the battlefield.",
+    "image_url": "https://cards.scryfall.io/normal/front/0/e/0e71954d-1768-46f9-b883-7c385c7a3601.jpg",
+    "id": "card-104",
+    "rarity": "rare",
+    "color_identity": [
+      "R"
+    ],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Chandra, Torch of Defiance",
+    "cmc": 4,
+    "mana_cost": "{2}{R}{R}",
+    "colors": [
+      "R"
+    ],
+    "type_line": "Legendary Planeswalker \u2014 Chandra",
+    "oracle_text": "+1: Exile top card; you may cast it. +1: Add {R}{R}. -3: Chandra deals 4 damage to target creature. -7: Emblem deals 5 damage.",
+    "image_url": "https://cards.scryfall.io/normal/front/f/f/ff8086cd-b868-4f4e-823e-2635ad7ebc07.jpg",
+    "id": "card-105",
+    "rarity": "rare",
+    "color_identity": [
+      "R"
+    ],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Sulfuric Vortex",
+    "cmc": 3,
+    "mana_cost": "{1}{R}{R}",
+    "colors": [
+      "R"
+    ],
+    "type_line": "Enchantment",
+    "oracle_text": "At the beginning of each player upkeep, Sulfuric Vortex deals 2 damage to that player. Players cannot gain life.",
+    "image_url": "https://cards.scryfall.io/normal/front/0/4/0463e989-ba32-4a46-a82f-e0d6cdf14bc1.jpg",
+    "id": "card-106",
+    "rarity": "rare",
+    "color_identity": [
+      "R"
+    ],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Guttersnipe",
+    "cmc": 3,
+    "mana_cost": "{2}{R}",
+    "colors": [
+      "R"
+    ],
+    "type_line": "Creature \u2014 Goblin Shaman",
+    "oracle_text": "Whenever you cast an instant or sorcery spell, Guttersnipe deals 2 damage to each opponent.",
+    "power": "2",
+    "toughness": "2",
+    "image_url": "https://cards.scryfall.io/normal/front/9/0/90907737-ad75-48f6-a350-87d4021d79ce.jpg",
+    "id": "card-107",
+    "rarity": "rare",
+    "color_identity": [
+      "R"
+    ]
+  },
+  {
+    "name": "Young Pyromancer",
+    "cmc": 2,
+    "mana_cost": "{1}{R}",
+    "colors": [
+      "R"
+    ],
+    "type_line": "Creature \u2014 Human Shaman",
+    "oracle_text": "Whenever you cast an instant or sorcery spell, create a 1/1 red Elemental creature token.",
+    "power": "2",
+    "toughness": "1",
+    "image_url": "https://cards.scryfall.io/normal/front/6/8/684b300d-297b-402a-a924-a2123f05d9e4.jpg",
+    "id": "card-108",
+    "rarity": "rare",
+    "color_identity": [
+      "R"
+    ]
+  },
+  {
+    "name": "Birds of Paradise",
+    "cmc": 1,
+    "mana_cost": "{G}",
+    "colors": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Bird",
+    "oracle_text": "Flying. {T}: Add one mana of any color.",
+    "power": "0",
+    "toughness": "1",
+    "image_url": "https://cards.scryfall.io/normal/front/f/e/feefe9f0-24a6-461c-9ef1-86c5a6f33b83.jpg",
+    "id": "card-109",
+    "rarity": "rare",
+    "color_identity": [
+      "G"
+    ]
+  },
+  {
+    "name": "Llanowar Elves",
+    "cmc": 1,
+    "mana_cost": "{G}",
+    "colors": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Elf Druid",
+    "oracle_text": "{T}: Add {G}.",
+    "power": "1",
+    "toughness": "1",
+    "image_url": "https://cards.scryfall.io/normal/front/8/b/8bbcfb77-daa1-4ce5-b5f9-48d0a8edbba9.jpg",
+    "id": "card-110",
+    "rarity": "rare",
+    "color_identity": [
+      "G"
+    ]
+  },
+  {
+    "name": "Tarmogoyf",
+    "cmc": 2,
+    "mana_cost": "{1}{G}",
+    "colors": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Lhurgoyf",
+    "oracle_text": "Power is equal to card types in all graveyards, toughness is that number + 1.",
+    "power": "*",
+    "toughness": "1+*",
+    "image_url": "https://cards.scryfall.io/normal/front/6/9/69dabc76-3002-442a-9f92-5875fc2f7375.jpg",
+    "id": "card-111",
+    "rarity": "rare",
+    "color_identity": [
+      "G"
+    ]
+  },
+  {
+    "name": "Craterhoof Behemoth",
+    "cmc": 8,
+    "mana_cost": "{5}{G}{G}{G}",
+    "colors": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Beast",
+    "oracle_text": "Haste. Creatures gain trample and +X/+X where X is creature count.",
+    "power": "5",
+    "toughness": "5",
+    "image_url": "https://cards.scryfall.io/normal/front/e/8/e8f44368-12d8-44e1-b903-887184ef9752.jpg",
+    "id": "card-112",
+    "rarity": "rare",
+    "color_identity": [
+      "G"
+    ]
+  },
+  {
+    "name": "Sylvan Library",
+    "cmc": 2,
+    "mana_cost": "{1}{G}",
+    "colors": [
+      "G"
+    ],
+    "type_line": "Enchantment",
+    "oracle_text": "Draw two extra cards in draw step. Pay 4 life or put each back.",
+    "image_url": "https://cards.scryfall.io/normal/front/7/a/7a483778-b88b-473f-9217-7583e69b3e70.jpg",
+    "id": "card-113",
+    "rarity": "rare",
+    "color_identity": [
+      "G"
+    ],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Cultivate",
+    "cmc": 3,
+    "mana_cost": "{2}{G}",
+    "colors": [
+      "G"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Search library for two basic lands, one tapped to field, other to hand.",
+    "image_url": "https://cards.scryfall.io/normal/front/8/5/857d1f57-8d45-4929-9e8c-572797e87ce6.jpg",
+    "id": "card-114",
+    "rarity": "rare",
+    "color_identity": [
+      "G"
+    ],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Primeval Titan",
+    "cmc": 6,
+    "mana_cost": "{4}{G}{G}",
+    "colors": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Giant",
+    "oracle_text": "Trample. Enters or attacks: search for two lands onto battlefield tapped.",
+    "power": "6",
+    "toughness": "6",
+    "image_url": "https://cards.scryfall.io/normal/front/6/d/6d5537da-112e-4679-a113-b5d7ce32a66b.jpg",
+    "id": "card-115",
+    "rarity": "rare",
+    "color_identity": [
+      "G"
+    ]
+  },
+  {
+    "name": "Eternal Witness",
+    "cmc": 3,
+    "mana_cost": "{1}{G}{G}",
+    "colors": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Human Shaman",
+    "oracle_text": "When Eternal Witness enters the battlefield, return target card from graveyard to hand.",
+    "power": "2",
+    "toughness": "1",
+    "image_url": "https://cards.scryfall.io/normal/front/3/9/39704000-65d3-4d39-849e-a3b617376ba7.jpg",
+    "id": "card-116",
+    "rarity": "rare",
+    "color_identity": [
+      "G"
+    ]
+  },
+  {
+    "name": "Scavenging Ooze",
+    "cmc": 2,
+    "mana_cost": "{1}{G}",
+    "colors": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Ooze",
+    "oracle_text": "{G}: Exile card from graveyard. If creature, +1/+1 counter and gain 1 life.",
+    "power": "2",
+    "toughness": "2",
+    "image_url": "https://cards.scryfall.io/normal/front/6/7/67d93e17-b3f9-4211-977c-7a93144a1eb6.jpg",
+    "id": "card-117",
+    "rarity": "rare",
+    "color_identity": [
+      "G"
+    ]
+  },
+  {
+    "name": "Questing Beast",
+    "cmc": 4,
+    "mana_cost": "{2}{G}{G}",
+    "colors": [
+      "G"
+    ],
+    "type_line": "Legendary Creature \u2014 Beast",
+    "oracle_text": "Vigilance, deathtouch, haste. Cannot be blocked by power 2 or less.",
+    "power": "4",
+    "toughness": "4",
+    "image_url": "https://cards.scryfall.io/normal/front/e/4/e41cf82d-3213-47ce-a015-6e51a8b07e4f.jpg",
+    "id": "card-118",
+    "rarity": "rare",
+    "color_identity": [
+      "G"
+    ]
+  },
+  {
+    "name": "Teferi, Hero of Dominaria",
+    "cmc": 5,
+    "mana_cost": "{3}{W}{U}",
+    "colors": [
+      "W",
+      "U"
+    ],
+    "type_line": "Legendary Planeswalker \u2014 Teferi",
+    "oracle_text": "+1: Draw card, untap two lands. -3: Tuck nonland permanent. -8: Emblem.",
+    "image_url": "https://cards.scryfall.io/normal/front/5/d/5d10b752-d9cb-419d-a5c4-d4ee1acb655e.jpg",
+    "id": "card-119",
+    "rarity": "rare",
+    "color_identity": [
+      "W",
+      "U"
+    ],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Nicol Bolas, Planeswalker",
+    "cmc": 8,
+    "mana_cost": "{4}{U}{B}{B}{R}",
+    "colors": [
+      "U",
+      "B",
+      "R"
+    ],
+    "type_line": "Legendary Planeswalker \u2014 Bolas",
+    "oracle_text": "+3: Destroy noncreature. -2: Gain control of creature. -9: 7 damage, discard 7, sac 7.",
+    "image_url": "https://cards.scryfall.io/normal/front/9/e/9e80f2fc-06d4-4ce9-b23b-3e4af1208fa5.jpg",
+    "id": "card-120",
+    "rarity": "rare",
+    "color_identity": [
+      "U",
+      "B",
+      "R"
+    ],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Lightning Helix",
+    "cmc": 2,
+    "mana_cost": "{R}{W}",
+    "colors": [
+      "R",
+      "W"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Lightning Helix deals 3 damage to any target and you gain 3 life.",
+    "image_url": "https://cards.scryfall.io/normal/front/9/5/9536438a-6421-4649-8857-4148e028b08c.jpg",
+    "id": "card-121",
+    "rarity": "rare",
+    "color_identity": [
+      "R",
+      "W"
+    ],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Assassin's Trophy",
+    "cmc": 2,
+    "mana_cost": "{B}{G}",
+    "colors": [
+      "B",
+      "G"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Destroy target permanent an opponent controls. They may search for basic land.",
+    "image_url": "https://cards.scryfall.io/normal/front/9/0/90e47429-a509-42db-84de-40c47e39a4c2.jpg",
+    "id": "card-122",
+    "rarity": "rare",
+    "color_identity": [
+      "B",
+      "G"
+    ],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Kolaghan's Command",
+    "cmc": 3,
+    "mana_cost": "{1}{B}{R}",
+    "colors": [
+      "B",
+      "R"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Choose two: Return creature; Target discards; Destroy artifact; 2 damage.",
+    "image_url": "https://cards.scryfall.io/normal/front/a/0/a0dab027-a475-4823-b00d-b6774b079897.jpg",
+    "id": "card-123",
+    "rarity": "rare",
+    "color_identity": [
+      "B",
+      "R"
+    ],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Omnath, Locus of Creation",
+    "cmc": 4,
+    "mana_cost": "{R}{G}{W}{U}",
+    "colors": [
+      "R",
+      "G",
+      "W",
+      "U"
+    ],
+    "type_line": "Legendary Creature \u2014 Elemental",
+    "oracle_text": "Draw a card on ETB. Landfall: 4 life, add RGWU, 4 damage.",
+    "power": "4",
+    "toughness": "4",
+    "image_url": "https://cards.scryfall.io/normal/front/4/e/4e4fb50c-a81f-44d3-93c5-fa9a0b37f617.jpg",
+    "id": "card-124",
+    "rarity": "rare",
+    "color_identity": [
+      "R",
+      "G",
+      "W",
+      "U"
+    ]
+  },
+  {
+    "name": "Black Lotus",
+    "cmc": 0,
+    "mana_cost": "{0}",
+    "colors": [],
+    "type_line": "Artifact",
+    "oracle_text": "{T}, Sacrifice: Add three mana of any one color.",
+    "image_url": "https://cards.scryfall.io/normal/front/b/d/bd8fa327-dd41-4737-8f19-2cf5eb1f7cdd.jpg",
+    "id": "card-125",
+    "rarity": "rare",
+    "color_identity": [],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Sol Ring",
+    "cmc": 1,
+    "mana_cost": "{1}",
+    "colors": [],
+    "type_line": "Artifact",
+    "oracle_text": "{T}: Add {C}{C}.",
+    "image_url": "https://cards.scryfall.io/normal/front/7/c/7c2e09dc-3054-4d89-9312-346c5f6621b7.jpg",
+    "id": "card-126",
+    "rarity": "rare",
+    "color_identity": [],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Mox Pearl",
+    "cmc": 0,
+    "mana_cost": "{0}",
+    "colors": [],
+    "type_line": "Artifact",
+    "oracle_text": "{T}: Add {W}.",
+    "image_url": "https://cards.scryfall.io/normal/front/e/d/ed0216a0-c5c9-4a99-b869-53e4d0256326.jpg",
+    "id": "card-127",
+    "rarity": "rare",
+    "color_identity": [],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Mox Sapphire",
+    "cmc": 0,
+    "mana_cost": "{0}",
+    "colors": [],
+    "type_line": "Artifact",
+    "oracle_text": "{T}: Add {U}.",
+    "image_url": "https://cards.scryfall.io/normal/front/e/a/ea1feac0-d3a7-45eb-9719-1cdef51ea463.jpg",
+    "id": "card-128",
+    "rarity": "rare",
+    "color_identity": [],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Mox Jet",
+    "cmc": 0,
+    "mana_cost": "{0}",
+    "colors": [],
+    "type_line": "Artifact",
+    "oracle_text": "{T}: Add {B}.",
+    "image_url": "https://cards.scryfall.io/normal/front/5/f/5f6927e1-c580-483a-8e2a-6e2deb74800e.jpg",
+    "id": "card-129",
+    "rarity": "rare",
+    "color_identity": [],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Mox Ruby",
+    "cmc": 0,
+    "mana_cost": "{0}",
+    "colors": [],
+    "type_line": "Artifact",
+    "oracle_text": "{T}: Add {R}.",
+    "image_url": "https://cards.scryfall.io/normal/front/4/5/45fd6e91-df76-497f-b642-33dc3d5f6a5a.jpg",
+    "id": "card-130",
+    "rarity": "rare",
+    "color_identity": [],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Mox Emerald",
+    "cmc": 0,
+    "mana_cost": "{0}",
+    "colors": [],
+    "type_line": "Artifact",
+    "oracle_text": "{T}: Add {G}.",
+    "image_url": "https://cards.scryfall.io/normal/front/a/c/aced2c55-7543-4076-bcdd-36c4d649b8ab.jpg",
+    "id": "card-131",
+    "rarity": "rare",
+    "color_identity": [],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Mana Crypt",
+    "cmc": 0,
+    "mana_cost": "{0}",
+    "colors": [],
+    "type_line": "Artifact",
+    "oracle_text": "Upkeep: flip coin, deal 3 damage if lose. {T}: Add {C}{C}.",
+    "image_url": "https://cards.scryfall.io/normal/front/4/d/4d960186-4559-4af0-bd22-63baa15f8939.jpg",
+    "id": "card-132",
+    "rarity": "rare",
+    "color_identity": [],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Wurmcoil Engine",
+    "cmc": 6,
+    "mana_cost": "{6}",
+    "colors": [],
+    "type_line": "Artifact Creature \u2014 Wurm",
+    "oracle_text": "Deathtouch, lifelink. Dies: create 3/3 lifelink and 3/3 deathtouch tokens.",
+    "power": "6",
+    "toughness": "6",
+    "image_url": "https://cards.scryfall.io/normal/front/d/0/d0a13423-67e8-453c-a719-af5de1704283.jpg",
+    "id": "card-133",
+    "rarity": "rare",
+    "color_identity": []
+  },
+  {
+    "name": "Skullclamp",
+    "cmc": 1,
+    "mana_cost": "{1}",
+    "colors": [],
+    "type_line": "Artifact \u2014 Equipment",
+    "oracle_text": "Equipped gets +1/-1. Dies: draw two cards. Equip {1}.",
+    "image_url": "https://cards.scryfall.io/normal/front/a/3/a36fd6d8-66a2-49d1-b9f3-b400ebc03674.jpg",
+    "id": "card-134",
+    "rarity": "rare",
+    "color_identity": [],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Umezawa's Jitte",
+    "cmc": 2,
+    "mana_cost": "{2}",
+    "colors": [],
+    "type_line": "Legendary Artifact \u2014 Equipment",
+    "oracle_text": "Combat damage: 2 counters. Remove: +2/+2, -1/-1, or gain 2 life. Equip {2}.",
+    "image_url": "https://cards.scryfall.io/normal/front/3/b/3b6e5956-f795-451b-bb24-56462d1ced27.jpg",
+    "id": "card-135",
+    "rarity": "rare",
+    "color_identity": [],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Karn Liberated",
+    "cmc": 7,
+    "mana_cost": "{7}",
+    "colors": [],
+    "type_line": "Legendary Planeswalker \u2014 Karn",
+    "oracle_text": "+4: Target exiles card. -3: Exile target permanent. -14: Restart game with exiled permanents.",
+    "image_url": "https://cards.scryfall.io/normal/front/4/b/4b0c6662-4dde-40a2-97e0-0318478c0367.jpg",
+    "id": "card-136",
+    "rarity": "rare",
+    "color_identity": [],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "City of Brass",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "type_line": "Land",
+    "oracle_text": "Tapped: deals 1 damage. {T}: Add one mana of any color.",
+    "image_url": "https://cards.scryfall.io/normal/front/4/5/459042ef-0d5b-480f-9b8a-520e13ae9217.jpg",
+    "id": "card-137",
+    "rarity": "rare",
+    "color_identity": [],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Command Tower",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "type_line": "Land",
+    "oracle_text": "{T}: Add one mana of any color in commander identity.",
+    "image_url": "https://cards.scryfall.io/normal/front/0/5/0536dd26-4657-4d74-ac6b-dd1f959d4377.jpg",
+    "id": "card-138",
+    "rarity": "rare",
+    "color_identity": [],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Mana Confluence",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "type_line": "Land",
+    "oracle_text": "{T}, Pay 1 life: Add one mana of any color.",
+    "image_url": "https://cards.scryfall.io/normal/front/b/d/bd6e4f3d-7494-40b4-8c7a-be67b4f57c4c.jpg",
+    "id": "card-139",
+    "rarity": "rare",
+    "color_identity": [],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Strip Mine",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "type_line": "Land",
+    "oracle_text": "{T}: Add {C}. {T}, Sacrifice: Destroy target land.",
+    "image_url": "https://cards.scryfall.io/normal/front/f/5/f57fd4c9-0004-4f71-a30f-2720943f57ca.jpg",
+    "id": "card-140",
+    "rarity": "rare",
+    "color_identity": [],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Ancient Tomb",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "type_line": "Land",
+    "oracle_text": "{T}: Add {C}{C}. Deals 2 damage to you.",
+    "image_url": "https://cards.scryfall.io/normal/front/b/d/bd3d4b4b-cf31-4f89-8140-9650edb03c7b.jpg",
+    "id": "card-141",
+    "rarity": "rare",
+    "color_identity": [],
+    "power": null,
+    "toughness": null
+  }
+]
