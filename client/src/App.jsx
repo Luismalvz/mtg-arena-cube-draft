@@ -12,7 +12,6 @@ import { RavnicaBoosterOpening } from './components/RavnicaBoosterOpening';
 import { AltCardZoom } from './components/AltCardZoom';
 import { sound } from './utils/audio';
 import {
-  Flame,
   Layers,
   Sparkles,
   Trophy,
@@ -357,49 +356,6 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans selection:bg-amber-500 selection:text-slate-950 relative">
-      {/* Top Header */}
-      <header className="sticky top-0 z-40 bg-slate-950/85 border-b border-slate-800/80 backdrop-blur-md px-4 py-2.5 flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <div className="flex items-center gap-2 font-black text-base md:text-lg tracking-wider bg-gradient-to-r from-amber-400 via-orange-400 to-amber-200 bg-clip-text text-transparent">
-            <Flame className="w-5 h-5 text-amber-500 fill-amber-500/20" />
-            <span>GETAWAY DRAFT</span>
-          </div>
-
-          {roomState?.id && (
-            <div className="hidden sm:flex items-center gap-2 pl-3 border-l border-slate-800 text-xs">
-              <span className="text-slate-400">Sala:</span>
-              <span className="font-mono font-bold text-amber-400 bg-slate-900 px-2 py-0.5 rounded border border-slate-800">
-                {roomState.id}
-              </span>
-            </div>
-          )}
-        </div>
-
-        {/* Header Right Actions */}
-        <div className="flex items-center gap-3">
-          {/* Connection Status Indicator */}
-          <div className="flex items-center gap-1.5 text-xs text-slate-400">
-            <span
-              className={`w-2 h-2 rounded-full ${
-                isConnected ? 'bg-emerald-400 shadow-xs shadow-emerald-400' : 'bg-rose-500'
-              }`}
-            />
-            <span className="hidden md:inline">{isConnected ? 'Conectado' : 'Conectando...'}</span>
-          </div>
-
-          {/* Reset Room / New Game button if complete */}
-          {isComplete && (
-            <button
-              onClick={handleResetDraft}
-              className="p-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white transition-colors"
-              title="Nueva Partida"
-            >
-              <RotateCcw className="w-4 h-4" />
-            </button>
-          )}
-        </div>
-      </header>
-
       {/* Main Content Area */}
       <main className="flex-1 w-full max-w-7xl mx-auto p-3 sm:p-4 md:p-6 flex flex-col gap-5">
         
