@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { io } from 'socket.io-client';
 import { AdminSetup } from './components/AdminSetup';
 import { PlayerLobby } from './components/PlayerLobby';
@@ -44,31 +44,69 @@ export default function App() {
   const [copiedTTS, setCopiedTTS] = useState(false);
   const [initialRoomId, setInitialRoomId] = useState('');
 
-  // Global Left Alt Detection for Card Zoom
+  // Global Left Alt Detection for Card Zoom (Zero Focus Loss & Auto Hardware Sync)
+  const isAltPressedRef = useRef(false);
+
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === 'Alt' || e.code === 'AltLeft' || e.code === 'AltRight') {
+        // Prevent Windows browser from activating menu bar / stealing window focus!
+        e.preventDefault();
+        isAltPressedRef.current = true;
         setIsAltPressed(true);
       }
     };
+
     const handleKeyUp = (e) => {
       if (e.key === 'Alt' || e.code === 'AltLeft' || e.code === 'AltRight') {
+        e.preventDefault();
+        isAltPressedRef.current = false;
         setIsAltPressed(false);
       }
     };
+
+    // Hardware sync: whenever cursor moves or hovers, synchronize isAltPressed directly with e.altKey
+    const handlePointerSync = (e) => {
+      if (e.altKey && !isAltPressedRef.current) {
+        isAltPressedRef.current = true;
+        setIsAltPressed(true);
+      } else if (!e.altKey && isAltPressedRef.current) {
+        isAltPressedRef.current = false;
+        setIsAltPressed(false);
+      }
+    };
+
     const handleBlur = () => {
+      isAltPressedRef.current = false;
       setIsAltPressed(false);
     };
 
-    window.addEventListener('keydown', handleKeyDown);
-    window.addEventListener('keyup', handleKeyUp);
+    // Use capture phase (true) to intercept Alt before browser system menu traps it
+    window.addEventListener('keydown', handleKeyDown, true);
+    window.addEventListener('keyup', handleKeyUp, true);
+    window.addEventListener('pointermove', handlePointerSync, true);
+    window.addEventListener('mousemove', handlePointerSync, true);
     window.addEventListener('blur', handleBlur);
 
     return () => {
-      window.removeEventListener('keydown', handleKeyDown);
-      window.removeEventListener('keyup', handleKeyUp);
+      window.removeEventListener('keydown', handleKeyDown, true);
+      window.removeEventListener('keyup', handleKeyUp, true);
+      window.removeEventListener('pointermove', handlePointerSync, true);
+      window.removeEventListener('mousemove', handlePointerSync, true);
       window.removeEventListener('blur', handleBlur);
     };
+  }, []);
+
+  const handleCardHoverStart = useCallback((card, e) => {
+    setHoveredCard(card);
+    if (e?.altKey) {
+      isAltPressedRef.current = true;
+      setIsAltPressed(true);
+    }
+  }, []);
+
+  const handleCardHoverEnd = useCallback(() => {
+    setHoveredCard(null);
   }, []);
 
   // Read URL query parameter for room code (e.g. ?room=ABCD)
@@ -406,8 +444,8 @@ export default function App() {
                 sound.playSelect();
                 setSelectedPlazaCard(card);
               }}
-              onHoverStart={(card) => setHoveredCard(card)}
-              onHoverEnd={() => setHoveredCard(null)}
+              onHoverStart={handleCardHoverStart}
+              onHoverEnd={handleCardHoverEnd}
               currentResolvingPlayerId={roomState.currentResolvingPlayerId}
               resolutionQueue={roomState.resolutionQueue || []}
               players={roomState.players || []}
@@ -437,8 +475,8 @@ export default function App() {
               onConfirmPick={handleConfirmPick}
               onConfirmSwap={handleConfirmSwap}
               onCancelDecision={handleCancelDecision}
-              onHoverStart={(card) => setHoveredCard(card)}
-              onHoverEnd={() => setHoveredCard(null)}
+              onHoverStart={handleCardHoverStart}
+              onHoverEnd={handleCardHoverEnd}
               onClearPlazaTarget={() => setSelectedPlazaCard(null)}
             />
           </div>
@@ -526,8 +564,8 @@ export default function App() {
         isOpen={isDrawerOpen}
         onClose={() => setIsDrawerOpen(false)}
         draftPicks={roomState?.me?.draftPicks || []}
-        onHoverStart={(card) => setHoveredCard(card)}
-        onHoverEnd={() => setHoveredCard(null)}
+        onHoverStart={handleCardHoverStart}
+        onHoverEnd={handleCardHoverEnd}
       />
 
       {/* Priority Swap Animated Announcement Banner */}
@@ -538,8 +576,8 @@ export default function App() {
         conflictData={conflictData}
         activePack={roomState?.me?.activePack || []}
         onResolveConflict={handleResolveConflict}
-        onHoverStart={(card) => setHoveredCard(card)}
-        onHoverEnd={() => setHoveredCard(null)}
+        onHoverStart={handleCardHoverStart}
+        onHoverEnd={handleCardHoverEnd}
       />
 
       {/* Left-Alt Card Quick Zoom Preview */}
@@ -556,6 +594,7 @@ export default function App() {
           <RavnicaBoosterOpening
             round={roomState.currentRound}
             totalPacks={roomState.config?.packCount || 3}
+            cards={roomState.me?.activePack || []}
             onFinishOpening={() => {
               setOpenedRounds((prev) => ({
                 ...prev,

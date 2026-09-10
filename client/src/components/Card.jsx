@@ -31,15 +31,15 @@ export function Card({
     if (onClick) onClick(card);
   };
 
-  const handleMouseEnter = () => {
+  const handleMouseEnter = (e) => {
     if (!disabled) {
       sound.playHover();
     }
-    if (onHoverStart) onHoverStart(card);
+    if (onHoverStart) onHoverStart(card, e);
   };
 
-  const handleMouseLeave = () => {
-    if (onHoverEnd) onHoverEnd(card);
+  const handleMouseLeave = (e) => {
+    if (onHoverEnd) onHoverEnd(card, e);
   };
 
   const hasImage = !imageError && Boolean(card.image_url);
