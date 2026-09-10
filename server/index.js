@@ -272,6 +272,11 @@ io.on('connection', (socket) => {
     broadcastRoomState(roomId);
 
     if (result.allReady) {
+      const room = gameManager.getRoom(roomId);
+      if (room && room.timerInterval) {
+        clearInterval(room.timerInterval);
+        room.timerInterval = null;
+      }
       handleResolutionChain(roomId);
     }
   });

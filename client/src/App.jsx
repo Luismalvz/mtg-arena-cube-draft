@@ -8,7 +8,8 @@ import { DraftHand } from './components/DraftHand';
 import { SwapConflictModal } from './components/SwapConflictModal';
 import { SwapAnimationOverlay } from './components/SwapAnimationOverlay';
 import { DraftPicksDrawer } from './components/DraftPicksDrawer';
-import { CardDetailModal } from './components/CardDetailModal';
+import { RavnicaBoosterOpening } from './components/RavnicaBoosterOpening';
+import { AltCardZoom } from './components/AltCardZoom';
 import { sound } from './utils/audio';
 import {
   Flame,
@@ -36,10 +37,39 @@ export default function App() {
   const [conflictData, setConflictData] = useState(null);
   const [activeSwapAnimation, setActiveSwapAnimation] = useState(null);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const [inspectedCard, setInspectedCard] = useState(null);
+  const [hoveredCard, setHoveredCard] = useState(null);
+  const [isAltPressed, setIsAltPressed] = useState(false);
+  const [openedRounds, setOpenedRounds] = useState({});
   const [toastMessage, setToastMessage] = useState(null);
   const [copiedTTS, setCopiedTTS] = useState(false);
   const [initialRoomId, setInitialRoomId] = useState('');
+
+  // Global Left Alt Detection for Card Zoom
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Alt' || e.code === 'AltLeft' || e.code === 'AltRight') {
+        setIsAltPressed(true);
+      }
+    };
+    const handleKeyUp = (e) => {
+      if (e.key === 'Alt' || e.code === 'AltLeft' || e.code === 'AltRight') {
+        setIsAltPressed(false);
+      }
+    };
+    const handleBlur = () => {
+      setIsAltPressed(false);
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    window.addEventListener('keyup', handleKeyUp);
+    window.addEventListener('blur', handleBlur);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener('keyup', handleKeyUp);
+      window.removeEventListener('blur', handleBlur);
+    };
+  }, []);
 
   // Read URL query parameter for room code (e.g. ?room=ABCD)
   useEffect(() => {
@@ -239,10 +269,6 @@ export default function App() {
     setConflictData(null);
   };
 
-  const handleInspectCard = (card) => {
-    sound.playHover();
-    setInspectedCard(card);
-  };
 
   // TTS Decklist Generator
   const generateTTSDecklist = (picks) => {
@@ -380,7 +406,8 @@ export default function App() {
                 sound.playSelect();
                 setSelectedPlazaCard(card);
               }}
-              onInspectCard={handleInspectCard}
+              onHoverStart={(card) => setHoveredCard(card)}
+              onHoverEnd={() => setHoveredCard(null)}
               currentResolvingPlayerId={roomState.currentResolvingPlayerId}
               resolutionQueue={roomState.resolutionQueue || []}
               players={roomState.players || []}
@@ -410,7 +437,8 @@ export default function App() {
               onConfirmPick={handleConfirmPick}
               onConfirmSwap={handleConfirmSwap}
               onCancelDecision={handleCancelDecision}
-              onInspectCard={handleInspectCard}
+              onHoverStart={(card) => setHoveredCard(card)}
+              onHoverEnd={() => setHoveredCard(null)}
               onClearPlazaTarget={() => setSelectedPlazaCard(null)}
             />
           </div>
@@ -498,7 +526,8 @@ export default function App() {
         isOpen={isDrawerOpen}
         onClose={() => setIsDrawerOpen(false)}
         draftPicks={roomState?.me?.draftPicks || []}
-        onInspectCard={handleInspectCard}
+        onHoverStart={(card) => setHoveredCard(card)}
+        onHoverEnd={() => setHoveredCard(null)}
       />
 
       {/* Priority Swap Animated Announcement Banner */}
@@ -509,14 +538,32 @@ export default function App() {
         conflictData={conflictData}
         activePack={roomState?.me?.activePack || []}
         onResolveConflict={handleResolveConflict}
-        onInspectCard={handleInspectCard}
+        onHoverStart={(card) => setHoveredCard(card)}
+        onHoverEnd={() => setHoveredCard(null)}
       />
 
-      {/* Full Card Detail Modal */}
-      <CardDetailModal
-        card={inspectedCard}
-        onClose={() => setInspectedCard(null)}
+      {/* Left-Alt Card Quick Zoom Preview */}
+      <AltCardZoom
+        card={hoveredCard}
+        isVisible={isAltPressed && !!hoveredCard}
       />
+
+      {/* Ravnica Collector Booster Pack Opening Animation */}
+      {isDecisionOrResolution &&
+        roomState?.currentRound &&
+        !openedRounds[roomState.currentRound] &&
+        (roomState.currentPickNumber === 1 || roomState.currentPickNumber === undefined) && (
+          <RavnicaBoosterOpening
+            round={roomState.currentRound}
+            totalPacks={roomState.config?.packCount || 3}
+            onFinishOpening={() => {
+              setOpenedRounds((prev) => ({
+                ...prev,
+                [roomState.currentRound]: true
+              }));
+            }}
+          />
+        )}
 
       {/* Toast Notification Ticker */}
       {toastMessage && (

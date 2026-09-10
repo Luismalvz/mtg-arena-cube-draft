@@ -11,18 +11,19 @@ export function Card({
   isSwapSource = false,
   disabled = false,
   onClick,
-  onInspect,
+  onHoverStart,
+  onHoverEnd,
   location = 'pack', // 'pack' | 'arena' | 'pick'
   size = 'md' // 'sm' | 'md' | 'lg'
 }) {
   const [imageError, setImageError] = useState(false);
 
-  // Proportional 5:7 MTG Card aspect ratios
+  // Proportional 5:7 MTG Card aspect ratios (Enlarged)
   const dimensions = {
-    sm: 'w-[110px] h-[154px] sm:w-[122px] sm:h-[171px]',
-    md: 'w-[136px] h-[190px] sm:w-[150px] sm:h-[210px]',
-    lg: 'w-[220px] h-[308px] sm:w-[250px] sm:h-[350px]'
-  }[size] || 'w-[136px] h-[190px] sm:w-[150px] sm:h-[210px]';
+    sm: 'w-[130px] h-[182px] sm:w-[145px] sm:h-[203px] md:w-[155px] md:h-[217px]',
+    md: 'w-[142px] h-[199px] sm:w-[156px] sm:h-[218px] md:w-[168px] md:h-[235px]',
+    lg: 'w-[250px] h-[350px] sm:w-[300px] sm:h-[420px]'
+  }[size] || 'w-[142px] h-[199px] sm:w-[156px] sm:h-[218px] md:w-[168px] md:h-[235px]';
 
   const handleClick = (e) => {
     if (disabled) return;
@@ -34,6 +35,11 @@ export function Card({
     if (!disabled) {
       sound.playHover();
     }
+    if (onHoverStart) onHoverStart(card);
+  };
+
+  const handleMouseLeave = () => {
+    if (onHoverEnd) onHoverEnd(card);
   };
 
   const hasImage = !imageError && Boolean(card.image_url);
@@ -42,22 +48,19 @@ export function Card({
     <div
       onClick={handleClick}
       onMouseEnter={handleMouseEnter}
-      onContextMenu={(e) => {
-        e.preventDefault();
-        if (onInspect) onInspect(card);
-      }}
+      onMouseLeave={handleMouseLeave}
       className={`relative select-none transition-all duration-200 cursor-pointer rounded-[7px] ${dimensions} ${
         isSelected
-          ? 'ring-2 ring-amber-400 ring-offset-2 ring-offset-slate-950 shadow-[0_0_16px_rgba(251,191,36,0.7)] z-30 -translate-y-2'
+          ? 'ring-2 ring-amber-400 ring-offset-2 ring-offset-slate-950 shadow-[0_0_18px_rgba(251,191,36,0.7)] z-30 -translate-y-2'
           : isSwapSource
-          ? 'ring-2 ring-cyan-400 ring-offset-2 ring-offset-slate-950 shadow-[0_0_16px_rgba(34,211,238,0.7)] z-30 -translate-y-2'
+          ? 'ring-2 ring-cyan-400 ring-offset-2 ring-offset-slate-950 shadow-[0_0_18px_rgba(34,211,238,0.7)] z-30 -translate-y-2'
           : isSwapTarget
-          ? 'ring-2 ring-emerald-400 ring-offset-2 ring-offset-slate-950 shadow-[0_0_16px_rgba(52,211,153,0.7)] z-20 animate-pulse'
+          ? 'ring-2 ring-emerald-400 ring-offset-2 ring-offset-slate-950 shadow-[0_0_18px_rgba(52,211,153,0.7)] z-20 animate-pulse'
           : 'shadow-md shadow-black/80 hover:shadow-xl hover:shadow-black'
       } ${disabled ? 'opacity-50 cursor-not-allowed filter grayscale-[20%]' : ''}`}
     >
       {/* MTG Card Body with authentic rounded corners */}
-      <div className="w-full h-full rounded-[7px] overflow-hidden bg-[#0d1017] border border-black/40 flex flex-col justify-between relative group">
+      <div className="w-full h-full rounded-[7px] overflow-hidden bg-[#0d1017] border border-black/50 flex flex-col justify-between relative group">
         
         {hasImage ? (
           <img
@@ -116,22 +119,6 @@ export function Card({
                 Objetivo
               </span>
             )}
-          </div>
-        )}
-
-        {/* Clean Hover Inspect Button */}
-        {onInspect && (
-          <div className="absolute top-1 left-1 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10">
-            <button
-              onClick={(e) => {
-                e.stopPropagation();
-                onInspect(card);
-              }}
-              className="pointer-events-auto p-1 rounded bg-black/75 hover:bg-amber-400 hover:text-black text-slate-200 border border-white/20 transition-all cursor-pointer shadow-md"
-              title="Inspeccionar carta (o clic secundario)"
-            >
-              <Eye className="w-3 h-3" />
-            </button>
           </div>
         )}
       </div>

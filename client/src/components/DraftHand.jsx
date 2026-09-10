@@ -21,7 +21,8 @@ export function DraftHand({
   onConfirmPick,
   onConfirmSwap,
   onCancelDecision,
-  onInspectCard
+  onHoverStart,
+  onHoverEnd
 }) {
   const [actionMode, setActionMode] = useState('pick'); // 'pick' | 'swap'
   const [selectedPickCard, setSelectedPickCard] = useState(null);
@@ -90,6 +91,9 @@ export function DraftHand({
           <div className="text-xs sm:text-sm font-space text-slate-300 tracking-wide font-medium">
             Cards in hand: <span className="text-[#ffd580] font-bold font-mono text-sm sm:text-base ml-1">{totalCards}</span>
           </div>
+          <span className="hidden sm:inline text-[11px] font-space text-slate-500">
+            (Mantén <kbd className="px-1.5 py-0.5 rounded bg-slate-800 text-amber-300 border border-slate-700 font-mono text-[10px]">Alt</kbd> para ampliar)
+          </span>
           {isReady && (
             <span className="px-2 py-0.5 rounded-full text-[10px] font-space font-bold bg-emerald-500/15 text-emerald-400 border border-emerald-500/30">
               Listo / Bloqueado
@@ -128,12 +132,12 @@ export function DraftHand({
       </div>
 
       {/* ================= ARCHIDEKT PLAYTESTER STYLE HAND FAN ================= */}
-      <div className="w-full relative h-[210px] sm:h-[240px] md:h-[260px] flex items-end justify-center overflow-visible py-2 select-none">
+      <div className="w-full relative h-[260px] sm:h-[290px] md:h-[310px] flex items-end justify-center overflow-visible py-2 select-none">
         
         {/* Subtle felt table shadow */}
-        <div className="absolute bottom-0 w-3/4 h-16 bg-black/40 rounded-full blur-xl pointer-events-none" />
+        <div className="absolute bottom-0 w-3/4 h-20 bg-black/50 rounded-full blur-2xl pointer-events-none" />
 
-        <div className="relative w-full max-w-5xl h-full flex items-end justify-center overflow-visible">
+        <div className="relative w-full max-w-6xl h-full flex items-end justify-center overflow-visible">
           {activePack.map((card, index) => {
             const isSelectedForPick =
               actionMode === 'pick' && selectedPickCard?.instanceId === card.instanceId;
@@ -143,10 +147,10 @@ export function DraftHand({
 
             // Geometry calculations for Archidekt Natural Hand Fan Arc
             const offset = index - midIndex; // e.g. -7 to +7
-            const spacing = Math.min(52, Math.max(30, 560 / Math.max(1, totalCards)));
+            const spacing = Math.min(64, Math.max(36, 640 / Math.max(1, totalCards)));
             const xOffset = offset * spacing;
-            const angle = offset * Math.min(2.8, 30 / Math.max(1, totalCards));
-            const arcY = Math.pow(offset, 2) * 0.5; // Very subtle natural curve
+            const angle = offset * Math.min(2.4, 26 / Math.max(1, totalCards));
+            const arcY = Math.pow(offset, 2) * 0.45; // Gentle natural baseline curve
 
             return (
               <motion.div
@@ -154,7 +158,7 @@ export function DraftHand({
                 layout
                 animate={{
                   x: xOffset,
-                  y: isSelected ? -35 : arcY,
+                  y: isSelected ? -45 : arcY,
                   rotate: isSelected ? 0 : angle,
                   scale: isSelected ? 1.15 : 1,
                   zIndex: isSelected ? 60 : 10 + index
@@ -163,9 +167,9 @@ export function DraftHand({
                   isReady
                     ? {}
                     : {
-                        y: -50,
+                        y: -65,
                         rotate: 0,
-                        scale: 1.22,
+                        scale: 1.2,
                         zIndex: 100,
                         transition: { type: 'spring', stiffness: 450, damping: 25 }
                       }
@@ -184,7 +188,8 @@ export function DraftHand({
                   isSelected={isSelectedForPick}
                   isSwapSource={isSelectedForSwapOffer}
                   disabled={isReady}
-                  onInspect={onInspectCard}
+                  onHoverStart={onHoverStart}
+                  onHoverEnd={onHoverEnd}
                 />
               </motion.div>
             );

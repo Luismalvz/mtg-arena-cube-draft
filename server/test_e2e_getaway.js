@@ -63,12 +63,21 @@ function runTest() {
   });
 
   console.log('Submit result for allReady:', submitRes2.allReady);
+  const startResPhase = gameManager.startResolutionPhase(room);
+  console.log('Start resolution phase result:', startResPhase.type);
   console.log('Room status after decisions:', room.status);
   console.log('Resolution queue length:', room.resolutionQueue.length);
 
-  // Step resolution queue to resolve Bob's swap
-  const stepRes = gameManager.stepResolutionQueue(room);
-  console.log('Step result type:', stepRes.type);
+  // If there are more steps in queue, step them
+  let stepRes = startResPhase;
+  while (stepRes && stepRes.type === 'swap_resolved' && room.resolutionQueue.length > 0) {
+    stepRes = gameManager.stepResolutionQueue(room);
+    console.log('Next step result type:', stepRes.type);
+  }
+  if (stepRes && stepRes.type === 'swap_resolved') {
+    stepRes = gameManager.stepResolutionQueue(room);
+    console.log('Final step result type:', stepRes.type);
+  }
 
   // Check draft picks after resolution
   console.log(`${p1.name} draft picks count: ${p1.draftPicks.length}`);

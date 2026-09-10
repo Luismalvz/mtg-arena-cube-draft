@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Card } from './Card';
 import {
@@ -18,7 +18,8 @@ export function DraftPicksDrawer({
   isOpen = false,
   onClose,
   draftPicks = [],
-  onInspectCard
+  onHoverStart,
+  onHoverEnd
 }) {
   const [groupBy, setGroupBy] = useState('cmc'); // 'cmc' | 'color' | 'type'
   const [copied, setCopied] = useState(false);
@@ -316,7 +317,8 @@ export function DraftPicksDrawer({
                               card={card}
                               location="pick"
                               size="sm"
-                              onInspect={onInspectCard}
+                              onHoverStart={onHoverStart}
+                              onHoverEnd={onHoverEnd}
                             />
                           </div>
                         ))}

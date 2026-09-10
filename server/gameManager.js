@@ -378,13 +378,8 @@ class GameManager {
 
     // Check if all players are ready
     const allReady = room.players.every(p => p.isReady);
-    let resolutionInfo = null;
 
-    if (allReady) {
-      resolutionInfo = this.startResolutionPhase(room);
-    }
-
-    return { success: true, room, player, allReady, resolutionInfo };
+    return { success: true, room, player, allReady };
   }
 
   processBotDecisions(room) {
@@ -495,7 +490,8 @@ class GameManager {
 
     if (plazaCard) {
       // Card is available! Execute swap
-      const offerIdx = player.activePack.findIndex(c => c.instanceId === player.pendingDecision.offerCardInstanceId);
+      let offerIdx = player.activePack.findIndex(c => c.instanceId === player.pendingDecision.offerCardInstanceId);
+      if (offerIdx === -1 && player.activePack.length > 0) offerIdx = 0;
       if (offerIdx !== -1) {
         const offerCard = player.activePack.splice(offerIdx, 1)[0];
         
@@ -594,8 +590,9 @@ class GameManager {
       if (!plazaCard) return { error: 'Esa carta ya no está en la Plaza' };
 
       const offerId = resolution.offerCardId || player.pendingDecision?.offerCardInstanceId;
-      const offerIdx = player.activePack.findIndex(c => c.instanceId === offerId);
-      if (offerIdx === -1) return { error: 'Carta ofrecida no encontrada en sobre' };
+      let offerIdx = player.activePack.findIndex(c => c.instanceId === offerId);
+      if (offerIdx === -1 && player.activePack.length > 0) offerIdx = 0;
+      if (offerIdx === -1) return { error: 'No tienes cartas disponibles para ofrecer en tu sobre' };
 
       const offerCard = player.activePack.splice(offerIdx, 1)[0];
 

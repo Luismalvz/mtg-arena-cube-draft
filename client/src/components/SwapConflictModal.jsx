@@ -8,7 +8,8 @@ export function SwapConflictModal({
   conflictData = null, // { message, plaza }
   activePack = [],
   onResolveConflict,
-  onInspectCard
+  onHoverStart,
+  onHoverEnd
 }) {
   if (!conflictData) return null;
 
@@ -107,7 +108,8 @@ export function SwapConflictModal({
                     size="sm"
                     isSelected={chosenPlazaCard?.instanceId === card.instanceId}
                     onClick={() => handleSelectPlaza(card)}
-                    onInspect={onInspectCard}
+                    onHoverStart={onHoverStart}
+                    onHoverEnd={onHoverEnd}
                   />
                 ))}
               </div>
@@ -126,7 +128,8 @@ export function SwapConflictModal({
                     size="sm"
                     isSelected={chosenHandCard?.instanceId === card.instanceId}
                     onClick={() => handleSelectHand(card)}
-                    onInspect={onInspectCard}
+                    onHoverStart={onHoverStart}
+                    onHoverEnd={onHoverEnd}
                   />
                 ))}
               </div>
