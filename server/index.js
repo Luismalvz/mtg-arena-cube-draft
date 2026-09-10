@@ -1,10 +1,10 @@
-const express = require('express');
+﻿const express = require('express');
 const http = require('http');
 const path = require('path');
 const { Server } = require('socket.io');
 const cors = require('cors');
-const draftManager = require('./gameLogic.js');
-const cubeCards = require('./cubeData.js');
+const gameManager = require('./gameManager.js');
+const cubeCards = require('./cube360.json');
 
 const app = express();
 const server = http.createServer(app);
@@ -21,16 +21,122 @@ const io = new Server(server, {
 
 const PORT = process.env.PORT || 3001;
 
-// Broadcast private+public state to all players in a room
+// Broadcast tailored state to every connected player in a room
 function broadcastRoomState(roomId) {
-  const room = draftManager.getRoom(roomId);
+  const room = gameManager.getRoom(roomId);
   if (!room) return;
 
   for (const player of room.players) {
     if (player.socketId) {
-      const clientState = draftManager.getClientRoomState(room, player.socketId);
+      const clientState = gameManager.getClientState(room, player.socketId);
       io.to(player.socketId).emit('room_state_update', clientState);
     }
+  }
+}
+
+// Manage turn timer for active decision phase
+function startDecisionTimer(roomId) {
+  const room = gameManager.getRoom(roomId);
+  if (!room) return;
+
+  if (room.timerInterval) {
+    clearInterval(room.timerInterval);
+    room.timerInterval = null;
+  }
+
+  if (!room.config.timerSeconds || room.config.timerSeconds <= 0) {
+    return; // Infinite timer
+  }
+
+  room.timerRemaining = room.config.timerSeconds;
+
+  room.timerInterval = setInterval(() => {
+    if (!room || room.status !== 'decision_phase') {
+      clearInterval(room.timerInterval);
+      room.timerInterval = null;
+      return;
+    }
+
+    room.timerRemaining -= 1;
+    io.to(roomId).emit('timer_tick', { timerRemaining: room.timerRemaining });
+
+    if (room.timerRemaining <= 0) {
+      clearInterval(room.timerInterval);
+      room.timerInterval = null;
+
+      // Force-pick Action A for anyone who has not confirmed
+      for (const player of room.players) {
+        if (!player.isReady && player.activePack.length > 0) {
+          player.pendingDecision = {
+            type: 'pick',
+            cardInstanceId: player.activePack[0].instanceId,
+            cardName: player.activePack[0].name
+          };
+          player.isReady = true;
+        }
+      }
+
+      // Trigger resolution phase
+      handleResolutionChain(roomId);
+    }
+  }, 1000);
+}
+
+// Sequentially resolve Priority Swaps in the Getaway Plaza
+function handleResolutionChain(roomId) {
+  const room = gameManager.getRoom(roomId);
+  if (!room) return;
+
+  const res = gameManager.startResolutionPhase(room);
+  broadcastRoomState(roomId);
+
+  processNextResolutionStep(roomId, res);
+}
+
+function processNextResolutionStep(roomId, stepResult) {
+  const room = gameManager.getRoom(roomId);
+  if (!room) return;
+
+  if (!stepResult) {
+    broadcastRoomState(roomId);
+    return;
+  }
+
+  if (stepResult.type === 'swap_resolved') {
+    // Broadcast animated swap event to all players
+    io.to(roomId).emit('swap_animation_event', {
+      playerId: stepResult.player.id,
+      playerName: stepResult.player.name,
+      seatIndex: stepResult.player.seatIndex,
+      offerCard: stepResult.offerCard,
+      plazaCard: stepResult.plazaCard,
+      swapLog: stepResult.swapLog
+    });
+
+    broadcastRoomState(roomId);
+
+    // Wait 1.5s for dramatic animation before resolving next priority player
+    setTimeout(() => {
+      const nextStep = gameManager.stepResolutionQueue(room);
+      processNextResolutionStep(roomId, nextStep);
+    }, 1500);
+  } else if (stepResult.type === 'swap_conflict') {
+    // Notify the conflicting player to choose replacement or normal pick
+    io.to(stepResult.socketId).emit('swap_conflict_prompt', {
+      message: stepResult.message,
+      plaza: room.getawayPlaza
+    });
+    broadcastRoomState(roomId);
+  } else if (stepResult.type === 'pick_step_completed') {
+    io.to(roomId).emit('pick_step_advanced', { pickNumber: stepResult.pickNumber });
+    broadcastRoomState(roomId);
+    startDecisionTimer(roomId);
+  } else if (stepResult.type === 'round_advanced') {
+    io.to(roomId).emit('round_advanced', { round: stepResult.round });
+    broadcastRoomState(roomId);
+  } else if (stepResult.type === 'draft_complete') {
+    io.to(roomId).emit('draft_completed');
+    broadcastRoomState(roomId);
   }
 }
 
@@ -38,7 +144,7 @@ function broadcastRoomState(roomId) {
 app.get('/health', (req, res) => {
   res.json({
     status: 'ok',
-    rooms: draftManager.rooms.size,
+    rooms: gameManager.rooms.size,
     cubeCardsCount: cubeCards.length
   });
 });
@@ -50,12 +156,17 @@ app.get('/api/cube', (req, res) => {
   });
 });
 
+app.get('/api/pack-limits', (req, res) => {
+  const players = parseInt(req.query.players) || 4;
+  res.json(gameManager.getPackLimits(players));
+});
+
 app.post('/api/export-tts', (req, res) => {
   const { picks } = req.body;
   if (!picks || !Array.isArray(picks)) {
     return res.status(400).json({ error: 'Invalid picks list' });
   }
-  const textExport = draftManager.generateTTSExport(picks);
+  const textExport = gameManager.generateTTSExport(picks);
   res.json({
     textExport,
     cardCount: picks.length
@@ -64,117 +175,102 @@ app.post('/api/export-tts', (req, res) => {
 
 // Socket.io Handlers
 io.on('connection', (socket) => {
-  console.log(`[Socket] Connected: ${socket.id}`);
+  console.log(`[Socket] Conectado: ${socket.id}`);
 
   // Create room
   socket.on('create_room', ({ roomId, playerName, options }) => {
     const cleanRoomId = (roomId || Math.random().toString(36).substring(2, 7)).toUpperCase();
-    const room = draftManager.createRoom(cleanRoomId, playerName, socket.id, options);
+    const room = gameManager.createRoom(cleanRoomId, playerName, socket.id, options);
     socket.join(cleanRoomId);
-    console.log(`[Draft] Room created: ${cleanRoomId} by ${playerName || 'Host'}`);
+    console.log(`[Getaway Draft] Sala creada: ${cleanRoomId} por ${playerName}`);
     broadcastRoomState(cleanRoomId);
   });
 
   // Join room
   socket.on('join_room', ({ roomId, playerName }) => {
     const cleanRoomId = (roomId || '').toUpperCase().trim();
-    const result = draftManager.joinRoom(cleanRoomId, playerName, socket.id);
+    const result = gameManager.joinRoom(cleanRoomId, playerName, socket.id);
     if (result.error) {
       return socket.emit('error_notification', { message: result.error });
     }
     socket.join(cleanRoomId);
-    console.log(`[Draft] ${playerName} joined room ${cleanRoomId}`);
+    console.log(`[Getaway Draft] ${playerName} unido a sala ${cleanRoomId}`);
     broadcastRoomState(cleanRoomId);
   });
 
-  // Update room settings (host only)
-  socket.on('update_settings', ({ roomId, options }) => {
-    const result = draftManager.updateSettings(roomId, socket.id, options);
+  // Update room config (Admin only)
+  socket.on('update_config', ({ roomId, config }) => {
+    const result = gameManager.updateConfig(roomId, socket.id, config);
     if (result.error) {
       return socket.emit('error_notification', { message: result.error });
     }
     broadcastRoomState(roomId);
   });
 
-  // Start draft
+  // Start draft (Admin only)
   socket.on('start_draft', ({ roomId }) => {
-    const result = draftManager.startDraft(roomId, socket.id);
+    const result = gameManager.startDraft(roomId, socket.id);
     if (result.error) {
       return socket.emit('error_notification', { message: result.error });
     }
-    console.log(`[Draft] Draft started for room ${roomId}`);
-    io.to(roomId).emit('draft_started_announcement');
+    console.log(`[Getaway Draft] Draft iniciado en sala ${roomId}`);
+    io.to(roomId).emit('draft_started');
     broadcastRoomState(roomId);
   });
 
-  // Interactive Arena Swap mechanic
-  socket.on('swap_with_arena', ({ roomId, cardFromPackInstanceId, cardFromArenaInstanceId }) => {
-    const result = draftManager.swapWithArena(
-      roomId,
-      socket.id,
-      cardFromPackInstanceId,
-      cardFromArenaInstanceId
-    );
-
-    if (result.error) {
-      return socket.emit('swap_error', { message: result.error });
-    }
-
-    // Broadcast arena update to room with visual animation cue
-    io.to(roomId).emit('arena_swapped', {
-      logEntry: result.logEntry,
-      arena: result.arena
-    });
-
-    // Broadcast full customized states so hand and arena stay 100% in sync
-    broadcastRoomState(roomId);
-  });
-
-  // Select tentative pick
-  socket.on('select_pick', ({ roomId, cardInstanceId }) => {
-    const result = draftManager.selectPick(roomId, socket.id, cardInstanceId);
+  // Open booster pack wrapper
+  socket.on('open_pack', ({ roomId }) => {
+    const result = gameManager.openPack(roomId, socket.id);
     if (result.error) {
       return socket.emit('error_notification', { message: result.error });
     }
     broadcastRoomState(roomId);
+    if (result.allOpened) {
+      io.to(roomId).emit('all_packs_opened');
+      startDecisionTimer(roomId);
+    }
   });
 
-  // Lock in pick
-  socket.on('lock_pick', ({ roomId, cardInstanceId }) => {
-    const result = draftManager.lockPick(roomId, socket.id, cardInstanceId);
+  // Submit player decision (Action A: Pick, or Action B: Swap Request)
+  socket.on('submit_decision', ({ roomId, decision }) => {
+    const result = gameManager.submitDecision(roomId, socket.id, decision);
     if (result.error) {
       return socket.emit('error_notification', { message: result.error });
     }
 
-    if (result.allReady && result.rotationResult) {
-      const rot = result.rotationResult;
-      if (rot.type === 'turn_advanced') {
-        io.to(roomId).emit('pick_step_completed', { pickNumber: rot.pickNumber });
-      } else if (rot.type === 'round_advanced') {
-        io.to(roomId).emit('round_advanced', { round: rot.round });
-      } else if (rot.type === 'draft_complete') {
-        io.to(roomId).emit('draft_completed');
-      }
-    }
-
     broadcastRoomState(roomId);
+
+    if (result.allReady) {
+      handleResolutionChain(roomId);
+    }
   });
 
-  // Unlock pick
-  socket.on('unlock_pick', ({ roomId }) => {
-    const result = draftManager.unlockPick(roomId, socket.id);
-    if (result.error) {
-      return socket.emit('error_notification', { message: result.error });
-    }
-    broadcastRoomState(roomId);
+  // Resolve swap conflict (when pre-selected Plaza card was taken by higher priority player)
+  socket.on('resolve_swap_conflict', ({ roomId, resolution }) => {
+    const nextStep = gameManager.resolveSwapConflict(roomId, socket.id, resolution);
+    processNextResolutionStep(roomId, nextStep);
   });
 
   // Disconnect
   socket.on('disconnect', () => {
-    console.log(`[Socket] Disconnected: ${socket.id}`);
-    const removedInfo = draftManager.removePlayer(socket.id);
-    if (removedInfo && !removedInfo.deleted && removedInfo.roomId) {
-      broadcastRoomState(removedInfo.roomId);
+    for (const [roomId, room] of gameManager.rooms.entries()) {
+      const p = room.players.find(player => player.socketId === socket.id);
+      if (p) {
+        if (room.status === 'lobby') {
+          room.players = room.players.filter(player => player.socketId !== socket.id);
+          if (room.players.length === 0) {
+            gameManager.rooms.delete(roomId);
+          } else if (p.isAdmin) {
+            room.players[0].isAdmin = true;
+            room.adminId = room.players[0].socketId;
+          }
+        } else {
+          // If in draft, convert to AI bot so draft continues seamlessly
+          p.isBot = true;
+          p.socketId = null;
+        }
+        broadcastRoomState(roomId);
+      }
     }
   });
 });
@@ -183,7 +279,7 @@ io.on('connection', (socket) => {
 const clientDistPath = path.join(__dirname, '../client/dist');
 app.use(express.static(clientDistPath));
 
-// SPA fallback for all GET requests (compatible with Express 4 & 5)
+// SPA fallback for all GET requests
 app.use((req, res, next) => {
   if (req.method === 'GET' && !req.path.startsWith('/api') && !req.path.startsWith('/health') && !req.path.startsWith('/socket.io')) {
     return res.sendFile(path.join(clientDistPath, 'index.html'));
@@ -192,5 +288,5 @@ app.use((req, res, next) => {
 });
 
 server.listen(PORT, () => {
-  console.log(`MTG Arena Cube Draft Server running on http://localhost:${PORT}`);
+  console.log(`MTG Getaway Draft Server running on http://localhost:${PORT}`);
 });

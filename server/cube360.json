@@ -1,0 +1,6346 @@
+[
+  {
+    "id": "c360_001",
+    "name": "Swords to Plowshares",
+    "cmc": 1,
+    "mana_cost": "{W}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Exile target creature. Its controller gains life equal to its power.",
+    "power": null,
+    "toughness": null,
+    "rarity": "uncommon",
+    "image_url": "https://cards.scryfall.io/normal/front/b/4/b4e9c870-23c0-413a-ae39-265f09da16d1.jpg?1783903243"
+  },
+  {
+    "id": "c360_002",
+    "name": "Path to Exile",
+    "cmc": 1,
+    "mana_cost": "{W}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Exile target creature. Its controller may search their library for a basic land card, put that card onto the battlefield tapped, then shuffle.",
+    "power": null,
+    "toughness": null,
+    "rarity": "uncommon",
+    "image_url": "https://cards.scryfall.io/normal/front/9/5/95ca89ea-1200-4bb4-ae4b-af35d3ccd35b.jpg?1783903242"
+  },
+  {
+    "id": "c360_003",
+    "name": "Esper Sentinel",
+    "cmc": 1,
+    "mana_cost": "{W}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Artifact Creature \u2014 Human Soldier",
+    "oracle_text": "Whenever an opponent casts their first noncreature spell each turn, draw a card unless that player pays {X}, where X is this creature's power.",
+    "power": "1",
+    "toughness": "1",
+    "rarity": "rare",
+    "image_url": "https://cards.scryfall.io/normal/front/f/3/f3537373-ef54-4578-9d05-6216420ee349.jpg?1783926893"
+  },
+  {
+    "id": "c360_004",
+    "name": "Mother of Runes",
+    "cmc": 1,
+    "mana_cost": "{W}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Creature \u2014 Human Cleric",
+    "oracle_text": "{T}: Target creature you control gains protection from the color of your choice until end of turn.",
+    "power": "1",
+    "toughness": "1",
+    "rarity": "uncommon",
+    "image_url": "https://cards.scryfall.io/normal/front/a/5/a5e19147-e459-43a6-8ef0-e37968a462e3.jpg?1783922485"
+  },
+  {
+    "name": "Giver of Runes",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Creature \u2014 Human",
+    "oracle_text": "Card text for Giver of Runes",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Giver%20of%20Runes",
+    "id": "c360_005"
+  },
+  {
+    "name": "Kytheon, Hero of Akros",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Creature \u2014 Human",
+    "oracle_text": "Card text for Kytheon, Hero of Akros",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Kytheon%2C%20Hero%20of%20Akros",
+    "id": "c360_006"
+  },
+  {
+    "name": "Student of Warfare",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Creature \u2014 Human",
+    "oracle_text": "Card text for Student of Warfare",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Student%20of%20Warfare",
+    "id": "c360_007"
+  },
+  {
+    "name": "Thraben Inspector",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Creature \u2014 Human",
+    "oracle_text": "Card text for Thraben Inspector",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Thraben%20Inspector",
+    "id": "c360_008"
+  },
+  {
+    "name": "Usher of the Fallen",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Creature \u2014 Human",
+    "oracle_text": "Card text for Usher of the Fallen",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Usher%20of%20the%20Fallen",
+    "id": "c360_009"
+  },
+  {
+    "name": "Isamaru, Hound of Konda",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Creature \u2014 Human",
+    "oracle_text": "Card text for Isamaru, Hound of Konda",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Isamaru%2C%20Hound%20of%20Konda",
+    "id": "c360_010"
+  },
+  {
+    "name": "Stoneforge Mystic",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Creature \u2014 Human",
+    "oracle_text": "Card text for Stoneforge Mystic",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Stoneforge%20Mystic",
+    "id": "c360_011"
+  },
+  {
+    "name": "Thalia, Guardian of Thraben",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Creature \u2014 Human",
+    "oracle_text": "Card text for Thalia, Guardian of Thraben",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Thalia%2C%20Guardian%20of%20Thraben",
+    "id": "c360_012"
+  },
+  {
+    "name": "Wall of Omens",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Creature \u2014 Human",
+    "oracle_text": "Card text for Wall of Omens",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Wall%20of%20Omens",
+    "id": "c360_013"
+  },
+  {
+    "name": "Selfless Spirit",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Creature \u2014 Human",
+    "oracle_text": "Card text for Selfless Spirit",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Selfless%20Spirit",
+    "id": "c360_014"
+  },
+  {
+    "name": "Containment Priest",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Creature \u2014 Human",
+    "oracle_text": "Card text for Containment Priest",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Containment%20Priest",
+    "id": "c360_015"
+  },
+  {
+    "name": "Cathar Commando",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Creature \u2014 Human",
+    "oracle_text": "Card text for Cathar Commando",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Cathar%20Commando",
+    "id": "c360_016"
+  },
+  {
+    "name": "Lion Sash",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Creature \u2014 Human",
+    "oracle_text": "Card text for Lion Sash",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Lion%20Sash",
+    "id": "c360_017"
+  },
+  {
+    "name": "Intangible Virtue",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Creature \u2014 Human",
+    "oracle_text": "Card text for Intangible Virtue",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Intangible%20Virtue",
+    "id": "c360_018"
+  },
+  {
+    "name": "Honor of the Pure",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Creature \u2014 Human",
+    "oracle_text": "Card text for Honor of the Pure",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Honor%20of%20the%20Pure",
+    "id": "c360_019"
+  },
+  {
+    "name": "Winds of Abandon",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Creature \u2014 Human",
+    "oracle_text": "Card text for Winds of Abandon",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Winds%20of%20Abandon",
+    "id": "c360_020"
+  },
+  {
+    "id": "c360_021",
+    "name": "Adeline, Resplendent Cathar",
+    "cmc": 3,
+    "mana_cost": "{1}{W}{W}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Legendary Creature \u2014 Human Knight",
+    "oracle_text": "Vigilance\nAdeline's power is equal to the number of creatures you control.\nWhenever you attack, for each opponent, create a 1/1 white Human creature token that's tapped and attacking that player or a planeswalker they control.",
+    "power": "*",
+    "toughness": "4",
+    "rarity": "rare",
+    "image_url": "https://cards.scryfall.io/normal/front/1/d/1de30c12-2011-495a-be25-f7a46b23e142.jpg?1783907131"
+  },
+  {
+    "id": "c360_022",
+    "name": "Archangel of Thune",
+    "cmc": 5,
+    "mana_cost": "{3}{W}{W}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Creature \u2014 Angel",
+    "oracle_text": "Flying\nLifelink (Damage dealt by this creature also causes you to gain that much life.)\nWhenever you gain life, put a +1/+1 counter on each creature you control.",
+    "power": "3",
+    "toughness": "4",
+    "rarity": "mythic",
+    "image_url": "https://cards.scryfall.io/normal/front/1/5/15c34447-b0f4-4fcc-b557-23c92850b31b.jpg?1783930222"
+  },
+  {
+    "id": "c360_023",
+    "name": "Gideon of the Trials",
+    "cmc": 3,
+    "mana_cost": "{1}{W}{W}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Legendary Planeswalker \u2014 Gideon",
+    "oracle_text": "+1: Until your next turn, prevent all damage target permanent would deal.\n0: Until end of turn, Gideon becomes a 4/4 Human Soldier creature with indestructible that's still a planeswalker. Prevent all damage that would be dealt to him this turn.\n0: You get an emblem with \"As long as you control a Gideon planeswalker, you can't lose the game and your opponents can't win the game.\"",
+    "power": null,
+    "toughness": null,
+    "rarity": "mythic",
+    "image_url": "https://cards.scryfall.io/normal/front/9/5/959ce13f-519f-4472-bbd1-f26a972723d7.jpg?1783936539"
+  },
+  {
+    "name": "Gideon, Ally of Zendikar",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Creature \u2014 Human",
+    "oracle_text": "Card text for Gideon, Ally of Zendikar",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Gideon%2C%20Ally%20of%20Zendikar",
+    "id": "c360_024"
+  },
+  {
+    "id": "c360_025",
+    "name": "Palace Jailer",
+    "cmc": 4,
+    "mana_cost": "{2}{W}{W}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Creature \u2014 Human Soldier",
+    "oracle_text": "When this creature enters, you become the monarch.\nWhen this creature enters, exile target creature an opponent controls until an opponent becomes the monarch.",
+    "power": "2",
+    "toughness": "2",
+    "rarity": "uncommon",
+    "image_url": "https://cards.scryfall.io/normal/front/3/a/3a8c2a84-e0f2-4611-af3d-42f4578ad4e3.jpg?1783903243"
+  },
+  {
+    "name": "Skyclave Apparition",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Creature \u2014 Human",
+    "oracle_text": "Card text for Skyclave Apparition",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Skyclave%20Apparition",
+    "id": "c360_026"
+  },
+  {
+    "name": "Luminarch Aspirant",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Creature \u2014 Human",
+    "oracle_text": "Card text for Luminarch Aspirant",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Luminarch%20Aspirant",
+    "id": "c360_027"
+  },
+  {
+    "name": "Flickerwisp",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Creature \u2014 Human",
+    "oracle_text": "Card text for Flickerwisp",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Flickerwisp",
+    "id": "c360_028"
+  },
+  {
+    "name": "Monastery Mentor",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Creature \u2014 Human",
+    "oracle_text": "Card text for Monastery Mentor",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Monastery%20Mentor",
+    "id": "c360_029"
+  },
+  {
+    "name": "Serra Paragon",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Creature \u2014 Human",
+    "oracle_text": "Card text for Serra Paragon",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Serra%20Paragon",
+    "id": "c360_030"
+  },
+  {
+    "name": "Sun Titan",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Creature \u2014 Human",
+    "oracle_text": "Card text for Sun Titan",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Sun%20Titan",
+    "id": "c360_031"
+  },
+  {
+    "name": "Elesh Norn, Grand Cenobite",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Creature \u2014 Human",
+    "oracle_text": "Card text for Elesh Norn, Grand Cenobite",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Elesh%20Norn%2C%20Grand%20Cenobite",
+    "id": "c360_032"
+  },
+  {
+    "name": "Elesh Norn, Mother of Machines",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Creature \u2014 Human",
+    "oracle_text": "Card text for Elesh Norn, Mother of Machines",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Elesh%20Norn%2C%20Mother%20of%20Machines",
+    "id": "c360_033"
+  },
+  {
+    "id": "c360_034",
+    "name": "Wrath of God",
+    "cmc": 4,
+    "mana_cost": "{2}{W}{W}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Destroy all creatures. They can't be regenerated.",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://cards.scryfall.io/normal/front/5/3/537d2b05-3f52-45d6-8fe3-26282085d0c6.jpg?1783915706"
+  },
+  {
+    "name": "Day of Judgment",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Creature \u2014 Human",
+    "oracle_text": "Card text for Day of Judgment",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Day%20of%20Judgment",
+    "id": "c360_035"
+  },
+  {
+    "name": "Council's Judgment",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Creature \u2014 Human",
+    "oracle_text": "Card text for Council's Judgment",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Council%27s%20Judgment",
+    "id": "c360_036"
+  },
+  {
+    "id": "c360_037",
+    "name": "Armageddon",
+    "cmc": 4,
+    "mana_cost": "{3}{W}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Destroy all lands.",
+    "power": null,
+    "toughness": null,
+    "rarity": "mythic",
+    "image_url": "https://cards.scryfall.io/normal/front/7/7/77f1f6ac-983f-4f3e-8906-47f774e8367b.jpg?1783935202"
+  },
+  {
+    "name": "Ravages of War",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Creature \u2014 Human",
+    "oracle_text": "Card text for Ravages of War",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Ravages%20of%20War",
+    "id": "c360_038"
+  },
+  {
+    "name": "Spectral Procession",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Creature \u2014 Human",
+    "oracle_text": "Card text for Spectral Procession",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Spectral%20Procession",
+    "id": "c360_039"
+  },
+  {
+    "name": "Lingering Souls",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Creature \u2014 Human",
+    "oracle_text": "Card text for Lingering Souls",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Lingering%20Souls",
+    "id": "c360_040"
+  },
+  {
+    "name": "Oust",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Creature \u2014 Human",
+    "oracle_text": "Card text for Oust",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Oust",
+    "id": "c360_041"
+  },
+  {
+    "name": "Prismatic Ending",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Creature \u2014 Human",
+    "oracle_text": "Card text for Prismatic Ending",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Prismatic%20Ending",
+    "id": "c360_042"
+  },
+  {
+    "name": "Elspeth, Sun's Champion",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Creature \u2014 Human",
+    "oracle_text": "Card text for Elspeth, Sun's Champion",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Elspeth%2C%20Sun%27s%20Champion",
+    "id": "c360_043"
+  },
+  {
+    "name": "Elspeth, Knight-Errant",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Creature \u2014 Human",
+    "oracle_text": "Card text for Elspeth, Knight-Errant",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Elspeth%2C%20Knight-Errant",
+    "id": "c360_044"
+  },
+  {
+    "name": "Restoration Angel",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Creature \u2014 Human",
+    "oracle_text": "Card text for Restoration Angel",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Restoration%20Angel",
+    "id": "c360_045"
+  },
+  {
+    "name": "Baneslayer Angel",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Creature \u2014 Human",
+    "oracle_text": "Card text for Baneslayer Angel",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Baneslayer%20Angel",
+    "id": "c360_046"
+  },
+  {
+    "name": "The Wandering Emperor",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Creature \u2014 Human",
+    "oracle_text": "Card text for The Wandering Emperor",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=The%20Wandering%20Emperor",
+    "id": "c360_047"
+  },
+  {
+    "name": "Solitude",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Creature \u2014 Human",
+    "oracle_text": "Card text for Solitude",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Solitude",
+    "id": "c360_048"
+  },
+  {
+    "name": "Recruiter of the Guard",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Creature \u2014 Human",
+    "oracle_text": "Card text for Recruiter of the Guard",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Recruiter%20of%20the%20Guard",
+    "id": "c360_049"
+  },
+  {
+    "name": "Parallax Wave",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "type_line": "Creature \u2014 Human",
+    "oracle_text": "Card text for Parallax Wave",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Parallax%20Wave",
+    "id": "c360_050"
+  },
+  {
+    "id": "c360_051",
+    "name": "Ancestral Recall",
+    "cmc": 1,
+    "mana_cost": "{U}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Target player draws three cards.",
+    "power": null,
+    "toughness": null,
+    "rarity": "bonus",
+    "image_url": "https://cards.scryfall.io/normal/front/2/3/2398892d-28e9-4009-81ec-0d544af79d2b.jpg?1783939333"
+  },
+  {
+    "id": "c360_052",
+    "name": "Time Walk",
+    "cmc": 2,
+    "mana_cost": "{1}{U}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Take an extra turn after this one.",
+    "power": null,
+    "toughness": null,
+    "rarity": "bonus",
+    "image_url": "https://cards.scryfall.io/normal/front/7/0/70901356-3266-4bd9-aacc-f06c27271de5.jpg?1783939332"
+  },
+  {
+    "id": "c360_053",
+    "name": "Counterspell",
+    "cmc": 2,
+    "mana_cost": "{U}{U}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Counter target spell.",
+    "power": null,
+    "toughness": null,
+    "rarity": "uncommon",
+    "image_url": "https://cards.scryfall.io/normal/front/4/f/4f616706-ec97-4923-bb1e-11a69fbaa1f8.jpg?1783909630"
+  },
+  {
+    "id": "c360_054",
+    "name": "Mana Drain",
+    "cmc": 2,
+    "mana_cost": "{U}{U}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Counter target spell. At the beginning of your next main phase, add an amount of {C} equal to that spell's mana value.",
+    "power": null,
+    "toughness": null,
+    "rarity": "mythic",
+    "image_url": "https://cards.scryfall.io/normal/front/3/c/3c429c40-2389-41e5-8681-4bb274e25eba.jpg?1783921913"
+  },
+  {
+    "id": "c360_055",
+    "name": "Brainstorm",
+    "cmc": 1,
+    "mana_cost": "{U}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Draw three cards, then put two cards from your hand on top of your library in any order.",
+    "power": null,
+    "toughness": null,
+    "rarity": "common",
+    "image_url": "https://cards.scryfall.io/normal/front/b/5/b5545882-6963-4729-b2c6-fb4bdc75ffcc.jpg?1783904806"
+  },
+  {
+    "name": "Ponder",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Ponder",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Ponder",
+    "id": "c360_056"
+  },
+  {
+    "name": "Preordain",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Preordain",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Preordain",
+    "id": "c360_057"
+  },
+  {
+    "id": "c360_058",
+    "name": "Force of Will",
+    "cmc": 5,
+    "mana_cost": "{3}{U}{U}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "You may pay 1 life and exile a blue card from your hand rather than pay this spell's mana cost.\nCounter target spell.",
+    "power": null,
+    "toughness": null,
+    "rarity": "mythic",
+    "image_url": "https://cards.scryfall.io/normal/front/8/9/89f612d6-7c59-4a7b-a87d-45f789e88ba5.jpg?1783918494"
+  },
+  {
+    "name": "Force of Negation",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Force of Negation",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Force%20of%20Negation",
+    "id": "c360_059"
+  },
+  {
+    "name": "Mana Leak",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Mana Leak",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Mana%20Leak",
+    "id": "c360_060"
+  },
+  {
+    "name": "Remand",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Remand",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Remand",
+    "id": "c360_061"
+  },
+  {
+    "id": "c360_062",
+    "name": "Cryptic Command",
+    "cmc": 4,
+    "mana_cost": "{1}{U}{U}{U}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Choose two \u2014\n\u2022 Counter target spell.\n\u2022 Return target permanent to its owner's hand.\n\u2022 Tap all creatures your opponents control.\n\u2022 Draw a card.",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://cards.scryfall.io/normal/front/3/0/30f6fca9-003b-4f6b-9d6e-1e88adda4155.jpg?1783935549"
+  },
+  {
+    "id": "c360_063",
+    "name": "Snapcaster Mage",
+    "cmc": 2,
+    "mana_cost": "{1}{U}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Creature \u2014 Human Wizard",
+    "oracle_text": "Flash\nWhen this creature enters, target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost. (You may cast that card from your graveyard for its flashback cost. Then exile it.)",
+    "power": "2",
+    "toughness": "1",
+    "rarity": "mythic",
+    "image_url": "https://cards.scryfall.io/normal/front/2/2/22b36ad5-bf4d-436a-9c3c-fa4acd0052fe.jpg?1783907976"
+  },
+  {
+    "id": "c360_064",
+    "name": "Jace, the Mind Sculptor",
+    "cmc": 4,
+    "mana_cost": "{2}{U}{U}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Legendary Planeswalker \u2014 Jace",
+    "oracle_text": "+2: Look at the top card of target player's library. You may put that card on the bottom of that player's library.\n0: Draw three cards, then put two cards from your hand on top of your library in any order.\n\u22121: Return target creature to its owner's hand.\n\u221212: Exile all cards from target player's library, then that player shuffles their hand into their library.",
+    "power": null,
+    "toughness": null,
+    "rarity": "mythic",
+    "image_url": "https://cards.scryfall.io/normal/front/c/8/c8817585-0d32-4d56-9142-0d29512e86a9.jpg?1783930196"
+  },
+  {
+    "name": "Jace, Vryn's Prodigy",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Jace, Vryn's Prodigy",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Jace%2C%20Vryn%27s%20Prodigy",
+    "id": "c360_065"
+  },
+  {
+    "id": "c360_066",
+    "name": "Cyclonic Rift",
+    "cmc": 2,
+    "mana_cost": "{1}{U}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Return target nonland permanent you don't control to its owner's hand.\nOverload {6}{U} (You may cast this spell for its overload cost. If you do, change \"target\" in its text to \"each.\")",
+    "power": null,
+    "toughness": null,
+    "rarity": "mythic",
+    "image_url": "https://cards.scryfall.io/normal/front/d/f/dfb7c4b9-f2f4-4d4e-baf2-86551c8150fe.jpg?1783913339"
+  },
+  {
+    "name": "Brazen Borrower",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Brazen Borrower",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Brazen%20Borrower",
+    "id": "c360_067"
+  },
+  {
+    "name": "True-Name Nemesis",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for True-Name Nemesis",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=True-Name%20Nemesis",
+    "id": "c360_068"
+  },
+  {
+    "name": "Vendilion Clique",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Vendilion Clique",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Vendilion%20Clique",
+    "id": "c360_069"
+  },
+  {
+    "name": "Subtlety",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Subtlety",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Subtlety",
+    "id": "c360_070"
+  },
+  {
+    "name": "Murktide Regent",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Murktide Regent",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Murktide%20Regent",
+    "id": "c360_071"
+  },
+  {
+    "name": "Urza, Lord High Artificer",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Urza, Lord High Artificer",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Urza%2C%20Lord%20High%20Artificer",
+    "id": "c360_072"
+  },
+  {
+    "name": "Tinker",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Tinker",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Tinker",
+    "id": "c360_073"
+  },
+  {
+    "name": "Show and Tell",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Show and Tell",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Show%20and%20Tell",
+    "id": "c360_074"
+  },
+  {
+    "name": "Bribery",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Bribery",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Bribery",
+    "id": "c360_075"
+  },
+  {
+    "name": "Treasure Cruise",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Treasure Cruise",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Treasure%20Cruise",
+    "id": "c360_076"
+  },
+  {
+    "name": "Dig Through Time",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Dig Through Time",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Dig%20Through%20Time",
+    "id": "c360_077"
+  },
+  {
+    "name": "Mystical Tutor",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Mystical Tutor",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Mystical%20Tutor",
+    "id": "c360_078"
+  },
+  {
+    "name": "Gitaxian Probe",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Gitaxian Probe",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Gitaxian%20Probe",
+    "id": "c360_079"
+  },
+  {
+    "name": "Mental Misstep",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Mental Misstep",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Mental%20Misstep",
+    "id": "c360_080"
+  },
+  {
+    "name": "Spell Pierce",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Spell Pierce",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Spell%20Pierce",
+    "id": "c360_081"
+  },
+  {
+    "name": "Flusterstorm",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Flusterstorm",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Flusterstorm",
+    "id": "c360_082"
+  },
+  {
+    "name": "Daze",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Daze",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Daze",
+    "id": "c360_083"
+  },
+  {
+    "name": "Misdirection",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Misdirection",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Misdirection",
+    "id": "c360_084"
+  },
+  {
+    "name": "Hullbreacher",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Hullbreacher",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Hullbreacher",
+    "id": "c360_085"
+  },
+  {
+    "name": "Opposition",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Opposition",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Opposition",
+    "id": "c360_086"
+  },
+  {
+    "name": "Upheaval",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Upheaval",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Upheaval",
+    "id": "c360_087"
+  },
+  {
+    "name": "Narset, Parter of Veils",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Narset, Parter of Veils",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Narset%2C%20Parter%20of%20Veils",
+    "id": "c360_088"
+  },
+  {
+    "name": "Tezzeret the Seeker",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Tezzeret the Seeker",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Tezzeret%20the%20Seeker",
+    "id": "c360_089"
+  },
+  {
+    "name": "Thassa's Oracle",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Thassa's Oracle",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Thassa%27s%20Oracle",
+    "id": "c360_090"
+  },
+  {
+    "name": "Phantasmal Image",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Phantasmal Image",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Phantasmal%20Image",
+    "id": "c360_091"
+  },
+  {
+    "name": "Mulldrifter",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Mulldrifter",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Mulldrifter",
+    "id": "c360_092"
+  },
+  {
+    "name": "Consecrated Sphinx",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Consecrated Sphinx",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Consecrated%20Sphinx",
+    "id": "c360_093"
+  },
+  {
+    "name": "Nexus of Fate",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Nexus of Fate",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Nexus%20of%20Fate",
+    "id": "c360_094"
+  },
+  {
+    "name": "Glen Elendra Archmage",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Glen Elendra Archmage",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Glen%20Elendra%20Archmage",
+    "id": "c360_095"
+  },
+  {
+    "name": "Gifts Ungiven",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Gifts Ungiven",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Gifts%20Ungiven",
+    "id": "c360_096"
+  },
+  {
+    "name": "Fact or Fiction",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Fact or Fiction",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Fact%20or%20Fiction",
+    "id": "c360_097"
+  },
+  {
+    "name": "Time Warp",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Time Warp",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Time%20Warp",
+    "id": "c360_098"
+  },
+  {
+    "name": "Pact of Negation",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Pact of Negation",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Pact%20of%20Negation",
+    "id": "c360_099"
+  },
+  {
+    "id": "c360_100",
+    "name": "Dark Ritual",
+    "cmc": 1,
+    "mana_cost": "{B}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Add {B}{B}{B}.",
+    "power": null,
+    "toughness": null,
+    "rarity": "uncommon",
+    "image_url": "https://cards.scryfall.io/normal/front/1/1/11e12a84-e7be-4afc-a230-c2e644743fa8.jpg?1783903013"
+  },
+  {
+    "id": "c360_101",
+    "name": "Demonic Tutor",
+    "cmc": 2,
+    "mana_cost": "{1}{B}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Search your library for a card, put that card into your hand, then shuffle.",
+    "power": null,
+    "toughness": null,
+    "rarity": "mythic",
+    "image_url": "https://cards.scryfall.io/normal/front/a/2/a24b4cb6-cebb-428b-8654-74347a6a8d63.jpg?1783915679"
+  },
+  {
+    "name": "Vampiric Tutor",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Card text for Vampiric Tutor",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Vampiric%20Tutor",
+    "id": "c360_102"
+  },
+  {
+    "id": "c360_103",
+    "name": "Thoughtseize",
+    "cmc": 1,
+    "mana_cost": "{B}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Target player reveals their hand. You choose a nonland card from it. That player discards that card. You lose 2 life.",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://cards.scryfall.io/normal/front/b/2/b281a308-ab6b-47b6-bec7-632c9aaecede.jpg?1783930173"
+  },
+  {
+    "name": "Inquisition of Kozilek",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Card text for Inquisition of Kozilek",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Inquisition%20of%20Kozilek",
+    "id": "c360_104"
+  },
+  {
+    "name": "Duress",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Card text for Duress",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Duress",
+    "id": "c360_105"
+  },
+  {
+    "id": "c360_106",
+    "name": "Reanimate",
+    "cmc": 1,
+    "mana_cost": "{B}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Put target creature card from a graveyard onto the battlefield under your control. You lose life equal to that card's mana value.",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://cards.scryfall.io/normal/front/3/6/368b6903-5fc4-43e7-bd44-46b8107c8bb4.jpg?1783909614"
+  },
+  {
+    "name": "Animate Dead",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Card text for Animate Dead",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Animate%20Dead",
+    "id": "c360_107"
+  },
+  {
+    "name": "Necromancy",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Card text for Necromancy",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Necromancy",
+    "id": "c360_108"
+  },
+  {
+    "id": "c360_109",
+    "name": "Fatal Push",
+    "cmc": 1,
+    "mana_cost": "{B}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Destroy target creature if it has mana value 2 or less.\nRevolt \u2014 Destroy that creature if it has mana value 4 or less instead if a permanent left the battlefield under your control this turn.",
+    "power": null,
+    "toughness": null,
+    "rarity": "uncommon",
+    "image_url": "https://cards.scryfall.io/normal/front/6/e/6e9d8fe4-fd9b-4923-92bf-7dd6b8fa02e7.jpg?1783930180"
+  },
+  {
+    "name": "Snuff Out",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Card text for Snuff Out",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Snuff%20Out",
+    "id": "c360_110"
+  },
+  {
+    "name": "Dismember",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Card text for Dismember",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Dismember",
+    "id": "c360_111"
+  },
+  {
+    "name": "Toxic Deluge",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Card text for Toxic Deluge",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Toxic%20Deluge",
+    "id": "c360_112"
+  },
+  {
+    "id": "c360_113",
+    "name": "Damnation",
+    "cmc": 4,
+    "mana_cost": "{2}{B}{B}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Destroy all creatures. They can't be regenerated.",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://cards.scryfall.io/normal/front/d/3/d3c0aac5-b9f1-4446-bfea-3e1dd1cf1f2f.jpg?1783921909"
+  },
+  {
+    "id": "c360_114",
+    "name": "Necropotence",
+    "cmc": 3,
+    "mana_cost": "{B}{B}{B}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Enchantment",
+    "oracle_text": "Skip your draw step.\nWhenever you discard a card, exile that card from your graveyard.\nPay 1 life: Exile the top card of your library face down. Put that card into your hand at the beginning of your next end step.",
+    "power": null,
+    "toughness": null,
+    "rarity": "mythic",
+    "image_url": "https://cards.scryfall.io/normal/front/c/8/c89c6895-b0f8-444a-9c89-c6b4fd027b3e.jpg?1783935537"
+  },
+  {
+    "id": "c360_115",
+    "name": "Liliana of the Veil",
+    "cmc": 3,
+    "mana_cost": "{1}{B}{B}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Legendary Planeswalker \u2014 Liliana",
+    "oracle_text": "+1: Each player discards a card.\n\u22122: Target player sacrifices a creature.\n\u22126: Separate all permanents target player controls into two piles. That player sacrifices all permanents in the pile of their choice.",
+    "power": null,
+    "toughness": null,
+    "rarity": "mythic",
+    "image_url": "https://cards.scryfall.io/normal/front/e/f/efbb7256-9337-4183-8bda-a419f3f2c501.jpg?1783907977"
+  },
+  {
+    "name": "Liliana, the Last Hope",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Card text for Liliana, the Last Hope",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Liliana%2C%20the%20Last%20Hope",
+    "id": "c360_116"
+  },
+  {
+    "id": "c360_117",
+    "name": "Sheoldred, the Apocalypse",
+    "cmc": 4,
+    "mana_cost": "{2}{B}{B}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Legendary Creature \u2014 Phyrexian Praetor",
+    "oracle_text": "Deathtouch\nWhenever you draw a card, you gain 2 life.\nWhenever an opponent draws a card, they lose 2 life.",
+    "power": "4",
+    "toughness": "5",
+    "rarity": "mythic",
+    "image_url": "https://cards.scryfall.io/normal/front/d/6/d67be074-cdd4-41d9-ac89-0a0456c4e4b2.jpg?1783921327"
+  },
+  {
+    "id": "c360_118",
+    "name": "Vampire Nighthawk",
+    "cmc": 3,
+    "mana_cost": "{1}{B}{B}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Creature \u2014 Vampire Shaman",
+    "oracle_text": "Flying\nDeathtouch (Any amount of damage this deals to a creature is enough to destroy it.)\nLifelink (Damage dealt by this creature also causes you to gain that much life.)",
+    "power": "2",
+    "toughness": "3",
+    "rarity": "uncommon",
+    "image_url": "https://cards.scryfall.io/normal/front/7/a/7aff07f9-9528-4149-9af0-f4e3c66c9dc5.jpg?1787562825"
+  },
+  {
+    "name": "Nighthawk Scavenger",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Card text for Nighthawk Scavenger",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Nighthawk%20Scavenger",
+    "id": "c360_119"
+  },
+  {
+    "name": "Grief",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Card text for Grief",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Grief",
+    "id": "c360_120"
+  },
+  {
+    "name": "Dauthi Voidwalker",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Card text for Dauthi Voidwalker",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Dauthi%20Voidwalker",
+    "id": "c360_121"
+  },
+  {
+    "name": "Dark Confidant",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Card text for Dark Confidant",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Dark%20Confidant",
+    "id": "c360_122"
+  },
+  {
+    "name": "Tourach, Dread Cantor",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Card text for Tourach, Dread Cantor",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Tourach%2C%20Dread%20Cantor",
+    "id": "c360_123"
+  },
+  {
+    "name": "Hypnotic Specter",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Card text for Hypnotic Specter",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Hypnotic%20Specter",
+    "id": "c360_124"
+  },
+  {
+    "name": "Entomb",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Card text for Entomb",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Entomb",
+    "id": "c360_125"
+  },
+  {
+    "name": "Buried Alive",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Card text for Buried Alive",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Buried%20Alive",
+    "id": "c360_126"
+  },
+  {
+    "name": "Living Death",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Card text for Living Death",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Living%20Death",
+    "id": "c360_127"
+  },
+  {
+    "name": "Grave Titan",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Card text for Grave Titan",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Grave%20Titan",
+    "id": "c360_128"
+  },
+  {
+    "name": "Archon of Cruelty",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Card text for Archon of Cruelty",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Archon%20of%20Cruelty",
+    "id": "c360_129"
+  },
+  {
+    "name": "Griselbrand",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Card text for Griselbrand",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Griselbrand",
+    "id": "c360_130"
+  },
+  {
+    "name": "Yawgmoth, Thran Physician",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Card text for Yawgmoth, Thran Physician",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Yawgmoth%2C%20Thran%20Physician",
+    "id": "c360_131"
+  },
+  {
+    "name": "Yawgmoth's Will",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Card text for Yawgmoth's Will",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Yawgmoth%27s%20Will",
+    "id": "c360_132"
+  },
+  {
+    "name": "Tendrils of Agony",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Card text for Tendrils of Agony",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Tendrils%20of%20Agony",
+    "id": "c360_133"
+  },
+  {
+    "name": "Bolas's Citadel",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Card text for Bolas's Citadel",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Bolas%27s%20Citadel",
+    "id": "c360_134"
+  },
+  {
+    "name": "Braids, Cabal Minion",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Card text for Braids, Cabal Minion",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Braids%2C%20Cabal%20Minion",
+    "id": "c360_135"
+  },
+  {
+    "name": "Bitterblossom",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Card text for Bitterblossom",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Bitterblossom",
+    "id": "c360_136"
+  },
+  {
+    "name": "Bloodghast",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Card text for Bloodghast",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Bloodghast",
+    "id": "c360_137"
+  },
+  {
+    "name": "Scrapheap Scrounger",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Card text for Scrapheap Scrounger",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Scrapheap%20Scrounger",
+    "id": "c360_138"
+  },
+  {
+    "name": "Blood Artist",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Card text for Blood Artist",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Blood%20Artist",
+    "id": "c360_139"
+  },
+  {
+    "name": "Zulaport Cutthroat",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Card text for Zulaport Cutthroat",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Zulaport%20Cutthroat",
+    "id": "c360_140"
+  },
+  {
+    "name": "Cut Down",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Card text for Cut Down",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Cut%20Down",
+    "id": "c360_141"
+  },
+  {
+    "name": "Go for the Throat",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Card text for Go for the Throat",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Go%20for%20the%20Throat",
+    "id": "c360_142"
+  },
+  {
+    "name": "Infernal Grasp",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Card text for Infernal Grasp",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Infernal%20Grasp",
+    "id": "c360_143"
+  },
+  {
+    "name": "Hero's Downfall",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Card text for Hero's Downfall",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Hero%27s%20Downfall",
+    "id": "c360_144"
+  },
+  {
+    "name": "Baleful Mastery",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Card text for Baleful Mastery",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Baleful%20Mastery",
+    "id": "c360_145"
+  },
+  {
+    "name": "Languish",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Card text for Languish",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Languish",
+    "id": "c360_146"
+  },
+  {
+    "name": "Kokusho, the Evening Star",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Card text for Kokusho, the Evening Star",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Kokusho%2C%20the%20Evening%20Star",
+    "id": "c360_147"
+  },
+  {
+    "name": "Tainted Pact",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Card text for Tainted Pact",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Tainted%20Pact",
+    "id": "c360_148"
+  },
+  {
+    "name": "Chainer's Edict",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Card text for Chainer's Edict",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Chainer%27s%20Edict",
+    "id": "c360_149"
+  },
+  {
+    "id": "c360_150",
+    "name": "Lightning Bolt",
+    "cmc": 1,
+    "mana_cost": "{R}",
+    "colors": [
+      "R"
+    ],
+    "color_identity": [
+      "R"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+    "power": null,
+    "toughness": null,
+    "rarity": "uncommon",
+    "image_url": "https://cards.scryfall.io/normal/front/7/6/7673784e-db4b-43a1-8d55-1bb9fc1e284f.jpg?1783903008"
+  },
+  {
+    "id": "c360_151",
+    "name": "Ragavan, Nimble Pilferer",
+    "cmc": 1,
+    "mana_cost": "{R}",
+    "colors": [
+      "R"
+    ],
+    "color_identity": [
+      "R"
+    ],
+    "type_line": "Legendary Creature \u2014 Monkey Pirate",
+    "oracle_text": "Whenever Ragavan deals combat damage to a player, create a Treasure token and exile the top card of that player's library. Until end of turn, you may cast that card.\nDash {1}{R} (You may cast this spell for its dash cost. If you do, it gains haste, and it's returned from the battlefield to its owner's hand at the beginning of the next end step.)",
+    "power": "2",
+    "toughness": "1",
+    "rarity": "mythic",
+    "image_url": "https://cards.scryfall.io/normal/front/a/9/a9738cda-adb1-47fb-9f4c-ecd930228c4d.jpg?1783926839"
+  },
+  {
+    "name": "Goblin Guide",
+    "cmc": 1,
+    "mana_cost": "{R}",
+    "colors": [
+      "R"
+    ],
+    "type_line": "Creature \u2014 Goblin Scout",
+    "oracle_text": "Haste. Whenever Goblin Guide attacks, defending player reveals the top card of their library. If it is a land card, that player puts it into their hand.",
+    "power": "2",
+    "toughness": "2",
+    "image_url": "https://cards.scryfall.io/normal/front/3/b/3b0e5411-1940-410f-96ce-6f92513f753a.jpg",
+    "id": "c360_152",
+    "rarity": "rare",
+    "color_identity": [
+      "R"
+    ]
+  },
+  {
+    "name": "Monastery Swiftspear",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "R"
+    ],
+    "color_identity": [
+      "R"
+    ],
+    "type_line": "Creature \u2014 Goblin",
+    "oracle_text": "Card text for Monastery Swiftspear",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Monastery%20Swiftspear",
+    "id": "c360_153"
+  },
+  {
+    "name": "Dragon's Rage Channeler",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "R"
+    ],
+    "color_identity": [
+      "R"
+    ],
+    "type_line": "Creature \u2014 Goblin",
+    "oracle_text": "Card text for Dragon's Rage Channeler",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Dragon%27s%20Rage%20Channeler",
+    "id": "c360_154"
+  },
+  {
+    "name": "Grim Lavamancer",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "R"
+    ],
+    "color_identity": [
+      "R"
+    ],
+    "type_line": "Creature \u2014 Goblin",
+    "oracle_text": "Card text for Grim Lavamancer",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Grim%20Lavamancer",
+    "id": "c360_155"
+  },
+  {
+    "name": "Kumano Faces Kakkazan",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "R"
+    ],
+    "color_identity": [
+      "R"
+    ],
+    "type_line": "Creature \u2014 Goblin",
+    "oracle_text": "Card text for Kumano Faces Kakkazan",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Kumano%20Faces%20Kakkazan",
+    "id": "c360_156"
+  },
+  {
+    "name": "Burst Lightning",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "R"
+    ],
+    "color_identity": [
+      "R"
+    ],
+    "type_line": "Creature \u2014 Goblin",
+    "oracle_text": "Card text for Burst Lightning",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Burst%20Lightning",
+    "id": "c360_157"
+  },
+  {
+    "name": "Unholy Heat",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "R"
+    ],
+    "color_identity": [
+      "R"
+    ],
+    "type_line": "Creature \u2014 Goblin",
+    "oracle_text": "Card text for Unholy Heat",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Unholy%20Heat",
+    "id": "c360_158"
+  },
+  {
+    "name": "Chain Lightning",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "R"
+    ],
+    "color_identity": [
+      "R"
+    ],
+    "type_line": "Creature \u2014 Goblin",
+    "oracle_text": "Card text for Chain Lightning",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Chain%20Lightning",
+    "id": "c360_159"
+  },
+  {
+    "name": "Faithless Looting",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "R"
+    ],
+    "color_identity": [
+      "R"
+    ],
+    "type_line": "Creature \u2014 Goblin",
+    "oracle_text": "Card text for Faithless Looting",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Faithless%20Looting",
+    "id": "c360_160"
+  },
+  {
+    "name": "Young Pyromancer",
+    "cmc": 2,
+    "mana_cost": "{1}{R}",
+    "colors": [
+      "R"
+    ],
+    "type_line": "Creature \u2014 Human Shaman",
+    "oracle_text": "Whenever you cast an instant or sorcery spell, create a 1/1 red Elemental creature token.",
+    "power": "2",
+    "toughness": "1",
+    "image_url": "https://cards.scryfall.io/normal/front/6/8/684b300d-297b-402a-a924-a2123f05d9e4.jpg",
+    "id": "c360_161",
+    "rarity": "rare",
+    "color_identity": [
+      "R"
+    ]
+  },
+  {
+    "name": "Bloodthirsty Adversary",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "R"
+    ],
+    "color_identity": [
+      "R"
+    ],
+    "type_line": "Creature \u2014 Goblin",
+    "oracle_text": "Card text for Bloodthirsty Adversary",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Bloodthirsty%20Adversary",
+    "id": "c360_162"
+  },
+  {
+    "name": "Eidolon of the Great Revel",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "R"
+    ],
+    "color_identity": [
+      "R"
+    ],
+    "type_line": "Creature \u2014 Goblin",
+    "oracle_text": "Card text for Eidolon of the Great Revel",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Eidolon%20of%20the%20Great%20Revel",
+    "id": "c360_163"
+  },
+  {
+    "name": "Robber of the Rich",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "R"
+    ],
+    "color_identity": [
+      "R"
+    ],
+    "type_line": "Creature \u2014 Goblin",
+    "oracle_text": "Card text for Robber of the Rich",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Robber%20of%20the%20Rich",
+    "id": "c360_164"
+  },
+  {
+    "name": "Kari Zev, Skyship Raider",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "R"
+    ],
+    "color_identity": [
+      "R"
+    ],
+    "type_line": "Creature \u2014 Goblin",
+    "oracle_text": "Card text for Kari Zev, Skyship Raider",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Kari%20Zev%2C%20Skyship%20Raider",
+    "id": "c360_165"
+  },
+  {
+    "name": "Earthshaker Khenra",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "R"
+    ],
+    "color_identity": [
+      "R"
+    ],
+    "type_line": "Creature \u2014 Goblin",
+    "oracle_text": "Card text for Earthshaker Khenra",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Earthshaker%20Khenra",
+    "id": "c360_166"
+  },
+  {
+    "name": "Abrade",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "R"
+    ],
+    "color_identity": [
+      "R"
+    ],
+    "type_line": "Creature \u2014 Goblin",
+    "oracle_text": "Card text for Abrade",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Abrade",
+    "id": "c360_167"
+  },
+  {
+    "name": "Incinerate",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "R"
+    ],
+    "color_identity": [
+      "R"
+    ],
+    "type_line": "Creature \u2014 Goblin",
+    "oracle_text": "Card text for Incinerate",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Incinerate",
+    "id": "c360_168"
+  },
+  {
+    "name": "Lightning Strike",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "R"
+    ],
+    "color_identity": [
+      "R"
+    ],
+    "type_line": "Creature \u2014 Goblin",
+    "oracle_text": "Card text for Lightning Strike",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Lightning%20Strike",
+    "id": "c360_169"
+  },
+  {
+    "name": "Blood Moon",
+    "cmc": 3,
+    "mana_cost": "{2}{R}",
+    "colors": [
+      "R"
+    ],
+    "type_line": "Enchantment",
+    "oracle_text": "Nonbasic lands are Mountains.",
+    "image_url": "https://cards.scryfall.io/normal/front/d/0/d072e9ca-aae7-45dc-8025-3ce590bae63f.jpg",
+    "id": "c360_170",
+    "rarity": "rare",
+    "color_identity": [
+      "R"
+    ],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Wheel of Fortune",
+    "cmc": 3,
+    "mana_cost": "{2}{R}",
+    "colors": [
+      "R"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Each player discards their hand, then draws seven cards.",
+    "image_url": "https://cards.scryfall.io/normal/front/2/5/2597050f-6b1b-474e-aa16-33fd154628ca.jpg",
+    "id": "c360_171",
+    "rarity": "rare",
+    "color_identity": [
+      "R"
+    ],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Chaos Warp",
+    "cmc": 3,
+    "mana_cost": "{2}{R}",
+    "colors": [
+      "R"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "The owner of target permanent shuffles it into their library, then reveals the top card of their library. If it is a permanent card, they put it onto the battlefield.",
+    "image_url": "https://cards.scryfall.io/normal/front/0/e/0e71954d-1768-46f9-b883-7c385c7a3601.jpg",
+    "id": "c360_172",
+    "rarity": "rare",
+    "color_identity": [
+      "R"
+    ],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Sulfuric Vortex",
+    "cmc": 3,
+    "mana_cost": "{1}{R}{R}",
+    "colors": [
+      "R"
+    ],
+    "type_line": "Enchantment",
+    "oracle_text": "At the beginning of each player upkeep, Sulfuric Vortex deals 2 damage to that player. Players cannot gain life.",
+    "image_url": "https://cards.scryfall.io/normal/front/0/4/0463e989-ba32-4a46-a82f-e0d6cdf14bc1.jpg",
+    "id": "c360_173",
+    "rarity": "rare",
+    "color_identity": [
+      "R"
+    ],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Guttersnipe",
+    "cmc": 3,
+    "mana_cost": "{2}{R}",
+    "colors": [
+      "R"
+    ],
+    "type_line": "Creature \u2014 Goblin Shaman",
+    "oracle_text": "Whenever you cast an instant or sorcery spell, Guttersnipe deals 2 damage to each opponent.",
+    "power": "2",
+    "toughness": "2",
+    "image_url": "https://cards.scryfall.io/normal/front/9/0/90907737-ad75-48f6-a350-87d4021d79ce.jpg",
+    "id": "c360_174",
+    "rarity": "rare",
+    "color_identity": [
+      "R"
+    ]
+  },
+  {
+    "name": "Seasoned Pyromancer",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "R"
+    ],
+    "color_identity": [
+      "R"
+    ],
+    "type_line": "Creature \u2014 Goblin",
+    "oracle_text": "Card text for Seasoned Pyromancer",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Seasoned%20Pyromancer",
+    "id": "c360_175"
+  },
+  {
+    "name": "Laelia, the Blade Reforged",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "R"
+    ],
+    "color_identity": [
+      "R"
+    ],
+    "type_line": "Creature \u2014 Goblin",
+    "oracle_text": "Card text for Laelia, the Blade Reforged",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Laelia%2C%20the%20Blade%20Reforged",
+    "id": "c360_176"
+  },
+  {
+    "name": "Broadside Bombardiers",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "R"
+    ],
+    "color_identity": [
+      "R"
+    ],
+    "type_line": "Creature \u2014 Goblin",
+    "oracle_text": "Card text for Broadside Bombardiers",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Broadside%20Bombardiers",
+    "id": "c360_177"
+  },
+  {
+    "name": "Goblin Rabblemaster",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "R"
+    ],
+    "color_identity": [
+      "R"
+    ],
+    "type_line": "Creature \u2014 Goblin",
+    "oracle_text": "Card text for Goblin Rabblemaster",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Goblin%20Rabblemaster",
+    "id": "c360_178"
+  },
+  {
+    "name": "Legion Warboss",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "R"
+    ],
+    "color_identity": [
+      "R"
+    ],
+    "type_line": "Creature \u2014 Goblin",
+    "oracle_text": "Card text for Legion Warboss",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Legion%20Warboss",
+    "id": "c360_179"
+  },
+  {
+    "name": "Fable of the Mirror-Breaker",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "R"
+    ],
+    "color_identity": [
+      "R"
+    ],
+    "type_line": "Creature \u2014 Goblin",
+    "oracle_text": "Card text for Fable of the Mirror-Breaker",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Fable%20of%20the%20Mirror-Breaker",
+    "id": "c360_180"
+  },
+  {
+    "name": "Chandra, Torch of Defiance",
+    "cmc": 4,
+    "mana_cost": "{2}{R}{R}",
+    "colors": [
+      "R"
+    ],
+    "type_line": "Legendary Planeswalker \u2014 Chandra",
+    "oracle_text": "+1: Exile top card; you may cast it. +1: Add {R}{R}. -3: Chandra deals 4 damage to target creature. -7: Emblem deals 5 damage.",
+    "image_url": "https://cards.scryfall.io/normal/front/f/f/ff8086cd-b868-4f4e-823e-2635ad7ebc07.jpg",
+    "id": "c360_181",
+    "rarity": "rare",
+    "color_identity": [
+      "R"
+    ],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Chandra, Acolyte of Flame",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "R"
+    ],
+    "color_identity": [
+      "R"
+    ],
+    "type_line": "Creature \u2014 Goblin",
+    "oracle_text": "Card text for Chandra, Acolyte of Flame",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Chandra%2C%20Acolyte%20of%20Flame",
+    "id": "c360_182"
+  },
+  {
+    "name": "Hellrider",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "R"
+    ],
+    "color_identity": [
+      "R"
+    ],
+    "type_line": "Creature \u2014 Goblin",
+    "oracle_text": "Card text for Hellrider",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Hellrider",
+    "id": "c360_183"
+  },
+  {
+    "name": "Hazoret the Fervent",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "R"
+    ],
+    "color_identity": [
+      "R"
+    ],
+    "type_line": "Creature \u2014 Goblin",
+    "oracle_text": "Card text for Hazoret the Fervent",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Hazoret%20the%20Fervent",
+    "id": "c360_184"
+  },
+  {
+    "name": "Rekindling Phoenix",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "R"
+    ],
+    "color_identity": [
+      "R"
+    ],
+    "type_line": "Creature \u2014 Goblin",
+    "oracle_text": "Card text for Rekindling Phoenix",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Rekindling%20Phoenix",
+    "id": "c360_185"
+  },
+  {
+    "name": "Fury",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "R"
+    ],
+    "color_identity": [
+      "R"
+    ],
+    "type_line": "Creature \u2014 Goblin",
+    "oracle_text": "Card text for Fury",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Fury",
+    "id": "c360_186"
+  },
+  {
+    "name": "Glorybringer",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "R"
+    ],
+    "color_identity": [
+      "R"
+    ],
+    "type_line": "Creature \u2014 Goblin",
+    "oracle_text": "Card text for Glorybringer",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Glorybringer",
+    "id": "c360_187"
+  },
+  {
+    "name": "Goldspan Dragon",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "R"
+    ],
+    "color_identity": [
+      "R"
+    ],
+    "type_line": "Creature \u2014 Goblin",
+    "oracle_text": "Card text for Goldspan Dragon",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Goldspan%20Dragon",
+    "id": "c360_188"
+  },
+  {
+    "name": "Inferno Titan",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "R"
+    ],
+    "color_identity": [
+      "R"
+    ],
+    "type_line": "Creature \u2014 Goblin",
+    "oracle_text": "Card text for Inferno Titan",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Inferno%20Titan",
+    "id": "c360_189"
+  },
+  {
+    "name": "Sneak Attack",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "R"
+    ],
+    "color_identity": [
+      "R"
+    ],
+    "type_line": "Creature \u2014 Goblin",
+    "oracle_text": "Card text for Sneak Attack",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Sneak%20Attack",
+    "id": "c360_190"
+  },
+  {
+    "name": "Through the Breach",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "R"
+    ],
+    "color_identity": [
+      "R"
+    ],
+    "type_line": "Creature \u2014 Goblin",
+    "oracle_text": "Card text for Through the Breach",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Through%20the%20Breach",
+    "id": "c360_191"
+  },
+  {
+    "name": "Underworld Breach",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "R"
+    ],
+    "color_identity": [
+      "R"
+    ],
+    "type_line": "Creature \u2014 Goblin",
+    "oracle_text": "Card text for Underworld Breach",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Underworld%20Breach",
+    "id": "c360_192"
+  },
+  {
+    "name": "Past in Flames",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "R"
+    ],
+    "color_identity": [
+      "R"
+    ],
+    "type_line": "Creature \u2014 Goblin",
+    "oracle_text": "Card text for Past in Flames",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Past%20in%20Flames",
+    "id": "c360_193"
+  },
+  {
+    "name": "Empty the Warrens",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "R"
+    ],
+    "color_identity": [
+      "R"
+    ],
+    "type_line": "Creature \u2014 Goblin",
+    "oracle_text": "Card text for Empty the Warrens",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Empty%20the%20Warrens",
+    "id": "c360_194"
+  },
+  {
+    "name": "Fiery Confluence",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "R"
+    ],
+    "color_identity": [
+      "R"
+    ],
+    "type_line": "Creature \u2014 Goblin",
+    "oracle_text": "Card text for Fiery Confluence",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Fiery%20Confluence",
+    "id": "c360_195"
+  },
+  {
+    "name": "Sweltering Suns",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "R"
+    ],
+    "color_identity": [
+      "R"
+    ],
+    "type_line": "Creature \u2014 Goblin",
+    "oracle_text": "Card text for Sweltering Suns",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Sweltering%20Suns",
+    "id": "c360_196"
+  },
+  {
+    "name": "Anger of the Gods",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "R"
+    ],
+    "color_identity": [
+      "R"
+    ],
+    "type_line": "Creature \u2014 Goblin",
+    "oracle_text": "Card text for Anger of the Gods",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Anger%20of%20the%20Gods",
+    "id": "c360_197"
+  },
+  {
+    "name": "Blasphemous Act",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "R"
+    ],
+    "color_identity": [
+      "R"
+    ],
+    "type_line": "Creature \u2014 Goblin",
+    "oracle_text": "Card text for Blasphemous Act",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Blasphemous%20Act",
+    "id": "c360_198"
+  },
+  {
+    "name": "Pyretic Ritual",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "R"
+    ],
+    "color_identity": [
+      "R"
+    ],
+    "type_line": "Creature \u2014 Goblin",
+    "oracle_text": "Card text for Pyretic Ritual",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Pyretic%20Ritual",
+    "id": "c360_199"
+  },
+  {
+    "name": "Birds of Paradise",
+    "cmc": 1,
+    "mana_cost": "{G}",
+    "colors": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Bird",
+    "oracle_text": "Flying. {T}: Add one mana of any color.",
+    "power": "0",
+    "toughness": "1",
+    "image_url": "https://cards.scryfall.io/normal/front/f/e/feefe9f0-24a6-461c-9ef1-86c5a6f33b83.jpg",
+    "id": "c360_200",
+    "rarity": "rare",
+    "color_identity": [
+      "G"
+    ]
+  },
+  {
+    "name": "Llanowar Elves",
+    "cmc": 1,
+    "mana_cost": "{G}",
+    "colors": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Elf Druid",
+    "oracle_text": "{T}: Add {G}.",
+    "power": "1",
+    "toughness": "1",
+    "image_url": "https://cards.scryfall.io/normal/front/8/b/8bbcfb77-daa1-4ce5-b5f9-48d0a8edbba9.jpg",
+    "id": "c360_201",
+    "rarity": "rare",
+    "color_identity": [
+      "G"
+    ]
+  },
+  {
+    "name": "Fyndhorn Elves",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "G"
+    ],
+    "color_identity": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Elf",
+    "oracle_text": "Card text for Fyndhorn Elves",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Fyndhorn%20Elves",
+    "id": "c360_202"
+  },
+  {
+    "name": "Elvish Mystic",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "G"
+    ],
+    "color_identity": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Elf",
+    "oracle_text": "Card text for Elvish Mystic",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Elvish%20Mystic",
+    "id": "c360_203"
+  },
+  {
+    "name": "Noble Hierarch",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "G"
+    ],
+    "color_identity": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Elf",
+    "oracle_text": "Card text for Noble Hierarch",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Noble%20Hierarch",
+    "id": "c360_204"
+  },
+  {
+    "name": "Ignoble Hierarch",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "G"
+    ],
+    "color_identity": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Elf",
+    "oracle_text": "Card text for Ignoble Hierarch",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Ignoble%20Hierarch",
+    "id": "c360_205"
+  },
+  {
+    "name": "Joraga Treespeaker",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "G"
+    ],
+    "color_identity": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Elf",
+    "oracle_text": "Card text for Joraga Treespeaker",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Joraga%20Treespeaker",
+    "id": "c360_206"
+  },
+  {
+    "name": "Arbor Elf",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "G"
+    ],
+    "color_identity": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Elf",
+    "oracle_text": "Card text for Arbor Elf",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Arbor%20Elf",
+    "id": "c360_207"
+  },
+  {
+    "name": "Delighted Halfling",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "G"
+    ],
+    "color_identity": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Elf",
+    "oracle_text": "Card text for Delighted Halfling",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Delighted%20Halfling",
+    "id": "c360_208"
+  },
+  {
+    "name": "Green Sun's Zenith",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "G"
+    ],
+    "color_identity": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Elf",
+    "oracle_text": "Card text for Green Sun's Zenith",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Green%20Sun%27s%20Zenith",
+    "id": "c360_209"
+  },
+  {
+    "name": "Tarmogoyf",
+    "cmc": 2,
+    "mana_cost": "{1}{G}",
+    "colors": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Lhurgoyf",
+    "oracle_text": "Power is equal to card types in all graveyards, toughness is that number + 1.",
+    "power": "*",
+    "toughness": "1+*",
+    "image_url": "https://cards.scryfall.io/normal/front/6/9/69dabc76-3002-442a-9f92-5875fc2f7375.jpg",
+    "id": "c360_210",
+    "rarity": "rare",
+    "color_identity": [
+      "G"
+    ]
+  },
+  {
+    "name": "Scavenging Ooze",
+    "cmc": 2,
+    "mana_cost": "{1}{G}",
+    "colors": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Ooze",
+    "oracle_text": "{G}: Exile card from graveyard. If creature, +1/+1 counter and gain 1 life.",
+    "power": "2",
+    "toughness": "2",
+    "image_url": "https://cards.scryfall.io/normal/front/6/7/67d93e17-b3f9-4211-977c-7a93144a1eb6.jpg",
+    "id": "c360_211",
+    "rarity": "rare",
+    "color_identity": [
+      "G"
+    ]
+  },
+  {
+    "name": "Sylvan Library",
+    "cmc": 2,
+    "mana_cost": "{1}{G}",
+    "colors": [
+      "G"
+    ],
+    "type_line": "Enchantment",
+    "oracle_text": "Draw two extra cards in draw step. Pay 4 life or put each back.",
+    "image_url": "https://cards.scryfall.io/normal/front/7/a/7a483778-b88b-473f-9217-7583e69b3e70.jpg",
+    "id": "c360_212",
+    "rarity": "rare",
+    "color_identity": [
+      "G"
+    ],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Wall of Roots",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "G"
+    ],
+    "color_identity": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Elf",
+    "oracle_text": "Card text for Wall of Roots",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Wall%20of%20Roots",
+    "id": "c360_213"
+  },
+  {
+    "name": "Sakura-Tribe Elder",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "G"
+    ],
+    "color_identity": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Elf",
+    "oracle_text": "Card text for Sakura-Tribe Elder",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Sakura-Tribe%20Elder",
+    "id": "c360_214"
+  },
+  {
+    "name": "Fauna Shaman",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "G"
+    ],
+    "color_identity": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Elf",
+    "oracle_text": "Card text for Fauna Shaman",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Fauna%20Shaman",
+    "id": "c360_215"
+  },
+  {
+    "name": "Lotus Cobra",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "G"
+    ],
+    "color_identity": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Elf",
+    "oracle_text": "Card text for Lotus Cobra",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Lotus%20Cobra",
+    "id": "c360_216"
+  },
+  {
+    "name": "Survival of the Fittest",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "G"
+    ],
+    "color_identity": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Elf",
+    "oracle_text": "Card text for Survival of the Fittest",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Survival%20of%20the%20Fittest",
+    "id": "c360_217"
+  },
+  {
+    "name": "Eternal Witness",
+    "cmc": 3,
+    "mana_cost": "{1}{G}{G}",
+    "colors": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Human Shaman",
+    "oracle_text": "When Eternal Witness enters the battlefield, return target card from graveyard to hand.",
+    "power": "2",
+    "toughness": "1",
+    "image_url": "https://cards.scryfall.io/normal/front/3/9/39704000-65d3-4d39-849e-a3b617376ba7.jpg",
+    "id": "c360_218",
+    "rarity": "rare",
+    "color_identity": [
+      "G"
+    ]
+  },
+  {
+    "name": "Cultivate",
+    "cmc": 3,
+    "mana_cost": "{2}{G}",
+    "colors": [
+      "G"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Search library for two basic lands, one tapped to field, other to hand.",
+    "image_url": "https://cards.scryfall.io/normal/front/8/5/857d1f57-8d45-4929-9e8c-572797e87ce6.jpg",
+    "id": "c360_219",
+    "rarity": "rare",
+    "color_identity": [
+      "G"
+    ],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Kodama's Reach",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "G"
+    ],
+    "color_identity": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Elf",
+    "oracle_text": "Card text for Kodama's Reach",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Kodama%27s%20Reach",
+    "id": "c360_220"
+  },
+  {
+    "name": "Tireless Tracker",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "G"
+    ],
+    "color_identity": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Elf",
+    "oracle_text": "Card text for Tireless Tracker",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Tireless%20Tracker",
+    "id": "c360_221"
+  },
+  {
+    "name": "Courser of Kruphix",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "G"
+    ],
+    "color_identity": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Elf",
+    "oracle_text": "Card text for Courser of Kruphix",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Courser%20of%20Kruphix",
+    "id": "c360_222"
+  },
+  {
+    "name": "Augur of Autumn",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "G"
+    ],
+    "color_identity": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Elf",
+    "oracle_text": "Card text for Augur of Autumn",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Augur%20of%20Autumn",
+    "id": "c360_223"
+  },
+  {
+    "name": "Endurance",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "G"
+    ],
+    "color_identity": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Elf",
+    "oracle_text": "Card text for Endurance",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Endurance",
+    "id": "c360_224"
+  },
+  {
+    "name": "Questing Beast",
+    "cmc": 4,
+    "mana_cost": "{2}{G}{G}",
+    "colors": [
+      "G"
+    ],
+    "type_line": "Legendary Creature \u2014 Beast",
+    "oracle_text": "Vigilance, deathtouch, haste. Cannot be blocked by power 2 or less.",
+    "power": "4",
+    "toughness": "4",
+    "image_url": "https://cards.scryfall.io/normal/front/e/4/e41cf82d-3213-47ce-a015-6e51a8b07e4f.jpg",
+    "id": "c360_225",
+    "rarity": "rare",
+    "color_identity": [
+      "G"
+    ]
+  },
+  {
+    "name": "Esika's Chariot",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "G"
+    ],
+    "color_identity": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Elf",
+    "oracle_text": "Card text for Esika's Chariot",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Esika%27s%20Chariot",
+    "id": "c360_226"
+  },
+  {
+    "name": "Thrun, the Last Troll",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "G"
+    ],
+    "color_identity": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Elf",
+    "oracle_text": "Card text for Thrun, the Last Troll",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Thrun%2C%20the%20Last%20Troll",
+    "id": "c360_227"
+  },
+  {
+    "name": "Oracle of Mul Daya",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "G"
+    ],
+    "color_identity": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Elf",
+    "oracle_text": "Card text for Oracle of Mul Daya",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Oracle%20of%20Mul%20Daya",
+    "id": "c360_228"
+  },
+  {
+    "name": "Master of the Wild Hunt",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "G"
+    ],
+    "color_identity": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Elf",
+    "oracle_text": "Card text for Master of the Wild Hunt",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Master%20of%20the%20Wild%20Hunt",
+    "id": "c360_229"
+  },
+  {
+    "name": "Deranged Hermit",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "G"
+    ],
+    "color_identity": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Elf",
+    "oracle_text": "Card text for Deranged Hermit",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Deranged%20Hermit",
+    "id": "c360_230"
+  },
+  {
+    "name": "Deep Forest Hermit",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "G"
+    ],
+    "color_identity": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Elf",
+    "oracle_text": "Card text for Deep Forest Hermit",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Deep%20Forest%20Hermit",
+    "id": "c360_231"
+  },
+  {
+    "name": "Titania, Protector of Argoth",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "G"
+    ],
+    "color_identity": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Elf",
+    "oracle_text": "Card text for Titania, Protector of Argoth",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Titania%2C%20Protector%20of%20Argoth",
+    "id": "c360_232"
+  },
+  {
+    "name": "Primeval Titan",
+    "cmc": 6,
+    "mana_cost": "{4}{G}{G}",
+    "colors": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Giant",
+    "oracle_text": "Trample. Enters or attacks: search for two lands onto battlefield tapped.",
+    "power": "6",
+    "toughness": "6",
+    "image_url": "https://cards.scryfall.io/normal/front/6/d/6d5537da-112e-4679-a113-b5d7ce32a66b.jpg",
+    "id": "c360_233",
+    "rarity": "rare",
+    "color_identity": [
+      "G"
+    ]
+  },
+  {
+    "name": "Carnage Tyrant",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "G"
+    ],
+    "color_identity": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Elf",
+    "oracle_text": "Card text for Carnage Tyrant",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Carnage%20Tyrant",
+    "id": "c360_234"
+  },
+  {
+    "name": "Craterhoof Behemoth",
+    "cmc": 8,
+    "mana_cost": "{5}{G}{G}{G}",
+    "colors": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Beast",
+    "oracle_text": "Haste. Creatures gain trample and +X/+X where X is creature count.",
+    "power": "5",
+    "toughness": "5",
+    "image_url": "https://cards.scryfall.io/normal/front/e/8/e8f44368-12d8-44e1-b903-887184ef9752.jpg",
+    "id": "c360_235",
+    "rarity": "rare",
+    "color_identity": [
+      "G"
+    ]
+  },
+  {
+    "name": "Woodfall Primus",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "G"
+    ],
+    "color_identity": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Elf",
+    "oracle_text": "Card text for Woodfall Primus",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Woodfall%20Primus",
+    "id": "c360_236"
+  },
+  {
+    "name": "Terastodon",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "G"
+    ],
+    "color_identity": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Elf",
+    "oracle_text": "Card text for Terastodon",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Terastodon",
+    "id": "c360_237"
+  },
+  {
+    "name": "Worldspine Wurm",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "G"
+    ],
+    "color_identity": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Elf",
+    "oracle_text": "Card text for Worldspine Wurm",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Worldspine%20Wurm",
+    "id": "c360_238"
+  },
+  {
+    "name": "Fastbond",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "G"
+    ],
+    "color_identity": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Elf",
+    "oracle_text": "Card text for Fastbond",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Fastbond",
+    "id": "c360_239"
+  },
+  {
+    "name": "Channel",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "G"
+    ],
+    "color_identity": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Elf",
+    "oracle_text": "Card text for Channel",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Channel",
+    "id": "c360_240"
+  },
+  {
+    "name": "Natural Order",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "G"
+    ],
+    "color_identity": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Elf",
+    "oracle_text": "Card text for Natural Order",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Natural%20Order",
+    "id": "c360_241"
+  },
+  {
+    "name": "Tooth and Nail",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "G"
+    ],
+    "color_identity": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Elf",
+    "oracle_text": "Card text for Tooth and Nail",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Tooth%20and%20Nail",
+    "id": "c360_242"
+  },
+  {
+    "name": "Garruk Wildspeaker",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "G"
+    ],
+    "color_identity": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Elf",
+    "oracle_text": "Card text for Garruk Wildspeaker",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Garruk%20Wildspeaker",
+    "id": "c360_243"
+  },
+  {
+    "name": "Garruk, Primal Hunter",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "G"
+    ],
+    "color_identity": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Elf",
+    "oracle_text": "Card text for Garruk, Primal Hunter",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Garruk%2C%20Primal%20Hunter",
+    "id": "c360_244"
+  },
+  {
+    "name": "Vivien, Monsters' Advocate",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "G"
+    ],
+    "color_identity": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Elf",
+    "oracle_text": "Card text for Vivien, Monsters' Advocate",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Vivien%2C%20Monsters%27%20Advocate",
+    "id": "c360_245"
+  },
+  {
+    "name": "Nissa, Who Shakes the World",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "G"
+    ],
+    "color_identity": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Elf",
+    "oracle_text": "Card text for Nissa, Who Shakes the World",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Nissa%2C%20Who%20Shakes%20the%20World",
+    "id": "c360_246"
+  },
+  {
+    "name": "Scapeshift",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "G"
+    ],
+    "color_identity": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Elf",
+    "oracle_text": "Card text for Scapeshift",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Scapeshift",
+    "id": "c360_247"
+  },
+  {
+    "name": "Life from the Loam",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "G"
+    ],
+    "color_identity": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Elf",
+    "oracle_text": "Card text for Life from the Loam",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Life%20from%20the%20Loam",
+    "id": "c360_248"
+  },
+  {
+    "name": "Regrowth",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "G"
+    ],
+    "color_identity": [
+      "G"
+    ],
+    "type_line": "Creature \u2014 Elf",
+    "oracle_text": "Card text for Regrowth",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Regrowth",
+    "id": "c360_249"
+  },
+  {
+    "name": "Teferi, Hero of Dominaria",
+    "cmc": 5,
+    "mana_cost": "{3}{W}{U}",
+    "colors": [
+      "W",
+      "U"
+    ],
+    "type_line": "Legendary Planeswalker \u2014 Teferi",
+    "oracle_text": "+1: Draw card, untap two lands. -3: Tuck nonland permanent. -8: Emblem.",
+    "image_url": "https://cards.scryfall.io/normal/front/5/d/5d10b752-d9cb-419d-a5c4-d4ee1acb655e.jpg",
+    "id": "c360_250",
+    "rarity": "rare",
+    "color_identity": [
+      "W",
+      "U"
+    ],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Teferi, Time Raveler",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U",
+      "R"
+    ],
+    "color_identity": [
+      "U",
+      "R"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Teferi, Time Raveler",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Teferi%2C%20Time%20Raveler",
+    "id": "c360_251"
+  },
+  {
+    "name": "Geist of Saint Traft",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U",
+      "R"
+    ],
+    "color_identity": [
+      "U",
+      "R"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Geist of Saint Traft",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Geist%20of%20Saint%20Traft",
+    "id": "c360_252"
+  },
+  {
+    "name": "Fractured Identity",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U",
+      "R"
+    ],
+    "color_identity": [
+      "U",
+      "R"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Fractured Identity",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Fractured%20Identity",
+    "id": "c360_253"
+  },
+  {
+    "name": "No More Lies",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U",
+      "R"
+    ],
+    "color_identity": [
+      "U",
+      "R"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for No More Lies",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=No%20More%20Lies",
+    "id": "c360_254"
+  },
+  {
+    "name": "Psychatog",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U",
+      "R"
+    ],
+    "color_identity": [
+      "U",
+      "R"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Psychatog",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Psychatog",
+    "id": "c360_255"
+  },
+  {
+    "name": "Baleful Strix",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U",
+      "R"
+    ],
+    "color_identity": [
+      "U",
+      "R"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Baleful Strix",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Baleful%20Strix",
+    "id": "c360_256"
+  },
+  {
+    "name": "Ashiok, Nightmare Weaver",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U",
+      "R"
+    ],
+    "color_identity": [
+      "U",
+      "R"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Ashiok, Nightmare Weaver",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Ashiok%2C%20Nightmare%20Weaver",
+    "id": "c360_257"
+  },
+  {
+    "name": "Drown in the Loch",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U",
+      "R"
+    ],
+    "color_identity": [
+      "U",
+      "R"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Drown in the Loch",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Drown%20in%20the%20Loch",
+    "id": "c360_258"
+  },
+  {
+    "name": "Shadowmage Infiltrator",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U",
+      "R"
+    ],
+    "color_identity": [
+      "U",
+      "R"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Shadowmage Infiltrator",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Shadowmage%20Infiltrator",
+    "id": "c360_259"
+  },
+  {
+    "name": "Kolaghan's Command",
+    "cmc": 3,
+    "mana_cost": "{1}{B}{R}",
+    "colors": [
+      "B",
+      "R"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Choose two: Return creature; Target discards; Destroy artifact; 2 damage.",
+    "image_url": "https://cards.scryfall.io/normal/front/a/0/a0dab027-a475-4823-b00d-b6774b079897.jpg",
+    "id": "c360_260",
+    "rarity": "rare",
+    "color_identity": [
+      "B",
+      "R"
+    ],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Kroxa, Titan of Death's Hunger",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U",
+      "R"
+    ],
+    "color_identity": [
+      "U",
+      "R"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Kroxa, Titan of Death's Hunger",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Kroxa%2C%20Titan%20of%20Death%27s%20Hunger",
+    "id": "c360_261"
+  },
+  {
+    "name": "Terminate",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U",
+      "R"
+    ],
+    "color_identity": [
+      "U",
+      "R"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Terminate",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Terminate",
+    "id": "c360_262"
+  },
+  {
+    "name": "Dreadbore",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U",
+      "R"
+    ],
+    "color_identity": [
+      "U",
+      "R"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Dreadbore",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Dreadbore",
+    "id": "c360_263"
+  },
+  {
+    "name": "Daretti, Ingenious Iconoclast",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U",
+      "R"
+    ],
+    "color_identity": [
+      "U",
+      "R"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Daretti, Ingenious Iconoclast",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Daretti%2C%20Ingenious%20Iconoclast",
+    "id": "c360_264"
+  },
+  {
+    "name": "Bloodbraid Elf",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U",
+      "R"
+    ],
+    "color_identity": [
+      "U",
+      "R"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Bloodbraid Elf",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Bloodbraid%20Elf",
+    "id": "c360_265"
+  },
+  {
+    "name": "Wrenn and Six",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U",
+      "R"
+    ],
+    "color_identity": [
+      "U",
+      "R"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Wrenn and Six",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Wrenn%20and%20Six",
+    "id": "c360_266"
+  },
+  {
+    "name": "Minsc & Boo, Timeless Heroes",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U",
+      "R"
+    ],
+    "color_identity": [
+      "U",
+      "R"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Minsc & Boo, Timeless Heroes",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Minsc%20%26%20Boo%2C%20Timeless%20Heroes",
+    "id": "c360_267"
+  },
+  {
+    "name": "Managorger Hydra",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U",
+      "R"
+    ],
+    "color_identity": [
+      "U",
+      "R"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Managorger Hydra",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Managorger%20Hydra",
+    "id": "c360_268"
+  },
+  {
+    "name": "Atarka's Command",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U",
+      "R"
+    ],
+    "color_identity": [
+      "U",
+      "R"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Atarka's Command",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Atarka%27s%20Command",
+    "id": "c360_269"
+  },
+  {
+    "name": "Kitchen Finks",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U",
+      "R"
+    ],
+    "color_identity": [
+      "U",
+      "R"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Kitchen Finks",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Kitchen%20Finks",
+    "id": "c360_270"
+  },
+  {
+    "name": "Knight of the Reliquary",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U",
+      "R"
+    ],
+    "color_identity": [
+      "U",
+      "R"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Knight of the Reliquary",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Knight%20of%20the%20Reliquary",
+    "id": "c360_271"
+  },
+  {
+    "name": "Gaddock Teeg",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U",
+      "R"
+    ],
+    "color_identity": [
+      "U",
+      "R"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Gaddock Teeg",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Gaddock%20Teeg",
+    "id": "c360_272"
+  },
+  {
+    "name": "Eladamri's Call",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U",
+      "R"
+    ],
+    "color_identity": [
+      "U",
+      "R"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Eladamri's Call",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Eladamri%27s%20Call",
+    "id": "c360_273"
+  },
+  {
+    "name": "Voice of Resurgence",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U",
+      "R"
+    ],
+    "color_identity": [
+      "U",
+      "R"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Voice of Resurgence",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Voice%20of%20Resurgence",
+    "id": "c360_274"
+  },
+  {
+    "name": "Kaya, Ghost Assassin",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U",
+      "R"
+    ],
+    "color_identity": [
+      "U",
+      "R"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Kaya, Ghost Assassin",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Kaya%2C%20Ghost%20Assassin",
+    "id": "c360_275"
+  },
+  {
+    "name": "Vindicate",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U",
+      "R"
+    ],
+    "color_identity": [
+      "U",
+      "R"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Vindicate",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Vindicate",
+    "id": "c360_276"
+  },
+  {
+    "name": "Sorin, Solemn Visitor",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U",
+      "R"
+    ],
+    "color_identity": [
+      "U",
+      "R"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Sorin, Solemn Visitor",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Sorin%2C%20Solemn%20Visitor",
+    "id": "c360_277"
+  },
+  {
+    "name": "Tidehollow Sculler",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U",
+      "R"
+    ],
+    "color_identity": [
+      "U",
+      "R"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Tidehollow Sculler",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Tidehollow%20Sculler",
+    "id": "c360_278"
+  },
+  {
+    "name": "Dack Fayden",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U",
+      "R"
+    ],
+    "color_identity": [
+      "U",
+      "R"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Dack Fayden",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Dack%20Fayden",
+    "id": "c360_279"
+  },
+  {
+    "name": "Expressive Iteration",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U",
+      "R"
+    ],
+    "color_identity": [
+      "U",
+      "R"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Expressive Iteration",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Expressive%20Iteration",
+    "id": "c360_280"
+  },
+  {
+    "name": "Izzet Charm",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U",
+      "R"
+    ],
+    "color_identity": [
+      "U",
+      "R"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Izzet Charm",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Izzet%20Charm",
+    "id": "c360_281"
+  },
+  {
+    "name": "Electrolyze",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U",
+      "R"
+    ],
+    "color_identity": [
+      "U",
+      "R"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Electrolyze",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Electrolyze",
+    "id": "c360_282"
+  },
+  {
+    "name": "Prismari Command",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U",
+      "R"
+    ],
+    "color_identity": [
+      "U",
+      "R"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Prismari Command",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Prismari%20Command",
+    "id": "c360_283"
+  },
+  {
+    "name": "Assassin's Trophy",
+    "cmc": 2,
+    "mana_cost": "{B}{G}",
+    "colors": [
+      "B",
+      "G"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Destroy target permanent an opponent controls. They may search for basic land.",
+    "image_url": "https://cards.scryfall.io/normal/front/9/0/90e47429-a509-42db-84de-40c47e39a4c2.jpg",
+    "id": "c360_284",
+    "rarity": "rare",
+    "color_identity": [
+      "B",
+      "G"
+    ],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Abrupt Decay",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U",
+      "R"
+    ],
+    "color_identity": [
+      "U",
+      "R"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Abrupt Decay",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Abrupt%20Decay",
+    "id": "c360_285"
+  },
+  {
+    "name": "Maelstrom Pulse",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U",
+      "R"
+    ],
+    "color_identity": [
+      "U",
+      "R"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Maelstrom Pulse",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Maelstrom%20Pulse",
+    "id": "c360_286"
+  },
+  {
+    "name": "Pernicious Deed",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U",
+      "R"
+    ],
+    "color_identity": [
+      "U",
+      "R"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Pernicious Deed",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Pernicious%20Deed",
+    "id": "c360_287"
+  },
+  {
+    "name": "Grist, the Hunger Tide",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U",
+      "R"
+    ],
+    "color_identity": [
+      "U",
+      "R"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Grist, the Hunger Tide",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Grist%2C%20the%20Hunger%20Tide",
+    "id": "c360_288"
+  },
+  {
+    "name": "Lightning Helix",
+    "cmc": 2,
+    "mana_cost": "{R}{W}",
+    "colors": [
+      "R",
+      "W"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Lightning Helix deals 3 damage to any target and you gain 3 life.",
+    "image_url": "https://cards.scryfall.io/normal/front/9/5/9536438a-6421-4649-8857-4148e028b08c.jpg",
+    "id": "c360_289",
+    "rarity": "rare",
+    "color_identity": [
+      "R",
+      "W"
+    ],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Figure of Destiny",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U",
+      "R"
+    ],
+    "color_identity": [
+      "U",
+      "R"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Figure of Destiny",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Figure%20of%20Destiny",
+    "id": "c360_290"
+  },
+  {
+    "name": "Ajani Vengeant",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U",
+      "R"
+    ],
+    "color_identity": [
+      "U",
+      "R"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Ajani Vengeant",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Ajani%20Vengeant",
+    "id": "c360_291"
+  },
+  {
+    "name": "Rip Apart",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U",
+      "R"
+    ],
+    "color_identity": [
+      "U",
+      "R"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Rip Apart",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Rip%20Apart",
+    "id": "c360_292"
+  },
+  {
+    "name": "Wear // Tear",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U",
+      "R"
+    ],
+    "color_identity": [
+      "U",
+      "R"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Wear // Tear",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Wear%20//%20Tear",
+    "id": "c360_293"
+  },
+  {
+    "name": "Uro, Titan of Nature's Wrath",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U",
+      "R"
+    ],
+    "color_identity": [
+      "U",
+      "R"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Uro, Titan of Nature's Wrath",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Uro%2C%20Titan%20of%20Nature%27s%20Wrath",
+    "id": "c360_294"
+  },
+  {
+    "name": "Oko, Thief of Crowns",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U",
+      "R"
+    ],
+    "color_identity": [
+      "U",
+      "R"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Oko, Thief of Crowns",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Oko%2C%20Thief%20of%20Crowns",
+    "id": "c360_295"
+  },
+  {
+    "name": "Hydroid Krasis",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [
+      "U",
+      "R"
+    ],
+    "color_identity": [
+      "U",
+      "R"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Card text for Hydroid Krasis",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Hydroid%20Krasis",
+    "id": "c360_296"
+  },
+  {
+    "name": "Nicol Bolas, Planeswalker",
+    "cmc": 8,
+    "mana_cost": "{4}{U}{B}{B}{R}",
+    "colors": [
+      "U",
+      "B",
+      "R"
+    ],
+    "type_line": "Legendary Planeswalker \u2014 Bolas",
+    "oracle_text": "+3: Destroy noncreature. -2: Gain control of creature. -9: 7 damage, discard 7, sac 7.",
+    "image_url": "https://cards.scryfall.io/normal/front/9/e/9e80f2fc-06d4-4ce9-b23b-3e4af1208fa5.jpg",
+    "id": "c360_297",
+    "rarity": "rare",
+    "color_identity": [
+      "U",
+      "B",
+      "R"
+    ],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Omnath, Locus of Creation",
+    "cmc": 4,
+    "mana_cost": "{R}{G}{W}{U}",
+    "colors": [
+      "R",
+      "G",
+      "W",
+      "U"
+    ],
+    "type_line": "Legendary Creature \u2014 Elemental",
+    "oracle_text": "Draw a card on ETB. Landfall: 4 life, add RGWU, 4 damage.",
+    "power": "4",
+    "toughness": "4",
+    "image_url": "https://cards.scryfall.io/normal/front/4/e/4e4fb50c-a81f-44d3-93c5-fa9a0b37f617.jpg",
+    "id": "c360_298",
+    "rarity": "rare",
+    "color_identity": [
+      "R",
+      "G",
+      "W",
+      "U"
+    ]
+  },
+  {
+    "name": "Black Lotus",
+    "cmc": 0,
+    "mana_cost": "{0}",
+    "colors": [],
+    "type_line": "Artifact",
+    "oracle_text": "{T}, Sacrifice: Add three mana of any one color.",
+    "image_url": "https://cards.scryfall.io/normal/front/b/d/bd8fa327-dd41-4737-8f19-2cf5eb1f7cdd.jpg",
+    "id": "c360_299",
+    "rarity": "rare",
+    "color_identity": [],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Mox Pearl",
+    "cmc": 0,
+    "mana_cost": "{0}",
+    "colors": [],
+    "type_line": "Artifact",
+    "oracle_text": "{T}: Add {W}.",
+    "image_url": "https://cards.scryfall.io/normal/front/e/d/ed0216a0-c5c9-4a99-b869-53e4d0256326.jpg",
+    "id": "c360_300",
+    "rarity": "rare",
+    "color_identity": [],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Mox Sapphire",
+    "cmc": 0,
+    "mana_cost": "{0}",
+    "colors": [],
+    "type_line": "Artifact",
+    "oracle_text": "{T}: Add {U}.",
+    "image_url": "https://cards.scryfall.io/normal/front/e/a/ea1feac0-d3a7-45eb-9719-1cdef51ea463.jpg",
+    "id": "c360_301",
+    "rarity": "rare",
+    "color_identity": [],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Mox Jet",
+    "cmc": 0,
+    "mana_cost": "{0}",
+    "colors": [],
+    "type_line": "Artifact",
+    "oracle_text": "{T}: Add {B}.",
+    "image_url": "https://cards.scryfall.io/normal/front/5/f/5f6927e1-c580-483a-8e2a-6e2deb74800e.jpg",
+    "id": "c360_302",
+    "rarity": "rare",
+    "color_identity": [],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Mox Ruby",
+    "cmc": 0,
+    "mana_cost": "{0}",
+    "colors": [],
+    "type_line": "Artifact",
+    "oracle_text": "{T}: Add {R}.",
+    "image_url": "https://cards.scryfall.io/normal/front/4/5/45fd6e91-df76-497f-b642-33dc3d5f6a5a.jpg",
+    "id": "c360_303",
+    "rarity": "rare",
+    "color_identity": [],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Mox Emerald",
+    "cmc": 0,
+    "mana_cost": "{0}",
+    "colors": [],
+    "type_line": "Artifact",
+    "oracle_text": "{T}: Add {G}.",
+    "image_url": "https://cards.scryfall.io/normal/front/a/c/aced2c55-7543-4076-bcdd-36c4d649b8ab.jpg",
+    "id": "c360_304",
+    "rarity": "rare",
+    "color_identity": [],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Sol Ring",
+    "cmc": 1,
+    "mana_cost": "{1}",
+    "colors": [],
+    "type_line": "Artifact",
+    "oracle_text": "{T}: Add {C}{C}.",
+    "image_url": "https://cards.scryfall.io/normal/front/7/c/7c2e09dc-3054-4d89-9312-346c5f6621b7.jpg",
+    "id": "c360_305",
+    "rarity": "rare",
+    "color_identity": [],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Mana Crypt",
+    "cmc": 0,
+    "mana_cost": "{0}",
+    "colors": [],
+    "type_line": "Artifact",
+    "oracle_text": "Upkeep: flip coin, deal 3 damage if lose. {T}: Add {C}{C}.",
+    "image_url": "https://cards.scryfall.io/normal/front/4/d/4d960186-4559-4af0-bd22-63baa15f8939.jpg",
+    "id": "c360_306",
+    "rarity": "rare",
+    "color_identity": [],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Mana Vault",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [],
+    "color_identity": [],
+    "type_line": "Artifact",
+    "oracle_text": "Card text for Mana Vault",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Mana%20Vault",
+    "id": "c360_307"
+  },
+  {
+    "name": "Grim Monolith",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [],
+    "color_identity": [],
+    "type_line": "Artifact",
+    "oracle_text": "Card text for Grim Monolith",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Grim%20Monolith",
+    "id": "c360_308"
+  },
+  {
+    "name": "Basalt Monolith",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [],
+    "color_identity": [],
+    "type_line": "Artifact",
+    "oracle_text": "Card text for Basalt Monolith",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Basalt%20Monolith",
+    "id": "c360_309"
+  },
+  {
+    "name": "Wurmcoil Engine",
+    "cmc": 6,
+    "mana_cost": "{6}",
+    "colors": [],
+    "type_line": "Artifact Creature \u2014 Wurm",
+    "oracle_text": "Deathtouch, lifelink. Dies: create 3/3 lifelink and 3/3 deathtouch tokens.",
+    "power": "6",
+    "toughness": "6",
+    "image_url": "https://cards.scryfall.io/normal/front/d/0/d0a13423-67e8-453c-a719-af5de1704283.jpg",
+    "id": "c360_310",
+    "rarity": "rare",
+    "color_identity": []
+  },
+  {
+    "name": "Skullclamp",
+    "cmc": 1,
+    "mana_cost": "{1}",
+    "colors": [],
+    "type_line": "Artifact \u2014 Equipment",
+    "oracle_text": "Equipped gets +1/-1. Dies: draw two cards. Equip {1}.",
+    "image_url": "https://cards.scryfall.io/normal/front/a/3/a36fd6d8-66a2-49d1-b9f3-b400ebc03674.jpg",
+    "id": "c360_311",
+    "rarity": "rare",
+    "color_identity": [],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Umezawa's Jitte",
+    "cmc": 2,
+    "mana_cost": "{2}",
+    "colors": [],
+    "type_line": "Legendary Artifact \u2014 Equipment",
+    "oracle_text": "Combat damage: 2 counters. Remove: +2/+2, -1/-1, or gain 2 life. Equip {2}.",
+    "image_url": "https://cards.scryfall.io/normal/front/3/b/3b6e5956-f795-451b-bb24-56462d1ced27.jpg",
+    "id": "c360_312",
+    "rarity": "rare",
+    "color_identity": [],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Sword of Fire and Ice",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [],
+    "color_identity": [],
+    "type_line": "Artifact",
+    "oracle_text": "Card text for Sword of Fire and Ice",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Sword%20of%20Fire%20and%20Ice",
+    "id": "c360_313"
+  },
+  {
+    "name": "Sword of Feast and Famine",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [],
+    "color_identity": [],
+    "type_line": "Artifact",
+    "oracle_text": "Card text for Sword of Feast and Famine",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Sword%20of%20Feast%20and%20Famine",
+    "id": "c360_314"
+  },
+  {
+    "name": "Batterskull",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [],
+    "color_identity": [],
+    "type_line": "Artifact",
+    "oracle_text": "Card text for Batterskull",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Batterskull",
+    "id": "c360_315"
+  },
+  {
+    "name": "Karn Liberated",
+    "cmc": 7,
+    "mana_cost": "{7}",
+    "colors": [],
+    "type_line": "Legendary Planeswalker \u2014 Karn",
+    "oracle_text": "+4: Target exiles card. -3: Exile target permanent. -14: Restart game with exiled permanents.",
+    "image_url": "https://cards.scryfall.io/normal/front/4/b/4b0c6662-4dde-40a2-97e0-0318478c0367.jpg",
+    "id": "c360_316",
+    "rarity": "rare",
+    "color_identity": [],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Karn, Scion of Urza",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [],
+    "color_identity": [],
+    "type_line": "Artifact",
+    "oracle_text": "Card text for Karn, Scion of Urza",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Karn%2C%20Scion%20of%20Urza",
+    "id": "c360_317"
+  },
+  {
+    "name": "Ugin, the Spirit Dragon",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [],
+    "color_identity": [],
+    "type_line": "Artifact",
+    "oracle_text": "Card text for Ugin, the Spirit Dragon",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Ugin%2C%20the%20Spirit%20Dragon",
+    "id": "c360_318"
+  },
+  {
+    "name": "Smuggler's Copter",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [],
+    "color_identity": [],
+    "type_line": "Artifact",
+    "oracle_text": "Card text for Smuggler's Copter",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Smuggler%27s%20Copter",
+    "id": "c360_319"
+  },
+  {
+    "name": "Walking Ballista",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [],
+    "color_identity": [],
+    "type_line": "Artifact",
+    "oracle_text": "Card text for Walking Ballista",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Walking%20Ballista",
+    "id": "c360_320"
+  },
+  {
+    "name": "Hangarback Walker",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [],
+    "color_identity": [],
+    "type_line": "Artifact",
+    "oracle_text": "Card text for Hangarback Walker",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Hangarback%20Walker",
+    "id": "c360_321"
+  },
+  {
+    "name": "Chalice of the Void",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [],
+    "color_identity": [],
+    "type_line": "Artifact",
+    "oracle_text": "Card text for Chalice of the Void",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Chalice%20of%20the%20Void",
+    "id": "c360_322"
+  },
+  {
+    "name": "Chromatic Lantern",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [],
+    "color_identity": [],
+    "type_line": "Artifact",
+    "oracle_text": "Card text for Chromatic Lantern",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Chromatic%20Lantern",
+    "id": "c360_323"
+  },
+  {
+    "name": "Coldsteel Heart",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [],
+    "color_identity": [],
+    "type_line": "Artifact",
+    "oracle_text": "Card text for Coldsteel Heart",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Coldsteel%20Heart",
+    "id": "c360_324"
+  },
+  {
+    "name": "Mind Stone",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [],
+    "color_identity": [],
+    "type_line": "Artifact",
+    "oracle_text": "Card text for Mind Stone",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Mind%20Stone",
+    "id": "c360_325"
+  },
+  {
+    "name": "Everflowing Chalice",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [],
+    "color_identity": [],
+    "type_line": "Artifact",
+    "oracle_text": "Card text for Everflowing Chalice",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Everflowing%20Chalice",
+    "id": "c360_326"
+  },
+  {
+    "name": "Worn Powerstone",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [],
+    "color_identity": [],
+    "type_line": "Artifact",
+    "oracle_text": "Card text for Worn Powerstone",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Worn%20Powerstone",
+    "id": "c360_327"
+  },
+  {
+    "name": "Thran Dynamo",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [],
+    "color_identity": [],
+    "type_line": "Artifact",
+    "oracle_text": "Card text for Thran Dynamo",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Thran%20Dynamo",
+    "id": "c360_328"
+  },
+  {
+    "name": "Gilded Lotus",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [],
+    "color_identity": [],
+    "type_line": "Artifact",
+    "oracle_text": "Card text for Gilded Lotus",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Gilded%20Lotus",
+    "id": "c360_329"
+  },
+  {
+    "name": "Crucible of Worlds",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [],
+    "color_identity": [],
+    "type_line": "Artifact",
+    "oracle_text": "Card text for Crucible of Worlds",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Crucible%20of%20Worlds",
+    "id": "c360_330"
+  },
+  {
+    "name": "Oblivion Stone",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [],
+    "color_identity": [],
+    "type_line": "Artifact",
+    "oracle_text": "Card text for Oblivion Stone",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Oblivion%20Stone",
+    "id": "c360_331"
+  },
+  {
+    "name": "Engineered Explosives",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [],
+    "color_identity": [],
+    "type_line": "Artifact",
+    "oracle_text": "Card text for Engineered Explosives",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Engineered%20Explosives",
+    "id": "c360_332"
+  },
+  {
+    "name": "Lightning Greaves",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [],
+    "color_identity": [],
+    "type_line": "Artifact",
+    "oracle_text": "Card text for Lightning Greaves",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Lightning%20Greaves",
+    "id": "c360_333"
+  },
+  {
+    "name": "Swiftfoot Boots",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [],
+    "color_identity": [],
+    "type_line": "Artifact",
+    "oracle_text": "Card text for Swiftfoot Boots",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Swiftfoot%20Boots",
+    "id": "c360_334"
+  },
+  {
+    "name": "Shadowspear",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [],
+    "color_identity": [],
+    "type_line": "Artifact",
+    "oracle_text": "Card text for Shadowspear",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Shadowspear",
+    "id": "c360_335"
+  },
+  {
+    "name": "Blightsteel Colossus",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [],
+    "color_identity": [],
+    "type_line": "Artifact",
+    "oracle_text": "Card text for Blightsteel Colossus",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Blightsteel%20Colossus",
+    "id": "c360_336"
+  },
+  {
+    "name": "Emrakul, the Aeons Torn",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [],
+    "color_identity": [],
+    "type_line": "Artifact",
+    "oracle_text": "Card text for Emrakul, the Aeons Torn",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Emrakul%2C%20the%20Aeons%20Torn",
+    "id": "c360_337"
+  },
+  {
+    "name": "Kozilek, Butcher of Truth",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [],
+    "color_identity": [],
+    "type_line": "Artifact",
+    "oracle_text": "Card text for Kozilek, Butcher of Truth",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Kozilek%2C%20Butcher%20of%20Truth",
+    "id": "c360_338"
+  },
+  {
+    "name": "City of Brass",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "type_line": "Land",
+    "oracle_text": "Tapped: deals 1 damage. {T}: Add one mana of any color.",
+    "image_url": "https://cards.scryfall.io/normal/front/4/5/459042ef-0d5b-480f-9b8a-520e13ae9217.jpg",
+    "id": "c360_339",
+    "rarity": "rare",
+    "color_identity": [],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Mana Confluence",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "type_line": "Land",
+    "oracle_text": "{T}, Pay 1 life: Add one mana of any color.",
+    "image_url": "https://cards.scryfall.io/normal/front/b/d/bd6e4f3d-7494-40b4-8c7a-be67b4f57c4c.jpg",
+    "id": "c360_340",
+    "rarity": "rare",
+    "color_identity": [],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Command Tower",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "type_line": "Land",
+    "oracle_text": "{T}: Add one mana of any color in commander identity.",
+    "image_url": "https://cards.scryfall.io/normal/front/0/5/0536dd26-4657-4d74-ac6b-dd1f959d4377.jpg",
+    "id": "c360_341",
+    "rarity": "rare",
+    "color_identity": [],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Strip Mine",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "type_line": "Land",
+    "oracle_text": "{T}: Add {C}. {T}, Sacrifice: Destroy target land.",
+    "image_url": "https://cards.scryfall.io/normal/front/f/5/f57fd4c9-0004-4f71-a30f-2720943f57ca.jpg",
+    "id": "c360_342",
+    "rarity": "rare",
+    "color_identity": [],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Wasteland",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [],
+    "color_identity": [],
+    "type_line": "Land",
+    "oracle_text": "Card text for Wasteland",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Wasteland",
+    "id": "c360_343"
+  },
+  {
+    "name": "Ancient Tomb",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "type_line": "Land",
+    "oracle_text": "{T}: Add {C}{C}. Deals 2 damage to you.",
+    "image_url": "https://cards.scryfall.io/normal/front/b/d/bd3d4b4b-cf31-4f89-8140-9650edb03c7b.jpg",
+    "id": "c360_344",
+    "rarity": "rare",
+    "color_identity": [],
+    "power": null,
+    "toughness": null
+  },
+  {
+    "name": "Prismatic Vista",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [],
+    "color_identity": [],
+    "type_line": "Land",
+    "oracle_text": "Card text for Prismatic Vista",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Prismatic%20Vista",
+    "id": "c360_345"
+  },
+  {
+    "name": "Fabled Passage",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [],
+    "color_identity": [],
+    "type_line": "Land",
+    "oracle_text": "Card text for Fabled Passage",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Fabled%20Passage",
+    "id": "c360_346"
+  },
+  {
+    "name": "Flooded Strand",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [],
+    "color_identity": [],
+    "type_line": "Land",
+    "oracle_text": "Card text for Flooded Strand",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Flooded%20Strand",
+    "id": "c360_347"
+  },
+  {
+    "name": "Polluted Delta",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [],
+    "color_identity": [],
+    "type_line": "Land",
+    "oracle_text": "Card text for Polluted Delta",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Polluted%20Delta",
+    "id": "c360_348"
+  },
+  {
+    "name": "Bloodstained Mire",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [],
+    "color_identity": [],
+    "type_line": "Land",
+    "oracle_text": "Card text for Bloodstained Mire",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Bloodstained%20Mire",
+    "id": "c360_349"
+  },
+  {
+    "name": "Wooded Foothills",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [],
+    "color_identity": [],
+    "type_line": "Land",
+    "oracle_text": "Card text for Wooded Foothills",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Wooded%20Foothills",
+    "id": "c360_350"
+  },
+  {
+    "name": "Windswept Heath",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [],
+    "color_identity": [],
+    "type_line": "Land",
+    "oracle_text": "Card text for Windswept Heath",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Windswept%20Heath",
+    "id": "c360_351"
+  },
+  {
+    "name": "Marsh Flats",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [],
+    "color_identity": [],
+    "type_line": "Land",
+    "oracle_text": "Card text for Marsh Flats",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Marsh%20Flats",
+    "id": "c360_352"
+  },
+  {
+    "name": "Scalding Tarn",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [],
+    "color_identity": [],
+    "type_line": "Land",
+    "oracle_text": "Card text for Scalding Tarn",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Scalding%20Tarn",
+    "id": "c360_353"
+  },
+  {
+    "name": "Verdant Catacombs",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [],
+    "color_identity": [],
+    "type_line": "Land",
+    "oracle_text": "Card text for Verdant Catacombs",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Verdant%20Catacombs",
+    "id": "c360_354"
+  },
+  {
+    "name": "Arid Mesa",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [],
+    "color_identity": [],
+    "type_line": "Land",
+    "oracle_text": "Card text for Arid Mesa",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Arid%20Mesa",
+    "id": "c360_355"
+  },
+  {
+    "name": "Misty Rainforest",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [],
+    "color_identity": [],
+    "type_line": "Land",
+    "oracle_text": "Card text for Misty Rainforest",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Misty%20Rainforest",
+    "id": "c360_356"
+  },
+  {
+    "name": "Urza's Saga",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [],
+    "color_identity": [],
+    "type_line": "Land",
+    "oracle_text": "Card text for Urza's Saga",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Urza%27s%20Saga",
+    "id": "c360_357"
+  },
+  {
+    "name": "Mutavault",
+    "cmc": 3,
+    "mana_cost": "{3}",
+    "colors": [],
+    "color_identity": [],
+    "type_line": "Land",
+    "oracle_text": "Card text for Mutavault",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://api.scryfall.com/cards/named?format=image&version=normal&exact=Mutavault",
+    "id": "c360_358"
+  },
+  {
+    "id": "c360_359",
+    "name": "Lightning Bolt",
+    "cmc": 1,
+    "mana_cost": "{R}",
+    "colors": [
+      "R"
+    ],
+    "color_identity": [
+      "R"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+    "power": null,
+    "toughness": null,
+    "rarity": "uncommon",
+    "image_url": "https://cards.scryfall.io/normal/front/7/6/7673784e-db4b-43a1-8d55-1bb9fc1e284f.jpg?1783903008"
+  },
+  {
+    "id": "c360_360",
+    "name": "Counterspell",
+    "cmc": 2,
+    "mana_cost": "{U}{U}",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "type_line": "Instant",
+    "oracle_text": "Counter target spell.",
+    "power": null,
+    "toughness": null,
+    "rarity": "uncommon",
+    "image_url": "https://cards.scryfall.io/normal/front/4/f/4f616706-ec97-4923-bb1e-11a69fbaa1f8.jpg?1783909630"
+  }
+]
