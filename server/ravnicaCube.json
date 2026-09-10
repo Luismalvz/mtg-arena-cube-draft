@@ -1,576 +1,6 @@
 [
   {
-    "id": "rav_001",
-    "name": "Azorius Chancery",
-    "cmc": 0,
-    "mana_cost": "",
-    "colors": [],
-    "color_identity": [
-      "U",
-      "W"
-    ],
-    "type_line": "Land",
-    "oracle_text": "This land enters tapped.\nWhen this land enters, return a land you control to its owner's hand.\n{T}: Add {W}{U}.",
-    "power": null,
-    "toughness": null,
-    "rarity": "uncommon",
-    "image_url": "https://cards.scryfall.io/normal/front/5/0/50ef0ac3-e911-4d67-a751-8d86160ae843.jpg?1783909580",
-    "isFixer": false
-  },
-  {
-    "id": "rav_002",
-    "name": "Azorius Guildgate",
-    "cmc": 0,
-    "mana_cost": "",
-    "colors": [],
-    "color_identity": [
-      "U",
-      "W"
-    ],
-    "type_line": "Land — Gate",
-    "oracle_text": "This land enters tapped.\n{T}: Add {W} or {U}.",
-    "power": null,
-    "toughness": null,
-    "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/f/9/f98a7264-0a83-42c8-a94d-05ad4c234242.jpg?1783908907",
-    "isFixer": true
-  },
-  {
-    "id": "rav_003",
-    "name": "Azorius Guildgate",
-    "cmc": 0,
-    "mana_cost": "",
-    "colors": [],
-    "color_identity": [
-      "U",
-      "W"
-    ],
-    "type_line": "Land — Gate",
-    "oracle_text": "This land enters tapped.\n{T}: Add {W} or {U}.",
-    "power": null,
-    "toughness": null,
-    "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/f/9/f98a7264-0a83-42c8-a94d-05ad4c234242.jpg?1783908907",
-    "isFixer": true
-  },
-  {
-    "id": "rav_004",
-    "name": "Boros Garrison",
-    "cmc": 0,
-    "mana_cost": "",
-    "colors": [],
-    "color_identity": [
-      "R",
-      "W"
-    ],
-    "type_line": "Land",
-    "oracle_text": "This land enters tapped.\nWhen this land enters, return a land you control to its owner's hand.\n{T}: Add {R}{W}.",
-    "power": null,
-    "toughness": null,
-    "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/7/6/76ec3366-98f3-4903-8f7b-cfcdd60e3be1.jpg?1783912508",
-    "isFixer": false
-  },
-  {
-    "id": "rav_005",
-    "name": "Boros Guildgate",
-    "cmc": 0,
-    "mana_cost": "",
-    "colors": [],
-    "color_identity": [
-      "R",
-      "W"
-    ],
-    "type_line": "Land — Gate",
-    "oracle_text": "This land enters tapped.\n{T}: Add {R} or {W}.",
-    "power": null,
-    "toughness": null,
-    "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/3/e/3e3c74ea-40e9-4ad9-a491-c208403b68ad.jpg?1783908903",
-    "isFixer": true
-  },
-  {
-    "id": "rav_006",
-    "name": "Boros Guildgate",
-    "cmc": 0,
-    "mana_cost": "",
-    "colors": [],
-    "color_identity": [
-      "R",
-      "W"
-    ],
-    "type_line": "Land — Gate",
-    "oracle_text": "This land enters tapped.\n{T}: Add {R} or {W}.",
-    "power": null,
-    "toughness": null,
-    "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/3/e/3e3c74ea-40e9-4ad9-a491-c208403b68ad.jpg?1783908903",
-    "isFixer": true
-  },
-  {
-    "id": "rav_007",
-    "name": "Dimir Aqueduct",
-    "cmc": 0,
-    "mana_cost": "",
-    "colors": [],
-    "color_identity": [
-      "B",
-      "U"
-    ],
-    "type_line": "Land",
-    "oracle_text": "This land enters tapped.\nWhen this land enters, return a land you control to its owner's hand.\n{T}: Add {U}{B}.",
-    "power": null,
-    "toughness": null,
-    "rarity": "uncommon",
-    "image_url": "https://cards.scryfall.io/normal/front/8/4/84bf9d60-64b8-4209-acfe-e07eefc6bf1f.jpg?1783909578",
-    "isFixer": false
-  },
-  {
-    "id": "rav_008",
-    "name": "Dimir Guildgate",
-    "cmc": 0,
-    "mana_cost": "",
-    "colors": [],
-    "color_identity": [
-      "B",
-      "U"
-    ],
-    "type_line": "Land — Gate",
-    "oracle_text": "This land enters tapped.\n{T}: Add {U} or {B}.",
-    "power": null,
-    "toughness": null,
-    "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/f/9/f9b8a159-5e58-4432-8ecd-62f39afa96da.jpg?1783908901",
-    "isFixer": true
-  },
-  {
-    "id": "rav_009",
-    "name": "Dimir Guildgate",
-    "cmc": 0,
-    "mana_cost": "",
-    "colors": [],
-    "color_identity": [
-      "B",
-      "U"
-    ],
-    "type_line": "Land — Gate",
-    "oracle_text": "This land enters tapped.\n{T}: Add {U} or {B}.",
-    "power": null,
-    "toughness": null,
-    "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/f/9/f9b8a159-5e58-4432-8ecd-62f39afa96da.jpg?1783908901",
-    "isFixer": true
-  },
-  {
-    "id": "rav_010",
-    "name": "Gate Colossus",
-    "cmc": 8,
-    "mana_cost": "{8}",
-    "colors": [],
-    "color_identity": [],
-    "type_line": "Artifact Creature — Construct",
-    "oracle_text": "Affinity for Gates (This spell costs {1} less to cast for each Gate you control.)\nThis creature can't be blocked by creatures with power 2 or less.\nWhenever a Gate you control enters, you may put this card from your graveyard on top of your library.",
-    "power": "8",
-    "toughness": "8",
-    "rarity": "uncommon",
-    "image_url": "https://cards.scryfall.io/normal/front/b/c/bc49d9cb-8c7a-4a8f-96ea-bbe6ade8ae00.jpg?1783908905",
-    "isFixer": false
-  },
-  {
-    "id": "rav_011",
-    "name": "Gate Colossus",
-    "cmc": 8,
-    "mana_cost": "{8}",
-    "colors": [],
-    "color_identity": [],
-    "type_line": "Artifact Creature — Construct",
-    "oracle_text": "Affinity for Gates (This spell costs {1} less to cast for each Gate you control.)\nThis creature can't be blocked by creatures with power 2 or less.\nWhenever a Gate you control enters, you may put this card from your graveyard on top of your library.",
-    "power": "8",
-    "toughness": "8",
-    "rarity": "uncommon",
-    "image_url": "https://cards.scryfall.io/normal/front/b/c/bc49d9cb-8c7a-4a8f-96ea-bbe6ade8ae00.jpg?1783908905",
-    "isFixer": false
-  },
-  {
-    "id": "rav_012",
-    "name": "Golgari Guildgate",
-    "cmc": 0,
-    "mana_cost": "",
-    "colors": [],
-    "color_identity": [
-      "B",
-      "G"
-    ],
-    "type_line": "Land — Gate",
-    "oracle_text": "This land enters tapped.\n{T}: Add {B} or {G}.",
-    "power": null,
-    "toughness": null,
-    "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/9/2/92d4646c-a375-4835-aa58-8bb77d1a5abf.jpg?1783908900",
-    "isFixer": true
-  },
-  {
-    "id": "rav_013",
-    "name": "Golgari Guildgate",
-    "cmc": 0,
-    "mana_cost": "",
-    "colors": [],
-    "color_identity": [
-      "B",
-      "G"
-    ],
-    "type_line": "Land — Gate",
-    "oracle_text": "This land enters tapped.\n{T}: Add {B} or {G}.",
-    "power": null,
-    "toughness": null,
-    "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/9/2/92d4646c-a375-4835-aa58-8bb77d1a5abf.jpg?1783908900",
-    "isFixer": true
-  },
-  {
-    "id": "rav_014",
-    "name": "Gruul Guildgate",
-    "cmc": 0,
-    "mana_cost": "",
-    "colors": [],
-    "color_identity": [
-      "G",
-      "R"
-    ],
-    "type_line": "Land — Gate",
-    "oracle_text": "This land enters tapped.\n{T}: Add {R} or {G}.",
-    "power": null,
-    "toughness": null,
-    "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/3/a/3ab6c240-c97d-4a5c-bc39-860c2d9901c2.jpg?1783908900",
-    "isFixer": true
-  },
-  {
-    "id": "rav_015",
-    "name": "Gruul Guildgate",
-    "cmc": 0,
-    "mana_cost": "",
-    "colors": [],
-    "color_identity": [
-      "G",
-      "R"
-    ],
-    "type_line": "Land — Gate",
-    "oracle_text": "This land enters tapped.\n{T}: Add {R} or {G}.",
-    "power": null,
-    "toughness": null,
-    "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/3/a/3ab6c240-c97d-4a5c-bc39-860c2d9901c2.jpg?1783908900",
-    "isFixer": true
-  },
-  {
-    "id": "rav_016",
-    "name": "Izzet Boilerworks",
-    "cmc": 0,
-    "mana_cost": "",
-    "colors": [],
-    "color_identity": [
-      "R",
-      "U"
-    ],
-    "type_line": "Land",
-    "oracle_text": "This land enters tapped.\nWhen this land enters, return a land you control to its owner's hand.\n{T}: Add {U}{R}.",
-    "power": null,
-    "toughness": null,
-    "rarity": "uncommon",
-    "image_url": "https://cards.scryfall.io/normal/front/b/f/bfac9395-7ca5-48dd-ab83-7c26ada12f61.jpg?1783911875",
-    "isFixer": false
-  },
-  {
-    "id": "rav_017",
-    "name": "Izzet Guildgate",
-    "cmc": 0,
-    "mana_cost": "",
-    "colors": [],
-    "color_identity": [
-      "R",
-      "U"
-    ],
-    "type_line": "Land — Gate",
-    "oracle_text": "This land enters tapped.\n{T}: Add {U} or {R}.",
-    "power": null,
-    "toughness": null,
-    "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/d/b/db9e6fc9-813d-4a71-8a68-8e0f83fa945d.jpg?1783908899",
-    "isFixer": true
-  },
-  {
-    "id": "rav_018",
-    "name": "Izzet Guildgate",
-    "cmc": 0,
-    "mana_cost": "",
-    "colors": [],
-    "color_identity": [
-      "R",
-      "U"
-    ],
-    "type_line": "Land — Gate",
-    "oracle_text": "This land enters tapped.\n{T}: Add {U} or {R}.",
-    "power": null,
-    "toughness": null,
-    "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/d/b/db9e6fc9-813d-4a71-8a68-8e0f83fa945d.jpg?1783908899",
-    "isFixer": true
-  },
-  {
-    "id": "rav_019",
-    "name": "Novijen, Heart of Progress",
-    "cmc": 0,
-    "mana_cost": "",
-    "colors": [],
-    "color_identity": [
-      "G",
-      "U"
-    ],
-    "type_line": "Land",
-    "oracle_text": "{T}: Add {C}.\n{G}{U}, {T}: Put a +1/+1 counter on each creature that entered this turn.",
-    "power": null,
-    "toughness": null,
-    "rarity": "uncommon",
-    "image_url": "https://cards.scryfall.io/normal/front/9/a/9a1e15e7-4ba6-41ad-b27b-aee2d037b6a7.jpg?1783927488",
-    "isFixer": false
-  },
-  {
-    "id": "rav_020",
-    "name": "Orzhov Basilica",
-    "cmc": 0,
-    "mana_cost": "",
-    "colors": [],
-    "color_identity": [
-      "B",
-      "W"
-    ],
-    "type_line": "Land",
-    "oracle_text": "This land enters tapped.\nWhen this land enters, return a land you control to its owner's hand.\n{T}: Add {W}{B}.",
-    "power": null,
-    "toughness": null,
-    "rarity": "uncommon",
-    "image_url": "https://cards.scryfall.io/normal/front/9/c/9c7c08fc-b6ee-498c-8ab6-fd6be27c9d97.jpg?1783909569",
-    "isFixer": false
-  },
-  {
-    "id": "rav_021",
-    "name": "Orzhov Guildgate",
-    "cmc": 0,
-    "mana_cost": "",
-    "colors": [],
-    "color_identity": [
-      "B",
-      "W"
-    ],
-    "type_line": "Land — Gate",
-    "oracle_text": "This land enters tapped.\n{T}: Add {W} or {B}.",
-    "power": null,
-    "toughness": null,
-    "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/a/9/a917be03-0c17-4454-b044-c4375e5c8085.jpg?1783908900",
-    "isFixer": true
-  },
-  {
-    "id": "rav_022",
-    "name": "Orzhov Guildgate",
-    "cmc": 0,
-    "mana_cost": "",
-    "colors": [],
-    "color_identity": [
-      "B",
-      "W"
-    ],
-    "type_line": "Land — Gate",
-    "oracle_text": "This land enters tapped.\n{T}: Add {W} or {B}.",
-    "power": null,
-    "toughness": null,
-    "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/a/9/a917be03-0c17-4454-b044-c4375e5c8085.jpg?1783908900",
-    "isFixer": true
-  },
-  {
-    "id": "rav_023",
-    "name": "Rakdos Guildgate",
-    "cmc": 0,
-    "mana_cost": "",
-    "colors": [],
-    "color_identity": [
-      "B",
-      "R"
-    ],
-    "type_line": "Land — Gate",
-    "oracle_text": "This land enters tapped.\n{T}: Add {B} or {R}.",
-    "power": null,
-    "toughness": null,
-    "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/e/1/e1f01964-c610-4d0f-a2b4-f52e46dc50d2.jpg?1783908899",
-    "isFixer": true
-  },
-  {
-    "id": "rav_024",
-    "name": "Rakdos Guildgate",
-    "cmc": 0,
-    "mana_cost": "",
-    "colors": [],
-    "color_identity": [
-      "B",
-      "R"
-    ],
-    "type_line": "Land — Gate",
-    "oracle_text": "This land enters tapped.\n{T}: Add {B} or {R}.",
-    "power": null,
-    "toughness": null,
-    "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/e/1/e1f01964-c610-4d0f-a2b4-f52e46dc50d2.jpg?1783908899",
-    "isFixer": true
-  },
-  {
-    "id": "rav_025",
-    "name": "Rix Maadi, Dungeon Palace",
-    "cmc": 0,
-    "mana_cost": "",
-    "colors": [],
-    "color_identity": [
-      "B",
-      "R"
-    ],
-    "type_line": "Land",
-    "oracle_text": "{T}: Add {C}.\n{1}{B}{R}, {T}: Each player discards a card. Activate only as a sorcery.",
-    "power": null,
-    "toughness": null,
-    "rarity": "uncommon",
-    "image_url": "https://cards.scryfall.io/normal/front/f/8/f8429762-e756-43e0-81b4-9d0a34270040.jpg?1783932703",
-    "isFixer": false
-  },
-  {
-    "id": "rav_026",
-    "name": "Selesnya Guildgate",
-    "cmc": 0,
-    "mana_cost": "",
-    "colors": [],
-    "color_identity": [
-      "G",
-      "W"
-    ],
-    "type_line": "Land — Gate",
-    "oracle_text": "This land enters tapped.\n{T}: Add {G} or {W}.",
-    "power": null,
-    "toughness": null,
-    "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/6/7/6718d4e7-768e-473f-8064-a68422e977f6.jpg?1783908899",
-    "isFixer": true
-  },
-  {
-    "id": "rav_027",
-    "name": "Selesnya Guildgate",
-    "cmc": 0,
-    "mana_cost": "",
-    "colors": [],
-    "color_identity": [
-      "G",
-      "W"
-    ],
-    "type_line": "Land — Gate",
-    "oracle_text": "This land enters tapped.\n{T}: Add {G} or {W}.",
-    "power": null,
-    "toughness": null,
-    "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/6/7/6718d4e7-768e-473f-8064-a68422e977f6.jpg?1783908899",
-    "isFixer": true
-  },
-  {
-    "id": "rav_028",
-    "name": "Simic Guildgate",
-    "cmc": 0,
-    "mana_cost": "",
-    "colors": [],
-    "color_identity": [
-      "G",
-      "U"
-    ],
-    "type_line": "Land — Gate",
-    "oracle_text": "This land enters tapped.\n{T}: Add {G} or {U}.",
-    "power": null,
-    "toughness": null,
-    "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/9/6/96590855-1ee5-4d69-9070-776e23f71976.jpg?1783908898",
-    "isFixer": true
-  },
-  {
-    "id": "rav_029",
-    "name": "Simic Guildgate",
-    "cmc": 0,
-    "mana_cost": "",
-    "colors": [],
-    "color_identity": [
-      "G",
-      "U"
-    ],
-    "type_line": "Land — Gate",
-    "oracle_text": "This land enters tapped.\n{T}: Add {G} or {U}.",
-    "power": null,
-    "toughness": null,
-    "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/9/6/96590855-1ee5-4d69-9070-776e23f71976.jpg?1783908898",
-    "isFixer": true
-  },
-  {
-    "id": "rav_030",
-    "name": "Skarrg, the Rage Pits",
-    "cmc": 0,
-    "mana_cost": "",
-    "colors": [],
-    "color_identity": [
-      "G",
-      "R"
-    ],
-    "type_line": "Land",
-    "oracle_text": "{T}: Add {C}.\n{R}{G}, {T}: Target creature gets +1/+1 and gains trample until end of turn.",
-    "power": null,
-    "toughness": null,
-    "rarity": "uncommon",
-    "image_url": "https://cards.scryfall.io/normal/front/3/3/3340d094-fe13-4087-abba-27e8c9a7f3c7.jpg?1783936812",
-    "isFixer": false
-  },
-  {
-    "id": "rav_031",
-    "name": "Svogthos, the Restless Tomb",
-    "cmc": 0,
-    "mana_cost": "",
-    "colors": [],
-    "color_identity": [
-      "B",
-      "G"
-    ],
-    "type_line": "Land",
-    "oracle_text": "{T}: Add {C}.\n{3}{B}{G}: Until end of turn, this land becomes a black and green Plant Zombie creature with \"This creature's power and toughness are each equal to the number of creature cards in your graveyard.\" It's still a land.",
-    "power": null,
-    "toughness": null,
-    "rarity": "uncommon",
-    "image_url": "https://cards.scryfall.io/normal/front/f/f/ffe08b0f-bb53-40b9-8057-10b60070459b.jpg?1783934679",
-    "isFixer": false
-  },
-  {
-    "id": "rav_032",
-    "name": "Vitu-Ghazi, the City-Tree",
-    "cmc": 0,
-    "mana_cost": "",
-    "colors": [],
-    "color_identity": [
-      "G",
-      "W"
-    ],
-    "type_line": "Land",
-    "oracle_text": "{T}: Add {C}.\n{2}{G}{W}, {T}: Create a 1/1 green Saproling creature token.",
-    "power": null,
-    "toughness": null,
-    "rarity": "uncommon",
-    "image_url": "https://cards.scryfall.io/normal/front/3/3/33145080-077e-4231-96ca-e8b1852b6380.jpg?1783926142",
-    "isFixer": false
-  },
-  {
-    "id": "rav_033",
+    "id": "cube_001",
     "name": "Boros Elite",
     "cmc": 1,
     "mana_cost": "{W}",
@@ -589,7 +19,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_034",
+    "id": "cube_002",
     "name": "Boros Elite",
     "cmc": 1,
     "mana_cost": "{W}",
@@ -608,7 +38,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_035",
+    "id": "cube_003",
     "name": "Boros Elite",
     "cmc": 1,
     "mana_cost": "{W}",
@@ -627,7 +57,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_036",
+    "id": "cube_004",
     "name": "Healer's Hawk",
     "cmc": 1,
     "mana_cost": "{W}",
@@ -646,7 +76,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_037",
+    "id": "cube_005",
     "name": "Healer's Hawk",
     "cmc": 1,
     "mana_cost": "{W}",
@@ -665,7 +95,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_038",
+    "id": "cube_006",
     "name": "Healer's Hawk",
     "cmc": 1,
     "mana_cost": "{W}",
@@ -684,7 +114,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_039",
+    "id": "cube_007",
     "name": "Healer's Hawk",
     "cmc": 1,
     "mana_cost": "{W}",
@@ -703,7 +133,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_040",
+    "id": "cube_008",
     "name": "Azorius Arrester",
     "cmc": 2,
     "mana_cost": "{1}{W}",
@@ -722,7 +152,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_041",
+    "id": "cube_009",
     "name": "Azorius Arrester",
     "cmc": 2,
     "mana_cost": "{1}{W}",
@@ -741,7 +171,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_042",
+    "id": "cube_010",
     "name": "Azorius Arrester",
     "cmc": 2,
     "mana_cost": "{1}{W}",
@@ -760,7 +190,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_043",
+    "id": "cube_011",
     "name": "Azorius Arrester",
     "cmc": 2,
     "mana_cost": "{1}{W}",
@@ -779,7 +209,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_044",
+    "id": "cube_012",
     "name": "Sunhome Stalwart",
     "cmc": 2,
     "mana_cost": "{1}{W}",
@@ -798,7 +228,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_045",
+    "id": "cube_013",
     "name": "Sunhome Stalwart",
     "cmc": 2,
     "mana_cost": "{1}{W}",
@@ -817,7 +247,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_046",
+    "id": "cube_014",
     "name": "Sunhome Stalwart",
     "cmc": 2,
     "mana_cost": "{1}{W}",
@@ -836,7 +266,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_047",
+    "id": "cube_015",
     "name": "Basilica Guards",
     "cmc": 3,
     "mana_cost": "{2}{W}",
@@ -855,7 +285,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_048",
+    "id": "cube_016",
     "name": "Basilica Guards",
     "cmc": 3,
     "mana_cost": "{2}{W}",
@@ -874,7 +304,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_049",
+    "id": "cube_017",
     "name": "Basilica Guards",
     "cmc": 3,
     "mana_cost": "{2}{W}",
@@ -893,7 +323,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_050",
+    "id": "cube_018",
     "name": "Makeshift Battalion",
     "cmc": 3,
     "mana_cost": "{2}{W}",
@@ -912,7 +342,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_051",
+    "id": "cube_019",
     "name": "Makeshift Battalion",
     "cmc": 3,
     "mana_cost": "{2}{W}",
@@ -931,7 +361,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_052",
+    "id": "cube_020",
     "name": "Makeshift Battalion",
     "cmc": 3,
     "mana_cost": "{2}{W}",
@@ -950,7 +380,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_053",
+    "id": "cube_021",
     "name": "Ministrant of Obligation",
     "cmc": 3,
     "mana_cost": "{2}{W}",
@@ -969,7 +399,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_054",
+    "id": "cube_022",
     "name": "Ministrant of Obligation",
     "cmc": 3,
     "mana_cost": "{2}{W}",
@@ -988,7 +418,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_055",
+    "id": "cube_023",
     "name": "Rising Populace",
     "cmc": 3,
     "mana_cost": "{2}{W}",
@@ -1007,7 +437,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_056",
+    "id": "cube_024",
     "name": "Rising Populace",
     "cmc": 3,
     "mana_cost": "{2}{W}",
@@ -1026,7 +456,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_057",
+    "id": "cube_025",
     "name": "Azorius Justiciar",
     "cmc": 4,
     "mana_cost": "{2}{W}{W}",
@@ -1045,7 +475,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_058",
+    "id": "cube_026",
     "name": "Arrester's Zeal",
     "cmc": 1,
     "mana_cost": "{W}",
@@ -1064,7 +494,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_059",
+    "id": "cube_027",
     "name": "Arrester's Zeal",
     "cmc": 1,
     "mana_cost": "{W}",
@@ -1083,7 +513,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_060",
+    "id": "cube_028",
     "name": "Arrester's Zeal",
     "cmc": 1,
     "mana_cost": "{W}",
@@ -1102,7 +532,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_061",
+    "id": "cube_029",
     "name": "Carom",
     "cmc": 2,
     "mana_cost": "{1}{W}",
@@ -1121,7 +551,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_062",
+    "id": "cube_030",
     "name": "Carom",
     "cmc": 2,
     "mana_cost": "{1}{W}",
@@ -1140,7 +570,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_063",
+    "id": "cube_031",
     "name": "To Arms!",
     "cmc": 2,
     "mana_cost": "{1}{W}",
@@ -1159,7 +589,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_064",
+    "id": "cube_032",
     "name": "To Arms!",
     "cmc": 2,
     "mana_cost": "{1}{W}",
@@ -1178,7 +608,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_065",
+    "id": "cube_033",
     "name": "Rootborn Defenses",
     "cmc": 3,
     "mana_cost": "{2}{W}",
@@ -1197,7 +627,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_066",
+    "id": "cube_034",
     "name": "Rootborn Defenses",
     "cmc": 3,
     "mana_cost": "{2}{W}",
@@ -1216,7 +646,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_067",
+    "id": "cube_035",
     "name": "Unbreakable Formation",
     "cmc": 3,
     "mana_cost": "{2}{W}",
@@ -1235,7 +665,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_068",
+    "id": "cube_036",
     "name": "Unbreakable Formation",
     "cmc": 3,
     "mana_cost": "{2}{W}",
@@ -1254,7 +684,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_069",
+    "id": "cube_037",
     "name": "Eyes in the Skies",
     "cmc": 4,
     "mana_cost": "{3}{W}",
@@ -1273,7 +703,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_070",
+    "id": "cube_038",
     "name": "Eyes in the Skies",
     "cmc": 4,
     "mana_cost": "{3}{W}",
@@ -1292,7 +722,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_071",
+    "id": "cube_039",
     "name": "Eyes in the Skies",
     "cmc": 4,
     "mana_cost": "{3}{W}",
@@ -1311,7 +741,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_072",
+    "id": "cube_040",
     "name": "Battle Screech",
     "cmc": 4,
     "mana_cost": "{2}{W}{W}",
@@ -1330,7 +760,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_073",
+    "id": "cube_041",
     "name": "Blind Obedience",
     "cmc": 2,
     "mana_cost": "{1}{W}",
@@ -1349,7 +779,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_074",
+    "id": "cube_042",
     "name": "Benthic Biomancer",
     "cmc": 1,
     "mana_cost": "{U}",
@@ -1368,7 +798,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_075",
+    "id": "cube_043",
     "name": "Benthic Biomancer",
     "cmc": 1,
     "mana_cost": "{U}",
@@ -1387,7 +817,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_076",
+    "id": "cube_044",
     "name": "Cloudfin Raptor",
     "cmc": 1,
     "mana_cost": "{U}",
@@ -1406,7 +836,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_077",
+    "id": "cube_045",
     "name": "Cloudfin Raptor",
     "cmc": 1,
     "mana_cost": "{U}",
@@ -1425,7 +855,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_078",
+    "id": "cube_046",
     "name": "Cloudfin Raptor",
     "cmc": 1,
     "mana_cost": "{U}",
@@ -1444,7 +874,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_079",
+    "id": "cube_047",
     "name": "Cloudfin Raptor",
     "cmc": 1,
     "mana_cost": "{U}",
@@ -1463,7 +893,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_080",
+    "id": "cube_048",
     "name": "Nightveil Sprite",
     "cmc": 2,
     "mana_cost": "{1}{U}",
@@ -1482,7 +912,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_081",
+    "id": "cube_049",
     "name": "Nightveil Sprite",
     "cmc": 2,
     "mana_cost": "{1}{U}",
@@ -1501,7 +931,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_082",
+    "id": "cube_050",
     "name": "Nightveil Sprite",
     "cmc": 2,
     "mana_cost": "{1}{U}",
@@ -1520,7 +950,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_083",
+    "id": "cube_051",
     "name": "Persistent Petitioners",
     "cmc": 2,
     "mana_cost": "{1}{U}",
@@ -1539,7 +969,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_084",
+    "id": "cube_052",
     "name": "Drift of Phantasms",
     "cmc": 3,
     "mana_cost": "{2}{U}",
@@ -1558,7 +988,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_085",
+    "id": "cube_053",
     "name": "Drift of Phantasms",
     "cmc": 3,
     "mana_cost": "{2}{U}",
@@ -1577,7 +1007,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_086",
+    "id": "cube_054",
     "name": "Drift of Phantasms",
     "cmc": 3,
     "mana_cost": "{2}{U}",
@@ -1596,7 +1026,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_087",
+    "id": "cube_055",
     "name": "Murmuring Mystic",
     "cmc": 4,
     "mana_cost": "{3}{U}",
@@ -1615,7 +1045,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_088",
+    "id": "cube_056",
     "name": "Downsize",
     "cmc": 1,
     "mana_cost": "{U}",
@@ -1634,7 +1064,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_089",
+    "id": "cube_057",
     "name": "Downsize",
     "cmc": 1,
     "mana_cost": "{U}",
@@ -1653,7 +1083,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_090",
+    "id": "cube_058",
     "name": "Downsize",
     "cmc": 1,
     "mana_cost": "{U}",
@@ -1672,7 +1102,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_091",
+    "id": "cube_059",
     "name": "Quicken",
     "cmc": 1,
     "mana_cost": "{U}",
@@ -1691,7 +1121,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_092",
+    "id": "cube_060",
     "name": "Quicken",
     "cmc": 1,
     "mana_cost": "{U}",
@@ -1710,7 +1140,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_093",
+    "id": "cube_061",
     "name": "Quicken",
     "cmc": 1,
     "mana_cost": "{U}",
@@ -1729,7 +1159,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_094",
+    "id": "cube_062",
     "name": "Radical Idea",
     "cmc": 2,
     "mana_cost": "{1}{U}",
@@ -1748,7 +1178,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_095",
+    "id": "cube_063",
     "name": "Radical Idea",
     "cmc": 2,
     "mana_cost": "{1}{U}",
@@ -1767,7 +1197,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_096",
+    "id": "cube_064",
     "name": "Radical Idea",
     "cmc": 2,
     "mana_cost": "{1}{U}",
@@ -1786,7 +1216,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_097",
+    "id": "cube_065",
     "name": "Remand",
     "cmc": 2,
     "mana_cost": "{1}{U}",
@@ -1805,7 +1235,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_098",
+    "id": "cube_066",
     "name": "Remand",
     "cmc": 2,
     "mana_cost": "{1}{U}",
@@ -1824,7 +1254,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_099",
+    "id": "cube_067",
     "name": "Remand",
     "cmc": 2,
     "mana_cost": "{1}{U}",
@@ -1843,7 +1273,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_100",
+    "id": "cube_068",
     "name": "Arrester's Admonition",
     "cmc": 3,
     "mana_cost": "{2}{U}",
@@ -1862,7 +1292,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_101",
+    "id": "cube_069",
     "name": "Arrester's Admonition",
     "cmc": 3,
     "mana_cost": "{2}{U}",
@@ -1881,7 +1311,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_102",
+    "id": "cube_070",
     "name": "Arrester's Admonition",
     "cmc": 3,
     "mana_cost": "{2}{U}",
@@ -1900,7 +1330,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_103",
+    "id": "cube_071",
     "name": "Sinister Sabotage",
     "cmc": 3,
     "mana_cost": "{1}{U}{U}",
@@ -1919,7 +1349,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_104",
+    "id": "cube_072",
     "name": "Sinister Sabotage",
     "cmc": 3,
     "mana_cost": "{1}{U}{U}",
@@ -1938,7 +1368,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_105",
+    "id": "cube_073",
     "name": "Sinister Sabotage",
     "cmc": 3,
     "mana_cost": "{1}{U}{U}",
@@ -1957,7 +1387,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_106",
+    "id": "cube_074",
     "name": "Aetherize",
     "cmc": 4,
     "mana_cost": "{3}{U}",
@@ -1976,7 +1406,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_107",
+    "id": "cube_075",
     "name": "Aetherize",
     "cmc": 4,
     "mana_cost": "{3}{U}",
@@ -1995,7 +1425,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_108",
+    "id": "cube_076",
     "name": "Chemister's Insight",
     "cmc": 4,
     "mana_cost": "{3}{U}",
@@ -2014,7 +1444,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_109",
+    "id": "cube_077",
     "name": "Chemister's Insight",
     "cmc": 4,
     "mana_cost": "{3}{U}",
@@ -2033,7 +1463,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_110",
+    "id": "cube_078",
     "name": "Clear the Mind",
     "cmc": 3,
     "mana_cost": "{2}{U}",
@@ -2052,7 +1482,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_111",
+    "id": "cube_079",
     "name": "Compulsive Research",
     "cmc": 3,
     "mana_cost": "{2}{U}",
@@ -2071,7 +1501,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_112",
+    "id": "cube_080",
     "name": "Compulsive Research",
     "cmc": 3,
     "mana_cost": "{2}{U}",
@@ -2090,7 +1520,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_113",
+    "id": "cube_081",
     "name": "Compulsive Research",
     "cmc": 3,
     "mana_cost": "{2}{U}",
@@ -2109,7 +1539,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_114",
+    "id": "cube_082",
     "name": "Quasiduplicate",
     "cmc": 3,
     "mana_cost": "{1}{U}{U}",
@@ -2128,7 +1558,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_115",
+    "id": "cube_083",
     "name": "Banehound",
     "cmc": 1,
     "mana_cost": "{B}",
@@ -2147,7 +1577,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_116",
+    "id": "cube_084",
     "name": "Banehound",
     "cmc": 1,
     "mana_cost": "{B}",
@@ -2166,7 +1596,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_117",
+    "id": "cube_085",
     "name": "Banehound",
     "cmc": 1,
     "mana_cost": "{B}",
@@ -2185,7 +1615,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_118",
+    "id": "cube_086",
     "name": "Shadow Alley Denizen",
     "cmc": 1,
     "mana_cost": "{B}",
@@ -2204,7 +1634,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_119",
+    "id": "cube_087",
     "name": "Shadow Alley Denizen",
     "cmc": 1,
     "mana_cost": "{B}",
@@ -2223,7 +1653,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_120",
+    "id": "cube_088",
     "name": "Golgari Thug",
     "cmc": 2,
     "mana_cost": "{1}{B}",
@@ -2242,7 +1672,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_121",
+    "id": "cube_089",
     "name": "Golgari Thug",
     "cmc": 2,
     "mana_cost": "{1}{B}",
@@ -2261,7 +1691,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_122",
+    "id": "cube_090",
     "name": "Golgari Thug",
     "cmc": 2,
     "mana_cost": "{1}{B}",
@@ -2280,7 +1710,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_123",
+    "id": "cube_091",
     "name": "Orzhov Enforcer",
     "cmc": 2,
     "mana_cost": "{1}{B}",
@@ -2299,7 +1729,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_124",
+    "id": "cube_092",
     "name": "Orzhov Enforcer",
     "cmc": 2,
     "mana_cost": "{1}{B}",
@@ -2318,7 +1748,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_125",
+    "id": "cube_093",
     "name": "Orzhov Enforcer",
     "cmc": 2,
     "mana_cost": "{1}{B}",
@@ -2337,7 +1767,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_126",
+    "id": "cube_094",
     "name": "Priest of Forgotten Gods",
     "cmc": 2,
     "mana_cost": "{1}{B}",
@@ -2356,7 +1786,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_127",
+    "id": "cube_095",
     "name": "Priest of Forgotten Gods",
     "cmc": 2,
     "mana_cost": "{1}{B}",
@@ -2375,7 +1805,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_128",
+    "id": "cube_096",
     "name": "Thrill-Kill Assassin",
     "cmc": 2,
     "mana_cost": "{1}{B}",
@@ -2394,7 +1824,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_129",
+    "id": "cube_097",
     "name": "Thrill-Kill Assassin",
     "cmc": 2,
     "mana_cost": "{1}{B}",
@@ -2413,7 +1843,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_130",
+    "id": "cube_098",
     "name": "Thrill-Kill Assassin",
     "cmc": 2,
     "mana_cost": "{1}{B}",
@@ -2432,7 +1862,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_131",
+    "id": "cube_099",
     "name": "Thrill-Kill Assassin",
     "cmc": 2,
     "mana_cost": "{1}{B}",
@@ -2451,7 +1881,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_132",
+    "id": "cube_100",
     "name": "Midnight Reaper",
     "cmc": 3,
     "mana_cost": "{2}{B}",
@@ -2470,7 +1900,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_133",
+    "id": "cube_101",
     "name": "Midnight Reaper",
     "cmc": 3,
     "mana_cost": "{2}{B}",
@@ -2489,7 +1919,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_134",
+    "id": "cube_102",
     "name": "Orzhov Euthanist",
     "cmc": 3,
     "mana_cost": "{2}{B}",
@@ -2508,7 +1938,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_135",
+    "id": "cube_103",
     "name": "Orzhov Euthanist",
     "cmc": 3,
     "mana_cost": "{2}{B}",
@@ -2527,7 +1957,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_136",
+    "id": "cube_104",
     "name": "Sewer Shambler",
     "cmc": 3,
     "mana_cost": "{2}{B}",
@@ -2546,7 +1976,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_137",
+    "id": "cube_105",
     "name": "Sewer Shambler",
     "cmc": 3,
     "mana_cost": "{2}{B}",
@@ -2565,7 +1995,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_138",
+    "id": "cube_106",
     "name": "Stinkweed Imp",
     "cmc": 3,
     "mana_cost": "{2}{B}",
@@ -2584,7 +2014,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_139",
+    "id": "cube_107",
     "name": "Dimir House Guard",
     "cmc": 4,
     "mana_cost": "{3}{B}",
@@ -2603,7 +2033,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_140",
+    "id": "cube_108",
     "name": "Dimir House Guard",
     "cmc": 4,
     "mana_cost": "{3}{B}",
@@ -2622,7 +2052,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_141",
+    "id": "cube_109",
     "name": "Blade Juggler",
     "cmc": 5,
     "mana_cost": "{4}{B}",
@@ -2641,7 +2071,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_142",
+    "id": "cube_110",
     "name": "Blade Juggler",
     "cmc": 5,
     "mana_cost": "{4}{B}",
@@ -2660,7 +2090,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_143",
+    "id": "cube_111",
     "name": "Doom Whisperer",
     "cmc": 5,
     "mana_cost": "{3}{B}{B}",
@@ -2679,7 +2109,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_144",
+    "id": "cube_112",
     "name": "Massacre Girl",
     "cmc": 5,
     "mana_cost": "{3}{B}{B}",
@@ -2698,7 +2128,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_145",
+    "id": "cube_113",
     "name": "Disembowel",
     "cmc": 1,
     "mana_cost": "{X}{B}",
@@ -2717,7 +2147,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_146",
+    "id": "cube_114",
     "name": "Disembowel",
     "cmc": 1,
     "mana_cost": "{X}{B}",
@@ -2736,7 +2166,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_147",
+    "id": "cube_115",
     "name": "Disembowel",
     "cmc": 1,
     "mana_cost": "{X}{B}",
@@ -2755,7 +2185,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_148",
+    "id": "cube_116",
     "name": "Last Gasp",
     "cmc": 2,
     "mana_cost": "{1}{B}",
@@ -2774,7 +2204,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_149",
+    "id": "cube_117",
     "name": "Last Gasp",
     "cmc": 2,
     "mana_cost": "{1}{B}",
@@ -2793,7 +2223,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_150",
+    "id": "cube_118",
     "name": "Last Gasp",
     "cmc": 2,
     "mana_cost": "{1}{B}",
@@ -2812,7 +2242,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_151",
+    "id": "cube_119",
     "name": "Last Gasp",
     "cmc": 2,
     "mana_cost": "{1}{B}",
@@ -2831,7 +2261,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_152",
+    "id": "cube_120",
     "name": "Infernal Tutor",
     "cmc": 2,
     "mana_cost": "{1}{B}",
@@ -2850,7 +2280,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_153",
+    "id": "cube_121",
     "name": "Macabre Waltz",
     "cmc": 2,
     "mana_cost": "{1}{B}",
@@ -2869,7 +2299,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_154",
+    "id": "cube_122",
     "name": "Macabre Waltz",
     "cmc": 2,
     "mana_cost": "{1}{B}",
@@ -2888,7 +2318,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_155",
+    "id": "cube_123",
     "name": "Gruesome Menagerie",
     "cmc": 5,
     "mana_cost": "{3}{B}{B}",
@@ -2907,7 +2337,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_156",
+    "id": "cube_124",
     "name": "Scorched Rusalka",
     "cmc": 1,
     "mana_cost": "{R}",
@@ -2926,7 +2356,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_157",
+    "id": "cube_125",
     "name": "Scorched Rusalka",
     "cmc": 1,
     "mana_cost": "{R}",
@@ -2945,7 +2375,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_158",
+    "id": "cube_126",
     "name": "Scorched Rusalka",
     "cmc": 1,
     "mana_cost": "{R}",
@@ -2964,7 +2394,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_159",
+    "id": "cube_127",
     "name": "Tin Street Dodger",
     "cmc": 1,
     "mana_cost": "{R}",
@@ -2983,7 +2413,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_160",
+    "id": "cube_128",
     "name": "Tin Street Dodger",
     "cmc": 1,
     "mana_cost": "{R}",
@@ -3002,7 +2432,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_161",
+    "id": "cube_129",
     "name": "Tin Street Dodger",
     "cmc": 1,
     "mana_cost": "{R}",
@@ -3021,7 +2451,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_162",
+    "id": "cube_130",
     "name": "Tin Street Dodger",
     "cmc": 1,
     "mana_cost": "{R}",
@@ -3040,7 +2470,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_163",
+    "id": "cube_131",
     "name": "Bomber Corps",
     "cmc": 2,
     "mana_cost": "{1}{R}",
@@ -3059,7 +2489,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_164",
+    "id": "cube_132",
     "name": "Bomber Corps",
     "cmc": 2,
     "mana_cost": "{1}{R}",
@@ -3078,7 +2508,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_165",
+    "id": "cube_133",
     "name": "Electrostatic Field",
     "cmc": 2,
     "mana_cost": "{1}{R}",
@@ -3097,7 +2527,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_166",
+    "id": "cube_134",
     "name": "Electrostatic Field",
     "cmc": 2,
     "mana_cost": "{1}{R}",
@@ -3116,7 +2546,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_167",
+    "id": "cube_135",
     "name": "Electrostatic Field",
     "cmc": 2,
     "mana_cost": "{1}{R}",
@@ -3135,7 +2565,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_168",
+    "id": "cube_136",
     "name": "Legion Warboss",
     "cmc": 3,
     "mana_cost": "{2}{R}",
@@ -3154,7 +2584,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_169",
+    "id": "cube_137",
     "name": "Arclight Phoenix",
     "cmc": 4,
     "mana_cost": "{3}{R}",
@@ -3173,7 +2603,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_170",
+    "id": "cube_138",
     "name": "Arclight Phoenix",
     "cmc": 4,
     "mana_cost": "{3}{R}",
@@ -3192,7 +2622,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_171",
+    "id": "cube_139",
     "name": "Arclight Phoenix",
     "cmc": 4,
     "mana_cost": "{3}{R}",
@@ -3211,7 +2641,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_172",
+    "id": "cube_140",
     "name": "Krenko, Mob Boss",
     "cmc": 4,
     "mana_cost": "{2}{R}{R}",
@@ -3230,7 +2660,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_173",
+    "id": "cube_141",
     "name": "Ilharg, the Raze-Boar",
     "cmc": 5,
     "mana_cost": "{3}{R}{R}",
@@ -3249,7 +2679,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_174",
+    "id": "cube_142",
     "name": "Skarrgan Hellkite",
     "cmc": 5,
     "mana_cost": "{3}{R}{R}",
@@ -3268,7 +2698,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_175",
+    "id": "cube_143",
     "name": "Skarrgan Hellkite",
     "cmc": 5,
     "mana_cost": "{3}{R}{R}",
@@ -3287,7 +2717,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_176",
+    "id": "cube_144",
     "name": "Skarrgan Hellkite",
     "cmc": 5,
     "mana_cost": "{3}{R}{R}",
@@ -3306,7 +2736,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_177",
+    "id": "cube_145",
     "name": "Utvara Hellkite",
     "cmc": 8,
     "mana_cost": "{6}{R}{R}",
@@ -3325,7 +2755,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_178",
+    "id": "cube_146",
     "name": "Street Spasm",
     "cmc": 1,
     "mana_cost": "{X}{R}",
@@ -3344,7 +2774,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_179",
+    "id": "cube_147",
     "name": "Street Spasm",
     "cmc": 1,
     "mana_cost": "{X}{R}",
@@ -3363,7 +2793,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_180",
+    "id": "cube_148",
     "name": "Skullcrack",
     "cmc": 2,
     "mana_cost": "{1}{R}",
@@ -3382,7 +2812,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_181",
+    "id": "cube_149",
     "name": "Skullcrack",
     "cmc": 2,
     "mana_cost": "{1}{R}",
@@ -3401,7 +2831,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_182",
+    "id": "cube_150",
     "name": "Skullcrack",
     "cmc": 2,
     "mana_cost": "{1}{R}",
@@ -3420,7 +2850,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_183",
+    "id": "cube_151",
     "name": "Demonfire",
     "cmc": 1,
     "mana_cost": "{X}{R}",
@@ -3439,7 +2869,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_184",
+    "id": "cube_152",
     "name": "Mugging",
     "cmc": 1,
     "mana_cost": "{R}",
@@ -3458,7 +2888,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_185",
+    "id": "cube_153",
     "name": "Mugging",
     "cmc": 1,
     "mana_cost": "{R}",
@@ -3477,7 +2907,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_186",
+    "id": "cube_154",
     "name": "Mugging",
     "cmc": 1,
     "mana_cost": "{R}",
@@ -3496,7 +2926,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_187",
+    "id": "cube_155",
     "name": "Mugging",
     "cmc": 1,
     "mana_cost": "{R}",
@@ -3515,7 +2945,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_188",
+    "id": "cube_156",
     "name": "Lava Coil",
     "cmc": 2,
     "mana_cost": "{1}{R}",
@@ -3534,7 +2964,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_189",
+    "id": "cube_157",
     "name": "Lava Coil",
     "cmc": 2,
     "mana_cost": "{1}{R}",
@@ -3553,7 +2983,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_190",
+    "id": "cube_158",
     "name": "Light Up the Stage",
     "cmc": 3,
     "mana_cost": "{2}{R}",
@@ -3572,7 +3002,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_191",
+    "id": "cube_159",
     "name": "Light Up the Stage",
     "cmc": 3,
     "mana_cost": "{2}{R}",
@@ -3591,7 +3021,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_192",
+    "id": "cube_160",
     "name": "Light Up the Stage",
     "cmc": 3,
     "mana_cost": "{2}{R}",
@@ -3610,7 +3040,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_193",
+    "id": "cube_161",
     "name": "Light Up the Stage",
     "cmc": 3,
     "mana_cost": "{2}{R}",
@@ -3629,7 +3059,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_194",
+    "id": "cube_162",
     "name": "Skewer the Critics",
     "cmc": 3,
     "mana_cost": "{2}{R}",
@@ -3648,7 +3078,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_195",
+    "id": "cube_163",
     "name": "Skewer the Critics",
     "cmc": 3,
     "mana_cost": "{2}{R}",
@@ -3667,7 +3097,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_196",
+    "id": "cube_164",
     "name": "Skewer the Critics",
     "cmc": 3,
     "mana_cost": "{2}{R}",
@@ -3686,7 +3116,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_197",
+    "id": "cube_165",
     "name": "Arboreal Grazer",
     "cmc": 1,
     "mana_cost": "{G}",
@@ -3705,7 +3135,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_198",
+    "id": "cube_166",
     "name": "Arboreal Grazer",
     "cmc": 1,
     "mana_cost": "{G}",
@@ -3724,7 +3154,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_199",
+    "id": "cube_167",
     "name": "Arboreal Grazer",
     "cmc": 1,
     "mana_cost": "{G}",
@@ -3743,7 +3173,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_200",
+    "id": "cube_168",
     "name": "Experiment One",
     "cmc": 1,
     "mana_cost": "{G}",
@@ -3762,7 +3192,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_201",
+    "id": "cube_169",
     "name": "Experiment One",
     "cmc": 1,
     "mana_cost": "{G}",
@@ -3781,7 +3211,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_202",
+    "id": "cube_170",
     "name": "Experiment One",
     "cmc": 1,
     "mana_cost": "{G}",
@@ -3800,7 +3230,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_203",
+    "id": "cube_171",
     "name": "Crocanura",
     "cmc": 3,
     "mana_cost": "{2}{G}",
@@ -3819,7 +3249,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_204",
+    "id": "cube_172",
     "name": "Crocanura",
     "cmc": 3,
     "mana_cost": "{2}{G}",
@@ -3838,7 +3268,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_205",
+    "id": "cube_173",
     "name": "Crocanura",
     "cmc": 3,
     "mana_cost": "{2}{G}",
@@ -3857,7 +3287,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_206",
+    "id": "cube_174",
     "name": "Crocanura",
     "cmc": 3,
     "mana_cost": "{2}{G}",
@@ -3876,7 +3306,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_207",
+    "id": "cube_175",
     "name": "Evolution Witness",
     "cmc": 3,
     "mana_cost": "{2}{G}",
@@ -3895,7 +3325,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_208",
+    "id": "cube_176",
     "name": "Loaming Shaman",
     "cmc": 3,
     "mana_cost": "{2}{G}",
@@ -3914,7 +3344,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_209",
+    "id": "cube_177",
     "name": "Beast Whisperer",
     "cmc": 4,
     "mana_cost": "{2}{G}{G}",
@@ -3933,7 +3363,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_210",
+    "id": "cube_178",
     "name": "Greater Mossdog",
     "cmc": 4,
     "mana_cost": "{3}{G}",
@@ -3952,7 +3382,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_211",
+    "id": "cube_179",
     "name": "Greater Mossdog",
     "cmc": 4,
     "mana_cost": "{3}{G}",
@@ -3971,7 +3401,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_212",
+    "id": "cube_180",
     "name": "Greater Mossdog",
     "cmc": 4,
     "mana_cost": "{3}{G}",
@@ -3990,7 +3420,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_213",
+    "id": "cube_181",
     "name": "Golgari Grave-Troll",
     "cmc": 5,
     "mana_cost": "{4}{G}",
@@ -4009,7 +3439,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_214",
+    "id": "cube_182",
     "name": "Giant Adephage",
     "cmc": 7,
     "mana_cost": "{5}{G}{G}",
@@ -4028,7 +3458,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_215",
+    "id": "cube_183",
     "name": "Giant Adephage",
     "cmc": 7,
     "mana_cost": "{5}{G}{G}",
@@ -4047,7 +3477,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_216",
+    "id": "cube_184",
     "name": "Arboretum Elemental",
     "cmc": 9,
     "mana_cost": "{7}{G}{G}",
@@ -4066,7 +3496,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_217",
+    "id": "cube_185",
     "name": "Skarrg Goliath",
     "cmc": 8,
     "mana_cost": "{6}{G}{G}",
@@ -4085,7 +3515,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_218",
+    "id": "cube_186",
     "name": "Edge of Autumn",
     "cmc": 2,
     "mana_cost": "{1}{G}",
@@ -4104,7 +3534,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_219",
+    "id": "cube_187",
     "name": "Edge of Autumn",
     "cmc": 2,
     "mana_cost": "{1}{G}",
@@ -4123,7 +3553,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_220",
+    "id": "cube_188",
     "name": "Edge of Autumn",
     "cmc": 2,
     "mana_cost": "{1}{G}",
@@ -4142,7 +3572,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_221",
+    "id": "cube_189",
     "name": "Farseek",
     "cmc": 2,
     "mana_cost": "{1}{G}",
@@ -4161,7 +3591,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_222",
+    "id": "cube_190",
     "name": "Farseek",
     "cmc": 2,
     "mana_cost": "{1}{G}",
@@ -4180,7 +3610,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_223",
+    "id": "cube_191",
     "name": "Farseek",
     "cmc": 2,
     "mana_cost": "{1}{G}",
@@ -4199,7 +3629,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_224",
+    "id": "cube_192",
     "name": "Life from the Loam",
     "cmc": 2,
     "mana_cost": "{1}{G}",
@@ -4218,7 +3648,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_225",
+    "id": "cube_193",
     "name": "Sprouting Renewal",
     "cmc": 3,
     "mana_cost": "{2}{G}",
@@ -4237,7 +3667,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_226",
+    "id": "cube_194",
     "name": "Sprouting Renewal",
     "cmc": 3,
     "mana_cost": "{2}{G}",
@@ -4256,7 +3686,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_227",
+    "id": "cube_195",
     "name": "Sprouting Renewal",
     "cmc": 3,
     "mana_cost": "{2}{G}",
@@ -4275,7 +3705,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_228",
+    "id": "cube_196",
     "name": "Forced Adaptation",
     "cmc": 1,
     "mana_cost": "{G}",
@@ -4294,7 +3724,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_229",
+    "id": "cube_197",
     "name": "Forced Adaptation",
     "cmc": 1,
     "mana_cost": "{G}",
@@ -4313,7 +3743,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_230",
+    "id": "cube_198",
     "name": "Utopia Sprawl",
     "cmc": 1,
     "mana_cost": "{G}",
@@ -4332,7 +3762,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_231",
+    "id": "cube_199",
     "name": "Utopia Sprawl",
     "cmc": 1,
     "mana_cost": "{G}",
@@ -4351,7 +3781,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_232",
+    "id": "cube_200",
     "name": "Utopia Sprawl",
     "cmc": 1,
     "mana_cost": "{G}",
@@ -4370,7 +3800,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_233",
+    "id": "cube_201",
     "name": "Fists of Ironwood",
     "cmc": 2,
     "mana_cost": "{1}{G}",
@@ -4389,7 +3819,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_234",
+    "id": "cube_202",
     "name": "Fists of Ironwood",
     "cmc": 2,
     "mana_cost": "{1}{G}",
@@ -4408,7 +3838,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_235",
+    "id": "cube_203",
     "name": "Fists of Ironwood",
     "cmc": 2,
     "mana_cost": "{1}{G}",
@@ -4427,7 +3857,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_236",
+    "id": "cube_204",
     "name": "Moldervine Cloak",
     "cmc": 3,
     "mana_cost": "{2}{G}",
@@ -4446,7 +3876,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_237",
+    "id": "cube_205",
     "name": "Moldervine Cloak",
     "cmc": 3,
     "mana_cost": "{2}{G}",
@@ -4465,7 +3895,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_238",
+    "id": "cube_206",
     "name": "Judge's Familiar",
     "cmc": 1,
     "mana_cost": "{W/U}",
@@ -4486,7 +3916,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_239",
+    "id": "cube_207",
     "name": "Judge's Familiar",
     "cmc": 1,
     "mana_cost": "{W/U}",
@@ -4507,7 +3937,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_240",
+    "id": "cube_208",
     "name": "Azorius Guildmage",
     "cmc": 2,
     "mana_cost": "{W/U}{W/U}",
@@ -4528,7 +3958,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_241",
+    "id": "cube_209",
     "name": "Azorius Guildmage",
     "cmc": 2,
     "mana_cost": "{W/U}{W/U}",
@@ -4549,7 +3979,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_242",
+    "id": "cube_210",
     "name": "Azorius Signet",
     "cmc": 2,
     "mana_cost": "{2}",
@@ -4567,7 +3997,7 @@
     "isFixer": true
   },
   {
-    "id": "rav_243",
+    "id": "cube_211",
     "name": "Lyev Skyknight",
     "cmc": 3,
     "mana_cost": "{1}{W}{U}",
@@ -4588,7 +4018,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_244",
+    "id": "cube_212",
     "name": "Lyev Skyknight",
     "cmc": 3,
     "mana_cost": "{1}{W}{U}",
@@ -4609,7 +4039,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_245",
+    "id": "cube_213",
     "name": "Lyev Skyknight",
     "cmc": 3,
     "mana_cost": "{1}{W}{U}",
@@ -4630,7 +4060,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_246",
+    "id": "cube_214",
     "name": "Sphinx of New Prahv",
     "cmc": 4,
     "mana_cost": "{W}{W}{U}{U}",
@@ -4651,7 +4081,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_247",
+    "id": "cube_215",
     "name": "Sphinx of New Prahv",
     "cmc": 4,
     "mana_cost": "{W}{W}{U}{U}",
@@ -4672,7 +4102,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_248",
+    "id": "cube_216",
     "name": "Isperia the Inscrutable",
     "cmc": 5,
     "mana_cost": "{1}{W}{W}{U}{U}",
@@ -4693,7 +4123,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_249",
+    "id": "cube_217",
     "name": "Lavinia of the Tenth",
     "cmc": 5,
     "mana_cost": "{3}{W}{U}",
@@ -4714,7 +4144,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_250",
+    "id": "cube_218",
     "name": "Sky Hussar",
     "cmc": 5,
     "mana_cost": "{3}{W}{U}",
@@ -4735,7 +4165,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_251",
+    "id": "cube_219",
     "name": "Dimir Guildmage",
     "cmc": 2,
     "mana_cost": "{U/B}{U/B}",
@@ -4756,7 +4186,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_252",
+    "id": "cube_220",
     "name": "Dimir Guildmage",
     "cmc": 2,
     "mana_cost": "{U/B}{U/B}",
@@ -4777,7 +4207,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_253",
+    "id": "cube_221",
     "name": "Dimir Signet",
     "cmc": 2,
     "mana_cost": "{2}",
@@ -4795,7 +4225,7 @@
     "isFixer": true
   },
   {
-    "id": "rav_254",
+    "id": "cube_222",
     "name": "House Guildmage",
     "cmc": 2,
     "mana_cost": "{U}{B}",
@@ -4816,7 +4246,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_255",
+    "id": "cube_223",
     "name": "Dimir Doppelganger",
     "cmc": 3,
     "mana_cost": "{1}{U}{B}",
@@ -4837,7 +4267,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_256",
+    "id": "cube_224",
     "name": "Thief of Sanity",
     "cmc": 3,
     "mana_cost": "{1}{U}{B}",
@@ -4858,7 +4288,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_257",
+    "id": "cube_225",
     "name": "Thief of Sanity",
     "cmc": 3,
     "mana_cost": "{1}{U}{B}",
@@ -4879,7 +4309,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_258",
+    "id": "cube_226",
     "name": "Whisper Agent",
     "cmc": 3,
     "mana_cost": "{1}{U/B}{U/B}",
@@ -4900,7 +4330,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_259",
+    "id": "cube_227",
     "name": "Whisper Agent",
     "cmc": 3,
     "mana_cost": "{1}{U/B}{U/B}",
@@ -4921,7 +4351,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_260",
+    "id": "cube_228",
     "name": "Whisper Agent",
     "cmc": 3,
     "mana_cost": "{1}{U/B}{U/B}",
@@ -4942,7 +4372,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_261",
+    "id": "cube_229",
     "name": "Lazav, Dimir Mastermind",
     "cmc": 4,
     "mana_cost": "{U}{U}{B}{B}",
@@ -4963,7 +4393,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_262",
+    "id": "cube_230",
     "name": "Whispering Madness",
     "cmc": 4,
     "mana_cost": "{2}{U}{B}",
@@ -4984,7 +4414,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_263",
+    "id": "cube_231",
     "name": "Consuming Aberration",
     "cmc": 5,
     "mana_cost": "{3}{U}{B}",
@@ -5005,7 +4435,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_264",
+    "id": "cube_232",
     "name": "Mirko Vosk, Mind Drinker",
     "cmc": 5,
     "mana_cost": "{3}{U}{B}",
@@ -5026,7 +4456,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_265",
+    "id": "cube_233",
     "name": "Footlight Fiend",
     "cmc": 1,
     "mana_cost": "{B/R}",
@@ -5047,7 +4477,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_266",
+    "id": "cube_234",
     "name": "Footlight Fiend",
     "cmc": 1,
     "mana_cost": "{B/R}",
@@ -5068,7 +4498,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_267",
+    "id": "cube_235",
     "name": "Footlight Fiend",
     "cmc": 1,
     "mana_cost": "{B/R}",
@@ -5089,7 +4519,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_268",
+    "id": "cube_236",
     "name": "Gobhobbler Rats",
     "cmc": 2,
     "mana_cost": "{B}{R}",
@@ -5110,7 +4540,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_269",
+    "id": "cube_237",
     "name": "Gobhobbler Rats",
     "cmc": 2,
     "mana_cost": "{B}{R}",
@@ -5131,7 +4561,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_270",
+    "id": "cube_238",
     "name": "Rakdos Guildmage",
     "cmc": 2,
     "mana_cost": "{B/R}{B/R}",
@@ -5152,7 +4582,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_271",
+    "id": "cube_239",
     "name": "Rakdos Signet",
     "cmc": 2,
     "mana_cost": "{2}",
@@ -5170,7 +4600,7 @@
     "isFixer": true
   },
   {
-    "id": "rav_272",
+    "id": "cube_240",
     "name": "Judith, the Scourge Diva",
     "cmc": 3,
     "mana_cost": "{1}{B}{R}",
@@ -5191,7 +4621,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_273",
+    "id": "cube_241",
     "name": "Theater of Horrors",
     "cmc": 3,
     "mana_cost": "{1}{B}{R}",
@@ -5212,7 +4642,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_274",
+    "id": "cube_242",
     "name": "Theater of Horrors",
     "cmc": 3,
     "mana_cost": "{1}{B}{R}",
@@ -5233,7 +4663,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_275",
+    "id": "cube_243",
     "name": "Carnage Gladiator",
     "cmc": 4,
     "mana_cost": "{2}{B}{R}",
@@ -5254,7 +4684,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_276",
+    "id": "cube_244",
     "name": "Carnage Gladiator",
     "cmc": 4,
     "mana_cost": "{2}{B}{R}",
@@ -5275,7 +4705,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_277",
+    "id": "cube_245",
     "name": "Rakdos Firewheeler",
     "cmc": 4,
     "mana_cost": "{B}{B}{R}{R}",
@@ -5296,7 +4726,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_278",
+    "id": "cube_246",
     "name": "Rakdos, Lord of Riots",
     "cmc": 4,
     "mana_cost": "{B}{B}{R}{R}",
@@ -5317,7 +4747,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_279",
+    "id": "cube_247",
     "name": "Goblin Anarchomancer",
     "cmc": 2,
     "mana_cost": "{R}{G}",
@@ -5338,7 +4768,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_280",
+    "id": "cube_248",
     "name": "Goblin Anarchomancer",
     "cmc": 2,
     "mana_cost": "{R}{G}",
@@ -5359,7 +4789,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_281",
+    "id": "cube_249",
     "name": "Gruul Signet",
     "cmc": 2,
     "mana_cost": "{2}",
@@ -5377,7 +4807,7 @@
     "isFixer": true
   },
   {
-    "id": "rav_282",
+    "id": "cube_250",
     "name": "Rhythm of the Wild",
     "cmc": 3,
     "mana_cost": "{1}{R}{G}",
@@ -5398,7 +4828,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_283",
+    "id": "cube_251",
     "name": "Rhythm of the Wild",
     "cmc": 3,
     "mana_cost": "{1}{R}{G}",
@@ -5419,7 +4849,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_284",
+    "id": "cube_252",
     "name": "Sunder Shaman",
     "cmc": 4,
     "mana_cost": "{R}{R}{G}{G}",
@@ -5440,7 +4870,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_285",
+    "id": "cube_253",
     "name": "Sunder Shaman",
     "cmc": 4,
     "mana_cost": "{R}{R}{G}{G}",
@@ -5461,7 +4891,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_286",
+    "id": "cube_254",
     "name": "Sunder Shaman",
     "cmc": 4,
     "mana_cost": "{R}{R}{G}{G}",
@@ -5482,7 +4912,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_287",
+    "id": "cube_255",
     "name": "Nikya of the Old Ways",
     "cmc": 5,
     "mana_cost": "{3}{R}{G}",
@@ -5503,7 +4933,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_288",
+    "id": "cube_256",
     "name": "Ravager Wurm",
     "cmc": 6,
     "mana_cost": "{3}{R}{G}{G}",
@@ -5524,7 +4954,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_289",
+    "id": "cube_257",
     "name": "Ravager Wurm",
     "cmc": 6,
     "mana_cost": "{3}{R}{G}{G}",
@@ -5545,7 +4975,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_290",
+    "id": "cube_258",
     "name": "Ravager Wurm",
     "cmc": 6,
     "mana_cost": "{3}{R}{G}{G}",
@@ -5566,7 +4996,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_291",
+    "id": "cube_259",
     "name": "Rubblehulk",
     "cmc": 6,
     "mana_cost": "{4}{R}{G}",
@@ -5587,7 +5017,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_292",
+    "id": "cube_260",
     "name": "Call of the Conclave",
     "cmc": 2,
     "mana_cost": "{G}{W}",
@@ -5608,7 +5038,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_293",
+    "id": "cube_261",
     "name": "Call of the Conclave",
     "cmc": 2,
     "mana_cost": "{G}{W}",
@@ -5629,7 +5059,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_294",
+    "id": "cube_262",
     "name": "Selesnya Evangel",
     "cmc": 2,
     "mana_cost": "{G}{W}",
@@ -5650,7 +5080,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_295",
+    "id": "cube_263",
     "name": "Selesnya Evangel",
     "cmc": 2,
     "mana_cost": "{G}{W}",
@@ -5671,7 +5101,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_296",
+    "id": "cube_264",
     "name": "Selesnya Evangel",
     "cmc": 2,
     "mana_cost": "{G}{W}",
@@ -5692,7 +5122,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_297",
+    "id": "cube_265",
     "name": "Selesnya Guildmage",
     "cmc": 2,
     "mana_cost": "{G/W}{G/W}",
@@ -5713,7 +5143,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_298",
+    "id": "cube_266",
     "name": "Selesnya Guildmage",
     "cmc": 2,
     "mana_cost": "{G/W}{G/W}",
@@ -5734,7 +5164,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_299",
+    "id": "cube_267",
     "name": "Selesnya Signet",
     "cmc": 2,
     "mana_cost": "{2}",
@@ -5752,7 +5182,7 @@
     "isFixer": true
   },
   {
-    "id": "rav_300",
+    "id": "cube_268",
     "name": "March of the Multitudes",
     "cmc": 3,
     "mana_cost": "{X}{G}{W}{W}",
@@ -5773,7 +5203,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_301",
+    "id": "cube_269",
     "name": "Conclave Cavalier",
     "cmc": 4,
     "mana_cost": "{G}{G}{W}{W}",
@@ -5794,7 +5224,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_302",
+    "id": "cube_270",
     "name": "Growing Ranks",
     "cmc": 4,
     "mana_cost": "{2}{G/W}{G/W}",
@@ -5815,7 +5245,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_303",
+    "id": "cube_271",
     "name": "Trostani, Selesnya's Voice",
     "cmc": 4,
     "mana_cost": "{G}{G}{W}{W}",
@@ -5836,7 +5266,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_304",
+    "id": "cube_272",
     "name": "Tolsimir Wolfblood",
     "cmc": 6,
     "mana_cost": "{4}{G}{W}",
@@ -5857,7 +5287,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_305",
+    "id": "cube_273",
     "name": "Cartel Aristocrat",
     "cmc": 2,
     "mana_cost": "{W}{B}",
@@ -5878,7 +5308,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_306",
+    "id": "cube_274",
     "name": "Cartel Aristocrat",
     "cmc": 2,
     "mana_cost": "{W}{B}",
@@ -5899,7 +5329,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_307",
+    "id": "cube_275",
     "name": "Mourning Thrull",
     "cmc": 2,
     "mana_cost": "{1}{W/B}",
@@ -5920,7 +5350,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_308",
+    "id": "cube_276",
     "name": "Mourning Thrull",
     "cmc": 2,
     "mana_cost": "{1}{W/B}",
@@ -5941,7 +5371,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_309",
+    "id": "cube_277",
     "name": "Mourning Thrull",
     "cmc": 2,
     "mana_cost": "{1}{W/B}",
@@ -5962,7 +5392,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_310",
+    "id": "cube_278",
     "name": "Orzhov Signet",
     "cmc": 2,
     "mana_cost": "{2}",
@@ -5980,7 +5410,7 @@
     "isFixer": true
   },
   {
-    "id": "rav_311",
+    "id": "cube_279",
     "name": "Teysa, Orzhov Scion",
     "cmc": 3,
     "mana_cost": "{1}{W}{B}",
@@ -6001,7 +5431,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_312",
+    "id": "cube_280",
     "name": "Blind Hunter",
     "cmc": 4,
     "mana_cost": "{2}{W}{B}",
@@ -6022,7 +5452,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_313",
+    "id": "cube_281",
     "name": "Ghost Council of Orzhova",
     "cmc": 4,
     "mana_cost": "{W}{W}{B}{B}",
@@ -6043,7 +5473,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_314",
+    "id": "cube_282",
     "name": "Seraph of the Scales",
     "cmc": 4,
     "mana_cost": "{2}{W}{B}",
@@ -6064,7 +5494,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_315",
+    "id": "cube_283",
     "name": "Seraph of the Scales",
     "cmc": 4,
     "mana_cost": "{2}{W}{B}",
@@ -6085,7 +5515,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_316",
+    "id": "cube_284",
     "name": "Revival // Revenge",
     "cmc": 0,
     "mana_cost": "",
@@ -6100,7 +5530,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_317",
+    "id": "cube_285",
     "name": "Revival // Revenge",
     "cmc": 0,
     "mana_cost": "",
@@ -6115,7 +5545,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_318",
+    "id": "cube_286",
     "name": "Goblin Electromancer",
     "cmc": 2,
     "mana_cost": "{U}{R}",
@@ -6136,7 +5566,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_319",
+    "id": "cube_287",
     "name": "Goblin Electromancer",
     "cmc": 2,
     "mana_cost": "{U}{R}",
@@ -6157,7 +5587,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_320",
+    "id": "cube_288",
     "name": "Goblin Electromancer",
     "cmc": 2,
     "mana_cost": "{U}{R}",
@@ -6178,7 +5608,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_321",
+    "id": "cube_289",
     "name": "Izzet Charm",
     "cmc": 2,
     "mana_cost": "{U}{R}",
@@ -6199,7 +5629,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_322",
+    "id": "cube_290",
     "name": "Izzet Charm",
     "cmc": 2,
     "mana_cost": "{U}{R}",
@@ -6220,7 +5650,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_323",
+    "id": "cube_291",
     "name": "Izzet Signet",
     "cmc": 2,
     "mana_cost": "{2}",
@@ -6238,7 +5668,7 @@
     "isFixer": true
   },
   {
-    "id": "rav_324",
+    "id": "cube_292",
     "name": "League Guildmage",
     "cmc": 2,
     "mana_cost": "{U}{R}",
@@ -6259,7 +5689,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_325",
+    "id": "cube_293",
     "name": "League Guildmage",
     "cmc": 2,
     "mana_cost": "{U}{R}",
@@ -6280,7 +5710,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_326",
+    "id": "cube_294",
     "name": "Wee Dragonauts",
     "cmc": 3,
     "mana_cost": "{1}{U}{R}",
@@ -6301,7 +5731,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_327",
+    "id": "cube_295",
     "name": "Wee Dragonauts",
     "cmc": 3,
     "mana_cost": "{1}{U}{R}",
@@ -6322,7 +5752,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_328",
+    "id": "cube_296",
     "name": "Crackling Drake",
     "cmc": 4,
     "mana_cost": "{U}{U}{R}{R}",
@@ -6343,7 +5773,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_329",
+    "id": "cube_297",
     "name": "Crackling Drake",
     "cmc": 4,
     "mana_cost": "{U}{U}{R}{R}",
@@ -6364,7 +5794,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_330",
+    "id": "cube_298",
     "name": "Ral, Storm Conduit",
     "cmc": 4,
     "mana_cost": "{2}{U}{R}",
@@ -6385,7 +5815,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_331",
+    "id": "cube_299",
     "name": "Niv-Mizzet, Dracogenius",
     "cmc": 6,
     "mana_cost": "{2}{U}{U}{R}{R}",
@@ -6406,7 +5836,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_332",
+    "id": "cube_300",
     "name": "Deathrite Shaman",
     "cmc": 1,
     "mana_cost": "{B/G}",
@@ -6427,7 +5857,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_333",
+    "id": "cube_301",
     "name": "Deathrite Shaman",
     "cmc": 1,
     "mana_cost": "{B/G}",
@@ -6448,7 +5878,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_334",
+    "id": "cube_302",
     "name": "Slitherhead",
     "cmc": 1,
     "mana_cost": "{B/G}",
@@ -6469,7 +5899,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_335",
+    "id": "cube_303",
     "name": "Slitherhead",
     "cmc": 1,
     "mana_cost": "{B/G}",
@@ -6490,7 +5920,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_336",
+    "id": "cube_304",
     "name": "Slitherhead",
     "cmc": 1,
     "mana_cost": "{B/G}",
@@ -6511,7 +5941,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_337",
+    "id": "cube_305",
     "name": "Glowspore Shaman",
     "cmc": 2,
     "mana_cost": "{B}{G}",
@@ -6532,7 +5962,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_338",
+    "id": "cube_306",
     "name": "Glowspore Shaman",
     "cmc": 2,
     "mana_cost": "{B}{G}",
@@ -6553,7 +5983,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_339",
+    "id": "cube_307",
     "name": "Glowspore Shaman",
     "cmc": 2,
     "mana_cost": "{B}{G}",
@@ -6574,7 +6004,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_340",
+    "id": "cube_308",
     "name": "Golgari Signet",
     "cmc": 2,
     "mana_cost": "{2}",
@@ -6592,7 +6022,7 @@
     "isFixer": true
   },
   {
-    "id": "rav_341",
+    "id": "cube_309",
     "name": "Jarad, Golgari Lich Lord",
     "cmc": 4,
     "mana_cost": "{B}{B}{G}{G}",
@@ -6613,7 +6043,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_342",
+    "id": "cube_310",
     "name": "Vraska, Golgari Queen",
     "cmc": 4,
     "mana_cost": "{2}{B}{G}",
@@ -6634,7 +6064,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_343",
+    "id": "cube_311",
     "name": "Underrealm Lich",
     "cmc": 5,
     "mana_cost": "{3}{B}{G}",
@@ -6655,7 +6085,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_344",
+    "id": "cube_312",
     "name": "Izoni, Thousand-Eyed",
     "cmc": 6,
     "mana_cost": "{2}{B}{B}{G}{G}",
@@ -6676,7 +6106,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_345",
+    "id": "cube_313",
     "name": "Find // Finality",
     "cmc": 0,
     "mana_cost": "",
@@ -6691,7 +6121,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_346",
+    "id": "cube_314",
     "name": "Boros Guildmage",
     "cmc": 2,
     "mana_cost": "{R/W}{R/W}",
@@ -6712,7 +6142,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_347",
+    "id": "cube_315",
     "name": "Boros Guildmage",
     "cmc": 2,
     "mana_cost": "{R/W}{R/W}",
@@ -6733,7 +6163,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_348",
+    "id": "cube_316",
     "name": "Boros Signet",
     "cmc": 2,
     "mana_cost": "{2}",
@@ -6751,7 +6181,7 @@
     "isFixer": true
   },
   {
-    "id": "rav_349",
+    "id": "cube_317",
     "name": "Fresh-Faced Recruit",
     "cmc": 2,
     "mana_cost": "{1}{R/W}",
@@ -6772,7 +6202,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_350",
+    "id": "cube_318",
     "name": "Fresh-Faced Recruit",
     "cmc": 2,
     "mana_cost": "{1}{R/W}",
@@ -6793,7 +6223,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_351",
+    "id": "cube_319",
     "name": "Fresh-Faced Recruit",
     "cmc": 2,
     "mana_cost": "{1}{R/W}",
@@ -6814,7 +6244,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_352",
+    "id": "cube_320",
     "name": "Boros Reckoner",
     "cmc": 3,
     "mana_cost": "{R/W}{R/W}{R/W}",
@@ -6835,7 +6265,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_353",
+    "id": "cube_321",
     "name": "Skyknight Legionnaire",
     "cmc": 3,
     "mana_cost": "{1}{R}{W}",
@@ -6856,7 +6286,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_354",
+    "id": "cube_322",
     "name": "Skyknight Legionnaire",
     "cmc": 3,
     "mana_cost": "{1}{R}{W}",
@@ -6877,7 +6307,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_355",
+    "id": "cube_323",
     "name": "Skyknight Legionnaire",
     "cmc": 3,
     "mana_cost": "{1}{R}{W}",
@@ -6898,7 +6328,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_356",
+    "id": "cube_324",
     "name": "Aurelia, Exemplar of Justice",
     "cmc": 4,
     "mana_cost": "{2}{R}{W}",
@@ -6919,7 +6349,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_357",
+    "id": "cube_325",
     "name": "Bell Borca, Spectral Sergeant",
     "cmc": 4,
     "mana_cost": "{2}{R}{W}",
@@ -6940,7 +6370,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_358",
+    "id": "cube_326",
     "name": "Truefire Captain",
     "cmc": 4,
     "mana_cost": "{R}{R}{W}{W}",
@@ -6961,7 +6391,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_359",
+    "id": "cube_327",
     "name": "Hydroid Krasis",
     "cmc": 2,
     "mana_cost": "{X}{G}{U}",
@@ -6982,7 +6412,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_360",
+    "id": "cube_328",
     "name": "Hydroid Krasis",
     "cmc": 2,
     "mana_cost": "{X}{G}{U}",
@@ -7003,7 +6433,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_361",
+    "id": "cube_329",
     "name": "Simic Guildmage",
     "cmc": 2,
     "mana_cost": "{G/U}{G/U}",
@@ -7024,7 +6454,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_362",
+    "id": "cube_330",
     "name": "Simic Guildmage",
     "cmc": 2,
     "mana_cost": "{G/U}{G/U}",
@@ -7045,7 +6475,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_363",
+    "id": "cube_331",
     "name": "Simic Signet",
     "cmc": 2,
     "mana_cost": "{2}",
@@ -7063,7 +6493,7 @@
     "isFixer": true
   },
   {
-    "id": "rav_364",
+    "id": "cube_332",
     "name": "Bred for the Hunt",
     "cmc": 3,
     "mana_cost": "{1}{G}{U}",
@@ -7084,7 +6514,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_365",
+    "id": "cube_333",
     "name": "Fathom Mage",
     "cmc": 4,
     "mana_cost": "{2}{G}{U}",
@@ -7105,7 +6535,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_366",
+    "id": "cube_334",
     "name": "Fathom Mage",
     "cmc": 4,
     "mana_cost": "{2}{G}{U}",
@@ -7126,7 +6556,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_367",
+    "id": "cube_335",
     "name": "Frilled Mystic",
     "cmc": 4,
     "mana_cost": "{G}{G}{U}{U}",
@@ -7147,7 +6577,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_368",
+    "id": "cube_336",
     "name": "Frilled Mystic",
     "cmc": 4,
     "mana_cost": "{G}{G}{U}{U}",
@@ -7168,7 +6598,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_369",
+    "id": "cube_337",
     "name": "Master Biomancer",
     "cmc": 4,
     "mana_cost": "{2}{G}{U}",
@@ -7189,7 +6619,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_370",
+    "id": "cube_338",
     "name": "Sharktocrab",
     "cmc": 4,
     "mana_cost": "{2}{G}{U}",
@@ -7210,7 +6640,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_371",
+    "id": "cube_339",
     "name": "Sharktocrab",
     "cmc": 4,
     "mana_cost": "{2}{G}{U}",
@@ -7231,7 +6661,7 @@
     "isFixer": false
   },
   {
-    "id": "rav_372",
+    "id": "cube_340",
     "name": "Zegana, Utopian Speaker",
     "cmc": 4,
     "mana_cost": "{2}{G}{U}",
@@ -7250,5 +6680,365 @@
     "rarity": "rare",
     "image_url": "https://cards.scryfall.io/normal/front/9/3/93800249-4fcd-47ec-92f9-58f875cb6f00.jpg?1783913842",
     "isFixer": false
+  },
+  {
+    "id": "cube_341",
+    "name": "Azorius Guildgate",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "color_identity": [
+      "U",
+      "W"
+    ],
+    "type_line": "Land — Gate",
+    "oracle_text": "This land enters tapped.\n{T}: Add {W} or {U}.",
+    "power": null,
+    "toughness": null,
+    "rarity": "common",
+    "image_url": "https://cards.scryfall.io/normal/front/f/9/f98a7264-0a83-42c8-a94d-05ad4c234242.jpg?1783908907",
+    "isFixer": true
+  },
+  {
+    "id": "cube_342",
+    "name": "Azorius Guildgate",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "color_identity": [
+      "U",
+      "W"
+    ],
+    "type_line": "Land — Gate",
+    "oracle_text": "This land enters tapped.\n{T}: Add {W} or {U}.",
+    "power": null,
+    "toughness": null,
+    "rarity": "common",
+    "image_url": "https://cards.scryfall.io/normal/front/f/9/f98a7264-0a83-42c8-a94d-05ad4c234242.jpg?1783908907",
+    "isFixer": true
+  },
+  {
+    "id": "cube_343",
+    "name": "Dimir Guildgate",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "color_identity": [
+      "B",
+      "U"
+    ],
+    "type_line": "Land — Gate",
+    "oracle_text": "This land enters tapped.\n{T}: Add {U} or {B}.",
+    "power": null,
+    "toughness": null,
+    "rarity": "common",
+    "image_url": "https://cards.scryfall.io/normal/front/f/9/f9b8a159-5e58-4432-8ecd-62f39afa96da.jpg?1783908901",
+    "isFixer": true
+  },
+  {
+    "id": "cube_344",
+    "name": "Dimir Guildgate",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "color_identity": [
+      "B",
+      "U"
+    ],
+    "type_line": "Land — Gate",
+    "oracle_text": "This land enters tapped.\n{T}: Add {U} or {B}.",
+    "power": null,
+    "toughness": null,
+    "rarity": "common",
+    "image_url": "https://cards.scryfall.io/normal/front/f/9/f9b8a159-5e58-4432-8ecd-62f39afa96da.jpg?1783908901",
+    "isFixer": true
+  },
+  {
+    "id": "cube_345",
+    "name": "Rakdos Guildgate",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "color_identity": [
+      "B",
+      "R"
+    ],
+    "type_line": "Land — Gate",
+    "oracle_text": "This land enters tapped.\n{T}: Add {B} or {R}.",
+    "power": null,
+    "toughness": null,
+    "rarity": "common",
+    "image_url": "https://cards.scryfall.io/normal/front/e/1/e1f01964-c610-4d0f-a2b4-f52e46dc50d2.jpg?1783908899",
+    "isFixer": true
+  },
+  {
+    "id": "cube_346",
+    "name": "Rakdos Guildgate",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "color_identity": [
+      "B",
+      "R"
+    ],
+    "type_line": "Land — Gate",
+    "oracle_text": "This land enters tapped.\n{T}: Add {B} or {R}.",
+    "power": null,
+    "toughness": null,
+    "rarity": "common",
+    "image_url": "https://cards.scryfall.io/normal/front/e/1/e1f01964-c610-4d0f-a2b4-f52e46dc50d2.jpg?1783908899",
+    "isFixer": true
+  },
+  {
+    "id": "cube_347",
+    "name": "Gruul Guildgate",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "color_identity": [
+      "G",
+      "R"
+    ],
+    "type_line": "Land — Gate",
+    "oracle_text": "This land enters tapped.\n{T}: Add {R} or {G}.",
+    "power": null,
+    "toughness": null,
+    "rarity": "common",
+    "image_url": "https://cards.scryfall.io/normal/front/3/a/3ab6c240-c97d-4a5c-bc39-860c2d9901c2.jpg?1783908900",
+    "isFixer": true
+  },
+  {
+    "id": "cube_348",
+    "name": "Gruul Guildgate",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "color_identity": [
+      "G",
+      "R"
+    ],
+    "type_line": "Land — Gate",
+    "oracle_text": "This land enters tapped.\n{T}: Add {R} or {G}.",
+    "power": null,
+    "toughness": null,
+    "rarity": "common",
+    "image_url": "https://cards.scryfall.io/normal/front/3/a/3ab6c240-c97d-4a5c-bc39-860c2d9901c2.jpg?1783908900",
+    "isFixer": true
+  },
+  {
+    "id": "cube_349",
+    "name": "Selesnya Guildgate",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "color_identity": [
+      "G",
+      "W"
+    ],
+    "type_line": "Land — Gate",
+    "oracle_text": "This land enters tapped.\n{T}: Add {G} or {W}.",
+    "power": null,
+    "toughness": null,
+    "rarity": "common",
+    "image_url": "https://cards.scryfall.io/normal/front/6/7/6718d4e7-768e-473f-8064-a68422e977f6.jpg?1783908899",
+    "isFixer": true
+  },
+  {
+    "id": "cube_350",
+    "name": "Selesnya Guildgate",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "color_identity": [
+      "G",
+      "W"
+    ],
+    "type_line": "Land — Gate",
+    "oracle_text": "This land enters tapped.\n{T}: Add {G} or {W}.",
+    "power": null,
+    "toughness": null,
+    "rarity": "common",
+    "image_url": "https://cards.scryfall.io/normal/front/6/7/6718d4e7-768e-473f-8064-a68422e977f6.jpg?1783908899",
+    "isFixer": true
+  },
+  {
+    "id": "cube_351",
+    "name": "Orzhov Guildgate",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "color_identity": [
+      "B",
+      "W"
+    ],
+    "type_line": "Land — Gate",
+    "oracle_text": "This land enters tapped.\n{T}: Add {W} or {B}.",
+    "power": null,
+    "toughness": null,
+    "rarity": "common",
+    "image_url": "https://cards.scryfall.io/normal/front/a/9/a917be03-0c17-4454-b044-c4375e5c8085.jpg?1783908900",
+    "isFixer": true
+  },
+  {
+    "id": "cube_352",
+    "name": "Orzhov Guildgate",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "color_identity": [
+      "B",
+      "W"
+    ],
+    "type_line": "Land — Gate",
+    "oracle_text": "This land enters tapped.\n{T}: Add {W} or {B}.",
+    "power": null,
+    "toughness": null,
+    "rarity": "common",
+    "image_url": "https://cards.scryfall.io/normal/front/a/9/a917be03-0c17-4454-b044-c4375e5c8085.jpg?1783908900",
+    "isFixer": true
+  },
+  {
+    "id": "cube_353",
+    "name": "Izzet Guildgate",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "color_identity": [
+      "R",
+      "U"
+    ],
+    "type_line": "Land — Gate",
+    "oracle_text": "This land enters tapped.\n{T}: Add {U} or {R}.",
+    "power": null,
+    "toughness": null,
+    "rarity": "common",
+    "image_url": "https://cards.scryfall.io/normal/front/d/b/db9e6fc9-813d-4a71-8a68-8e0f83fa945d.jpg?1783908899",
+    "isFixer": true
+  },
+  {
+    "id": "cube_354",
+    "name": "Izzet Guildgate",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "color_identity": [
+      "R",
+      "U"
+    ],
+    "type_line": "Land — Gate",
+    "oracle_text": "This land enters tapped.\n{T}: Add {U} or {R}.",
+    "power": null,
+    "toughness": null,
+    "rarity": "common",
+    "image_url": "https://cards.scryfall.io/normal/front/d/b/db9e6fc9-813d-4a71-8a68-8e0f83fa945d.jpg?1783908899",
+    "isFixer": true
+  },
+  {
+    "id": "cube_355",
+    "name": "Golgari Guildgate",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "color_identity": [
+      "B",
+      "G"
+    ],
+    "type_line": "Land — Gate",
+    "oracle_text": "This land enters tapped.\n{T}: Add {B} or {G}.",
+    "power": null,
+    "toughness": null,
+    "rarity": "common",
+    "image_url": "https://cards.scryfall.io/normal/front/9/2/92d4646c-a375-4835-aa58-8bb77d1a5abf.jpg?1783908900",
+    "isFixer": true
+  },
+  {
+    "id": "cube_356",
+    "name": "Golgari Guildgate",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "color_identity": [
+      "B",
+      "G"
+    ],
+    "type_line": "Land — Gate",
+    "oracle_text": "This land enters tapped.\n{T}: Add {B} or {G}.",
+    "power": null,
+    "toughness": null,
+    "rarity": "common",
+    "image_url": "https://cards.scryfall.io/normal/front/9/2/92d4646c-a375-4835-aa58-8bb77d1a5abf.jpg?1783908900",
+    "isFixer": true
+  },
+  {
+    "id": "cube_357",
+    "name": "Boros Guildgate",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "color_identity": [
+      "R",
+      "W"
+    ],
+    "type_line": "Land — Gate",
+    "oracle_text": "This land enters tapped.\n{T}: Add {R} or {W}.",
+    "power": null,
+    "toughness": null,
+    "rarity": "common",
+    "image_url": "https://cards.scryfall.io/normal/front/3/e/3e3c74ea-40e9-4ad9-a491-c208403b68ad.jpg?1783908903",
+    "isFixer": true
+  },
+  {
+    "id": "cube_358",
+    "name": "Boros Guildgate",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "color_identity": [
+      "R",
+      "W"
+    ],
+    "type_line": "Land — Gate",
+    "oracle_text": "This land enters tapped.\n{T}: Add {R} or {W}.",
+    "power": null,
+    "toughness": null,
+    "rarity": "common",
+    "image_url": "https://cards.scryfall.io/normal/front/3/e/3e3c74ea-40e9-4ad9-a491-c208403b68ad.jpg?1783908903",
+    "isFixer": true
+  },
+  {
+    "id": "cube_359",
+    "name": "Simic Guildgate",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "color_identity": [
+      "G",
+      "U"
+    ],
+    "type_line": "Land — Gate",
+    "oracle_text": "This land enters tapped.\n{T}: Add {G} or {U}.",
+    "power": null,
+    "toughness": null,
+    "rarity": "common",
+    "image_url": "https://cards.scryfall.io/normal/front/9/6/96590855-1ee5-4d69-9070-776e23f71976.jpg?1783908898",
+    "isFixer": true
+  },
+  {
+    "id": "cube_360",
+    "name": "Simic Guildgate",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "color_identity": [
+      "G",
+      "U"
+    ],
+    "type_line": "Land — Gate",
+    "oracle_text": "This land enters tapped.\n{T}: Add {G} or {U}.",
+    "power": null,
+    "toughness": null,
+    "rarity": "common",
+    "image_url": "https://cards.scryfall.io/normal/front/9/6/96590855-1ee5-4d69-9070-776e23f71976.jpg?1783908898",
+    "isFixer": true
   }
 ]

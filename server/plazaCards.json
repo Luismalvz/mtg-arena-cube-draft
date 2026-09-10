@@ -1,0 +1,540 @@
+[
+  {
+    "id": "plaza_001",
+    "name": "Azorius Chancery",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "color_identity": [
+      "U",
+      "W"
+    ],
+    "type_line": "Land",
+    "oracle_text": "This land enters tapped.\nWhen this land enters, return a land you control to its owner's hand.\n{T}: Add {W}{U}.",
+    "power": null,
+    "toughness": null,
+    "rarity": "uncommon",
+    "image_url": "https://cards.scryfall.io/normal/front/5/0/50ef0ac3-e911-4d67-a751-8d86160ae843.jpg?1783909580"
+  },
+  {
+    "id": "plaza_002",
+    "name": "Azorius Guildgate",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "color_identity": [
+      "U",
+      "W"
+    ],
+    "type_line": "Land — Gate",
+    "oracle_text": "This land enters tapped.\n{T}: Add {W} or {U}.",
+    "power": null,
+    "toughness": null,
+    "rarity": "common",
+    "image_url": "https://cards.scryfall.io/normal/front/f/9/f98a7264-0a83-42c8-a94d-05ad4c234242.jpg?1783908907"
+  },
+  {
+    "id": "plaza_003",
+    "name": "Azorius Guildgate",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "color_identity": [
+      "U",
+      "W"
+    ],
+    "type_line": "Land — Gate",
+    "oracle_text": "This land enters tapped.\n{T}: Add {W} or {U}.",
+    "power": null,
+    "toughness": null,
+    "rarity": "common",
+    "image_url": "https://cards.scryfall.io/normal/front/f/9/f98a7264-0a83-42c8-a94d-05ad4c234242.jpg?1783908907"
+  },
+  {
+    "id": "plaza_004",
+    "name": "Boros Garrison",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "color_identity": [
+      "R",
+      "W"
+    ],
+    "type_line": "Land",
+    "oracle_text": "This land enters tapped.\nWhen this land enters, return a land you control to its owner's hand.\n{T}: Add {R}{W}.",
+    "power": null,
+    "toughness": null,
+    "rarity": "common",
+    "image_url": "https://cards.scryfall.io/normal/front/7/6/76ec3366-98f3-4903-8f7b-cfcdd60e3be1.jpg?1783912508"
+  },
+  {
+    "id": "plaza_005",
+    "name": "Boros Guildgate",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "color_identity": [
+      "R",
+      "W"
+    ],
+    "type_line": "Land — Gate",
+    "oracle_text": "This land enters tapped.\n{T}: Add {R} or {W}.",
+    "power": null,
+    "toughness": null,
+    "rarity": "common",
+    "image_url": "https://cards.scryfall.io/normal/front/3/e/3e3c74ea-40e9-4ad9-a491-c208403b68ad.jpg?1783908903"
+  },
+  {
+    "id": "plaza_006",
+    "name": "Boros Guildgate",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "color_identity": [
+      "R",
+      "W"
+    ],
+    "type_line": "Land — Gate",
+    "oracle_text": "This land enters tapped.\n{T}: Add {R} or {W}.",
+    "power": null,
+    "toughness": null,
+    "rarity": "common",
+    "image_url": "https://cards.scryfall.io/normal/front/3/e/3e3c74ea-40e9-4ad9-a491-c208403b68ad.jpg?1783908903"
+  },
+  {
+    "id": "plaza_007",
+    "name": "Dimir Aqueduct",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "color_identity": [
+      "B",
+      "U"
+    ],
+    "type_line": "Land",
+    "oracle_text": "This land enters tapped.\nWhen this land enters, return a land you control to its owner's hand.\n{T}: Add {U}{B}.",
+    "power": null,
+    "toughness": null,
+    "rarity": "uncommon",
+    "image_url": "https://cards.scryfall.io/normal/front/8/4/84bf9d60-64b8-4209-acfe-e07eefc6bf1f.jpg?1783909578"
+  },
+  {
+    "id": "plaza_008",
+    "name": "Dimir Guildgate",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "color_identity": [
+      "B",
+      "U"
+    ],
+    "type_line": "Land — Gate",
+    "oracle_text": "This land enters tapped.\n{T}: Add {U} or {B}.",
+    "power": null,
+    "toughness": null,
+    "rarity": "common",
+    "image_url": "https://cards.scryfall.io/normal/front/f/9/f9b8a159-5e58-4432-8ecd-62f39afa96da.jpg?1783908901"
+  },
+  {
+    "id": "plaza_009",
+    "name": "Dimir Guildgate",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "color_identity": [
+      "B",
+      "U"
+    ],
+    "type_line": "Land — Gate",
+    "oracle_text": "This land enters tapped.\n{T}: Add {U} or {B}.",
+    "power": null,
+    "toughness": null,
+    "rarity": "common",
+    "image_url": "https://cards.scryfall.io/normal/front/f/9/f9b8a159-5e58-4432-8ecd-62f39afa96da.jpg?1783908901"
+  },
+  {
+    "id": "plaza_010",
+    "name": "Gate Colossus",
+    "cmc": 8,
+    "mana_cost": "{8}",
+    "colors": [],
+    "color_identity": [],
+    "type_line": "Artifact Creature — Construct",
+    "oracle_text": "Affinity for Gates (This spell costs {1} less to cast for each Gate you control.)\nThis creature can't be blocked by creatures with power 2 or less.\nWhenever a Gate you control enters, you may put this card from your graveyard on top of your library.",
+    "power": "8",
+    "toughness": "8",
+    "rarity": "uncommon",
+    "image_url": "https://cards.scryfall.io/normal/front/b/c/bc49d9cb-8c7a-4a8f-96ea-bbe6ade8ae00.jpg?1783908905"
+  },
+  {
+    "id": "plaza_011",
+    "name": "Gate Colossus",
+    "cmc": 8,
+    "mana_cost": "{8}",
+    "colors": [],
+    "color_identity": [],
+    "type_line": "Artifact Creature — Construct",
+    "oracle_text": "Affinity for Gates (This spell costs {1} less to cast for each Gate you control.)\nThis creature can't be blocked by creatures with power 2 or less.\nWhenever a Gate you control enters, you may put this card from your graveyard on top of your library.",
+    "power": "8",
+    "toughness": "8",
+    "rarity": "uncommon",
+    "image_url": "https://cards.scryfall.io/normal/front/b/c/bc49d9cb-8c7a-4a8f-96ea-bbe6ade8ae00.jpg?1783908905"
+  },
+  {
+    "id": "plaza_012",
+    "name": "Golgari Guildgate",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "color_identity": [
+      "B",
+      "G"
+    ],
+    "type_line": "Land — Gate",
+    "oracle_text": "This land enters tapped.\n{T}: Add {B} or {G}.",
+    "power": null,
+    "toughness": null,
+    "rarity": "common",
+    "image_url": "https://cards.scryfall.io/normal/front/9/2/92d4646c-a375-4835-aa58-8bb77d1a5abf.jpg?1783908900"
+  },
+  {
+    "id": "plaza_013",
+    "name": "Golgari Guildgate",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "color_identity": [
+      "B",
+      "G"
+    ],
+    "type_line": "Land — Gate",
+    "oracle_text": "This land enters tapped.\n{T}: Add {B} or {G}.",
+    "power": null,
+    "toughness": null,
+    "rarity": "common",
+    "image_url": "https://cards.scryfall.io/normal/front/9/2/92d4646c-a375-4835-aa58-8bb77d1a5abf.jpg?1783908900"
+  },
+  {
+    "id": "plaza_014",
+    "name": "Gruul Guildgate",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "color_identity": [
+      "G",
+      "R"
+    ],
+    "type_line": "Land — Gate",
+    "oracle_text": "This land enters tapped.\n{T}: Add {R} or {G}.",
+    "power": null,
+    "toughness": null,
+    "rarity": "common",
+    "image_url": "https://cards.scryfall.io/normal/front/3/a/3ab6c240-c97d-4a5c-bc39-860c2d9901c2.jpg?1783908900"
+  },
+  {
+    "id": "plaza_015",
+    "name": "Gruul Guildgate",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "color_identity": [
+      "G",
+      "R"
+    ],
+    "type_line": "Land — Gate",
+    "oracle_text": "This land enters tapped.\n{T}: Add {R} or {G}.",
+    "power": null,
+    "toughness": null,
+    "rarity": "common",
+    "image_url": "https://cards.scryfall.io/normal/front/3/a/3ab6c240-c97d-4a5c-bc39-860c2d9901c2.jpg?1783908900"
+  },
+  {
+    "id": "plaza_016",
+    "name": "Izzet Boilerworks",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "color_identity": [
+      "R",
+      "U"
+    ],
+    "type_line": "Land",
+    "oracle_text": "This land enters tapped.\nWhen this land enters, return a land you control to its owner's hand.\n{T}: Add {U}{R}.",
+    "power": null,
+    "toughness": null,
+    "rarity": "uncommon",
+    "image_url": "https://cards.scryfall.io/normal/front/b/f/bfac9395-7ca5-48dd-ab83-7c26ada12f61.jpg?1783911875"
+  },
+  {
+    "id": "plaza_017",
+    "name": "Izzet Guildgate",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "color_identity": [
+      "R",
+      "U"
+    ],
+    "type_line": "Land — Gate",
+    "oracle_text": "This land enters tapped.\n{T}: Add {U} or {R}.",
+    "power": null,
+    "toughness": null,
+    "rarity": "common",
+    "image_url": "https://cards.scryfall.io/normal/front/d/b/db9e6fc9-813d-4a71-8a68-8e0f83fa945d.jpg?1783908899"
+  },
+  {
+    "id": "plaza_018",
+    "name": "Izzet Guildgate",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "color_identity": [
+      "R",
+      "U"
+    ],
+    "type_line": "Land — Gate",
+    "oracle_text": "This land enters tapped.\n{T}: Add {U} or {R}.",
+    "power": null,
+    "toughness": null,
+    "rarity": "common",
+    "image_url": "https://cards.scryfall.io/normal/front/d/b/db9e6fc9-813d-4a71-8a68-8e0f83fa945d.jpg?1783908899"
+  },
+  {
+    "id": "plaza_019",
+    "name": "Novijen, Heart of Progress",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "color_identity": [
+      "G",
+      "U"
+    ],
+    "type_line": "Land",
+    "oracle_text": "{T}: Add {C}.\n{G}{U}, {T}: Put a +1/+1 counter on each creature that entered this turn.",
+    "power": null,
+    "toughness": null,
+    "rarity": "uncommon",
+    "image_url": "https://cards.scryfall.io/normal/front/9/a/9a1e15e7-4ba6-41ad-b27b-aee2d037b6a7.jpg?1783927488"
+  },
+  {
+    "id": "plaza_020",
+    "name": "Orzhov Basilica",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "color_identity": [
+      "B",
+      "W"
+    ],
+    "type_line": "Land",
+    "oracle_text": "This land enters tapped.\nWhen this land enters, return a land you control to its owner's hand.\n{T}: Add {W}{B}.",
+    "power": null,
+    "toughness": null,
+    "rarity": "uncommon",
+    "image_url": "https://cards.scryfall.io/normal/front/9/c/9c7c08fc-b6ee-498c-8ab6-fd6be27c9d97.jpg?1783909569"
+  },
+  {
+    "id": "plaza_021",
+    "name": "Orzhov Guildgate",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "color_identity": [
+      "B",
+      "W"
+    ],
+    "type_line": "Land — Gate",
+    "oracle_text": "This land enters tapped.\n{T}: Add {W} or {B}.",
+    "power": null,
+    "toughness": null,
+    "rarity": "common",
+    "image_url": "https://cards.scryfall.io/normal/front/a/9/a917be03-0c17-4454-b044-c4375e5c8085.jpg?1783908900"
+  },
+  {
+    "id": "plaza_022",
+    "name": "Orzhov Guildgate",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "color_identity": [
+      "B",
+      "W"
+    ],
+    "type_line": "Land — Gate",
+    "oracle_text": "This land enters tapped.\n{T}: Add {W} or {B}.",
+    "power": null,
+    "toughness": null,
+    "rarity": "common",
+    "image_url": "https://cards.scryfall.io/normal/front/a/9/a917be03-0c17-4454-b044-c4375e5c8085.jpg?1783908900"
+  },
+  {
+    "id": "plaza_023",
+    "name": "Rakdos Guildgate",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "color_identity": [
+      "B",
+      "R"
+    ],
+    "type_line": "Land — Gate",
+    "oracle_text": "This land enters tapped.\n{T}: Add {B} or {R}.",
+    "power": null,
+    "toughness": null,
+    "rarity": "common",
+    "image_url": "https://cards.scryfall.io/normal/front/e/1/e1f01964-c610-4d0f-a2b4-f52e46dc50d2.jpg?1783908899"
+  },
+  {
+    "id": "plaza_024",
+    "name": "Rakdos Guildgate",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "color_identity": [
+      "B",
+      "R"
+    ],
+    "type_line": "Land — Gate",
+    "oracle_text": "This land enters tapped.\n{T}: Add {B} or {R}.",
+    "power": null,
+    "toughness": null,
+    "rarity": "common",
+    "image_url": "https://cards.scryfall.io/normal/front/e/1/e1f01964-c610-4d0f-a2b4-f52e46dc50d2.jpg?1783908899"
+  },
+  {
+    "id": "plaza_025",
+    "name": "Rix Maadi, Dungeon Palace",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "color_identity": [
+      "B",
+      "R"
+    ],
+    "type_line": "Land",
+    "oracle_text": "{T}: Add {C}.\n{1}{B}{R}, {T}: Each player discards a card. Activate only as a sorcery.",
+    "power": null,
+    "toughness": null,
+    "rarity": "uncommon",
+    "image_url": "https://cards.scryfall.io/normal/front/f/8/f8429762-e756-43e0-81b4-9d0a34270040.jpg?1783932703"
+  },
+  {
+    "id": "plaza_026",
+    "name": "Selesnya Guildgate",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "color_identity": [
+      "G",
+      "W"
+    ],
+    "type_line": "Land — Gate",
+    "oracle_text": "This land enters tapped.\n{T}: Add {G} or {W}.",
+    "power": null,
+    "toughness": null,
+    "rarity": "common",
+    "image_url": "https://cards.scryfall.io/normal/front/6/7/6718d4e7-768e-473f-8064-a68422e977f6.jpg?1783908899"
+  },
+  {
+    "id": "plaza_027",
+    "name": "Selesnya Guildgate",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "color_identity": [
+      "G",
+      "W"
+    ],
+    "type_line": "Land — Gate",
+    "oracle_text": "This land enters tapped.\n{T}: Add {G} or {W}.",
+    "power": null,
+    "toughness": null,
+    "rarity": "common",
+    "image_url": "https://cards.scryfall.io/normal/front/6/7/6718d4e7-768e-473f-8064-a68422e977f6.jpg?1783908899"
+  },
+  {
+    "id": "plaza_028",
+    "name": "Simic Guildgate",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "color_identity": [
+      "G",
+      "U"
+    ],
+    "type_line": "Land — Gate",
+    "oracle_text": "This land enters tapped.\n{T}: Add {G} or {U}.",
+    "power": null,
+    "toughness": null,
+    "rarity": "common",
+    "image_url": "https://cards.scryfall.io/normal/front/9/6/96590855-1ee5-4d69-9070-776e23f71976.jpg?1783908898"
+  },
+  {
+    "id": "plaza_029",
+    "name": "Simic Guildgate",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "color_identity": [
+      "G",
+      "U"
+    ],
+    "type_line": "Land — Gate",
+    "oracle_text": "This land enters tapped.\n{T}: Add {G} or {U}.",
+    "power": null,
+    "toughness": null,
+    "rarity": "common",
+    "image_url": "https://cards.scryfall.io/normal/front/9/6/96590855-1ee5-4d69-9070-776e23f71976.jpg?1783908898"
+  },
+  {
+    "id": "plaza_030",
+    "name": "Skarrg, the Rage Pits",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "color_identity": [
+      "G",
+      "R"
+    ],
+    "type_line": "Land",
+    "oracle_text": "{T}: Add {C}.\n{R}{G}, {T}: Target creature gets +1/+1 and gains trample until end of turn.",
+    "power": null,
+    "toughness": null,
+    "rarity": "uncommon",
+    "image_url": "https://cards.scryfall.io/normal/front/3/3/3340d094-fe13-4087-abba-27e8c9a7f3c7.jpg?1783936812"
+  },
+  {
+    "id": "plaza_031",
+    "name": "Svogthos, the Restless Tomb",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "color_identity": [
+      "B",
+      "G"
+    ],
+    "type_line": "Land",
+    "oracle_text": "{T}: Add {C}.\n{3}{B}{G}: Until end of turn, this land becomes a black and green Plant Zombie creature with \"This creature's power and toughness are each equal to the number of creature cards in your graveyard.\" It's still a land.",
+    "power": null,
+    "toughness": null,
+    "rarity": "uncommon",
+    "image_url": "https://cards.scryfall.io/normal/front/f/f/ffe08b0f-bb53-40b9-8057-10b60070459b.jpg?1783934679"
+  },
+  {
+    "id": "plaza_032",
+    "name": "Vitu-Ghazi, the City-Tree",
+    "cmc": 0,
+    "mana_cost": "",
+    "colors": [],
+    "color_identity": [
+      "G",
+      "W"
+    ],
+    "type_line": "Land",
+    "oracle_text": "{T}: Add {C}.\n{2}{G}{W}, {T}: Create a 1/1 green Saproling creature token.",
+    "power": null,
+    "toughness": null,
+    "rarity": "uncommon",
+    "image_url": "https://cards.scryfall.io/normal/front/3/3/33145080-077e-4231-96ca-e8b1852b6380.jpg?1783926142"
+  }
+]

@@ -1,4 +1,5 @@
 const cubeCards = require('./ravnicaCube.json');
+const plazaCards = require('./plazaCards.json');
 
 class GameManager {
   constructor() {
@@ -213,13 +214,15 @@ class GameManager {
       shuffledGeneral.sort(() => Math.random() - 0.5);
     }
 
-    // 5. Initialize Getaway Plaza with 5 face-up cards
+    // 5. Initialize Getaway Plaza with 5 face-up cards drawn from dedicated Plaza Pool
+    const shuffledPlazaPool = [...plazaCards].sort(() => Math.random() - 0.5).map(makeInstance);
     room.getawayPlaza = [];
     for (let i = 0; i < room.config.plazaSize; i++) {
-      if (shuffledGeneral.length > 0) {
-        room.getawayPlaza.push(shuffledGeneral.pop());
+      if (shuffledPlazaPool.length > 0) {
+        room.getawayPlaza.push(shuffledPlazaPool.pop());
       }
     }
+    room.plazaReserve = shuffledPlazaPool;
 
     // 6. Complete each pack up to 15 cards with the shuffled general pool
     for (let i = 0; i < totalPacksNeeded; i++) {
