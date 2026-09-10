@@ -1,6 +1,21 @@
 const cubeCards = require('./ravnicaCube.json');
 const plazaCards = require('./plazaCards.json');
 
+const PLAZA_SLOT_DEFS = [
+  { id: 'colossus_left', name: 'Gate Colossus', guild: 'Colorless', type: 'flank', colors: [] },
+  { id: 'azorius', name: 'Senado Azorius', guild: 'Azorius', type: 'guild', colors: ['W', 'U'] },
+  { id: 'dimir', name: 'Casa Dimir', guild: 'Dimir', type: 'guild', colors: ['U', 'B'] },
+  { id: 'rakdos', name: 'Culto de Rakdos', guild: 'Rakdos', type: 'guild', colors: ['B', 'R'] },
+  { id: 'gruul', name: 'Clanes Gruul', guild: 'Gruul', type: 'guild', colors: ['R', 'G'] },
+  { id: 'selesnya', name: 'Cónclave Selesnya', guild: 'Selesnya', type: 'guild', colors: ['G', 'W'] },
+  { id: 'orzhov', name: 'Sindicato Orzhov', guild: 'Orzhov', type: 'guild', colors: ['W', 'B'] },
+  { id: 'izzet', name: 'Liga Izzet', guild: 'Izzet', type: 'guild', colors: ['U', 'R'] },
+  { id: 'golgari', name: 'Enjambre Golgari', guild: 'Golgari', type: 'guild', colors: ['B', 'G'] },
+  { id: 'boros', name: 'Legión Boros', guild: 'Boros', type: 'guild', colors: ['R', 'W'] },
+  { id: 'simic', name: 'Combinado Simic', guild: 'Simic', type: 'guild', colors: ['G', 'U'] },
+  { id: 'colossus_right', name: 'Gate Colossus', guild: 'Colorless', type: 'flank', colors: [] }
+];
+
 class GameManager {
   constructor() {
     this.rooms = new Map();
@@ -28,11 +43,12 @@ class GameManager {
         minPacks: limits.minPacks,
         maxPacks: limits.maxPacks,
         timerSeconds: options.timerSeconds !== undefined ? options.timerSeconds : 45, // 0 = infinite
-        plazaSize: 5
+        plazaSize: 32
       },
       players: [],
       seatingOrder: [], // Player IDs in seated order
       getawayPlaza: [],
+      plazaSlots: [],
       cubePool: [],
       currentRound: 1, // Pack number
       currentPickNumber: 1,
@@ -214,15 +230,49 @@ class GameManager {
       shuffledGeneral.sort(() => Math.random() - 0.5);
     }
 
-    // 5. Initialize Getaway Plaza with 5 face-up cards drawn from dedicated Plaza Pool
-    const shuffledPlazaPool = [...plazaCards].sort(() => Math.random() - 0.5).map(makeInstance);
-    room.getawayPlaza = [];
-    for (let i = 0; i < room.config.plazaSize; i++) {
-      if (shuffledPlazaPool.length > 0) {
-        room.getawayPlaza.push(shuffledPlazaPool.pop());
+    // 5. Initialize Getaway Plaza with 12 slots: 10 guild piles (3 cards each) + 2 Gate Colossus flanks (1 card each)
+    const slotMap = new Map();
+    PLAZA_SLOT_DEFS.forEach(def => {
+      slotMap.set(def.id, {
+        ...def,
+        cards: []
+      });
+    });
+
+    let colossusCount = 0;
+    for (const rawCard of plazaCards) {
+      const card = makeInstance(rawCard);
+      if (card.name === 'Gate Colossus') {
+        const slotId = colossusCount === 0 ? 'colossus_left' : 'colossus_right';
+        card.slotId = slotId;
+        slotMap.get(slotId).cards.push(card);
+        colossusCount++;
+      } else {
+        for (const def of PLAZA_SLOT_DEFS) {
+          if (def.type === 'guild') {
+            const matchesGuild = card.name.toLowerCase().includes(def.guild.toLowerCase()) ||
+              (def.guild === 'Rakdos' && card.name.includes('Rix Maadi')) ||
+              (def.guild === 'Gruul' && card.name.includes('Skarrg')) ||
+              (def.guild === 'Selesnya' && card.name.includes('Vitu-Ghazi')) ||
+              (def.guild === 'Golgari' && card.name.includes('Svogthos')) ||
+              (def.guild === 'Simic' && card.name.includes('Novijen'));
+            if (matchesGuild) {
+              card.slotId = def.id;
+              slotMap.get(def.id).cards.push(card);
+              break;
+            }
+          }
+        }
       }
     }
-    room.plazaReserve = shuffledPlazaPool;
+
+    // Shuffle within each guild pile so top card is varied
+    for (const slot of slotMap.values()) {
+      slot.cards.sort(() => Math.random() - 0.5);
+    }
+
+    room.plazaSlots = Array.from(slotMap.values());
+    room.getawayPlaza = room.plazaSlots.flatMap(s => s.cards);
 
     // 6. Complete each pack up to 15 cards with the shuffled general pool
     for (let i = 0; i < totalPacksNeeded; i++) {
@@ -416,18 +466,47 @@ class GameManager {
       return this.stepResolutionQueue(room);
     }
 
-    // Check if target card is still in Getaway Plaza
-    const plazaIdx = room.getawayPlaza.findIndex(c => c.instanceId === player.pendingDecision.targetPlazaInstanceId);
+    // Check if target card is still in Getaway Plaza (via slots or flat pool)
+    let targetSlot = null;
+    let targetCardIdx = -1;
+    let plazaCard = null;
 
-    if (plazaIdx !== -1) {
+    if (room.plazaSlots && room.plazaSlots.length > 0) {
+      for (const slot of room.plazaSlots) {
+        const idx = slot.cards.findIndex(c => c.instanceId === player.pendingDecision.targetPlazaInstanceId);
+        if (idx !== -1) {
+          targetSlot = slot;
+          targetCardIdx = idx;
+          plazaCard = slot.cards[idx];
+          break;
+        }
+      }
+    }
+
+    if (!plazaCard) {
+      const plazaIdx = room.getawayPlaza.findIndex(c => c.instanceId === player.pendingDecision.targetPlazaInstanceId);
+      if (plazaIdx !== -1) {
+        plazaCard = room.getawayPlaza[plazaIdx];
+      }
+    }
+
+    if (plazaCard) {
       // Card is available! Execute swap
       const offerIdx = player.activePack.findIndex(c => c.instanceId === player.pendingDecision.offerCardInstanceId);
       if (offerIdx !== -1) {
         const offerCard = player.activePack.splice(offerIdx, 1)[0];
-        const plazaCard = room.getawayPlaza.splice(plazaIdx, 1)[0];
+        
+        if (targetSlot) {
+          targetSlot.cards.splice(targetCardIdx, 1);
+          offerCard.slotId = targetSlot.id;
+          targetSlot.cards.push(offerCard);
+          room.getawayPlaza = room.plazaSlots.flatMap(s => s.cards);
+        } else {
+          const pIdx = room.getawayPlaza.findIndex(c => c.instanceId === plazaCard.instanceId);
+          if (pIdx !== -1) room.getawayPlaza.splice(pIdx, 1);
+          room.getawayPlaza.push(offerCard);
+        }
 
-        // Deposited card goes to Plaza, Plaza card goes to player's draft pool (acting as their draft pick)
-        room.getawayPlaza.push(offerCard);
         player.draftPicks.push(plazaCard);
 
         const swapLog = {
@@ -488,17 +567,46 @@ class GameManager {
 
     if (resolution.choiceType === 'plaza_card') {
       // Choose new plaza card
-      const plazaIdx = room.getawayPlaza.findIndex(c => c.instanceId === resolution.newTargetPlazaId);
-      if (plazaIdx === -1) return { error: 'Esa carta ya no está en la Plaza' };
+      let targetSlot = null;
+      let targetCardIdx = -1;
+      let plazaCard = null;
+
+      if (room.plazaSlots && room.plazaSlots.length > 0) {
+        for (const slot of room.plazaSlots) {
+          const idx = slot.cards.findIndex(c => c.instanceId === resolution.newTargetPlazaId);
+          if (idx !== -1) {
+            targetSlot = slot;
+            targetCardIdx = idx;
+            plazaCard = slot.cards[idx];
+            break;
+          }
+        }
+      }
+
+      if (!plazaCard) {
+        const plazaIdx = room.getawayPlaza.findIndex(c => c.instanceId === resolution.newTargetPlazaId);
+        if (plazaIdx !== -1) plazaCard = room.getawayPlaza[plazaIdx];
+      }
+
+      if (!plazaCard) return { error: 'Esa carta ya no está en la Plaza' };
 
       const offerId = resolution.offerCardId || player.pendingDecision?.offerCardInstanceId;
       const offerIdx = player.activePack.findIndex(c => c.instanceId === offerId);
       if (offerIdx === -1) return { error: 'Carta ofrecida no encontrada en sobre' };
 
       const offerCard = player.activePack.splice(offerIdx, 1)[0];
-      const plazaCard = room.getawayPlaza.splice(plazaIdx, 1)[0];
 
-      room.getawayPlaza.push(offerCard);
+      if (targetSlot) {
+        targetSlot.cards.splice(targetCardIdx, 1);
+        offerCard.slotId = targetSlot.id;
+        targetSlot.cards.push(offerCard);
+        room.getawayPlaza = room.plazaSlots.flatMap(s => s.cards);
+      } else {
+        const pIdx = room.getawayPlaza.findIndex(c => c.instanceId === plazaCard.instanceId);
+        if (pIdx !== -1) room.getawayPlaza.splice(pIdx, 1);
+        room.getawayPlaza.push(offerCard);
+      }
+
       player.draftPicks.push(plazaCard);
 
       room.activityLog.unshift({
@@ -617,6 +725,16 @@ class GameManager {
       currentPickNumber: room.currentPickNumber,
       passDirection: room.passDirection,
       getawayPlaza: room.getawayPlaza,
+      plazaSlots: (room.plazaSlots || []).map(slot => ({
+        id: slot.id,
+        name: slot.name,
+        guild: slot.guild,
+        type: slot.type,
+        colors: slot.colors || [],
+        cardCount: slot.cards.length,
+        topCard: slot.cards[slot.cards.length - 1] || null,
+        cards: slot.cards
+      })),
       resolutionQueue: room.resolutionQueue,
       currentResolvingPlayerId: room.currentResolvingPlayerId,
       activityLog: room.activityLog,

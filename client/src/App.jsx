@@ -360,6 +360,7 @@ export default function App() {
             {/* ZONE 1 (Top Center): Getaway Plaza */}
             <GetawayPlaza
               plazaCards={roomState.getawayPlaza || []}
+              plazaSlots={roomState.plazaSlots || []}
               swapOfferCard={
                 roomState.me?.pendingDecision?.type === 'swap'
                   ? roomState.me?.activePack?.find(

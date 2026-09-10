@@ -31,7 +31,7 @@ function runTest() {
   console.log(`Total players after start: ${room.players.length}`);
   console.log(`Seating order:`, room.players.map(p => `#${p.seatIndex + 1} ${p.name} (Bot: ${p.isBot})`));
   console.log(`Getaway Plaza cards: ${room.getawayPlaza.length}`);
-  if (room.getawayPlaza.length !== 5) throw new Error('Plaza should have 5 cards');
+  if (room.getawayPlaza.length !== 32) throw new Error('Plaza should have 32 cards');
 
   console.log('=== TEST 4: Pack Opening Phase ===');
   console.log(`Status before opening: ${room.status}`);
