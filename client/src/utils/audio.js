@@ -186,6 +186,25 @@ class SoundEffects {
       osc.stop(this.ctx.currentTime + 0.03);
     } catch (e) {}
   }
+  playShuffle() {
+    try {
+      this.init();
+      if (!this.ctx) return;
+      const now = this.ctx.currentTime;
+      for (let i = 0; i < 4; i++) {
+        const osc = this.ctx.createOscillator();
+        const gain = this.ctx.createGain();
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(300 + Math.random() * 400, now + i * 0.05);
+        gain.gain.setValueAtTime(0.08, now + i * 0.05);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + i * 0.05 + 0.08);
+        osc.connect(gain);
+        gain.connect(this.ctx.destination);
+        osc.start(now + i * 0.05);
+        osc.stop(now + i * 0.05 + 0.08);
+      }
+    } catch (e) {}
+  }
 }
 
 export const sound = new SoundEffects();

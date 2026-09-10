@@ -1,4 +1,4 @@
-﻿const express = require('express');
+const express = require('express');
 const http = require('http');
 const path = require('path');
 const { Server } = require('socket.io');
@@ -204,6 +204,16 @@ io.on('connection', (socket) => {
     if (result.error) {
       return socket.emit('error_notification', { message: result.error });
     }
+    broadcastRoomState(roomId);
+  });
+
+  // Randomize seating order (Admin only)
+  socket.on('randomize_seating', ({ roomId }) => {
+    const result = gameManager.randomizeSeating(roomId, socket.id);
+    if (result.error) {
+      return socket.emit('error_notification', { message: result.error });
+    }
+    io.to(roomId).emit('seating_randomized');
     broadcastRoomState(roomId);
   });
 

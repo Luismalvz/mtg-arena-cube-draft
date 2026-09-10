@@ -1,4 +1,4 @@
-﻿const cubeCards = require('./cube360.json');
+const cubeCards = require('./cube360.json');
 
 class GameManager {
   constructor() {
@@ -127,6 +127,22 @@ class GameManager {
 
     return { room };
   }
+
+  randomizeSeating(roomId, socketId) {
+    const room = this.rooms.get(roomId);
+    if (!room) return { error: 'Sala no encontrada' };
+    if (room.adminId !== socketId) return { error: 'Solo el anfitrión puede reorganizar los asientos' };
+    if (room.status !== 'lobby') return { error: 'El draft ya ha comenzado' };
+
+    room.players = room.players.sort(() => Math.random() - 0.5);
+    room.players.forEach((p, idx) => {
+      p.seatIndex = idx;
+    });
+    room.seatingOrder = room.players.map(p => p.id);
+
+    return { room };
+  }
+
   startDraft(roomId, socketId) {
     const room = this.rooms.get(roomId);
     if (!room) return { error: 'Sala no encontrada' };
@@ -155,8 +171,7 @@ class GameManager {
       });
     }
 
-    // 1. Randomize player seating / priority turn order
-    room.players = room.players.sort(() => Math.random() - 0.5);
+    // 1. Finalize player seating / priority turn order
     room.players.forEach((p, idx) => {
       p.seatIndex = idx;
     });

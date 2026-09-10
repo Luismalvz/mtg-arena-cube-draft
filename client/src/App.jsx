@@ -113,6 +113,11 @@ export default function App() {
       setIsDrawerOpen(true);
     });
 
+    s.on('seating_randomized', () => {
+      sound.playShuffle();
+      showToast('¡Asientos y orden de prioridad reorganizados!', 'info');
+    });
+
     s.on('error_notification', ({ message }) => {
       sound.playSelect();
       showToast(message, 'error');
@@ -157,6 +162,16 @@ export default function App() {
   const handleStartDraft = () => {
     if (!socket || !roomState?.id) return;
     socket.emit('start_draft', { roomId: roomState.id });
+  };
+
+  const handleRandomizeSeating = () => {
+    if (!socket || !roomState?.id) return;
+    socket.emit('randomize_seating', { roomId: roomState.id });
+  };
+
+  const handleJoinRoomAsPlayer = (playerName) => {
+    if (!socket || !roomState?.id) return;
+    socket.emit('join_room', { roomId: roomState.id, playerName });
   };
 
   const handleOpenPack = () => {
@@ -321,6 +336,8 @@ export default function App() {
           <PlayerLobby
             roomState={roomState}
             onStartDraft={handleStartDraft}
+            onRandomizeSeating={handleRandomizeSeating}
+            onJoinRoomAsPlayer={handleJoinRoomAsPlayer}
             isHost={roomState.isAdmin}
             myId={roomState.me?.id}
           />
