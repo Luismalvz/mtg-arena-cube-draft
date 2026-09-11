@@ -41,7 +41,7 @@ export function TurnTimeline({
     : Math.max(0, Math.min(100, (timerRemaining / maxTimerSeconds) * 100));
 
   return (
-    <section className="timeline-surface w-full bg-slate-900/80 border-y border-slate-800/90 rounded-none px-4 py-2.5 sm:px-6 shadow-xl backdrop-blur-md space-y-2">
+    <section className="timeline-surface w-full glass-panel rounded-none border-x-0 px-4 py-2.5 sm:px-6 space-y-2">
       {/* Top row: Pack/Pick info, Pass Direction, Countdown Timer */}
       <div className="flex items-center justify-between gap-3 flex-wrap">
         

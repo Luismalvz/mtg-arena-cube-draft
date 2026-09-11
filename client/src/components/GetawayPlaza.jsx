@@ -80,12 +80,12 @@ export function GetawayPlaza({
           className="flex flex-col items-center justify-center p-3 rounded-2xl border border-dashed border-white/10 bg-black/20 min-w-[130px] min-h-[190px] opacity-40 select-none transition-all hover:opacity-60"
         >
           {isFlank ? (
-            <span className="font-space text-[10px] text-slate-500 uppercase tracking-wider">{slot.name}</span>
+            <span className="font-sans text-[10px] text-slate-500 uppercase tracking-wider">{slot.name}</span>
           ) : (
             <img src={`/avatar-${slot.id}.png`} alt={slot.name} className="w-12 h-12 object-cover rounded-full opacity-50 mb-2 shadow-inner grayscale contrast-125" onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'block'; }} />
           )}
-          <span className="font-space text-[10px] text-slate-500 uppercase tracking-wider hidden" style={{ display: 'none' }}>{slot.name}</span>
-          <span className="font-space text-[9px] text-slate-600">Vacío</span>
+          <span className="font-sans text-[10px] text-slate-500 uppercase tracking-wider hidden" style={{ display: 'none' }}>{slot.name}</span>
+          <span className="font-sans text-[9px] text-slate-600">Vacío</span>
         </div>
       );
     }
@@ -128,13 +128,13 @@ export function GetawayPlaza({
         {/* Guild Emblem & Stack Count Pill beneath the pile */}
         <div className="plaza-label mt-2.5 flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900/80 border border-white/10 backdrop-blur-xs shadow-md">
           {isFlank ? (
-            <span className={`font-space font-bold text-[10px] uppercase tracking-wider ${theme.text}`}>
+            <span className={`font-sans font-bold text-[10px] uppercase tracking-wider ${theme.text}`}>
               {slot.name}
             </span>
           ) : (
             <div className="relative">
               <img src={`/avatar-${slot.id}.png`} alt={slot.name} className="w-6 h-6 object-cover rounded-full shadow-[0_0_8px_rgba(255,255,255,0.15)] ring-1 ring-white/10" onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'block'; }} />
-              <span className={`font-space font-bold text-[10px] uppercase tracking-wider ${theme.text} hidden`} style={{ display: 'none' }}>{slot.name}</span>
+              <span className={`font-sans font-bold text-[10px] uppercase tracking-wider ${theme.text} hidden`} style={{ display: 'none' }}>{slot.name}</span>
             </div>
           )}
           <span className="font-mono text-[10px] font-bold text-amber-300/90 bg-slate-950 px-1.5 py-0.5 rounded border border-white/5 shadow-inner">
@@ -146,7 +146,7 @@ export function GetawayPlaza({
   };
 
   return (
-    <section className="plaza-surface w-full relative p-3 sm:p-5 bg-[#080a0f] border-b border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.65)] font-manrope overflow-visible">
+    <section className="plaza-surface w-full relative p-3 sm:p-5 bg-transparent border-b border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.65)] font-sans overflow-visible">
       
       {/* Gateway Plaza Thematic Art Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -165,8 +165,8 @@ export function GetawayPlaza({
         
         {/* Left Flank: Gate Colossus 1 */}
         <div className="plaza-flank flex flex-col items-center justify-center">
-          <div className="flex items-center gap-1.5 text-[10px] font-space uppercase font-bold text-slate-400 mb-2">
-            <Shield className="w-3.5 h-3.5 text-[#ffd580]" />
+          <div className="flex items-center gap-1.5 text-[10px] font-sans uppercase font-bold text-slate-400 mb-2">
+            <Shield className="w-3.5 h-3.5 text-amber-400" />
             <span>Flanco Izquierdo</span>
           </div>
           {renderSlotPile(leftColossusSlot, true)}
@@ -191,8 +191,8 @@ export function GetawayPlaza({
 
         {/* Right Flank: Gate Colossus 2 */}
         <div className="plaza-flank flex flex-col items-center justify-center">
-          <div className="flex items-center gap-1.5 text-[10px] font-space uppercase font-bold text-slate-400 mb-2">
-            <Shield className="w-3.5 h-3.5 text-[#ffd580]" />
+          <div className="flex items-center gap-1.5 text-[10px] font-sans uppercase font-bold text-slate-400 mb-2">
+            <Shield className="w-3.5 h-3.5 text-amber-400" />
             <span>Flanco Derecho</span>
           </div>
           {renderSlotPile(rightColossusSlot, true)}

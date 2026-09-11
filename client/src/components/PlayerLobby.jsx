@@ -100,26 +100,26 @@ export function PlayerLobby({
   }
 
   return (
-    <div className="w-full h-full flex flex-col justify-center items-center py-6 px-4 sm:px-8 font-manrope text-slate-200">
+    <div className="w-full h-full flex flex-col justify-center items-center py-6 px-4 sm:px-8 font-sans text-slate-200">
       
       {/* Seamless Full-width Container */}
       <div className="relative w-full max-w-screen-2xl flex flex-col gap-6 my-auto">
         
         {/* Ambient Gold Bloom Glow */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] rounded-full bg-[#ffd580]/5 blur-[120px] pointer-events-none" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] rounded-full bg-amber-500/5 blur-[120px] pointer-events-none" />
 
         {/* Header */}
         <div className="flex flex-col items-center text-center gap-1.5 relative z-10">
-          <div className="flex items-center gap-1.5 text-[#ffd580] font-space text-[10px] sm:text-xs uppercase tracking-widest font-semibold">
+          <div className="flex items-center gap-1.5 text-amber-400 font-sans text-[10px] sm:text-xs uppercase tracking-widest font-semibold">
             <span className="material-symbols-outlined text-[16px]">groups</span>
             <span>Sala de Espera</span>
           </div>
 
-          <h1 className="font-cinzel text-3xl sm:text-4xl text-[#ffd580] tracking-wider uppercase font-bold drop-shadow-[0_2px_10px_rgba(255,213,128,0.2)]">
+          <h1 className="font-cinzel text-3xl sm:text-4xl text-amber-400 tracking-wider uppercase font-bold drop-shadow-md">
             Cube Lobby
           </h1>
 
-          <p className="text-xs sm:text-sm text-[#d2c5b1] font-manrope">
+          <p className="text-xs sm:text-sm text-slate-400 font-sans">
             Los asientos en la mesa determinan el orden estricto de prioridad para los intercambios en el Getaway Plaza.
           </p>
         </div>
@@ -128,25 +128,25 @@ export function PlayerLobby({
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 relative z-10">
           
           {/* Enlace de Invitación */}
-          <div className="bg-[#1c1f29] p-3.5 rounded-xl flex flex-col justify-between gap-2 border border-[#272a33]/60">
+          <div className="bg-slate-900/80 backdrop-blur-sm p-3.5 rounded-xl flex flex-col justify-between gap-2 border border-slate-800/60">
             <div className="flex items-center justify-between">
-              <span className="font-space text-[11px] text-[#d2c5b1] uppercase tracking-wider font-semibold">
+              <span className="font-sans text-[11px] text-slate-400 uppercase tracking-wider font-semibold">
                 Enlace de Invitación
               </span>
-              <span className="font-space text-[11px] text-[#ffd580] uppercase font-bold tracking-wider">
+              <span className="font-sans text-[11px] text-amber-400 uppercase font-bold tracking-wider">
                 Sala: {roomId}
               </span>
             </div>
 
-            <div className="flex items-center gap-2 bg-[#0b0e17] p-1.5 rounded-lg border border-white/5">
-              <span className="font-space text-xs text-[#d2c5b1] truncate pl-2 flex-1 select-all font-mono">
+            <div className="flex items-center gap-2 bg-slate-950/50 p-1.5 rounded-lg border border-white/5">
+              <span className="font-sans text-xs text-slate-400 truncate pl-2 flex-1 select-all font-mono">
                 {inviteUrl}
               </span>
 
               <button
                 type="button"
                 onClick={handleCopyInvite}
-                className="px-3 py-1.5 bg-[#e5b85a] hover:bg-[#ffd580] text-[#402d00] font-space text-xs uppercase rounded-md font-bold transition-all flex items-center gap-1 shadow-sm shrink-0 cursor-pointer active:scale-95"
+                className="px-3 py-1.5 bg-amber-500 hover:bg-amber-500 text-amber-950 font-sans text-xs uppercase rounded-md font-bold transition-all flex items-center gap-1 shadow-sm shrink-0 cursor-pointer active:scale-95"
               >
                 <span className="material-symbols-outlined text-[16px]">
                   {copiedLink ? 'done' : 'content_copy'}
@@ -157,33 +157,33 @@ export function PlayerLobby({
           </div>
 
           {/* Configuración del Drafteo */}
-          <div className="bg-[#1c1f29] p-3.5 rounded-xl flex flex-col justify-between gap-2 border border-[#272a33]/60">
+          <div className="bg-slate-900/80 backdrop-blur-sm p-3.5 rounded-xl flex flex-col justify-between gap-2 border border-slate-800/60">
             <div className="flex items-center justify-between">
-              <span className="font-space text-[11px] text-[#d2c5b1] uppercase tracking-wider font-semibold">
+              <span className="font-sans text-[11px] text-slate-400 uppercase tracking-wider font-semibold">
                 Configuración de la Sesión
               </span>
-              <span className="material-symbols-outlined text-[#ffd580] text-[18px]">tune</span>
+              <span className="material-symbols-outlined text-amber-400 text-[18px]">tune</span>
             </div>
 
-            <div className="grid grid-cols-2 gap-2 text-xs font-space">
-              <div className="bg-[#10131c] px-2.5 py-1.5 rounded-lg border border-white/5 flex items-center justify-between">
-                <span className="text-[#d2c5b1]/70">Capacidad:</span>
-                <span className="font-bold text-[#ffd580]">{targetCount} Jugadores</span>
+            <div className="grid grid-cols-2 gap-2 text-xs font-sans">
+              <div className="bg-slate-900/40 px-2.5 py-1.5 rounded-lg border border-white/5 flex items-center justify-between">
+                <span className="text-slate-400">Capacidad:</span>
+                <span className="font-bold text-amber-400">{targetCount} Jugadores</span>
               </div>
 
-              <div className="bg-[#10131c] px-2.5 py-1.5 rounded-lg border border-white/5 flex items-center justify-between">
-                <span className="text-[#d2c5b1]/70">Sobres:</span>
-                <span className="font-bold text-[#ffd580]">{config?.packCount || 3} × 15</span>
+              <div className="bg-slate-900/40 px-2.5 py-1.5 rounded-lg border border-white/5 flex items-center justify-between">
+                <span className="text-slate-400">Sobres:</span>
+                <span className="font-bold text-amber-400">{config?.packCount || 3} × 15</span>
               </div>
 
-              <div className="bg-[#10131c] px-2.5 py-1.5 rounded-lg border border-white/5 flex items-center justify-between">
-                <span className="text-[#d2c5b1]/70">Picks Totales:</span>
-                <span className="font-bold text-[#ffd580]">{(config?.packCount || 3) * 15} cartas</span>
+              <div className="bg-slate-900/40 px-2.5 py-1.5 rounded-lg border border-white/5 flex items-center justify-between">
+                <span className="text-slate-400">Picks Totales:</span>
+                <span className="font-bold text-amber-400">{(config?.packCount || 3) * 15} cartas</span>
               </div>
 
-              <div className="bg-[#10131c] px-2.5 py-1.5 rounded-lg border border-white/5 flex items-center justify-between">
-                <span className="text-[#d2c5b1]/70">Tiempo Turno:</span>
-                <span className="font-bold text-[#ffd580]">
+              <div className="bg-slate-900/40 px-2.5 py-1.5 rounded-lg border border-white/5 flex items-center justify-between">
+                <span className="text-slate-400">Tiempo Turno:</span>
+                <span className="font-bold text-amber-400">
                   {config?.timerSeconds ? `${config.timerSeconds}s` : 'Sin Límite'}
                 </span>
               </div>
@@ -193,9 +193,9 @@ export function PlayerLobby({
 
         {/* If user hasn't joined the room yet, prompt to take a seat */}
         {!hasTakenSeat && (
-          <form onSubmit={handleJoinSubmit} className="bg-[#1c1f29] p-4 rounded-xl border border-[#ffd580]/40 shadow-lg relative z-10 flex flex-col sm:flex-row items-center gap-3">
+          <form onSubmit={handleJoinSubmit} className="bg-slate-900/80 backdrop-blur-sm p-4 rounded-xl border border-amber-500/40 shadow-lg relative z-10 flex flex-col sm:flex-row items-center gap-3">
             <div className="flex-1 w-full space-y-1">
-              <label className="font-space text-xs text-[#ffd580] uppercase tracking-wider font-bold flex items-center gap-1.5">
+              <label className="font-sans text-xs text-amber-400 uppercase tracking-wider font-bold flex items-center gap-1.5">
                 <User className="w-3.5 h-3.5" />
                 <span>Ingresa tu nombre para tomar un asiento en la mesa:</span>
               </label>
@@ -205,7 +205,7 @@ export function PlayerLobby({
                 value={nameInput}
                 onChange={(e) => setNameInput(e.target.value)}
                 maxLength={24}
-                className="w-full px-3.5 py-2 bg-[#0b0e17] border border-[#272a33] rounded-lg text-[#e0e2ef] placeholder-[#d2c5b1]/40 text-xs sm:text-sm focus:outline-none focus:border-[#ffd580] focus:ring-1 focus:ring-[#ffd580] transition-all font-manrope"
+                className="w-full px-3.5 py-2 bg-slate-950/50 border border-slate-800/60 rounded-lg text-slate-200 placeholder-[#d2c5b1]/40 text-xs sm:text-sm focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all font-sans"
               />
               <div className="avatar-picker compact" aria-label="Elige tu avatar">
                 {TOKEN_AVATARS.map((option) => (
@@ -225,7 +225,7 @@ export function PlayerLobby({
             <button
               type="submit"
               disabled={!nameInput.trim()}
-              className="w-full sm:w-auto px-5 py-2.5 bg-[#e5b85a] hover:bg-[#ffd580] text-[#402d00] font-space text-xs uppercase rounded-lg font-bold transition-all shadow-md shrink-0 cursor-pointer disabled:opacity-40"
+              className="w-full sm:w-auto px-5 py-2.5 bg-amber-500 hover:bg-amber-500 text-amber-950 font-sans text-xs uppercase rounded-lg font-bold transition-all shadow-md shrink-0 cursor-pointer disabled:opacity-40"
             >
               Tomar Asiento
             </button>
@@ -234,9 +234,9 @@ export function PlayerLobby({
 
         {/* ================= SECTION 2: ASIENTOS DE LA MESA (SEATING ORDER & PRIORITY) ================= */}
         <div className="flex flex-col gap-2.5 relative z-10">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-[#272a33] pb-2">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800/60 pb-2">
             <div className="flex items-center gap-2">
-              <span className="font-space text-xs text-[#e0e2ef] uppercase tracking-wider font-semibold">
+              <span className="font-sans text-xs text-slate-200 uppercase tracking-wider font-semibold">
                 Asientos de la Mesa & Orden de Prioridad ({currentCount}/{targetCount})
               </span>
             </div>
@@ -247,7 +247,7 @@ export function PlayerLobby({
                 type="button"
                 onClick={handleShuffle}
                 disabled={isShuffling}
-                className={`px-3.5 py-1.5 bg-[#1c1f29] hover:bg-[#272a33] border border-[#ffd580]/40 hover:border-[#ffd580] text-[#ffd580] font-space text-xs uppercase rounded-lg font-bold transition-all flex items-center gap-1.5 shadow-sm self-start sm:self-auto cursor-pointer active:scale-95 ${
+                className={`px-3.5 py-1.5 bg-slate-900/80 backdrop-blur-sm hover:bg-slate-800 border border-amber-500/40 hover:border-amber-500 text-amber-400 font-sans text-xs uppercase rounded-lg font-bold transition-all flex items-center gap-1.5 shadow-sm self-start sm:self-auto cursor-pointer active:scale-95 ${
                   isShuffling ? 'opacity-60 pointer-events-none' : ''
                 }`}
                 title="Randomizar aleatoriamente los asientos de los jugadores"
@@ -273,32 +273,32 @@ export function PlayerLobby({
             </AnimatePresence>
           </motion.div>
 
-          <div className="flex items-center justify-between text-[11px] font-space text-[#d2c5b1]/70 px-1 pt-0.5">
+          <div className="flex items-center justify-between text-[11px] font-sans text-slate-400 px-1 pt-0.5">
             <span>
               {botsNeeded > 0
                 ? `Faltan ${botsNeeded} jugadores para completar los ${targetCount} asientos.`
                 : 'Mesa completa con todos los participantes listos.'}
             </span>
-            <span className="text-[#ffd580] text-right font-medium">
+            <span className="text-amber-400 text-right font-medium">
               Giro de cartas: Horario (Sobre 1)
             </span>
           </div>
         </div>
 
         {/* ================= SECTION 3: BOTTOM ACTIONS (START DRAFT / WAITING HOST) ================= */}
-        <div className="pt-2 flex flex-col gap-2 relative z-10 border-t border-[#272a33]">
+        <div className="pt-2 flex flex-col gap-2 relative z-10 border-t border-slate-800/60">
           {isHost ? (
             <div className="flex flex-col gap-1.5">
               <button
                 type="button"
                 onClick={handleStart}
-                className="w-full py-3.5 bg-[#ffd580] hover:bg-[#ffdea2] text-[#402d00] font-space text-sm uppercase rounded-xl font-bold tracking-widest transition-all flex items-center justify-center gap-2 shadow-[0_0_24px_rgba(255,213,128,0.4)] active:scale-[0.99] cursor-pointer"
+                className="w-full py-3.5 bg-amber-500 hover:bg-amber-300 text-amber-950 font-sans text-sm uppercase rounded-xl font-bold tracking-widest transition-all flex items-center justify-center gap-2 shadow-lg shadow-amber-500/20 active:scale-[0.99] cursor-pointer"
               >
                 <span>INICIAR DRAFT CON ESTE ORDEN DE PRIORIDAD</span>
                 <span className="material-symbols-outlined text-[20px]">east</span>
               </button>
 
-              <div className="flex items-center justify-center gap-1.5 text-[#d2c5b1]/80 text-center font-space text-[10px] sm:text-[11px] uppercase tracking-wider">
+              <div className="flex items-center justify-center gap-1.5 text-slate-400 text-center font-sans text-[10px] sm:text-[11px] uppercase tracking-wider">
                 <span className="material-symbols-outlined text-[15px]">smart_toy</span>
                 <span>
                   {botsNeeded > 0
@@ -308,8 +308,8 @@ export function PlayerLobby({
               </div>
             </div>
           ) : (
-            <div className="w-full py-3.5 px-4 bg-[#1c1f29] rounded-xl border border-[#272a33] text-center flex items-center justify-center gap-2 text-xs font-space text-[#d2c5b1]">
-              <span className="w-2 h-2 rounded-full bg-[#ffd580] animate-ping shrink-0" />
+            <div className="w-full py-3.5 px-4 bg-slate-900/80 backdrop-blur-sm rounded-xl border border-slate-800/60 text-center flex items-center justify-center gap-2 text-xs font-sans text-slate-400">
+              <span className="w-2 h-2 rounded-full bg-amber-500 animate-ping shrink-0" />
               <span>
                 Esperando a que el anfitrión inicie la partida con el orden de prioridad definido...
               </span>
@@ -319,7 +319,7 @@ export function PlayerLobby({
       </div>
 
       {/* Footer Branding */}
-      <footer className="w-full max-w-3xl mt-6 px-2 flex flex-col sm:flex-row items-center justify-between gap-2 text-[#d2c5b1]/60 font-space text-[10px] sm:text-[11px]">
+      <footer className="w-full max-w-3xl mt-6 px-2 flex flex-col sm:flex-row items-center justify-between gap-2 text-slate-400 font-sans text-[10px] sm:text-[11px]">
         <div className="flex items-center gap-1.5">
           <span className="uppercase">Getaway Draft Engine v2.4</span>
           <span>•</span>
@@ -328,7 +328,7 @@ export function PlayerLobby({
         <div className="flex items-center gap-1.5">
           <span className="uppercase">Magic: The Gathering ™ WotC</span>
           <span>•</span>
-          <span className="text-[#ffd580] hover:underline cursor-pointer">Cube 360</span>
+          <span className="text-amber-400 hover:underline cursor-pointer">Cube 360</span>
         </div>
       </footer>
     </div>

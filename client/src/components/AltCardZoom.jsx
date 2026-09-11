@@ -18,7 +18,7 @@ export function AltCardZoom({ card, isVisible }) {
         <div className="absolute inset-0 bg-black/50 backdrop-blur-xs pointer-events-none" />
 
         {/* Large Crisp MTG Card Zoom */}
-        <div className="relative w-[300px] h-[420px] sm:w-[360px] sm:h-[504px] md:w-[400px] md:h-[560px] rounded-[14px] overflow-hidden bg-[#0d1017] border-2 border-amber-400/80 shadow-[0_25px_60px_rgba(0,0,0,0.95),0_0_40px_rgba(251,191,36,0.35)] select-none pointer-events-none">
+        <div className="relative w-[300px] h-[420px] sm:w-[360px] sm:h-[504px] md:w-[400px] md:h-[560px] rounded-[14px] overflow-hidden glass-panel border-2 border-amber-400/80 shadow-[0_25px_60px_rgba(0,0,0,0.95),0_0_40px_rgba(251,191,36,0.35)] select-none pointer-events-none">
           {card.image_url ? (
             <img
               src={card.image_url}
@@ -52,7 +52,7 @@ export function AltCardZoom({ card, isVisible }) {
           )}
 
           {/* Bottom subtle hotkey indicator */}
-          <div className="absolute bottom-2 right-2 px-2 py-0.5 rounded bg-black/80 text-[10px] font-space text-amber-300/80 border border-amber-400/30">
+          <div className="absolute bottom-2 right-2 px-2 py-0.5 rounded bg-black/80 text-[10px] font-sans text-amber-300/80 border border-amber-400/30">
             [ALT] Zoom
           </div>
         </div>

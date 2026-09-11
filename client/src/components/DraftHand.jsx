@@ -83,19 +83,19 @@ export function DraftHand({
   const midIndex = (totalCards - 1) / 2;
 
   return (
-    <section className="hand-surface w-full bg-[#141721] border-t border-[#252936] p-3 sm:p-4 shadow-2xl space-y-3 font-manrope relative overflow-visible">
+    <section className="hand-surface w-full bg-transparent p-3 sm:p-4 space-y-3 font-sans relative overflow-visible">
       
       {/* Hand Header & Mode Switcher (Archidekt Style) */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 relative z-20">
         {/* Action A vs Action B Selector Buttons */}
         {!isReady && (
-          <div className="flex bg-[#0d1017] p-1 rounded-xl border border-[#252936] self-stretch sm:self-auto font-space text-xs">
+          <div className="flex glass-panel p-1 rounded-xl border border-slate-800 self-stretch sm:self-auto font-sans text-xs">
             <button
               onClick={() => handleSwitchMode('pick')}
               className={`flex-1 sm:flex-none px-3.5 py-1.5 rounded-lg font-bold transition-all flex items-center justify-center gap-1.5 cursor-pointer ${
                 actionMode === 'pick'
-                  ? 'bg-[#e5b85a] text-[#402d00] shadow-[0_0_10px_rgba(229,184,90,0.3)]'
-                  : 'text-[#d2c5b1] hover:text-white'
+                  ? 'bg-amber-500 text-amber-950 shadow-md shadow-amber-500/20'
+                  : 'text-slate-400 hover:text-white'
               }`}
             >
               <Check className="w-3.5 h-3.5" />
@@ -107,7 +107,7 @@ export function DraftHand({
               className={`flex-1 sm:flex-none px-3.5 py-1.5 rounded-lg font-bold transition-all flex items-center justify-center gap-1.5 cursor-pointer ${
                 actionMode === 'swap'
                   ? 'bg-cyan-500 text-slate-950 shadow-[0_0_10px_rgba(6,182,212,0.3)]'
-                  : 'text-[#d2c5b1] hover:text-white'
+                  : 'text-slate-400 hover:text-white'
               }`}
             >
               <ArrowLeftRight className="w-3.5 h-3.5" />
@@ -185,16 +185,16 @@ export function DraftHand({
       </div>
 
       {/* Confirmation & Status Action Bar */}
-      <div className="pt-2 border-t border-[#272a33] relative z-20">
+      <div className="pt-2 border-t border-slate-800/60 relative z-20">
         {isReady ? (
           <div className="bg-emerald-950/40 border border-emerald-500/40 rounded-xl p-3.5 flex flex-col sm:flex-row items-center justify-between gap-3 text-emerald-200">
             <div className="flex items-center gap-2.5">
               <div className="w-8 h-8 rounded-lg bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400 shrink-0">
                 <Lock className="w-4 h-4" />
               </div>
-              <div className="text-xs font-space">
+              <div className="text-xs font-sans">
                 <div className="font-bold">Decisión Confirmada & Bloqueada</div>
-                <div className="text-[11px] text-emerald-300/80 font-manrope">
+                <div className="text-[11px] text-emerald-300/80 font-sans">
                   {actionMode === 'pick'
                     ? `Seleccionaste: [${selectedPickCard?.name || pendingDecision?.cardName || 'Carta'}]`
                     : `Intercambio solicitado: [${selectedOfferCard?.name || pendingDecision?.offerName}] ➜ [${selectedPlazaCard?.name || pendingDecision?.targetName}]`}
@@ -204,36 +204,36 @@ export function DraftHand({
 
             <button
               onClick={onCancelDecision}
-              className="px-3 py-1.5 rounded-lg bg-[#1c1f29] hover:bg-[#272a33] border border-[#272a33] text-slate-300 text-xs font-space font-semibold flex items-center gap-1.5 transition-all self-end sm:self-auto cursor-pointer"
+              className="px-3 py-1.5 rounded-lg bg-slate-900/80 backdrop-blur-sm hover:bg-slate-800 border border-slate-800/60 text-slate-300 text-xs font-sans font-semibold flex items-center gap-1.5 transition-all self-end sm:self-auto cursor-pointer"
             >
               <RotateCcw className="w-3.5 h-3.5" />
               <span>Cambiar Selección</span>
             </button>
           </div>
         ) : (
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-3 bg-[#10131c] p-3.5 rounded-xl border border-[#272a33]">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-3 bg-slate-900/40 p-3.5 rounded-xl border border-slate-800/60">
             {/* Left summary of chosen action */}
-            <div className="text-xs font-space space-y-0.5 text-center sm:text-left">
+            <div className="text-xs font-sans space-y-0.5 text-center sm:text-left">
               {actionMode === 'pick' ? (
                 <div>
-                  <span className="text-[#d2c5b1]/70">Modo Pick Normal: </span>
+                  <span className="text-slate-400">Modo Pick Normal: </span>
                   {selectedPickCard ? (
-                    <span className="text-[#ffd580] font-bold font-mono">
+                    <span className="text-amber-400 font-bold font-mono">
                       [{selectedPickCard.name}]
                     </span>
                   ) : (
-                    <span className="text-[#d2c5b1]/50 italic">Elige 1 carta de tu mano arriba</span>
+                    <span className="text-slate-400 italic">Elige 1 carta de tu mano arriba</span>
                   )}
                 </div>
               ) : (
                 <div className="space-y-1">
                   <div className="flex items-center gap-1.5 flex-wrap">
-                    <span className="text-[#d2c5b1]/70">Ofreces:</span>
+                    <span className="text-slate-400">Ofreces:</span>
                     <span className="font-bold text-cyan-300 font-mono">
                       {selectedOfferCard ? `[${selectedOfferCard.name}]` : '(Elige de tu mano)'}
                     </span>
-                    <ArrowUpRight className="w-3.5 h-3.5 text-[#d2c5b1]/50" />
-                    <span className="text-[#d2c5b1]/70">Tomas del Plaza:</span>
+                    <ArrowUpRight className="w-3.5 h-3.5 text-slate-400" />
+                    <span className="text-slate-400">Tomas del Plaza:</span>
                     <span className="font-bold text-emerald-400 font-mono">
                       {selectedPlazaCard ? `[${selectedPlazaCard.name}]` : '(Elige de la Plaza arriba)'}
                     </span>
@@ -250,9 +250,9 @@ export function DraftHand({
                   ? !selectedPickCard
                   : !selectedOfferCard || !selectedPlazaCard
               }
-              className={`w-full sm:w-auto px-6 py-2.5 rounded-xl font-space font-bold text-xs uppercase tracking-wider transition-all shadow-lg flex items-center justify-center gap-2 cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed ${
+              className={`w-full sm:w-auto px-6 py-2.5 rounded-xl font-sans font-bold text-xs uppercase tracking-wider transition-all shadow-lg flex items-center justify-center gap-2 cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed ${
                 actionMode === 'pick'
-                  ? 'bg-[#ffd580] hover:bg-[#ffdea2] text-[#402d00] shadow-[0_0_15px_rgba(255,213,128,0.3)]'
+                  ? 'bg-amber-500 hover:bg-amber-300 text-amber-950 shadow-[0_0_15px_rgba(255,213,128,0.3)]'
                   : 'bg-cyan-400 hover:bg-cyan-300 text-slate-950 shadow-[0_0_15px_rgba(34,211,238,0.3)]'
               }`}
             >

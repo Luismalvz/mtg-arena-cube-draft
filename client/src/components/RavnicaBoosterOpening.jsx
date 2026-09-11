@@ -276,7 +276,7 @@ export function RavnicaBoosterOpening({
                         }}
                       >
                         {/* Real Card Frame */}
-                        <div className="w-[125px] h-[175px] sm:w-[145px] sm:h-[203px] rounded-[8px] overflow-hidden bg-[#0d1017] border-2 border-black shadow-[0_15px_35px_rgba(0,0,0,0.9)] ring-1 ring-amber-400/40 select-none relative group">
+                        <div className="w-[125px] h-[175px] sm:w-[145px] sm:h-[203px] rounded-[8px] overflow-hidden glass-panel border-2 border-black shadow-[0_15px_35px_rgba(0,0,0,0.9)] ring-1 ring-amber-400/40 select-none relative group">
                           {card.image_url ? (
                             <img
                               src={card.image_url}

@@ -67,7 +67,7 @@ export function PlayerTokenCard({
               {isPlayerHost && (
                 <Crown className="w-4 h-4 text-amber-400 shrink-0 drop-shadow" />
               )}
-              <span className="font-cinzel text-sm font-black text-[#ffd580] uppercase tracking-wider truncate drop-shadow-md">
+              <span className="font-cinzel text-sm font-black text-amber-400 uppercase tracking-wider truncate drop-shadow-md">
                 {isOccupied ? player.name : `Asiento #${seatIndex + 1}`}
               </span>
             </div>
@@ -112,7 +112,7 @@ export function PlayerTokenCard({
                   </span>
                 )}
               </div>
-              <p className="text-slate-400 text-[10px] line-clamp-2 font-manrope leading-tight">
+              <p className="text-slate-400 text-[10px] line-clamp-2 font-sans leading-tight">
                 {isOccupied
                   ? seatIndex === 0
                     ? 'Vigilancia. Tiene la máxima prioridad de intercambio en el Gateway Plaza.'

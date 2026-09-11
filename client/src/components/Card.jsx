@@ -62,7 +62,7 @@ export function Card({
       } ${disabled ? 'opacity-50 cursor-not-allowed filter grayscale-[20%]' : ''}`}
     >
       {/* MTG Card Body with authentic rounded corners */}
-      <div className="w-full h-full rounded-[7px] overflow-hidden bg-[#0d1017] border border-black/50 flex flex-col justify-between relative group">
+      <div className="w-full h-full rounded-[7px] overflow-hidden glass-panel border border-black/50 flex flex-col justify-between relative group">
         
         {hasImage ? (
           <img
@@ -105,19 +105,19 @@ export function Card({
         {(isSelected || isSwapSource || isSwapTarget) && (
           <div className="absolute top-1 right-1 pointer-events-none z-10 flex items-center gap-1">
             {isSelected && (
-              <span className="px-1.5 py-0.5 rounded text-[8px] font-space font-bold uppercase bg-amber-400 text-slate-950 shadow-sm flex items-center gap-0.5">
+              <span className="px-1.5 py-0.5 rounded text-[8px] font-sans font-bold uppercase bg-amber-400 text-slate-950 shadow-sm flex items-center gap-0.5">
                 <Check className="w-2.5 h-2.5" />
                 Pick
               </span>
             )}
             {isSwapSource && (
-              <span className="px-1.5 py-0.5 rounded text-[8px] font-space font-bold uppercase bg-cyan-400 text-slate-950 shadow-sm flex items-center gap-0.5">
+              <span className="px-1.5 py-0.5 rounded text-[8px] font-sans font-bold uppercase bg-cyan-400 text-slate-950 shadow-sm flex items-center gap-0.5">
                 <ArrowLeftRight className="w-2.5 h-2.5" />
                 Swap
               </span>
             )}
             {isSwapTarget && (
-              <span className="px-1.5 py-0.5 rounded text-[8px] font-space font-bold uppercase bg-emerald-400 text-slate-950 shadow-sm flex items-center gap-0.5">
+              <span className="px-1.5 py-0.5 rounded text-[8px] font-sans font-bold uppercase bg-emerald-400 text-slate-950 shadow-sm flex items-center gap-0.5">
                 Objetivo
               </span>
             )}
