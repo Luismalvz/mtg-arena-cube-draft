@@ -357,7 +357,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans selection:bg-amber-500 selection:text-slate-950 relative">
       {/* Main Content Area */}
-      <main className="flex-1 w-full max-w-7xl mx-auto p-3 sm:p-4 md:p-6 flex flex-col gap-5">
+      <main className={`flex-1 w-full max-w-none mx-auto p-0 flex flex-col gap-0 draft-stage ${isDecisionOrResolution ? 'draft-shell' : ''}`}>
         
         {/* VIEW 1: Admin Setup & Join Screen */}
         {isLobby && !roomState?.id && (
@@ -383,7 +383,7 @@ export default function App() {
 
         {/* VIEW 3: Active Drafting View (Decision & Resolution Phases) */}
         {isDecisionOrResolution && (
-          <div className="flex flex-col gap-4 md:gap-5">
+          <div className="draft-board flex flex-col gap-0">
             {/* ZONE 1 (Top Center): Getaway Plaza */}
             <GetawayPlaza
               plazaCards={roomState.getawayPlaza || []}

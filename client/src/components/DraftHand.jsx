@@ -83,7 +83,7 @@ export function DraftHand({
   const midIndex = (totalCards - 1) / 2;
 
   return (
-    <section className="w-full bg-[#141721] border border-[#252936] rounded-2xl p-4 sm:p-5 shadow-2xl space-y-3 font-manrope relative overflow-visible">
+    <section className="hand-surface w-full bg-[#141721] border-t border-[#252936] p-3 sm:p-4 shadow-2xl space-y-3 font-manrope relative overflow-visible">
       
       {/* Hand Header & Mode Switcher (Archidekt Style) */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border-b border-[#252936] pb-3 relative z-20">
@@ -132,7 +132,7 @@ export function DraftHand({
       </div>
 
       {/* ================= ARCHIDEKT PLAYTESTER STYLE HAND FAN ================= */}
-      <div className="w-full relative h-[260px] sm:h-[290px] md:h-[310px] flex items-end justify-center overflow-visible py-2 select-none">
+      <div className="w-full relative h-[285px] sm:h-[330px] md:h-[360px] flex items-end justify-center overflow-visible py-2 select-none">
         
         {/* Subtle felt table shadow */}
         <div className="absolute bottom-0 w-3/4 h-20 bg-black/50 rounded-full blur-2xl pointer-events-none" />
@@ -147,7 +147,8 @@ export function DraftHand({
 
             // Geometry calculations for Archidekt Natural Hand Fan Arc
             const offset = index - midIndex; // e.g. -7 to +7
-            const spacing = Math.min(64, Math.max(36, 640 / Math.max(1, totalCards)));
+            const viewportWidth = typeof window !== 'undefined' ? window.innerWidth : 1200;
+            const spacing = Math.min(82, Math.max(22, (viewportWidth - 180) / Math.max(1, totalCards)));
             const xOffset = offset * spacing;
             const angle = offset * Math.min(2.4, 26 / Math.max(1, totalCards));
             const arcY = Math.pow(offset, 2) * 0.45; // Gentle natural baseline curve

@@ -2,24 +2,26 @@
 
 @layer base {
   body {
-    @apply bg-slate-950 text-slate-100 min-h-screen font-sans selection:bg-amber-500/30 selection:text-amber-200;
-    font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background-image: 
-      radial-gradient(ellipse 80% 80% at 50% -20%, rgba(120, 50, 20, 0.2), rgba(255, 255, 255, 0)),
-      radial-gradient(circle at 100% 100%, rgba(30, 58, 138, 0.15), transparent 40%),
-      radial-gradient(circle at 0% 100%, rgba(88, 28, 135, 0.15), transparent 40%);
+    @apply bg-slate-950 text-slate-100 min-h-screen font-sans selection:bg-amber-500/30 selection:text-amber-100;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", sans-serif;
+    background-color: #0a0a0b;
+    background-image:
+      radial-gradient(ellipse 100% 55% at 50% -15%, rgba(126, 92, 45, 0.16), transparent 68%),
+      linear-gradient(180deg, #101011 0%, #080809 68%, #050506 100%);
+    letter-spacing: -0.01em;
   }
 
   .font-cinzel {
-    font-family: 'Cinzel', serif;
+    font-family: inherit;
+    letter-spacing: -0.035em;
   }
 
   .font-space {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: inherit;
   }
 
   .font-manrope {
-    font-family: 'Manrope', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
   }
 
   #root {
@@ -28,6 +30,63 @@
     max-width: 100% !important;
     border-inline: none !important;
   }
+}
+
+button, input { font-family: inherit; }
+button { letter-spacing: -0.01em; }
+
+/* Quiet, Ravnica-inspired surfaces. The cards provide the color. */
+.draft-stage { background: rgba(10, 10, 11, 0.18); }
+.plaza-surface, .hand-surface, .timeline-surface { border-color: rgba(255,255,255,.08) !important; }
+.plaza-surface { background: #0a0a0b !important; }
+.hand-surface { background: transparent !important; }
+.timeline-surface { background: rgba(255,255,255,.035) !important; }
+.plaza-surface .text-sky-300, .plaza-surface .text-indigo-300, .plaza-surface .text-rose-300,
+.plaza-surface .text-amber-400, .plaza-surface .text-emerald-300, .plaza-surface .text-zinc-200,
+.plaza-surface .text-cyan-300, .plaza-surface .text-lime-300, .plaza-surface .text-orange-300,
+.plaza-surface .text-teal-300, .plaza-surface .text-slate-300 { color: rgba(255,255,255,.62) !important; }
+
+@media (min-width: 1280px) {
+  .plaza-surface { padding-inline: clamp(1rem, 2vw, 3rem) !important; }
+  .hand-surface { padding-inline: clamp(1rem, 3vw, 4rem) !important; }
+}
+
+/* The active draft is a single game table: all three zones share one viewport. */
+.draft-shell { height: 100dvh; min-height: 600px; overflow: hidden; }
+.draft-board { height: 100%; min-height: 0; }
+.draft-board .plaza-surface {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.draft-board .plaza-surface > .relative.z-10:last-child { flex: 1 1 auto; min-height: 0; }
+.draft-board .timeline-surface { flex: 0 0 auto; }
+.draft-board .hand-surface {
+  flex: 0 0 39dvh;
+  min-height: 275px;
+  overflow: visible;
+}
+.draft-board .hand-surface > div:first-child { margin-bottom: 0; padding-bottom: .45rem; }
+.draft-board .hand-surface > div:nth-child(2) { height: 24dvh; min-height: 180px; }
+.draft-board .hand-surface > div:last-child { padding-top: .35rem; }
+.draft-board .plaza-surface .plaza-label { margin-top: .25rem; transform: scale(.9); }
+
+@media (max-height: 820px) {
+  .draft-board .hand-surface { flex-basis: 37dvh; min-height: 250px; }
+  .draft-board .hand-surface > div:nth-child(2) { height: 21dvh; min-height: 160px; }
+  .draft-board .plaza-surface { padding-top: .55rem !important; padding-bottom: .55rem !important; }
+  .draft-board .plaza-surface .plaza-label,
+  .draft-board .plaza-surface .text-\[10px\] { display: none; }
+  .draft-board .plaza-surface .relative.flex.flex-col.items-center.select-none { margin-bottom: -1px; }
+}
+
+@media (max-width: 767px) {
+  .draft-shell { min-height: 560px; }
+  .draft-board .plaza-surface { overflow: hidden; }
+  .draft-board .hand-surface { flex-basis: 41dvh; }
+  .draft-board .timeline-surface { font-size: .7rem; }
 }
 
 /* Custom scrollbar for card trays */
@@ -60,4 +119,3 @@
 .arena-glow {
   animation: arenaGlow 3s ease-in-out infinite;
 }
-

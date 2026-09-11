@@ -94,6 +94,7 @@ export function RavnicaBoosterOpening({
 
   const totalCards = displayCards.length;
   const midIndex = (totalCards - 1) / 2;
+  const fanSpacing = Math.min(32, Math.max(18, ((typeof window !== 'undefined' ? window.innerWidth : 1200) - 180) / Math.max(1, totalCards)));
 
   return (
     <div
@@ -124,13 +125,7 @@ export function RavnicaBoosterOpening({
           {stage === 'fanned' && '¡15 CARTAS DE RAVNICA REVELADAS!'}
         </motion.h1>
 
-        <p className="text-xs sm:text-sm text-slate-400 max-w-lg mb-4">
-          {stage === 'sealed'
-            ? 'Haz clic en el sobre de Ravnica para rasgar el empaque y sacar tus cartas.'
-            : stage === 'fanned'
-            ? 'Tus 15 cartas están listas. Pasa el cursor para explorarlas o haz clic para empezar a draftear.'
-            : 'Extrayendo cartas del empaque...'}
-        </p>
+        <div className="h-2" aria-hidden="true" />
 
         {/* Booster Opening 3D Stage */}
         <div
@@ -247,7 +242,7 @@ export function RavnicaBoosterOpening({
                   {displayCards.map((card, i) => {
                     const offset = i - midIndex;
                     const rotateZ = stage === 'fanned' ? offset * 2.8 : 0;
-                    const x = stage === 'fanned' ? offset * 32 : 0;
+                    const x = stage === 'fanned' ? offset * fanSpacing : 0;
                     const y = stage === 'fanned' ? Math.abs(offset) * 5 - 40 : 30;
                     const scale = stage === 'fanned' ? 1 : 0.85;
 
@@ -346,7 +341,7 @@ export function RavnicaBoosterOpening({
               className="text-xs font-mono text-amber-300/90 bg-amber-500/10 hover:bg-amber-500/20 px-4 py-2 rounded-lg border border-amber-500/30 flex items-center gap-2 cursor-pointer transition-all hover:scale-105"
             >
               <Scissors className="w-3.5 h-3.5 text-amber-400" />
-              <span>Haz clic en el sobre para abrirlo (o pulsa Enter)</span>
+                <span>Abrir sobre</span>
             </button>
           ) : (
             <span className="text-xs font-mono text-amber-400/80 animate-pulse">

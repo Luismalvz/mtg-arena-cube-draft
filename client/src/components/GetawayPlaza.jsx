@@ -100,14 +100,14 @@ export function GetawayPlaza({
               <div
                 key={c.instanceId}
                 style={{
-                  marginTop: cardIdx === 0 ? 0 : '-142px',
+                  marginTop: cardIdx === 0 ? 0 : '-148px',
                   zIndex: isTarget ? 50 : 10 + cardIdx
                 }}
                 className="relative transition-all duration-200 hover:z-50 hover:-translate-y-3"
               >
                 <Card
                   card={c}
-                  size="md"
+                  size="plaza"
                   isSwapTarget={isTarget}
                   disabled={disabled}
                   onClick={() => {
@@ -125,7 +125,7 @@ export function GetawayPlaza({
         </div>
 
         {/* Guild Name & Stack Count Pill beneath the pile */}
-        <div className="mt-2.5 flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-slate-900/80 border border-white/10 backdrop-blur-xs shadow-md">
+        <div className="plaza-label mt-2.5 flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-slate-900/80 border border-white/10 backdrop-blur-xs shadow-md">
           <span className={`font-space font-bold text-[10px] uppercase tracking-wider ${theme.text}`}>
             {slot.name}
           </span>
@@ -138,38 +138,32 @@ export function GetawayPlaza({
   };
 
   return (
-    <section className="w-full relative rounded-3xl p-4 sm:p-6 bg-[#080a0f] border border-amber-500/25 shadow-[0_20px_60px_rgba(0,0,0,0.85)] font-manrope overflow-visible">
+    <section className="plaza-surface w-full relative p-3 sm:p-5 bg-[#080a0f] border-b border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.65)] font-manrope overflow-visible">
       
       {/* Gateway Plaza Thematic Art Background */}
-      <div className="absolute inset-0 rounded-3xl overflow-hidden pointer-events-none">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <img
           src="/gateway-plaza-bg.jpg"
           alt="Gateway Plaza"
-          className="w-full h-full object-cover object-center scale-105 opacity-40 filter brightness-90 saturate-110"
+          className="w-full h-full object-cover object-center scale-105 opacity-20 filter grayscale brightness-75 contrast-125"
         />
         {/* Dark Vignette & Fantasy Lighting Overlays to ensure card contrast and legibility */}
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/85 via-slate-950/70 to-slate-950/92" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-amber-500/10 via-transparent to-black/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0b]/92 via-[#0a0a0b]/78 to-[#0a0a0b]/96" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-amber-500/5 via-transparent to-black/75" />
       </div>
 
       {/* Header bar */}
-      <div className="relative z-10 flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6 pb-3 border-b border-white/5">
+      <div className="relative z-10 flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3 pb-2 border-b border-white/10">
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center text-slate-950 shadow-md shadow-amber-500/20 font-bold shrink-0">
+          <div className="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center text-amber-200 border border-white/15 font-bold shrink-0">
             <Sparkles className="w-4 h-4" />
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <h3 className="font-cinzel font-bold text-base sm:text-lg uppercase tracking-wider text-[#ffd580]">
-                Getaway Plaza · Mesa Central (32 Cartas)
+              <h3 className="font-manrope font-semibold text-sm sm:text-base uppercase tracking-[0.18em] text-white/90">
+                Getaway Plaza <span className="text-white/35 tracking-normal">/ 32 cartas</span>
               </h3>
-              <span className="px-2 py-0.5 rounded-full text-[10px] font-space font-bold bg-[#ffd580]/15 text-[#ffd580] border border-[#ffd580]/30">
-                10 Gremios (Pilas de 3) + 2 Colosos
-              </span>
             </div>
-            <p className="text-xs text-slate-400 font-manrope">
-              Las 3 cartas de cada gremio están extendidas en la mesa. Elige cualquier carta visible para solicitar un intercambio.
-            </p>
           </div>
         </div>
 
@@ -197,7 +191,7 @@ export function GetawayPlaza({
       </div>
 
       {/* Main Tabletop POV Layout: Flank Left | Center 10 Guild Piles | Flank Right */}
-      <div className="relative z-10 flex flex-col xl:flex-row items-start justify-center gap-6 py-2">
+      <div className="relative z-10 flex flex-col xl:flex-row items-start justify-center gap-3 sm:gap-5 py-1">
         
         {/* Left Flank: Gate Colossus 1 */}
         <div className="w-full xl:w-auto flex flex-col items-center justify-center p-2 rounded-2xl shrink-0">
@@ -209,10 +203,10 @@ export function GetawayPlaza({
         </div>
 
         {/* Center: 10 Guild Piles in 2 Rows of 5 (Cascaded Stacks) */}
-        <div className="flex-1 w-full flex flex-col gap-6">
+        <div className="flex-1 w-full flex flex-col gap-3">
           
           {/* Fila 1: Azorius, Dimir, Rakdos, Gruul, Selesnya */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-5 justify-items-center">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-2 gap-y-3 sm:gap-x-3 justify-items-center">
             {row1Slots.map((slot) => renderSlotPile(slot))}
           </div>
 
@@ -220,7 +214,7 @@ export function GetawayPlaza({
           <div className="w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent my-1" />
 
           {/* Fila 2: Orzhov, Izzet, Golgari, Boros, Simic */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-5 justify-items-center">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-2 gap-y-3 sm:gap-x-3 justify-items-center">
             {row2Slots.map((slot) => renderSlotPile(slot))}
           </div>
         </div>
@@ -237,4 +231,3 @@ export function GetawayPlaza({
     </section>
   );
 }
-
