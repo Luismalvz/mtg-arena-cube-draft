@@ -1,27 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import { ArrowRight, LogIn, Plus } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { sound } from '../utils/audio';
-import {
-  Sliders,
-  Layers,
-  Clock,
-  Copy,
-  Check,
-  ArrowRight,
-  LogIn,
-  Lock,
-  Hourglass,
-  Sparkles
-} from 'lucide-react';
 import { TOKEN_AVATARS } from '../utils/tokenAvatars';
 
-export function AdminSetup({
-  onCreateRoom,
-  onJoinRoom,
-  initialRoomId = '',
-  isConnected = true
-}) {
-  const [mode, setMode] = useState(initialRoomId ? 'join' : 'create'); // 'create' | 'join'
+export function AdminSetup({ onCreateRoom, onJoinRoom, initialRoomId = '', isConnected = true }) {
+  const [mode, setMode] = useState(initialRoomId ? 'join' : 'create');
   const [adminName, setAdminName] = useState('');
   const [joinPlayerName, setJoinPlayerName] = useState('');
   const [roomIdInput, setRoomIdInput] = useState(initialRoomId);
@@ -29,371 +13,78 @@ export function AdminSetup({
   const [packCount, setPackCount] = useState(3);
   const [timerSeconds, setTimerSeconds] = useState(45);
   const [avatar, setAvatar] = useState('046');
-  const [copiedLink, setCopiedLink] = useState(false);
 
-  // Pre-generate a stylish room code for preview
-  const [generatedRoomId] = useState(() => {
-    const letters = 'ABCDEFGHJKLMNPQRSTUVWXYZ';
-    const randLetters = Array.from({ length: 3 }, () => letters[Math.floor(Math.random() * letters.length)]).join('');
-    const randNum = Math.floor(100 + Math.random() * 900);
-    return `ARCANE-${randLetters}${randNum}`;
-  });
-
-  const activeRoomId = mode === 'join' ? (roomIdInput || 'SALA') : generatedRoomId;
-
-  // Dynamic Pack calculation: floor(360 / (numPlayers * 15))
-  const cardsPerPack = 15;
-  const cubeTotal = 360;
-  const cardsNeededPerRound = playerCount * cardsPerPack;
-  const maxPossiblePacks = Math.max(3, Math.floor(cubeTotal / cardsNeededPerRound));
-  const minPacks = 3;
-
-  // Auto-clamp packCount when playerCount changes
-  useEffect(() => {
-    if (packCount > maxPossiblePacks) {
-      setPackCount(maxPossiblePacks);
-    }
-  }, [maxPossiblePacks, packCount]);
-
-  // Pack buttons to offer (min 3, up to maxPossiblePacks, showing up to 4 choices)
-  const availablePackChoices = [];
-  for (let p = minPacks; p <= Math.min(minPacks + 2, maxPossiblePacks); p++) {
-    availablePackChoices.push(p);
-  }
-
-  // Invite URL preview
-  const inviteUrl = typeof window !== 'undefined'
-    ? `${window.location.origin}${window.location.pathname}?room=${activeRoomId}`
-    : `https://arcane.draft/join/${activeRoomId}`;
-
-  const handleCopyLink = async () => {
-    sound.playSelect();
-    try {
-      await navigator.clipboard.writeText(inviteUrl);
-      setCopiedLink(true);
-      setTimeout(() => setCopiedLink(false), 2500);
-    } catch (e) {}
+  const maxPossiblePacks = Math.max(3, Math.floor(360 / (playerCount * 15)));
+  const chooseAvatar = (id) => { setAvatar(id); sound.playHover(); };
+  const create = (event) => {
+    event.preventDefault(); sound.playSelect();
+    onCreateRoom({ playerName: adminName.trim() || 'Admin Drafter', avatar, options: { playerCount, packCount, timerSeconds, avatar } });
   };
-
-  const handleCreate = (e) => {
-    e?.preventDefault();
-    sound.playSelect();
-    const cleanName = adminName.trim() || 'Admin Drafter';
-    onCreateRoom({
-      roomId: generatedRoomId,
-      playerName: cleanName,
-      options: {
-        playerCount,
-        packCount,
-        timerSeconds,
-        avatar
-      }
-    });
+  const join = (event) => {
+    event.preventDefault(); if (!roomIdInput.trim()) return; sound.playSelect();
+    onJoinRoom({ roomId: roomIdInput.trim().toUpperCase(), playerName: joinPlayerName.trim() || 'Drafter', avatar });
   };
-
-  const handleJoin = (e) => {
-    e?.preventDefault();
-    if (!roomIdInput.trim()) return;
-    sound.playSelect();
-    const cleanName = joinPlayerName.trim() || 'Drafter';
-    onJoinRoom({
-      roomId: roomIdInput.trim().toUpperCase(),
-      playerName: cleanName,
-      avatar
-    });
-  };
-
-  const playerPresets = [
-    { count: 2, label: 'Duelo' },
-    { count: 3, label: 'Trío' },
-    { count: 4, label: 'Minipod' },
-    { count: 5, label: 'Pentágono' },
-    { count: 6, label: 'Ágil' },
-    { count: 7, label: 'Mesa' },
-    { count: 8, label: 'Estándar', isRecommended: true }
-  ];
 
   return (
-    <div className="w-full flex flex-col justify-center items-center py-6 px-3 sm:px-4 font-sans text-[#ecd8b7]">
-      
-      {/* Mode Switcher Pills (Top) */}
-      <div className="flex bg-[#2a1a0f]/60 backdrop-blur-md p-1 rounded-xl border border-[#4a3219]/60 mb-4 shadow-lg text-xs font-sans">
-        <button
-          type="button"
-          onClick={() => {
-            sound.playHover();
-            setMode('create');
-          }}
-          className={`py-1.5 px-4 rounded-lg font-semibold transition-all flex items-center gap-1.5 cursor-pointer ${
-            mode === 'create'
-              ? 'bg-amber-500 text-amber-950 font-bold shadow-md shadow-amber-500/20'
-              : 'text-[#cbb593] hover:text-white'
-          }`}
-        >
-          <Sliders className="w-3.5 h-3.5" />
-          <span>Crear Nueva Sala</span>
-        </button>
+    <div className="min-h-[100dvh] w-full px-4 py-5 sm:px-7 sm:py-7 flex flex-col">
+      <header className="w-full flex items-center justify-between">
+        <div className="flex items-center gap-3">
+          <span className="grid h-9 w-9 place-items-center rounded-full border border-[#d8b770]/35 text-[#e7cb8e] text-sm">G</span>
+          <span className="text-sm font-semibold tracking-[-.03em]">Getaway Draft</span>
+        </div>
+        <span className={`h-2 w-2 rounded-full ${isConnected ? 'bg-[#83d9d2] shadow-[0_0_12px_#83d9d2]' : 'bg-[#ff766d]'}`} aria-label={isConnected ? 'Conectado' : 'Sin conexión'} />
+      </header>
 
-        <button
-          type="button"
-          onClick={() => {
-            sound.playHover();
-            setMode('join');
-          }}
-          className={`py-1.5 px-4 rounded-lg font-semibold transition-all flex items-center gap-1.5 cursor-pointer ${
-            mode === 'join'
-              ? 'bg-amber-500 text-amber-950 font-bold shadow-md shadow-amber-500/20'
-              : 'text-[#cbb593] hover:text-white'
-          }`}
-        >
-          <LogIn className="w-3.5 h-3.5" />
-          <span>Unirse con Código</span>
-        </button>
-      </div>
-
-      {/* Main Glass/Obsidian Card */}
-      <div className="relative w-full max-w-2xl rounded-2xl p-5 sm:p-7 md:p-8 flex flex-col gap-5 overflow-hidden my-auto bg-[#1a0f08]/90 backdrop-blur-xl border border-[#4a3219]/80 shadow-[0_0_50px_rgba(42,26,15,0.7)]">
-        
-        {/* Subtle Ambient Gold Bloom Glow */}
-        <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-80 h-80 rounded-full bg-amber-500/5 blur-[100px] pointer-events-none" />
-
-        {/* Card Header */}
-        <div className="flex flex-col items-center text-center gap-1 relative z-10">
-          
-
-          <h1 className="font-cinzel text-3xl sm:text-4xl text-amber-400 tracking-wider uppercase font-bold drop-shadow-md">
-            Cube Setup
-          </h1>
-
-          
+      <div className="m-auto w-full max-w-[1020px] grid gap-8 lg:grid-cols-[.88fr_1.12fr] lg:items-center">
+        <div className="max-w-md">
+          <p className="mb-5 text-[12px] font-semibold uppercase tracking-[.22em] text-[#d8b770]">Ravnica cube</p>
+          <h1 className="text-[clamp(2.8rem,6vw,5.8rem)] font-medium leading-[.86] tracking-[-.075em] text-[#f1f3ed]">Una mesa.<br/>Toda la ciudad.</h1>
         </div>
 
-        {mode === 'create' ? (
-          /* ================= CREATE ROOM FORM ================= */
-          <div className="flex flex-col gap-4 relative z-10">
-            
-            {/* Host Display Name Input */}
-            <div className="flex flex-col gap-1.5">
-              <label className="font-sans text-xs text-[#ecd8b7] uppercase tracking-wider font-semibold">
-                <span>Nombre del Anfitrión</span>
-                
-              </label>
-              <input
-                type="text"
-                placeholder="Ej. Luis the Planeswalker"
-                value={adminName}
-                onChange={(e) => setAdminName(e.target.value)}
-                maxLength={24}
-                className="w-full px-3.5 py-2.5 bg-[#2a1a0f]/90 backdrop-blur-sm border border-[#4a3219]/60 rounded-lg text-[#ecd8b7] placeholder-[#d2c5b1]/40 text-xs sm:text-sm focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all font-sans"
-              />
-              <div className="avatar-picker" aria-label="Elige tu avatar">
-                {TOKEN_AVATARS.map((option) => (
-                  <button
-                    key={option.id}
-                    type="button"
-                    className={`avatar-choice ${avatar === option.id ? 'selected' : ''}`}
-                    onClick={() => setAvatar(option.id)}
-                    aria-label={`Avatar ${option.id}`}
-                    aria-pressed={avatar === option.id}
-                  >
-                    <img src={option.src} alt="" />
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* 1. NÚMERO DE JUGADORES */}
-            <div className="flex flex-col gap-1.5">
-              <div className="flex items-center justify-between">
-                <label className="font-sans text-xs text-[#ecd8b7] uppercase tracking-wider font-semibold">
-                  Número de Jugadores
-                </label>
-                <span className="font-sans text-xs text-amber-400 uppercase font-semibold">
-                  {playerCount} Jugadores 
-                </span>
-              </div>
-
-              {/* 7 Player count buttons (2 to 8) */}
-              <div className="grid grid-cols-7 gap-1 sm:gap-1.5">
-                {playerPresets.map((p) => {
-                  const isSelected = playerCount === p.count;
-                  return (
-                    <button
-                      key={p.count}
-                      type="button"
-                      onClick={() => {
-                        sound.playHover();
-                        setPlayerCount(p.count);
-                      }}
-                      className={`py-2 px-1 rounded-lg font-sans text-xs transition-all flex items-center justify-center cursor-pointer ${
-                        isSelected
-                          ? 'bg-amber-500 text-amber-950 font-bold shadow-md shadow-amber-500/20'
-                          : 'bg-[#2a1a0f]/90 backdrop-blur-sm text-[#cbb593] hover:bg-[#3d2616] border border-[#ffd580]/10'
-                      }`}
-                    >
-                      <span className="text-sm font-bold">{p.count}</span>
-                      <span className={`text-[9px] sm:text-[10px] ${isSelected ? 'text-amber-950 font-bold' : 'text-[#cbb593]'}`}>
-                        {p.label}
-                      </span>
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-
-            {/* 2. TWO COLUMNS: SOBRES POR JUGADOR + LÍMITE DE TIEMPO */}
-            <div className="grid grid-cols-1 gap-3 sm:gap-4">
-              
-              {/* LÍMITE DE TIEMPO */}
-              <div className="bg-[#2a1a0f]/90 backdrop-blur-sm p-3.5 rounded-xl flex flex-col gap-1.5 border border-[#4a3219]/60">
-                <div className="flex items-center justify-between">
-                  <span className="font-sans text-xs text-[#ecd8b7] uppercase font-semibold">
-                    Límite de Tiempo
-                  </span>
-                  <span className="material-symbols-outlined text-amber-400 text-[20px]">hourglass_top</span>
-                </div>
-
-                <div className="grid grid-cols-4 gap-1 mt-1">
-                  {[
-                    { val: 30, label: '30s' },
-                    { val: 45, label: '45s' },
-                    { val: 60, label: '60s' },
-                    { val: 0, label: '∞' }
-                  ].map((t) => {
-                    const isSelected = timerSeconds === t.val;
-                    return (
-                      <button
-                        key={t.val}
-                        type="button"
-                        onClick={() => {
-                          sound.playSelect();
-                          setTimerSeconds(t.val);
-                        }}
-                        className={`py-1.5 rounded font-sans text-xs font-bold transition-all text-center cursor-pointer ${
-                          isSelected
-                            ? 'bg-amber-500 text-amber-950 shadow-[0_0_8px_rgba(229,184,90,0.3)]'
-                            : 'bg-[#3d2616] text-[#cbb593] hover:text-white'
-                        }`}
-                      >
-                        {t.label}
-                      </button>
-                    );
-                  })}
-                </div>
-
-                <span className="font-sans text-[10px] text-[#cbb593] mt-0.5">
-                  Timer de selección por sobre
-                </span>
-              </div>
-            </div>
-
-            {/* 3. ENLACE DE INVITACIÓN WEB */}
-            <div className="bg-[#2a1a0f]/90 backdrop-blur-sm p-3.5 rounded-xl flex flex-col gap-1.5 border border-[#4a3219]/60">
-              <div className="flex items-center justify-between">
-                <span className="font-sans text-[11px] text-[#cbb593] uppercase tracking-wider font-semibold">
-                  Enlace de Invitación Web
-                </span>
-                <span className="font-sans text-[11px] text-amber-400 uppercase font-bold tracking-wider">
-                  Sala: {generatedRoomId}
-                </span>
-              </div>
-
-              <div className="flex items-center gap-2 bg-[#1a0f08]/80 p-1.5 rounded-lg border border-[#ffd580]/10">
-                <span className="font-sans text-xs text-[#cbb593] truncate pl-2 flex-1 select-all font-mono">
-                  {inviteUrl}
-                </span>
-
-                <button
-                  type="button"
-                  onClick={handleCopyLink}
-                  className="px-3 py-1.5 bg-amber-500 hover:bg-amber-500 text-amber-950 font-sans text-xs uppercase rounded-md font-bold transition-all flex items-center gap-1 shadow-sm shrink-0 cursor-pointer active:scale-95"
-                >
-                  <span className="material-symbols-outlined text-[16px]">
-                    {copiedLink ? 'done' : 'content_copy'}
-                  </span>
-                  <span>{copiedLink ? 'Copiado' : 'Copiar'}</span>
-                </button>
-              </div>
-            </div>
-
-            {/* 4. MAIN CTA BUTTON & FOOTER CAPTION */}
-            <div className="pt-1 flex flex-col gap-2">
-              <button
-                type="button"
-                onClick={handleCreate}
-                disabled={!isConnected}
-                className="w-full py-3.5 bg-amber-500 hover:bg-amber-300 text-amber-950 font-sans text-sm uppercase rounded-xl font-bold tracking-widest transition-all flex items-center justify-center gap-2 shadow-lg shadow-amber-500/20 active:scale-[0.99] cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                <span>CREAR SALA Y PASAR AL LOBBY</span>
-                <span className="material-symbols-outlined text-[20px]">east</span>
+        <div className="rounded-[28px] border border-white/10 bg-[#0d110f]/78 p-3 shadow-[0_50px_120px_rgba(0,0,0,.48)] backdrop-blur-2xl sm:p-4">
+          <div className="mb-3 grid grid-cols-2 rounded-2xl bg-black/25 p-1" role="tablist">
+            {[['create', Plus, 'Crear'], ['join', LogIn, 'Entrar']].map(([value, Icon, label]) => (
+              <button key={value} role="tab" aria-selected={mode === value} onClick={() => setMode(value)} className={`flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm transition ${mode === value ? 'bg-white text-[#0a0c0b]' : 'text-[#9ba49d] hover:text-white'}`}>
+                <Icon className="h-4 w-4" />{label}
               </button>
-
-              
-            </div>
+            ))}
           </div>
-        ) : (
-          /* ================= JOIN WITH CODE FORM ================= */
-          <div className="flex flex-col gap-4 relative z-10">
-            {/* Room Code */}
-            <div className="flex flex-col gap-1.5">
-              <label className="font-sans text-xs text-[#ecd8b7] uppercase tracking-wider font-semibold">
-                Código de Sala
-              </label>
-              <input
-                type="text"
-                placeholder="Ej. ARCANE-ABC123"
-                value={roomIdInput}
-                onChange={(e) => setRoomIdInput(e.target.value.toUpperCase())}
-                maxLength={16}
-                className="w-full px-3.5 py-3 bg-[#2a1a0f]/90 backdrop-blur-sm border border-[#4a3219]/60 rounded-lg text-amber-400 font-mono text-center tracking-widest text-base sm:text-lg uppercase placeholder-[#d2c5b1]/40 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all font-bold"
-              />
-            </div>
 
-            {/* Player Name */}
-            <div className="flex flex-col gap-1.5">
-              <label className="font-sans text-xs text-[#ecd8b7] uppercase tracking-wider font-semibold">
-                Tu Nombre de Jugador
-              </label>
-              <input
-                type="text"
-                placeholder="Ej. Chandra Fan"
-                value={joinPlayerName}
-                onChange={(e) => setJoinPlayerName(e.target.value)}
-                maxLength={24}
-                className="w-full px-3.5 py-2.5 bg-[#2a1a0f]/90 backdrop-blur-sm border border-[#4a3219]/60 rounded-lg text-[#ecd8b7] placeholder-[#d2c5b1]/40 text-xs sm:text-sm focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all font-sans"
-              />
-              <div className="avatar-picker" aria-label="Elige tu avatar">
-                {TOKEN_AVATARS.map((option) => (
-                  <button
-                    key={option.id}
-                    type="button"
-                    className={`avatar-choice ${avatar === option.id ? 'selected' : ''}`}
-                    onClick={() => setAvatar(option.id)}
-                    aria-label={`Avatar ${option.id}`}
-                    aria-pressed={avatar === option.id}
-                  >
-                    <img src={option.src} alt="" />
-                  </button>
-                ))}
+          <AnimatePresence mode="wait">
+            <motion.form key={mode} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -6 }} transition={{ duration: .2 }} onSubmit={mode === 'create' ? create : join} className="grid gap-3">
+              {mode === 'join' && (
+                <input autoFocus aria-label="Código de sala" className="h-14 rounded-2xl border border-white/10 bg-white/[.035] px-5 text-center text-lg font-semibold tracking-[.14em] uppercase outline-none transition focus:border-[#d8b770]/60" placeholder="CÓDIGO DE SALA" value={roomIdInput} onChange={(e) => setRoomIdInput(e.target.value.toUpperCase())} maxLength={16} />
+              )}
+              <input aria-label="Nombre" className="h-14 rounded-2xl border border-white/10 bg-white/[.035] px-5 text-base outline-none transition placeholder:text-[#677069] focus:border-[#d8b770]/60" placeholder="Tu nombre" value={mode === 'create' ? adminName : joinPlayerName} onChange={(e) => mode === 'create' ? setAdminName(e.target.value) : setJoinPlayerName(e.target.value)} maxLength={24} />
+
+              <div className="avatar-picker scrollbar-hide" aria-label="Avatar">
+                {TOKEN_AVATARS.map((option) => <button key={option.id} type="button" className={`avatar-choice ${avatar === option.id ? 'selected' : ''}`} onClick={() => chooseAvatar(option.id)} aria-label={`Avatar ${option.id}`} aria-pressed={avatar === option.id}><img src={option.src} alt="" /></button>)}
               </div>
-            </div>
 
-            <div className="pt-2 flex flex-col gap-2">
-              <button
-                type="button"
-                onClick={handleJoin}
-                disabled={!isConnected || !roomIdInput.trim()}
-                className="w-full py-3.5 bg-amber-500 hover:bg-amber-300 text-amber-950 font-sans text-sm uppercase rounded-xl font-bold tracking-widest transition-all flex items-center justify-center gap-2 shadow-lg shadow-amber-500/20 active:scale-[0.99] cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                <span>ENTRAR AL LOBBY</span>
-                <span className="material-symbols-outlined text-[20px]">east</span>
+              {mode === 'create' && (
+                <div className="grid gap-2 sm:grid-cols-3">
+                  <div className="rounded-2xl border border-white/10 bg-black/20 p-3">
+                    <div className="mb-2 flex items-center justify-between text-xs text-[#9ba49d]"><span>Jugadores</span><strong className="text-white">{playerCount}</strong></div>
+                    <div className="grid grid-cols-7 gap-1">{[2,3,4,5,6,7,8].map(n => <button type="button" key={n} onClick={() => { setPlayerCount(n); setPackCount(current => Math.min(current, Math.max(3, Math.floor(360 / (n * 15))))); }} className={`h-8 rounded-lg text-xs ${playerCount === n ? 'bg-[#d8b770] text-[#12100b]' : 'bg-white/[.045] text-[#9ba49d] hover:text-white'}`}>{n}</button>)}</div>
+                  </div>
+                  <div className="rounded-2xl border border-white/10 bg-black/20 p-3">
+                    <div className="mb-2 flex items-center justify-between text-xs text-[#9ba49d]"><span>Sobres</span><strong className="text-white">{packCount}</strong></div>
+                    <div className="grid grid-cols-3 gap-1">{Array.from({ length: Math.min(3, maxPossiblePacks - 2) }, (_, i) => i + 3).map(n => <button type="button" key={n} onClick={() => setPackCount(n)} className={`h-8 rounded-lg text-xs ${packCount === n ? 'bg-[#d8b770] text-[#12100b]' : 'bg-white/[.045] text-[#9ba49d] hover:text-white'}`}>{n}</button>)}</div>
+                  </div>
+                  <div className="rounded-2xl border border-white/10 bg-black/20 p-3">
+                    <div className="mb-2 flex items-center justify-between text-xs text-[#9ba49d]"><span>Tiempo</span><strong className="text-white">{timerSeconds ? `${timerSeconds}s` : '∞'}</strong></div>
+                    <div className="grid grid-cols-4 gap-1">{[30,45,60,0].map(n => <button type="button" key={n} onClick={() => setTimerSeconds(n)} className={`h-8 rounded-lg text-xs ${timerSeconds === n ? 'bg-[#d8b770] text-[#12100b]' : 'bg-white/[.045] text-[#9ba49d] hover:text-white'}`}>{n || '∞'}</button>)}</div>
+                  </div>
+                </div>
+              )}
+
+              <button type="submit" disabled={!isConnected || (mode === 'join' && !roomIdInput.trim())} className="group flex h-14 items-center justify-between rounded-2xl bg-[#f1f3ed] px-5 text-sm font-semibold text-[#090b0a] transition hover:bg-[#d8b770] disabled:cursor-not-allowed disabled:opacity-35">
+                <span>{mode === 'create' ? 'Crear sala' : 'Entrar a la mesa'}</span><ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </button>
-            </div>
-          </div>
-        )}
+            </motion.form>
+          </AnimatePresence>
+        </div>
       </div>
-
-      
     </div>
   );
 }

@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import { ManaCost } from '../utils/manaSymbols';
 import { sound } from '../utils/audio';
-import { Eye, ArrowLeftRight, Check, Sparkles } from 'lucide-react';
+import { ArrowLeftRight, Check } from 'lucide-react';
 
 export function Card({
   card,
@@ -13,7 +12,7 @@ export function Card({
   onClick,
   onHoverStart,
   onHoverEnd,
-  location = 'pack', // 'pack' | 'arena' | 'pick'
+  location: _location = 'pack', // 'pack' | 'arena' | 'pick'
   size = 'md' // 'sm' | 'md' | 'lg'
 }) {
   const [imageError, setImageError] = useState(false);
@@ -21,13 +20,15 @@ export function Card({
   // Proportional 5:7 MTG Card aspect ratios (Enlarged)
   const dimensions = {
     sm: 'w-[130px] h-[182px] sm:w-[145px] sm:h-[203px] md:w-[155px] md:h-[217px]',
+    hand: 'draft-hand-card',
+    deck: 'deck-card',
     plaza: 'plaza-card',
     golem: 'golem-card',
     md: 'w-[142px] h-[199px] sm:w-[156px] sm:h-[218px] md:w-[168px] md:h-[235px]',
     lg: 'w-[250px] h-[350px] sm:w-[300px] sm:h-[420px]'
   }[size] || 'w-[142px] h-[199px] sm:w-[156px] sm:h-[218px] md:w-[168px] md:h-[235px]';
 
-  const handleClick = (e) => {
+  const handleClick = () => {
     if (disabled) return;
     sound.playSelect();
     if (onClick) onClick(card);
@@ -53,16 +54,16 @@ export function Card({
       onMouseLeave={handleMouseLeave}
       className={`relative select-none transition-all duration-200 cursor-pointer rounded-[7px] ${dimensions} ${
         isSelected
-          ? 'ring-2 ring-amber-400 ring-offset-2 ring-offset-slate-950 shadow-[0_0_18px_rgba(251,191,36,0.7)] z-30 -translate-y-2'
+          ? 'ring-2 ring-[#e5c681] ring-offset-2 ring-offset-[#080b09] shadow-[0_0_24px_rgba(216,183,112,.36)] z-30 -translate-y-2'
           : isSwapSource
           ? 'ring-2 ring-cyan-400 ring-offset-2 ring-offset-slate-950 shadow-[0_0_18px_rgba(34,211,238,0.7)] z-30 -translate-y-2'
           : isSwapTarget
           ? 'ring-2 ring-emerald-400 ring-offset-2 ring-offset-slate-950 shadow-[0_0_18px_rgba(52,211,153,0.7)] z-20 animate-pulse'
-          : 'shadow-md shadow-black/80 hover:shadow-xl hover:shadow-black'
+          : 'shadow-[0_12px_28px_rgba(0,0,0,.48)] hover:shadow-[0_18px_38px_rgba(0,0,0,.62)]'
       } ${disabled ? 'opacity-50 cursor-not-allowed filter grayscale-[20%]' : ''}`}
     >
       {/* MTG Card Body with authentic rounded corners */}
-      <div className="w-full h-full rounded-[7px] overflow-hidden glass-panel border border-black/50 flex flex-col justify-between relative group">
+      <div className="w-full h-full rounded-[7px] overflow-hidden bg-[#111411] border border-black/70 flex flex-col justify-between relative group">
         
         {hasImage ? (
           <img
@@ -107,7 +108,7 @@ export function Card({
             {isSelected && (
               <span className="px-1.5 py-0.5 rounded text-[8px] font-sans font-bold uppercase bg-amber-400 text-slate-950 shadow-sm flex items-center gap-0.5">
                 <Check className="w-2.5 h-2.5" />
-                Pick
+                Elegida
               </span>
             )}
             {isSwapSource && (

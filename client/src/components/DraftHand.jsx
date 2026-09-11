@@ -1,268 +1,46 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
+import { ArrowLeftRight, Check, RotateCcw } from 'lucide-react';
 import { Card } from './Card';
 import { sound } from '../utils/audio';
-import {
-  Sparkles,
-  ArrowLeftRight,
-  Check,
-  RotateCcw,
-  Layers,
-  Lock,
-  ArrowUpRight,
-  Hand
-} from 'lucide-react';
 
-export function DraftHand({
-  activePack = [],
-  isReady = false,
-  pendingDecision = null,
-  selectedPlazaCard = null,
-  onConfirmPick,
-  onConfirmSwap,
-  onCancelDecision,
-  onHoverStart,
-  onHoverEnd
-}) {
-  const [actionMode, setActionMode] = useState('pick'); // 'pick' | 'swap'
-  const [selectedPickCard, setSelectedPickCard] = useState(null);
-  const [selectedOfferCard, setSelectedOfferCard] = useState(null);
-
-  // Sync state if player already has pendingDecision
+export function DraftHand({ activePack = [], isReady = false, pendingDecision = null, selectedPlazaCard = null, onConfirmPick, onConfirmSwap, onCancelDecision, onHoverStart, onHoverEnd }) {
+  const [mode, setMode] = useState('pick');
+  const [picked, setPicked] = useState(null);
+  const [offered, setOffered] = useState(null);
   useEffect(() => {
-    if (pendingDecision) {
-      if (pendingDecision.type === 'pick') {
-        setActionMode('pick');
-        const c = activePack.find((card) => card.instanceId === pendingDecision.cardInstanceId);
-        if (c) setSelectedPickCard(c);
-      } else if (pendingDecision.type === 'swap') {
-        setActionMode('swap');
-        const c = activePack.find((card) => card.instanceId === pendingDecision.offerCardInstanceId);
-        if (c) setSelectedOfferCard(c);
-      }
-    }
+    if (pendingDecision?.type === 'pick') { setMode('pick'); setPicked(activePack.find(c => c.instanceId === pendingDecision.cardInstanceId) || null); }
+    if (pendingDecision?.type === 'swap') { setMode('swap'); setOffered(activePack.find(c => c.instanceId === pendingDecision.offerCardInstanceId) || null); }
   }, [pendingDecision, activePack]);
-
-  // Clean selections when pack changes
-  useEffect(() => {
-    if (!isReady && !pendingDecision) {
-      setSelectedPickCard(null);
-      setSelectedOfferCard(null);
-    }
-  }, [activePack.length, isReady, pendingDecision]);
-
-  const handleCardClick = (card) => {
-    if (isReady) return;
-
-    if (actionMode === 'pick') {
-      sound.playSelect();
-      setSelectedPickCard(card);
-    } else {
-      sound.playSelect();
-      setSelectedOfferCard(card);
-    }
-  };
-
-  const handleSwitchMode = (mode) => {
-    if (isReady) return;
-    sound.playHover();
-    setActionMode(mode);
-  };
-
-  const handleConfirmAction = () => {
-    if (actionMode === 'pick' && selectedPickCard) {
-      sound.playPick();
-      onConfirmPick(selectedPickCard.instanceId);
-    } else if (actionMode === 'swap' && selectedOfferCard && selectedPlazaCard) {
-      sound.playSwap();
-      onConfirmSwap(selectedOfferCard.instanceId, selectedPlazaCard.instanceId);
-    }
-  };
-
-  const totalCards = activePack.length;
-  const midIndex = (totalCards - 1) / 2;
+  useEffect(() => { if (!isReady && !pendingDecision) { setPicked(null); setOffered(null); } }, [activePack.length, isReady, pendingDecision]);
+  const select = card => { if (isReady) return; sound.playSelect(); if (mode === 'pick') setPicked(card); else setOffered(card); };
+  const confirm = () => { if (mode === 'pick' && picked) { sound.playPick(); onConfirmPick(picked.instanceId); } else if (mode === 'swap' && offered && selectedPlazaCard) { sound.playSwap(); onConfirmSwap(offered.instanceId, selectedPlazaCard.instanceId); } };
+  const ready = mode === 'pick' ? !!picked : !!offered && !!selectedPlazaCard;
+  const selectedName = mode === 'pick' ? picked?.name : offered && selectedPlazaCard ? `${offered.name} ↔ ${selectedPlazaCard.name}` : offered?.name;
+  const mid = (activePack.length - 1) / 2;
 
   return (
-    <section className="hand-surface w-full bg-transparent p-3 sm:p-4 space-y-3 font-sans relative overflow-visible">
-      
-      {/* Hand Header & Mode Switcher (Archidekt Style) */}
-      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 relative z-20">
-        {/* Action A vs Action B Selector Buttons */}
-        {!isReady && (
-          <div className="flex glass-panel p-1 rounded-xl border border-slate-800 self-stretch sm:self-auto font-sans text-xs">
-            <button
-              onClick={() => handleSwitchMode('pick')}
-              className={`flex-1 sm:flex-none px-3.5 py-1.5 rounded-lg font-bold transition-all flex items-center justify-center gap-1.5 cursor-pointer ${
-                actionMode === 'pick'
-                  ? 'bg-amber-500 text-amber-950 shadow-md shadow-amber-500/20'
-                  : 'text-slate-400 hover:text-white'
-              }`}
-            >
-              <Check className="w-3.5 h-3.5" />
-              <span>Acción A: Pick</span>
-            </button>
-
-            <button
-              onClick={() => handleSwitchMode('swap')}
-              className={`flex-1 sm:flex-none px-3.5 py-1.5 rounded-lg font-bold transition-all flex items-center justify-center gap-1.5 cursor-pointer ${
-                actionMode === 'swap'
-                  ? 'bg-cyan-500 text-slate-950 shadow-[0_0_10px_rgba(6,182,212,0.3)]'
-                  : 'text-slate-400 hover:text-white'
-              }`}
-            >
-              <ArrowLeftRight className="w-3.5 h-3.5" />
-              <span>Acción B: Swap Plaza</span>
-            </button>
-          </div>
-        )}
-      </div>
-
-      {/* ================= ARCHIDEKT PLAYTESTER STYLE HAND FAN ================= */}
-      <div className="w-full relative flex-1 min-h-[200px] max-h-[320px] lg:max-h-[360px] flex items-end justify-center overflow-visible py-2 select-none">
-        
-        {/* Subtle felt table shadow */}
-        <div className="absolute bottom-0 w-3/4 h-20 bg-black/50 rounded-full blur-2xl pointer-events-none" />
-
-        <div className="relative w-full max-w-6xl h-full flex items-end justify-center overflow-visible">
-          {activePack.map((card, index) => {
-            const isSelectedForPick =
-              actionMode === 'pick' && selectedPickCard?.instanceId === card.instanceId;
-            const isSelectedForSwapOffer =
-              actionMode === 'swap' && selectedOfferCard?.instanceId === card.instanceId;
-            const isSelected = isSelectedForPick || isSelectedForSwapOffer;
-
-            // Geometry calculations for Archidekt Natural Hand Fan Arc
-            const offset = index - midIndex; // e.g. -7 to +7
-            const viewportWidth = typeof window !== 'undefined' ? window.innerWidth : 1200;
-            const spacing = Math.min(82, Math.max(22, (viewportWidth - 180) / Math.max(1, totalCards)));
-            const xOffset = offset * spacing;
-            const angle = offset * Math.min(2.4, 26 / Math.max(1, totalCards));
-            const arcY = Math.pow(offset, 2) * 0.45; // Gentle natural baseline curve
-
-            return (
-              <motion.div
-                key={card.instanceId}
-                layout
-                animate={{
-                  x: xOffset,
-                  y: isSelected ? -45 : arcY,
-                  rotate: isSelected ? 0 : angle,
-                  scale: isSelected ? 1.15 : 1,
-                  zIndex: isSelected ? 60 : 10 + index
-                }}
-                whileHover={
-                  isReady
-                    ? {}
-                    : {
-                        y: -65,
-                        rotate: 0,
-                        scale: 1.2,
-                        zIndex: 100,
-                        transition: { type: 'spring', stiffness: 450, damping: 25 }
-                      }
-                }
-                transition={{ type: 'spring', stiffness: 350, damping: 30 }}
-                onClick={() => handleCardClick(card)}
-                className="absolute left-1/2 -translate-x-1/2 bottom-2 cursor-pointer origin-bottom"
-                style={{
-                  transformOrigin: '50% 100%'
-                }}
-              >
-                <Card
-                  card={card}
-                  location="pack"
-                  size="sm"
-                  isSelected={isSelectedForPick}
-                  isSwapSource={isSelectedForSwapOffer}
-                  disabled={isReady}
-                  onHoverStart={onHoverStart}
-                  onHoverEnd={onHoverEnd}
-                />
-              </motion.div>
-            );
-          })}
+    <section className="hand-surface relative z-20 shrink-0 border-t border-white/10 bg-[#080b09]/94 px-2 pb-2 pt-2 backdrop-blur-2xl sm:px-4">
+      <div className="mx-auto flex max-w-[1540px] items-center justify-between gap-3">
+        <div className="flex rounded-full border border-white/10 bg-black/25 p-1">
+          <button onClick={() => { if (!isReady) { setMode('pick'); sound.playHover(); } }} aria-pressed={mode === 'pick'} className={`rounded-full px-3 py-1.5 text-xs font-semibold transition ${mode === 'pick' ? 'bg-[#f1f3ed] text-[#090b0a]' : 'text-[#8f9991] hover:text-white'}`}>Elegir</button>
+          <button onClick={() => { if (!isReady) { setMode('swap'); sound.playHover(); } }} aria-pressed={mode === 'swap'} className={`flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-semibold transition ${mode === 'swap' ? 'bg-[#83d9d2] text-[#07100f]' : 'text-[#8f9991] hover:text-white'}`}><ArrowLeftRight className="h-3.5 w-3.5" />Cambiar</button>
         </div>
+        <div className="min-w-0 flex-1 truncate text-right text-xs text-[#8f9991]">{selectedName || (mode === 'pick' ? 'Selecciona una carta' : offered ? 'Elige en la Plaza' : 'Selecciona una carta')}</div>
+        {isReady ? <button onClick={onCancelDecision} className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-white/12 text-[#aab2ac] hover:text-white" title="Cambiar selección" aria-label="Cambiar selección"><RotateCcw className="h-4 w-4" /></button> : <button onClick={confirm} disabled={!ready} className={`flex h-9 shrink-0 items-center gap-2 rounded-full px-4 text-xs font-semibold transition disabled:opacity-25 ${mode === 'pick' ? 'bg-[#f1f3ed] text-[#090b0a]' : 'bg-[#83d9d2] text-[#07100f]'}`}><Check className="h-3.5 w-3.5" />Confirmar</button>}
       </div>
 
-      {/* Confirmation & Status Action Bar */}
-      <div className="pt-2 border-t border-slate-800/60 relative z-20">
-        {isReady ? (
-          <div className="bg-emerald-950/40 border border-emerald-500/40 rounded-xl p-3.5 flex flex-col sm:flex-row items-center justify-between gap-3 text-emerald-200">
-            <div className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-lg bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400 shrink-0">
-                <Lock className="w-4 h-4" />
-              </div>
-              <div className="text-xs font-sans">
-                <div className="font-bold">Decisión Confirmada & Bloqueada</div>
-                <div className="text-[11px] text-emerald-300/80 font-sans">
-                  {actionMode === 'pick'
-                    ? `Seleccionaste: [${selectedPickCard?.name || pendingDecision?.cardName || 'Carta'}]`
-                    : `Intercambio solicitado: [${selectedOfferCard?.name || pendingDecision?.offerName}] ➜ [${selectedPlazaCard?.name || pendingDecision?.targetName}]`}
-                </div>
-              </div>
-            </div>
-
-            <button
-              onClick={onCancelDecision}
-              className="px-3 py-1.5 rounded-lg bg-slate-900/80 backdrop-blur-sm hover:bg-slate-800 border border-slate-800/60 text-slate-300 text-xs font-sans font-semibold flex items-center gap-1.5 transition-all self-end sm:self-auto cursor-pointer"
-            >
-              <RotateCcw className="w-3.5 h-3.5" />
-              <span>Cambiar Selección</span>
-            </button>
-          </div>
-        ) : (
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-3 bg-slate-900/40 p-3.5 rounded-xl border border-slate-800/60">
-            {/* Left summary of chosen action */}
-            <div className="text-xs font-sans space-y-0.5 text-center sm:text-left">
-              {actionMode === 'pick' ? (
-                <div>
-                  <span className="text-slate-400">Modo Pick Normal: </span>
-                  {selectedPickCard ? (
-                    <span className="text-amber-400 font-bold font-mono">
-                      [{selectedPickCard.name}]
-                    </span>
-                  ) : (
-                    <span className="text-slate-400 italic">Elige 1 carta de tu mano arriba</span>
-                  )}
-                </div>
-              ) : (
-                <div className="space-y-1">
-                  <div className="flex items-center gap-1.5 flex-wrap">
-                    <span className="text-slate-400">Ofreces:</span>
-                    <span className="font-bold text-cyan-300 font-mono">
-                      {selectedOfferCard ? `[${selectedOfferCard.name}]` : '(Elige de tu mano)'}
-                    </span>
-                    <ArrowUpRight className="w-3.5 h-3.5 text-slate-400" />
-                    <span className="text-slate-400">Tomas del Plaza:</span>
-                    <span className="font-bold text-emerald-400 font-mono">
-                      {selectedPlazaCard ? `[${selectedPlazaCard.name}]` : '(Elige de la Plaza arriba)'}
-                    </span>
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* Confirm CTA Button */}
-            <button
-              onClick={handleConfirmAction}
-              disabled={
-                actionMode === 'pick'
-                  ? !selectedPickCard
-                  : !selectedOfferCard || !selectedPlazaCard
-              }
-              className={`w-full sm:w-auto px-6 py-2.5 rounded-xl font-sans font-bold text-xs uppercase tracking-wider transition-all shadow-lg flex items-center justify-center gap-2 cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed ${
-                actionMode === 'pick'
-                  ? 'bg-amber-500 hover:bg-amber-300 text-amber-950 shadow-[0_0_15px_rgba(255,213,128,0.3)]'
-                  : 'bg-cyan-400 hover:bg-cyan-300 text-slate-950 shadow-[0_0_15px_rgba(34,211,238,0.3)]'
-              }`}
-            >
-              <Check className="w-4 h-4" />
-              <span>
-                {actionMode === 'pick' ? 'Confirmar Pick' : 'Confirmar Intercambio Plaza'}
-              </span>
-            </button>
-          </div>
-        )}
+      <div className="relative mx-auto h-[clamp(132px,21vh,190px)] max-w-[1500px] select-none overflow-visible">
+        <div className="absolute bottom-1 left-1/2 h-10 w-2/3 -translate-x-1/2 rounded-full bg-black/65 blur-xl" />
+        {activePack.map((card, index) => {
+          const offset = index - mid;
+          const selected = (mode === 'pick' ? picked?.instanceId : offered?.instanceId) === card.instanceId;
+          const width = typeof window !== 'undefined' ? window.innerWidth : 1200;
+          const spacing = Math.min(78, Math.max(18, (width - 120) / Math.max(1, activePack.length)));
+          return <motion.div key={card.instanceId} layout animate={{ x: offset * spacing, y: selected ? -24 : Math.pow(offset,2)*.25, rotate: selected ? 0 : offset * Math.min(1.9,22 / Math.max(1,activePack.length)), scale: selected ? 1.06 : .88, zIndex: selected ? 80 : 10 + index }} whileHover={isReady ? {} : { y: -46, rotate: 0, scale: 1.08, zIndex: 100 }} transition={{ type:'spring', stiffness:380, damping:30 }} className="absolute bottom-[-54px] left-1/2 -translate-x-1/2 origin-bottom cursor-pointer" onClick={() => select(card)}>
+            <Card card={card} size="hand" isSelected={mode === 'pick' && selected} isSwapSource={mode === 'swap' && selected} disabled={isReady} onHoverStart={onHoverStart} onHoverEnd={onHoverEnd} />
+          </motion.div>;
+        })}
       </div>
     </section>
   );

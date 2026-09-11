@@ -148,7 +148,6 @@ export default function App() {
     s.on('swap_conflict_prompt', (data) => {
       sound.playSelect();
       setConflictData(data);
-      showToast('¡Conflicto de prioridad! La carta seleccionada fue tomada.', 'error');
     });
 
     s.on('pick_step_advanced', ({ pickNumber }) => {
@@ -307,7 +306,7 @@ export default function App() {
   const isComplete = roomState?.status === 'complete';
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans selection:bg-amber-500 selection:text-slate-950 relative">
+    <div className="min-h-screen text-[#f1f3ed] flex flex-col font-sans relative">
       {/* Main Content Area */}
       <MagicBackground />
 
@@ -338,7 +337,7 @@ export default function App() {
 
         {/* VIEW 3: Active Drafting View (Decision & Resolution Phases) */}
         {isDecisionOrResolution && (
-          <div className="draft-board flex-1 flex flex-col justify-between overflow-hidden h-[100dvh]">
+          <div className="draft-board flex-1 flex flex-col overflow-hidden h-[100dvh]">
             {/* ZONE 2 (Mid-Board): Turn Timeline & Priority Indicators */}
             <TurnTimeline
               currentRound={roomState.currentRound || 1}
@@ -400,19 +399,17 @@ export default function App() {
 
       {/* ZONE 4: Collapsed Right-Edge Slide-Over "Tus Picks" Tab Trigger */}
       {roomState?.me && !isComplete && (
-        <div className="fixed right-0 top-1/2 -translate-y-1/2 z-40">
+        <div className="fixed right-3 top-1/2 -translate-y-1/2 z-40">
           <button
             onClick={() => {
               sound.playSelect();
               setIsDrawerOpen(true);
             }}
-            className="px-2.5 py-4 rounded-l-2xl bg-gradient-to-b from-amber-500 to-orange-600 text-slate-950 font-black text-xs shadow-[-5px_0_20px_rgba(251,191,36,0.3)] hover:pr-4 transition-all flex flex-col items-center gap-1.5 cursor-pointer border-y border-l border-amber-300"
+            className="grid h-11 w-11 place-items-center rounded-full border border-white/15 bg-[#0b0e0c]/85 text-[#e5c681] shadow-[0_10px_35px_rgba(0,0,0,.45)] backdrop-blur-xl transition hover:border-[#d8b770]/60 cursor-pointer"
             title="Abrir Tus Picks"
           >
             <Layers className="w-4 h-4" />
-            <span className="[writing-mode:vertical-rl] tracking-wider uppercase text-[10px]">
-              Tus Picks ({roomState.me.draftPicks?.length || 0})
-            </span>
+            <span className="absolute -right-1 -top-1 grid h-5 min-w-5 place-items-center rounded-full bg-[#f1f3ed] px-1 text-[9px] font-bold text-[#090b0a]">{roomState.me.draftPicks?.length || 0}</span>
           </button>
         </div>
       )}
@@ -467,10 +464,10 @@ export default function App() {
       {toastMessage && (
         <div className="fixed bottom-5 right-5 z-50 max-w-md animate-fade-in pointer-events-none">
           <div
-            className={`px-4 py-3 rounded-xl border shadow-2xl backdrop-blur-md flex items-center gap-2.5 text-xs font-semibold ${
+            className={`px-4 py-3 rounded-full border shadow-2xl backdrop-blur-xl flex items-center gap-2.5 text-xs font-semibold ${
               toastMessage.type === 'error'
-                ? 'bg-rose-950/90 border-rose-500/50 text-rose-200 shadow-rose-950/50'
-                : 'bg-slate-900/95 border-amber-500/40 text-amber-200 shadow-black/80'
+                ? 'bg-[#2a1212]/92 border-[#ff766d]/40 text-[#ffc5c0]'
+                : 'bg-[#0b0e0c]/92 border-white/12 text-[#d9ded9] shadow-black/80'
             }`}
           >
             <AlertCircle className="w-4 h-4 shrink-0 text-amber-400" />

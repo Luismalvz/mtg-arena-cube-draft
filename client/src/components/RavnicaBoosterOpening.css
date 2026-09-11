@@ -1,198 +1,33 @@
-/* Realistic MTG Booster Pack Opening Simulation Styles */
-
-.booster-stage {
-  perspective: 1200px;
-  transform-style: preserve-3d;
-}
-
-/* Foil Booster Pack Wrapper */
-.booster-pack-wrapper {
-  position: relative;
-  width: 270px;
-  height: 465px;
-  transform-style: preserve-3d;
-  transition: transform 0.25s ease-out;
-  cursor: pointer;
-  user-select: none;
-}
-
-@media (max-width: 640px) {
-  .booster-pack-wrapper {
-    width: 220px;
-    height: 380px;
-  }
-}
-
-/* Ambient glow under the booster */
-.booster-ambient-glow {
-  position: absolute;
-  inset: -25px;
-  border-radius: 24px;
-  background: radial-gradient(circle, rgba(245, 158, 11, 0.45) 0%, rgba(217, 119, 6, 0.2) 50%, transparent 75%);
-  filter: blur(30px);
-  pointer-events: none;
-  z-index: 1;
-  animation: booster-pulse 3s ease-in-out infinite alternate;
-}
-
-@keyframes booster-pulse {
-  0% { opacity: 0.6; transform: scale(0.95); }
-  100% { opacity: 1; transform: scale(1.05); }
-}
-
-/* Metallic Serrated Crimp at Top and Bottom */
-.booster-crimp-top,
-.booster-crimp-bottom {
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 22px;
-  z-index: 30;
-  background: repeating-linear-gradient(
-    90deg,
-    #3b1802 0px,
-    #78350f 1px,
-    #d97706 2px,
-    #fef3c7 3px,
-    #b45309 4px,
-    #3b1802 5px
-  );
-  box-shadow: 
-    inset 0 1px 2px rgba(255, 255, 255, 0.5),
-    inset 0 -1px 2px rgba(0, 0, 0, 0.7),
-    0 2px 4px rgba(0, 0, 0, 0.6);
-}
-
-.booster-crimp-top {
-  top: 0;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-}
-
-.booster-crimp-bottom {
-  bottom: 0;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-}
-
-/* Foil Holo Sheen that glides across the pack */
-.booster-foil-sheen {
-  position: absolute;
-  inset: 0;
-  border-radius: 6px;
-  pointer-events: none;
-  z-index: 25;
-  background: linear-gradient(
-    115deg,
-    transparent 0%,
-    rgba(255, 255, 255, 0.04) 25%,
-    rgba(251, 191, 36, 0.22) 42%,
-    rgba(236, 72, 153, 0.18) 50%,
-    rgba(56, 189, 248, 0.22) 58%,
-    rgba(255, 255, 255, 0.06) 75%,
-    transparent 100%
-  );
-  background-size: 250% 250%;
-  animation: foil-glimmer 5s ease infinite;
-  mix-blend-mode: color-dodge;
-}
-
-@keyframes foil-glimmer {
-  0% { background-position: 0% 0%; }
-  50% { background-position: 100% 100%; }
-  100% { background-position: 0% 0%; }
-}
-
-/* Perforation Tear Guide Line */
-.booster-tear-guide {
-  position: absolute;
-  top: 55px;
-  left: 0;
-  right: 0;
-  height: 2px;
-  border-top: 2px dashed rgba(253, 230, 138, 0.85);
-  filter: drop-shadow(0 0 4px rgba(245, 158, 11, 0.9));
-  z-index: 35;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding-right: 10px;
-  pointer-events: none;
-}
-
-.booster-tear-tab {
-  transform: translateY(-50%);
-  background: linear-gradient(135deg, #f59e0b, #b45309);
-  color: #1a0f02;
-  font-family: monospace;
-  font-size: 10px;
-  font-weight: 900;
-  padding: 3px 8px;
-  border-radius: 4px;
-  box-shadow: 0 0 10px rgba(245, 158, 11, 0.8);
-  letter-spacing: 1px;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  animation: tab-pulse 1.5s ease-in-out infinite;
-}
-
-@keyframes tab-pulse {
-  0%, 100% { transform: translateY(-50%) scale(1); filter: brightness(1); }
-  50% { transform: translateY(-50%) scale(1.08); filter: brightness(1.25); }
-}
-
-/* Light burst when torn */
-.booster-tear-flash {
-  position: absolute;
-  top: 40px;
-  left: 0;
-  right: 0;
-  height: 40px;
-  border-radius: 50%;
-  background: radial-gradient(ellipse, #ffffff 0%, #fef08a 40%, rgba(245, 158, 11, 0.7) 70%, transparent 100%);
-  filter: blur(6px);
-  z-index: 45;
-  pointer-events: none;
-  animation: tear-flash 0.55s cubic-bezier(0.1, 0.8, 0.2, 1) forwards;
-}
-
-@keyframes tear-flash {
-  0% { transform: scale(0.2); opacity: 0; }
-  30% { transform: scale(1.4); opacity: 1; filter: blur(2px); }
-  100% { transform: scale(2.2); opacity: 0; filter: blur(10px); }
-}
-
-/* Dark internal foil cavity of the opened booster */
-.booster-inner-cavity {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, #050508 0%, #171513 35%, #0a0a0e 100%);
-  border-radius: 6px;
-  border: 1px solid rgba(245, 158, 11, 0.3);
-  box-shadow: inset 0 0 35px rgba(0, 0, 0, 0.98);
-  z-index: 5;
-}
-
-/* Card Fanning in 3D Arc */
-.fanned-cards-container {
-  perspective: 1400px;
-  transform-style: preserve-3d;
-}
-
-/* Individual card inside the fan */
-.fanned-card {
-  transition: transform 0.25s ease-out, filter 0.25s ease-out, box-shadow 0.25s ease-out;
-  transform-origin: bottom center;
-}
-
-.fanned-card:hover {
-
-  z-index: 70 !important;
-  filter: brightness(1.15) drop-shadow(0 20px 30px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 15px rgba(251, 191, 36, 0.65));
-}
-
-@media (max-height: 760px) {
-  .booster-stage { height: 52dvh; min-height: 260px; }
-  .booster-pack-wrapper { width: 190px; height: 327px; }
-}
+.booster-overlay { position:fixed; inset:0; z-index:100; display:flex; flex-direction:column; align-items:center; justify-content:center; overflow:hidden; background:radial-gradient(circle at 50% 45%,rgba(52,88,71,.2),transparent 34%),rgba(5,7,6,.96); backdrop-filter:blur(24px); user-select:none; }
+.booster-overlay::before { content:""; position:absolute; inset:0; opacity:.035; background-image:linear-gradient(rgba(255,255,255,.7) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.7) 1px,transparent 1px); background-size:80px 80px; mask-image:radial-gradient(circle,#000,transparent 70%); pointer-events:none; }
+.booster-copy { position:absolute; top:clamp(18px,4vh,42px); left:clamp(18px,4vw,56px); z-index:5; display:flex; align-items:baseline; gap:14px; }
+.booster-copy span { color:#d8b770; font-size:11px; font-weight:700; letter-spacing:.18em; }
+.booster-copy strong { color:#f1f3ed; font-size:clamp(16px,2vw,24px); font-weight:500; letter-spacing:-.04em; }
+.booster-stage { position:relative; width:min(1120px,100vw); height:min(68dvh,610px); display:grid; place-items:center; perspective:1300px; }
+.booster-pack-wrapper { position:absolute; z-index:20; width:clamp(205px,24vh,270px); aspect-ratio:.58; cursor:ew-resize; touch-action:none; transform-style:preserve-3d; filter:drop-shadow(0 35px 42px rgba(0,0,0,.72)); }
+.booster-pack-wrapper::before { content:""; position:absolute; inset:-18%; z-index:-1; border-radius:50%; background:rgba(216,183,112,.22); filter:blur(46px); opacity:.48; }
+.booster-body { position:absolute; inset:0; overflow:hidden; border-radius:7px; background:#17100c; box-shadow:inset 0 0 0 1px rgba(255,255,255,.16),inset 0 -24px 40px rgba(0,0,0,.34); }
+.booster-body>img { width:100%; height:100%; object-fit:cover; pointer-events:none; }
+.booster-top { position:absolute; z-index:25; top:0; left:0; right:0; height:66px; overflow:hidden; transform-origin:left center; clip-path:polygon(0 0,100% 0,100% 73%,94% 86%,86% 70%,77% 91%,68% 72%,57% 90%,48% 73%,37% 91%,26% 70%,15% 89%,7% 72%,0 84%); }
+.booster-top>img { width:100%; height:auto; min-height:430px; object-fit:cover; object-position:top; pointer-events:none; }
+.booster-crimp-top { position:absolute; inset:0 0 auto; height:20px; background:repeating-linear-gradient(90deg,#5a341c 0 2px,#d6a660 2px 3px,#6d3d20 3px 5px); mix-blend-mode:screen; opacity:.6; }
+.booster-foil-sheen { position:absolute; inset:-25%; background:linear-gradient(112deg,transparent 25%,rgba(255,255,255,.2) 42%,rgba(119,214,198,.2) 48%,rgba(213,169,104,.28) 53%,transparent 68%); transform:translateX(-45%); animation:pack-sheen 4.8s ease-in-out infinite; mix-blend-mode:screen; pointer-events:none; }
+@keyframes pack-sheen { 0%,22%{transform:translateX(-55%)} 65%,100%{transform:translateX(55%)} }
+.booster-tear-zone { position:absolute; z-index:35; top:37px; left:8px; right:8px; height:44px; display:flex; align-items:center; }
+.booster-tear-track { position:relative; width:100%; height:2px; background:rgba(255,255,255,.22); box-shadow:0 0 10px rgba(255,255,255,.12); }
+.booster-tear-progress { height:100%; background:#f2d796; box-shadow:0 0 12px rgba(242,215,150,.8); }
+.booster-tear-handle { position:absolute; top:50%; width:24px; height:24px; transform:translateY(-50%); display:grid; place-items:center; border:1px solid rgba(255,255,255,.48); border-radius:50%; background:rgba(8,10,9,.9); color:#f2d796; font-size:18px; line-height:1; box-shadow:0 4px 14px rgba(0,0,0,.4); transition:transform .15s ease; }
+.is-dragging .booster-tear-handle { transform:translateY(-50%) scale(1.13); }
+.booster-tear-flash { position:absolute; z-index:40; top:48px; left:0; right:0; height:4px; background:white; box-shadow:0 0 20px 8px rgba(242,215,150,.8); animation:tear-flash .55s ease-out forwards; }
+@keyframes tear-flash { to { opacity:0; transform:scaleX(1.35); filter:blur(9px); } }
+.fanned-cards-container { position:absolute; inset:0; z-index:30; display:flex; align-items:center; justify-content:center; pointer-events:none; perspective:1200px; }
+.fanned-card { position:absolute; pointer-events:auto; transform-origin:50% 100%; cursor:pointer; }
+.booster-card { width:clamp(100px,15vh,136px); aspect-ratio:5/7; overflow:hidden; border-radius:7px; background:#101311; border:1px solid rgba(255,255,255,.24); box-shadow:0 20px 42px rgba(0,0,0,.74); }
+.booster-card>img { width:100%; height:100%; display:block; object-fit:cover; }
+.booster-card-fallback { height:100%; padding:10px; display:flex; flex-direction:column; justify-content:space-between; color:#f1f3ed; background:linear-gradient(145deg,#1b211d,#080a09); }
+.booster-card-fallback strong { font-size:11px; }.booster-card-fallback span { font-size:9px; color:#9ba49d; }
+.booster-hint,.booster-continue { position:absolute; bottom:clamp(20px,5vh,48px); z-index:60; height:46px; border-radius:999px; padding:0 22px; display:flex; align-items:center; gap:28px; border:1px solid rgba(255,255,255,.14); background:rgba(14,18,16,.72); color:#d9ded9; font-size:13px; cursor:pointer; backdrop-filter:blur(14px); }
+.booster-hint:hover { border-color:rgba(216,183,112,.55); color:#f2d796; }
+.booster-hint span { color:#d8b770; }.booster-continue { background:#f1f3ed; color:#090b0a; border:0; font-weight:700; }
+@media(max-height:720px){.booster-stage{height:66dvh}.booster-pack-wrapper{width:190px}.booster-card{width:98px}.booster-copy{top:16px}.booster-hint,.booster-continue{bottom:16px}}
+@media(max-width:640px){.booster-copy{left:18px}.booster-copy strong{font-size:16px}.booster-stage{height:65dvh}.booster-card{width:88px}.fanned-card:hover{z-index:90}.booster-pack-wrapper{width:200px}}
