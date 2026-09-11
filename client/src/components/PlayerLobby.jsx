@@ -4,12 +4,14 @@ import { ArrowRight, Check, Copy, Shuffle } from 'lucide-react';
 import { sound } from '../utils/audio';
 import { PlayerTokenCard } from './PlayerTokenCard';
 import { TOKEN_AVATARS } from '../utils/tokenAvatars';
+import { useHorizontalWheelScroll } from '../hooks/useHorizontalWheelScroll';
 
 export function PlayerLobby({ roomState, onStartDraft, onRandomizeSeating, onJoinRoomAsPlayer, isHost, myId }) {
   const [copied, setCopied] = useState(false);
   const [shuffling, setShuffling] = useState(false);
   const [name, setName] = useState('');
   const [avatar, setAvatar] = useState('046');
+  const avatarPickerRef = useHorizontalWheelScroll();
   if (!roomState) return null;
   const { id: roomId, config, players = [] } = roomState;
   const targetCount = config?.playerCount || 8;
@@ -31,7 +33,7 @@ export function PlayerLobby({ roomState, onStartDraft, onRandomizeSeating, onJoi
           <div className="flex items-center gap-2 text-xs text-[#9ba49d]"><span>{config?.packCount || 3} sobres</span><span className="text-white/20">/</span><span>{config?.timerSeconds ? `${config.timerSeconds}s` : '∞'}</span>{isHost && <button onClick={shuffle} aria-label="Mezclar asientos" title="Mezclar asientos" className="ml-2 grid h-9 w-9 place-items-center rounded-full border border-white/10 hover:border-[#d8b770]/45 hover:text-[#e7cb8e]"><Shuffle className={`h-4 w-4 ${shuffling ? 'animate-spin' : ''}`} /></button>}</div>
         </div>
 
-        {!hasSeat && <form onSubmit={join} className="mb-4 grid gap-3 rounded-2xl border border-[#d8b770]/28 bg-[#0d110f]/85 p-3 sm:grid-cols-[minmax(160px,260px)_1fr_auto] sm:items-center"><input aria-label="Tu nombre" className="h-11 rounded-xl border border-white/10 bg-white/[.04] px-4 outline-none focus:border-[#d8b770]/55" placeholder="Tu nombre" value={name} onChange={e => setName(e.target.value)} /><div className="avatar-picker compact scrollbar-hide">{TOKEN_AVATARS.map(option => <button key={option.id} type="button" className={`avatar-choice ${avatar === option.id ? 'selected' : ''}`} onClick={() => setAvatar(option.id)} aria-label={`Avatar ${option.id}`} aria-pressed={avatar === option.id}><img src={option.src} alt="" /></button>)}</div><button disabled={!name.trim()} className="h-11 rounded-xl bg-[#f1f3ed] px-5 text-sm font-semibold text-[#090b0a] disabled:opacity-35">Tomar asiento</button></form>}
+        {!hasSeat && <form onSubmit={join} className="mb-4 grid gap-3 rounded-2xl border border-[#d8b770]/28 bg-[#0d110f]/85 p-3 sm:grid-cols-[minmax(160px,260px)_1fr_auto] sm:items-center"><input aria-label="Tu nombre" className="h-11 rounded-xl border border-white/10 bg-white/[.04] px-4 outline-none focus:border-[#d8b770]/55" placeholder="Tu nombre" value={name} onChange={e => setName(e.target.value)} /><div ref={avatarPickerRef} className="avatar-picker compact">{TOKEN_AVATARS.map(option => <button key={option.id} type="button" className={`avatar-choice ${avatar === option.id ? 'selected' : ''}`} onClick={() => setAvatar(option.id)} aria-label={`Avatar ${option.id}`} aria-pressed={avatar === option.id}><img src={option.src} alt="" /></button>)}</div><button disabled={!name.trim()} className="h-11 rounded-xl bg-[#f1f3ed] px-5 text-sm font-semibold text-[#090b0a] disabled:opacity-35">Tomar asiento</button></form>}
 
         <motion.div layout className={`grid gap-2.5 sm:gap-3 ${targetCount <= 4 ? 'grid-cols-2 sm:grid-cols-4 max-w-4xl mx-auto' : 'grid-cols-2 sm:grid-cols-4 lg:grid-cols-8'}`}>
           <AnimatePresence>{seats.map((seat, index) => <PlayerTokenCard key={seat.type === 'player' ? seat.data.id : `vacant-${index}`} seat={seat} seatIndex={index} myId={myId} />)}</AnimatePresence>

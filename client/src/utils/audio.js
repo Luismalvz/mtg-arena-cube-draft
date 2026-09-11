@@ -1,6 +1,8 @@
 class SoundEffects {
   constructor() {
     this.ctx = null;
+    this.plazaSwapBuffer = null;
+    this.plazaSwapPromise = null;
   }
 
   init() {
@@ -13,6 +15,49 @@ class SoundEffects {
     if (this.ctx && this.ctx.state === 'suspended') {
       this.ctx.resume();
     }
+    if (this.ctx) this.preloadPlazaSwap();
+  }
+
+  preloadPlazaSwap() {
+    if (!this.ctx) return Promise.resolve(null);
+    if (this.plazaSwapBuffer) return Promise.resolve(this.plazaSwapBuffer);
+    if (!this.plazaSwapPromise) {
+      this.plazaSwapPromise = fetch('/audio/wololo-plaza-swap.mp3')
+        .then(response => {
+          if (!response.ok) throw new Error('No se pudo cargar el sonido de la Plaza');
+          return response.arrayBuffer();
+        })
+        .then(data => this.ctx.decodeAudioData(data))
+        .then(buffer => {
+          this.plazaSwapBuffer = buffer;
+          return buffer;
+        })
+        .catch(() => {
+          this.plazaSwapPromise = null;
+          return null;
+        });
+    }
+    return this.plazaSwapPromise;
+  }
+
+  playPlazaSwap() {
+    try {
+      this.init();
+      if (!this.ctx) return;
+      const play = (buffer) => {
+        if (!buffer || !this.ctx) return;
+        const source = this.ctx.createBufferSource();
+        const gain = this.ctx.createGain();
+        source.buffer = buffer;
+        gain.gain.setValueAtTime(0.68, this.ctx.currentTime);
+        source.connect(gain);
+        gain.connect(this.ctx.destination);
+        const startOffset = Math.min(0.5, Math.max(0, buffer.duration - 0.01));
+        source.start(this.ctx.currentTime, startOffset);
+      };
+      if (this.plazaSwapBuffer) play(this.plazaSwapBuffer);
+      else this.preloadPlazaSwap().then(play);
+    } catch (e) {}
   }
 
   playHover() {

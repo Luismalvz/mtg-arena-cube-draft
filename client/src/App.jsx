@@ -138,7 +138,7 @@ export default function App() {
     });
 
     s.on('swap_animation_event', (event) => {
-      sound.playSwap();
+      sound.playPlazaSwap();
       setActiveSwapAnimation(event);
       setTimeout(() => {
         setActiveSwapAnimation(null);

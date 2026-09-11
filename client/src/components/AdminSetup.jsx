@@ -3,6 +3,8 @@ import { ArrowRight, LogIn, Plus } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { sound } from '../utils/audio';
 import { TOKEN_AVATARS } from '../utils/tokenAvatars';
+import { useHorizontalWheelScroll } from '../hooks/useHorizontalWheelScroll';
+import { MagicParticles } from './MagicBackground';
 
 export function AdminSetup({ onCreateRoom, onJoinRoom, initialRoomId = '', isConnected = true }) {
   const [mode, setMode] = useState(initialRoomId ? 'join' : 'create');
@@ -13,6 +15,7 @@ export function AdminSetup({ onCreateRoom, onJoinRoom, initialRoomId = '', isCon
   const [packCount, setPackCount] = useState(3);
   const [timerSeconds, setTimerSeconds] = useState(45);
   const [avatar, setAvatar] = useState('046');
+  const avatarPickerRef = useHorizontalWheelScroll();
 
   const maxPossiblePacks = Math.max(3, Math.floor(360 / (playerCount * 15)));
   const chooseAvatar = (id) => { setAvatar(id); sound.playHover(); };
@@ -27,6 +30,7 @@ export function AdminSetup({ onCreateRoom, onJoinRoom, initialRoomId = '', isCon
 
   return (
     <div className="setup-screen">
+      <MagicParticles className="setup-magic-particles" />
       <span className={`setup-connection ${isConnected ? 'is-online' : 'is-offline'}`} aria-label={isConnected ? 'Conectado' : 'Sin conexión'} />
 
       <div className="setup-layout">
@@ -57,7 +61,7 @@ export function AdminSetup({ onCreateRoom, onJoinRoom, initialRoomId = '', isCon
               )}
               <input aria-label="Nombre" className="h-14 rounded-2xl border border-white/10 bg-white/[.035] px-5 text-base outline-none transition placeholder:text-[#677069] focus:border-[#d8b770]/60" placeholder="Tu nombre" value={mode === 'create' ? adminName : joinPlayerName} onChange={(e) => mode === 'create' ? setAdminName(e.target.value) : setJoinPlayerName(e.target.value)} maxLength={24} />
 
-              <div className="avatar-picker scrollbar-hide" aria-label="Avatar">
+              <div ref={avatarPickerRef} className="avatar-picker" aria-label="Avatar">
                 {TOKEN_AVATARS.map((option) => <button key={option.id} type="button" className={`avatar-choice ${avatar === option.id ? 'selected' : ''}`} onClick={() => chooseAvatar(option.id)} aria-label={`Avatar ${option.id}`} aria-pressed={avatar === option.id}><img src={option.src} alt="" /></button>)}
               </div>
 
