@@ -338,7 +338,7 @@ export default function App() {
 
         {/* VIEW 3: Active Drafting View (Decision & Resolution Phases) */}
         {isDecisionOrResolution && (
-          <div className="draft-board flex flex-col gap-0">
+          <div className="draft-board flex-1 flex flex-col justify-between overflow-hidden h-[100dvh]">
             {/* ZONE 2 (Mid-Board): Turn Timeline & Priority Indicators */}
             <TurnTimeline
               currentRound={roomState.currentRound || 1}

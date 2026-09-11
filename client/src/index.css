@@ -80,9 +80,13 @@
 }
 
 /* Plaza Cards */
+:root {
+  --plaza-card-height: clamp(126px, 16.8vw, 179px);
+}
+
 .plaza-card {
   width: clamp(90px, 12vw, 128px);
-  height: clamp(126px, 16.8vw, 179px);
+  height: var(--plaza-card-height);
 }
 
 .golem-card {

@@ -118,7 +118,7 @@ export function DraftHand({
       </div>
 
       {/* ================= ARCHIDEKT PLAYTESTER STYLE HAND FAN ================= */}
-      <div className="w-full relative h-[285px] sm:h-[330px] md:h-[360px] flex items-end justify-center overflow-visible py-2 select-none">
+      <div className="w-full relative flex-1 min-h-[200px] max-h-[320px] lg:max-h-[360px] flex items-end justify-center overflow-visible py-2 select-none">
         
         {/* Subtle felt table shadow */}
         <div className="absolute bottom-0 w-3/4 h-20 bg-black/50 rounded-full blur-2xl pointer-events-none" />

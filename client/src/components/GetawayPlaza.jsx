@@ -82,7 +82,7 @@ export function GetawayPlaza({
           {isFlank ? (
             <span className="font-sans text-[10px] text-slate-500 uppercase tracking-wider">{slot.name}</span>
           ) : (
-            <img src={`/avatar-${slot.id}.png`} alt={slot.name} className="w-12 h-12 object-cover rounded-full opacity-50 mb-2 shadow-inner grayscale contrast-125" onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'block'; }} />
+            <img src={`/guilds/${slot.id}.png`} alt={slot.name} className="w-12 h-12 object-cover rounded-full opacity-50 mb-2 shadow-inner grayscale contrast-125" onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'block'; }} />
           )}
           <span className="font-sans text-[10px] text-slate-500 uppercase tracking-wider hidden" style={{ display: 'none' }}>{slot.name}</span>
           <span className="font-sans text-[9px] text-slate-600">Vacío</span>
@@ -128,13 +128,13 @@ export function GetawayPlaza({
         {/* Guild Emblem & Stack Count Pill beneath the pile */}
         <div className="plaza-label mt-2.5 flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900/80 border border-white/10 backdrop-blur-xs shadow-md">
           {isFlank ? (
-            <span className={`font-sans font-bold text-[10px] uppercase tracking-wider ${theme.text}`}>
+            <span className={`font-space font-bold text-[10px] uppercase tracking-wider ${theme.text}`}>
               {slot.name}
             </span>
           ) : (
             <div className="relative">
-              <img src={`/avatar-${slot.id}.png`} alt={slot.name} className="w-6 h-6 object-cover rounded-full shadow-[0_0_8px_rgba(255,255,255,0.15)] ring-1 ring-white/10" onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'block'; }} />
-              <span className={`font-sans font-bold text-[10px] uppercase tracking-wider ${theme.text} hidden`} style={{ display: 'none' }}>{slot.name}</span>
+              <img src={`/guilds/${slot.id}.png`} alt={slot.name} className="w-6 h-6 object-cover rounded-full shadow-[0_0_8px_rgba(255,255,255,0.15)] ring-1 ring-white/10" onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'block'; }} />
+              <span className={`font-space font-bold text-[10px] uppercase tracking-wider ${theme.text} hidden`} style={{ display: 'none' }}>{slot.name}</span>
             </div>
           )}
           <span className="font-mono text-[10px] font-bold text-amber-300/90 bg-slate-950 px-1.5 py-0.5 rounded border border-white/5 shadow-inner">
@@ -146,7 +146,7 @@ export function GetawayPlaza({
   };
 
   return (
-    <section className="plaza-surface w-full relative p-3 sm:p-5 bg-transparent border-b border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.65)] font-sans overflow-visible">
+    <section className="plaza-surface w-full flex-1 flex flex-col justify-center relative p-2 sm:p-4 bg-transparent border-b border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.65)] font-sans overflow-visible">
       
       {/* Gateway Plaza Thematic Art Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
