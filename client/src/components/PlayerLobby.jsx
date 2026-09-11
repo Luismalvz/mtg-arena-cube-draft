@@ -25,14 +25,9 @@ export function PlayerLobby({ roomState, onStartDraft, onRandomizeSeating, onJoi
 
   return (
     <div className="min-h-[100dvh] w-full px-4 py-5 sm:px-7 sm:py-7 flex flex-col overflow-hidden">
-      <header className="flex items-center justify-between gap-4">
-        <div className="flex items-center gap-3"><span className="grid h-9 w-9 place-items-center rounded-full border border-[#d8b770]/35 text-[#e7cb8e] text-sm">G</span><span className="text-sm font-semibold">Getaway Draft</span></div>
-        <button onClick={copy} className="flex items-center gap-2 rounded-full border border-white/10 bg-white/[.035] px-4 py-2 text-xs text-[#cbd1cc] hover:border-[#d8b770]/45">{roomId}{copied ? <Check className="h-3.5 w-3.5 text-[#83d9d2]" /> : <Copy className="h-3.5 w-3.5" />}</button>
-      </header>
-
       <main className="m-auto w-full max-w-[1380px] py-5">
         <div className="mb-5 flex flex-wrap items-end justify-between gap-4">
-          <div><p className="mb-1 text-[11px] uppercase tracking-[.2em] text-[#d8b770]">Mesa {roomId}</p><h1 className="text-[clamp(2rem,4vw,4rem)] font-medium leading-none tracking-[-.065em]">{players.length} / {targetCount}</h1></div>
+          <div><button onClick={copy} className="mb-1 flex items-center gap-2 text-[11px] uppercase tracking-[.2em] text-[#d8b770] transition hover:text-[#f1d99e]">Mesa {roomId}{copied ? <Check className="h-3.5 w-3.5 text-[#83d9d2]" /> : <Copy className="h-3.5 w-3.5" />}</button><h1 className="text-[clamp(2rem,4vw,4rem)] font-medium leading-none tracking-[-.065em]">{players.length} / {targetCount}</h1></div>
           <div className="flex items-center gap-2 text-xs text-[#9ba49d]"><span>{config?.packCount || 3} sobres</span><span className="text-white/20">/</span><span>{config?.timerSeconds ? `${config.timerSeconds}s` : '∞'}</span>{isHost && <button onClick={shuffle} aria-label="Mezclar asientos" title="Mezclar asientos" className="ml-2 grid h-9 w-9 place-items-center rounded-full border border-white/10 hover:border-[#d8b770]/45 hover:text-[#e7cb8e]"><Shuffle className={`h-4 w-4 ${shuffling ? 'animate-spin' : ''}`} /></button>}</div>
         </div>
 

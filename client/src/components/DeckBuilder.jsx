@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Check, Copy, Download, Minus, Plus } from 'lucide-react';
+import { Check, Copy, Download } from 'lucide-react';
 import { Card } from './Card';
 import basicLands from '../basicLands.json';
 import { buildDeck, deckText, normalizeQuantity } from '../utils/deck';
@@ -17,6 +17,9 @@ export function DeckBuilder({ picks, storageKey, onHoverStart, onHoverEnd }) {
   const cards = tab === 'main' ? deck.main : deck.sideboard;
   const toggle = card => setSelection(previous => ({ ...previous, ids: previous.ids.includes(card.instanceId) ? previous.ids.filter(id => id !== card.instanceId) : [...previous.ids, card.instanceId] }));
   const quantity = (id,value) => setSelection(previous => ({ ...previous, quantities: { ...previous.quantities, [id]: normalizeQuantity(value) } }));
+  const addLand = card => quantity(card.id, normalizeQuantity(selection.quantities[card.id]) + 1);
+  const removeLand = card => quantity(card.id, Math.max(0, normalizeQuantity(selection.quantities[card.id]) - 1));
+  const selectedLandCount = deck.lands.reduce((sum, card) => sum + card.quantity, 0);
   const copy = async () => { if (!valid) return; try { await navigator.clipboard.writeText(text); setMessage('Copiado'); } catch { setMessage('No se pudo copiar'); } };
   const download = () => { if (!valid) return; const url = URL.createObjectURL(new Blob([text],{type:'text/plain;charset=utf-8'})); const link = document.createElement('a'); link.href=url; link.download='getaway-deck-sideboard.txt'; link.click(); setTimeout(()=>URL.revokeObjectURL(url),1000); setMessage('Descargado'); };
 
@@ -34,8 +37,21 @@ export function DeckBuilder({ picks, storageKey, onHoverStart, onHoverEnd }) {
       </section>
 
       <aside className="deck-panel">
-        <div className="mb-4 flex items-center justify-between"><h2 className="text-sm font-semibold">Tierras</h2><span className="text-xs text-[#8f9991]">Ilimitadas</span></div>
-        <div className="space-y-5">{Object.keys(LAND_NAMES).map(name => <section key={name}><h3 className="mb-2 text-[11px] uppercase tracking-[.14em] text-[#d8b770]">{LAND_NAMES[name]}</h3><div className="lands-grid">{basicLands.filter(card => card.name === name).map(card => <div key={card.id} className="land-option"><Card card={card} size="deck" onHoverStart={onHoverStart} onHoverEnd={onHoverEnd}/><div className="land-counter"><button aria-label={`Quitar ${LAND_NAMES[name]}`} disabled={!normalizeQuantity(selection.quantities[card.id])} onClick={() => quantity(card.id, normalizeQuantity(selection.quantities[card.id])-1)}><Minus className="mx-auto h-3.5 w-3.5" /></button><input aria-label={`Cantidad ${LAND_NAMES[name]}`} type="number" min="0" value={normalizeQuantity(selection.quantities[card.id])} onChange={e => quantity(card.id,e.target.value)}/><button aria-label={`Agregar ${LAND_NAMES[name]}`} onClick={() => quantity(card.id, normalizeQuantity(selection.quantities[card.id])+1)}><Plus className="mx-auto h-3.5 w-3.5" /></button></div></div>)}</div></section>)}</div>
+        <div className="mb-4 flex items-center justify-between"><h2 className="text-sm font-semibold">Tierras</h2><span className="text-xs text-[#8f9991]">{selectedLandCount}</span></div>
+        <div className="space-y-5">{Object.keys(LAND_NAMES).map(name => <section key={name}><h3 className="mb-2 text-[11px] uppercase tracking-[.14em] text-[#d8b770]">{LAND_NAMES[name]}</h3><div className="lands-grid">{basicLands.filter(card => card.name === name).map(card => {
+          const count = normalizeQuantity(selection.quantities[card.id]);
+          return <button key={card.id} type="button" className="land-option" onClick={() => addLand(card)} aria-label={`Agregar ${LAND_NAMES[name]}, ilustración ${card.set.toUpperCase()} ${card.collector_number}. ${count} seleccionadas`}>
+            <Card card={card} size="deck" onHoverStart={onHoverStart} onHoverEnd={onHoverEnd}/>
+            {count > 0 && <span className="land-quantity-badge" aria-hidden="true">{count}</span>}
+          </button>;
+        })}</div></section>)}</div>
+
+        {deck.lands.length > 0 && <section className="land-summary" aria-label="Tierras básicas seleccionadas">
+          <div className="land-summary-heading"><h3>Tierras básicas</h3><strong>{selectedLandCount}</strong></div>
+          <div className="land-summary-grid">{deck.lands.map(card => <button key={card.id} type="button" className="land-summary-item" onClick={() => removeLand(card)} aria-label={`Quitar una ${LAND_NAMES[card.name]}, quedan ${card.quantity - 1}`}>
+            <span><b>{LAND_NAMES[card.name]}</b><small>{card.set.toUpperCase()} · {card.collector_number}</small></span><strong>{card.quantity}</strong>
+          </button>)}</div>
+        </section>}
       </aside>
     </div>
   </div>;

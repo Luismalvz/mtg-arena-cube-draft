@@ -18,12 +18,23 @@ function runTest() {
   const room = gameManager.createRoom('TEST1', 'Admin Luis', 'sock_admin', {
     playerCount: 4,
     packCount: 3,
-    timerSeconds: 45
+    timerSeconds: 45,
+    avatar: '112'
   });
 
-  const joinRes = gameManager.joinRoom('TEST1', 'Player 2 (Bob)', 'sock_bob');
+  const joinRes = gameManager.joinRoom('TEST1', 'Player 2 (Bob)', 'sock_bob', '197');
   if (joinRes.error) throw new Error(joinRes.error);
   console.log(`Players in lobby: ${room.players.length}/4`);
+
+  const adminState = gameManager.getClientState(room, 'sock_admin');
+  const bobState = gameManager.getClientState(room, 'sock_bob');
+  const lobbyAvatars = Object.fromEntries(adminState.players.map(player => [player.name, player.avatar]));
+  if (lobbyAvatars['Admin Luis'] !== '112' || lobbyAvatars['Player 2 (Bob)'] !== '197') {
+    throw new Error('Lobby state did not preserve each player avatar');
+  }
+  if (adminState.me.avatar !== '112' || bobState.me.avatar !== '197') {
+    throw new Error('Personal player state did not preserve the selected avatar');
+  }
 
   console.log('=== TEST 3: Starting draft (Auto-fill with 2 AI Bots) ===');
   const startRes = gameManager.startDraft('TEST1', 'sock_admin');

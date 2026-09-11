@@ -26,22 +26,13 @@ export function AdminSetup({ onCreateRoom, onJoinRoom, initialRoomId = '', isCon
   };
 
   return (
-    <div className="min-h-[100dvh] w-full px-4 py-5 sm:px-7 sm:py-7 flex flex-col">
-      <header className="w-full flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <span className="grid h-9 w-9 place-items-center rounded-full border border-[#d8b770]/35 text-[#e7cb8e] text-sm">G</span>
-          <span className="text-sm font-semibold tracking-[-.03em]">Getaway Draft</span>
-        </div>
-        <span className={`h-2 w-2 rounded-full ${isConnected ? 'bg-[#83d9d2] shadow-[0_0_12px_#83d9d2]' : 'bg-[#ff766d]'}`} aria-label={isConnected ? 'Conectado' : 'Sin conexión'} />
-      </header>
+    <div className="setup-screen">
+      <span className={`setup-connection ${isConnected ? 'is-online' : 'is-offline'}`} aria-label={isConnected ? 'Conectado' : 'Sin conexión'} />
 
-      <div className="m-auto w-full max-w-[1020px] grid gap-8 lg:grid-cols-[.88fr_1.12fr] lg:items-center">
-        <div className="max-w-md">
-          <p className="mb-5 text-[12px] font-semibold uppercase tracking-[.22em] text-[#d8b770]">Ravnica cube</p>
-          <h1 className="text-[clamp(2.8rem,6vw,5.8rem)] font-medium leading-[.86] tracking-[-.075em] text-[#f1f3ed]">Una mesa.<br/>Toda la ciudad.</h1>
-        </div>
+      <div className="setup-layout">
+        <h1 className="sr-only">Magic: The Gathering — Ravnica Cube. Creado por Luis Alvarez y Jorge Schifferli</h1>
 
-        <div className="rounded-[28px] border border-white/10 bg-[#0d110f]/78 p-3 shadow-[0_50px_120px_rgba(0,0,0,.48)] backdrop-blur-2xl sm:p-4">
+        <div className="setup-panel rounded-[28px] border border-white/10 bg-[#0d110f]/92 p-3 shadow-[0_36px_100px_rgba(0,0,0,.62)] backdrop-blur-2xl sm:p-4">
           <div className="mb-3 grid grid-cols-2 rounded-2xl bg-black/25 p-1" role="tablist">
             {[['create', Plus, 'Crear'], ['join', LogIn, 'Entrar']].map(([value, Icon, label]) => (
               <button key={value} role="tab" aria-selected={mode === value} onClick={() => setMode(value)} className={`flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm transition ${mode === value ? 'bg-white text-[#0a0c0b]' : 'text-[#9ba49d] hover:text-white'}`}>

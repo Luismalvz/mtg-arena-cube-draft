@@ -79,7 +79,6 @@ export function SwapConflictModal({
             <ArrowLeftRight />
           </div>
           <div className="min-w-0">
-            <div className="swap-conflict-kicker">Getaway Plaza</div>
             <h2 id="swap-conflict-title">La Plaza cambió</h2>
             <p id="swap-conflict-description">
               Esa carta fue tomada antes. Elige tu siguiente movimiento.

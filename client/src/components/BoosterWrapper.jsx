@@ -92,9 +92,6 @@ export function BoosterWrapper({
                   <div className="text-[11px] font-mono font-bold tracking-widest text-amber-400 uppercase">
                     Magic: The Gathering
                   </div>
-                  <div className="text-xl font-black text-white tracking-wide">
-                    GETAWAY DRAFT
-                  </div>
                   <div className="text-[10px] text-slate-400 font-mono mt-1">
                     CUBE 360 • SOBRE #{currentRound}
                   </div>

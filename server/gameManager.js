@@ -751,6 +751,7 @@ class GameManager {
       players: room.players.map(p => ({
         id: p.id,
         name: p.name,
+        avatar: p.avatar,
         isAdmin: p.isAdmin,
         isBot: p.isBot,
         seatIndex: p.seatIndex,
@@ -763,6 +764,7 @@ class GameManager {
       me: me ? {
         id: me.id,
         name: me.name,
+        avatar: me.avatar,
         isAdmin: me.isAdmin,
         seatIndex: me.seatIndex,
         isReady: me.isReady,
