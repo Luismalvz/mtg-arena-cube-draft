@@ -30,14 +30,14 @@ export function DraftHand({ activePack = [], isReady = false, pendingDecision = 
         {isReady ? <button onClick={onCancelDecision} className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-white/12 text-[#aab2ac] hover:text-white" title="Cambiar selección" aria-label="Cambiar selección"><RotateCcw className="h-4 w-4" /></button> : <button onClick={confirm} disabled={!ready} className={`flex h-9 shrink-0 items-center gap-2 rounded-full px-4 text-xs font-semibold transition disabled:opacity-25 ${mode === 'pick' ? 'bg-[#f1f3ed] text-[#090b0a]' : 'bg-[#83d9d2] text-[#07100f]'}`}><Check className="h-3.5 w-3.5" />Confirmar</button>}
       </div>
 
-      <div className="relative mx-auto h-[clamp(132px,21vh,190px)] max-w-[1500px] select-none overflow-visible">
+      <div className="relative mx-auto h-[clamp(150px,24vh,220px)] max-w-[1560px] select-none overflow-visible">
         <div className="absolute bottom-1 left-1/2 h-10 w-2/3 -translate-x-1/2 rounded-full bg-black/65 blur-xl" />
         {activePack.map((card, index) => {
           const offset = index - mid;
           const selected = (mode === 'pick' ? picked?.instanceId : offered?.instanceId) === card.instanceId;
           const width = typeof window !== 'undefined' ? window.innerWidth : 1200;
-          const spacing = Math.min(78, Math.max(18, (width - 120) / Math.max(1, activePack.length)));
-          return <motion.div key={card.instanceId} layout animate={{ x: offset * spacing, y: selected ? -24 : Math.pow(offset,2)*.25, rotate: selected ? 0 : offset * Math.min(1.9,22 / Math.max(1,activePack.length)), scale: selected ? 1.06 : .88, zIndex: selected ? 80 : 10 + index }} whileHover={isReady ? {} : { y: -46, rotate: 0, scale: 1.08, zIndex: 100 }} transition={{ type:'spring', stiffness:380, damping:30 }} className="absolute bottom-[-54px] left-1/2 -translate-x-1/2 origin-bottom cursor-pointer" onClick={() => select(card)}>
+          const spacing = Math.min(88, Math.max(20, (width - 112) / Math.max(1, activePack.length)));
+          return <motion.div key={card.instanceId} layout animate={{ x: offset * spacing, y: selected ? -30 : Math.pow(offset,2)*.22, rotate: selected ? 0 : offset * Math.min(1.75,21 / Math.max(1,activePack.length)), scale: selected ? 1.06 : .9, zIndex: selected ? 80 : 10 + index }} whileHover={isReady ? {} : { y: -52, rotate: 0, scale: 1.08, zIndex: 100 }} transition={{ type:'spring', stiffness:380, damping:30 }} className="absolute bottom-[-42px] left-1/2 -translate-x-1/2 origin-bottom cursor-pointer" onClick={() => select(card)}>
             <Card card={card} size="hand" isSelected={mode === 'pick' && selected} isSwapSource={mode === 'swap' && selected} disabled={isReady} onHoverStart={onHoverStart} onHoverEnd={onHoverEnd} />
           </motion.div>;
         })}

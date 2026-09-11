@@ -14,14 +14,13 @@ export function GetawayPlaza({ plazaCards = [], plazaSlots = [], selectedTargetI
     const cards = slot.cards || [];
     return <div key={slot.id} className="relative flex min-w-0 flex-col items-center">
       <div className={`relative flex flex-col items-center ${cards.length ? '' : 'opacity-35'}`}>
-        {cards.length ? cards.map((card, index) => <div key={card.instanceId} className="relative transition-transform duration-200 hover:z-50 hover:-translate-y-2" style={{ marginTop: index ? 'calc(-1 * var(--plaza-card-height) + clamp(18px,3.2vh,28px))' : 0, zIndex: selectedTargetId === card.instanceId ? 50 : 10 + index }}>
+        {cards.length ? cards.map((card, index) => <div key={card.instanceId} className="relative transition-transform duration-200 hover:z-50 hover:-translate-y-2" style={{ marginTop: index ? 'calc(-1 * var(--plaza-card-height) + var(--plaza-stack-peek))' : 0, zIndex: selectedTargetId === card.instanceId ? 50 : 10 + index }}>
           <Card card={card} size={flank ? 'golem' : 'plaza'} isSwapTarget={selectedTargetId === card.instanceId} disabled={disabled} onClick={() => { sound.playSelect(); onSelectTargetCard?.(card); }} onHoverStart={onHoverStart} onHoverEnd={onHoverEnd} />
         </div>) : <div className="grid plaza-card place-items-center rounded-[7px] border border-dashed border-white/14 bg-black/20"><img src={flank ? '/guilds/azorius.png' : `/guilds/${slot.id}.png`} alt="" className="h-8 w-8 rounded-full object-cover opacity-45 grayscale" onError={e => { e.currentTarget.style.display = 'none'; }} /></div>}
       </div>
-      <div className="mt-1.5 flex h-6 items-center gap-1.5 rounded-full border border-white/10 bg-black/45 px-2 backdrop-blur-md">
+      <div className="mt-2 flex h-7 items-center gap-1.5 rounded-full border border-white/10 bg-black/45 px-2.5 backdrop-blur-md">
         {!flank && <img src={`/guilds/${slot.id}.png`} alt="" className="h-4 w-4 rounded-full object-cover" onError={e => { e.currentTarget.style.display = 'none'; }} />}
-        <span className="max-w-[64px] truncate text-[9px] font-semibold uppercase tracking-[.1em] text-white/60">{flank ? slot.name.replace('Gate ','') : slot.id}</span>
-        <span className="text-[9px] tabular-nums text-[#e5c681]">{cards.length}</span>
+        <span className="max-w-[72px] truncate text-[10px] font-semibold uppercase tracking-[.1em] text-white/65">{flank ? slot.name.replace('Gate ','') : slot.id}</span>
       </div>
     </div>;
   };
@@ -36,7 +35,7 @@ export function GetawayPlaza({ plazaCards = [], plazaSlots = [], selectedTargetI
       <div className="relative z-10 mb-1 flex items-center justify-center gap-3 text-[10px] uppercase tracking-[.23em] text-white/42"><span className="h-px w-10 bg-gradient-to-r from-transparent to-white/18" />Getaway Plaza<span className="h-px w-10 bg-gradient-to-l from-transparent to-white/18" /></div>
       <div className="plaza-table relative z-10">
         <div className="plaza-flank flex justify-center">{pile(left,true)}</div>
-        <div className="plaza-guilds grid grid-cols-5 gap-x-1.5 gap-y-1.5 sm:gap-x-3">
+        <div className="plaza-guilds grid grid-cols-5 gap-x-2 gap-y-3 sm:gap-x-4">
           {guilds.map(slot => pile(slot))}
         </div>
         <div className="plaza-flank flex justify-center">{pile(right,true)}</div>
