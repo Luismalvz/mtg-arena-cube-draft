@@ -1,0 +1,142 @@
+[
+  {
+    "name": "Forest",
+    "set": "gk1",
+    "collector_number": "127",
+    "id": "gk1-127",
+    "image_url": "https://api.scryfall.com/cards/gk1/127?format=image"
+  },
+  {
+    "name": "Forest",
+    "set": "gk1",
+    "collector_number": "76",
+    "id": "gk1-76",
+    "image_url": "https://api.scryfall.com/cards/gk1/76?format=image"
+  },
+  {
+    "name": "Forest",
+    "set": "gk2",
+    "collector_number": "106",
+    "id": "gk2-106",
+    "image_url": "https://api.scryfall.com/cards/gk2/106?format=image"
+  },
+  {
+    "name": "Forest",
+    "set": "gk2",
+    "collector_number": "133",
+    "id": "gk2-133",
+    "image_url": "https://api.scryfall.com/cards/gk2/133?format=image"
+  },
+  {
+    "name": "Island",
+    "set": "gk1",
+    "collector_number": "24",
+    "id": "gk1-24",
+    "image_url": "https://api.scryfall.com/cards/gk1/24?format=image"
+  },
+  {
+    "name": "Island",
+    "set": "gk1",
+    "collector_number": "48",
+    "id": "gk1-48",
+    "image_url": "https://api.scryfall.com/cards/gk1/48?format=image"
+  },
+  {
+    "name": "Island",
+    "set": "gk2",
+    "collector_number": "132",
+    "id": "gk2-132",
+    "image_url": "https://api.scryfall.com/cards/gk2/132?format=image"
+  },
+  {
+    "name": "Island",
+    "set": "gk2",
+    "collector_number": "27",
+    "id": "gk2-27",
+    "image_url": "https://api.scryfall.com/cards/gk2/27?format=image"
+  },
+  {
+    "name": "Mountain",
+    "set": "gk1",
+    "collector_number": "101",
+    "id": "gk1-101",
+    "image_url": "https://api.scryfall.com/cards/gk1/101?format=image"
+  },
+  {
+    "name": "Mountain",
+    "set": "gk1",
+    "collector_number": "49",
+    "id": "gk1-49",
+    "image_url": "https://api.scryfall.com/cards/gk1/49?format=image"
+  },
+  {
+    "name": "Mountain",
+    "set": "gk2",
+    "collector_number": "105",
+    "id": "gk2-105",
+    "image_url": "https://api.scryfall.com/cards/gk2/105?format=image"
+  },
+  {
+    "name": "Mountain",
+    "set": "gk2",
+    "collector_number": "79",
+    "id": "gk2-79",
+    "image_url": "https://api.scryfall.com/cards/gk2/79?format=image"
+  },
+  {
+    "name": "Plains",
+    "set": "gk1",
+    "collector_number": "100",
+    "id": "gk1-100",
+    "image_url": "https://api.scryfall.com/cards/gk1/100?format=image"
+  },
+  {
+    "name": "Plains",
+    "set": "gk1",
+    "collector_number": "126",
+    "id": "gk1-126",
+    "image_url": "https://api.scryfall.com/cards/gk1/126?format=image"
+  },
+  {
+    "name": "Plains",
+    "set": "gk2",
+    "collector_number": "26",
+    "id": "gk2-26",
+    "image_url": "https://api.scryfall.com/cards/gk2/26?format=image"
+  },
+  {
+    "name": "Plains",
+    "set": "gk2",
+    "collector_number": "50",
+    "id": "gk2-50",
+    "image_url": "https://api.scryfall.com/cards/gk2/50?format=image"
+  },
+  {
+    "name": "Swamp",
+    "set": "gk1",
+    "collector_number": "25",
+    "id": "gk1-25",
+    "image_url": "https://api.scryfall.com/cards/gk1/25?format=image"
+  },
+  {
+    "name": "Swamp",
+    "set": "gk1",
+    "collector_number": "75",
+    "id": "gk1-75",
+    "image_url": "https://api.scryfall.com/cards/gk1/75?format=image"
+  },
+  {
+    "name": "Swamp",
+    "set": "gk2",
+    "collector_number": "51",
+    "id": "gk2-51",
+    "image_url": "https://api.scryfall.com/cards/gk2/51?format=image"
+  },
+  {
+    "name": "Swamp",
+    "set": "gk2",
+    "collector_number": "78",
+    "id": "gk2-78",
+    "image_url": "https://api.scryfall.com/cards/gk2/78?format=image"
+  }
+]

@@ -1,8 +1,7 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Card } from './Card';
 import { sound } from '../utils/audio';
-import { Sparkles, ArrowLeftRight, Shield, Zap, Layers } from 'lucide-react';
+import { Shield } from 'lucide-react';
 
 const GUILD_COLOR_THEMES = {
   Azorius: { border: 'border-sky-400/50', text: 'text-sky-300', glow: 'from-sky-500/10' },
@@ -30,8 +29,6 @@ export function GetawayPlaza({
   players = [],
   disabled = false
 }) {
-  const isSwapMode = !!swapOfferCard;
-  const resolvingPlayer = players.find((p) => p.id === currentResolvingPlayerId);
 
   // Group slots: Colossus Left, 10 Guilds, Colossus Right
   const leftColossusSlot = plazaSlots.find((s) => s.id === 'colossus_left') || {
@@ -94,20 +91,19 @@ export function GetawayPlaza({
         <div className="relative flex flex-col items-center select-none pt-1">
           {cards.map((c, cardIdx) => {
             const isTarget = selectedTargetId === c.instanceId;
-            const isTop = cardIdx === cards.length - 1;
 
             return (
               <div
                 key={c.instanceId}
                 style={{
-                  marginTop: cardIdx === 0 ? 0 : '-148px',
+                  marginTop: cardIdx === 0 ? 0 : 'calc(-1 * var(--plaza-card-height) + 30px)',
                   zIndex: isTarget ? 50 : 10 + cardIdx
                 }}
                 className="relative transition-all duration-200 hover:z-50 hover:-translate-y-3"
               >
                 <Card
                   card={c}
-                  size="plaza"
+                  size={isFlank ? "golem" : "plaza"}
                   isSwapTarget={isTarget}
                   disabled={disabled}
                   onClick={() => {
@@ -130,7 +126,7 @@ export function GetawayPlaza({
             {slot.name}
           </span>
           <span className="font-mono text-[9px] font-bold text-amber-300/80 bg-slate-950 px-1.5 py-0.2 rounded border border-white/5">
-            {count}/3
+            {isFlank ? count : `${count}/3`}
           </span>
         </div>
       </div>
@@ -152,49 +148,11 @@ export function GetawayPlaza({
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-amber-500/5 via-transparent to-black/75" />
       </div>
 
-      {/* Header bar */}
-      <div className="relative z-10 flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3 pb-2 border-b border-white/10">
-        <div className="flex items-center gap-3">
-          <div className="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center text-amber-200 border border-white/15 font-bold shrink-0">
-            <Sparkles className="w-4 h-4" />
-          </div>
-          <div>
-            <div className="flex items-center gap-2">
-              <h3 className="font-manrope font-semibold text-sm sm:text-base uppercase tracking-[0.18em] text-white/90">
-                Getaway Plaza <span className="text-white/35 tracking-normal">/ 32 cartas</span>
-              </h3>
-            </div>
-          </div>
-        </div>
-
-        {/* Dynamic Context Banner */}
-        {isSwapMode ? (
-          <motion.div
-            initial={{ scale: 0.95, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            className="flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-cyan-500/15 border border-cyan-400/50 text-cyan-200 text-xs font-space font-bold animate-pulse"
-          >
-            <ArrowLeftRight className="w-3.5 h-3.5 text-cyan-400" />
-            <span>Ofreces [{swapOfferCard.name}]: Elige tu objetivo en la mesa</span>
-          </motion.div>
-        ) : resolvingPlayer ? (
-          <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-[#ffd580]/15 border border-[#ffd580]/40 text-[#ffd580] text-xs font-space font-bold">
-            <Zap className="w-3.5 h-3.5 text-[#ffd580] animate-bounce" />
-            <span>Resolviendo prioridad: {resolvingPlayer.name} (#{resolvingPlayer.seatIndex + 1})</span>
-          </div>
-        ) : (
-          <div className="text-xs font-space text-slate-400 flex items-center gap-2 self-start sm:self-center">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_#34d399]" />
-            <span>Mercado Central Activo</span>
-          </div>
-        )}
-      </div>
-
       {/* Main Tabletop POV Layout: Flank Left | Center 10 Guild Piles | Flank Right */}
-      <div className="relative z-10 flex flex-col xl:flex-row items-start justify-center gap-3 sm:gap-5 py-1">
+      <div className="plaza-table relative z-10">
         
         {/* Left Flank: Gate Colossus 1 */}
-        <div className="w-full xl:w-auto flex flex-col items-center justify-center p-2 rounded-2xl shrink-0">
+        <div className="plaza-flank flex flex-col items-center justify-center">
           <div className="flex items-center gap-1.5 text-[10px] font-space uppercase font-bold text-slate-400 mb-2">
             <Shield className="w-3.5 h-3.5 text-[#ffd580]" />
             <span>Flanco Izquierdo</span>
@@ -203,7 +161,7 @@ export function GetawayPlaza({
         </div>
 
         {/* Center: 10 Guild Piles in 2 Rows of 5 (Cascaded Stacks) */}
-        <div className="flex-1 w-full flex flex-col gap-3">
+        <div className="plaza-guilds w-full flex flex-col gap-2">
           
           {/* Fila 1: Azorius, Dimir, Rakdos, Gruul, Selesnya */}
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-2 gap-y-3 sm:gap-x-3 justify-items-center">
@@ -220,7 +178,7 @@ export function GetawayPlaza({
         </div>
 
         {/* Right Flank: Gate Colossus 2 */}
-        <div className="w-full xl:w-auto flex flex-col items-center justify-center p-2 rounded-2xl shrink-0">
+        <div className="plaza-flank flex flex-col items-center justify-center">
           <div className="flex items-center gap-1.5 text-[10px] font-space uppercase font-bold text-slate-400 mb-2">
             <Shield className="w-3.5 h-3.5 text-[#ffd580]" />
             <span>Flanco Derecho</span>

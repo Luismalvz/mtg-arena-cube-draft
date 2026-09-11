@@ -185,18 +185,18 @@ io.on('connection', (socket) => {
   console.log(`[Socket] Conectado: ${socket.id}`);
 
   // Create room
-  socket.on('create_room', ({ roomId, playerName, options }) => {
+  socket.on('create_room', ({ roomId, playerName, avatar, options }) => {
     const cleanRoomId = (roomId || Math.random().toString(36).substring(2, 7)).toUpperCase();
-    const room = gameManager.createRoom(cleanRoomId, playerName, socket.id, options);
+    const room = gameManager.createRoom(cleanRoomId, playerName, socket.id, { ...options, avatar });
     socket.join(cleanRoomId);
     console.log(`[Getaway Draft] Sala creada: ${cleanRoomId} por ${playerName}`);
     broadcastRoomState(cleanRoomId);
   });
 
   // Join room
-  socket.on('join_room', ({ roomId, playerName }) => {
+  socket.on('join_room', ({ roomId, playerName, avatar }) => {
     const cleanRoomId = (roomId || '').toUpperCase().trim();
-    const result = gameManager.joinRoom(cleanRoomId, playerName, socket.id);
+    const result = gameManager.joinRoom(cleanRoomId, playerName, socket.id, avatar);
     if (result.error) {
       return socket.emit('error_notification', { message: result.error });
     }

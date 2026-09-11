@@ -28,6 +28,14 @@ export function PlayerLobby({
   const [copiedLink, setCopiedLink] = useState(false);
   const [isShuffling, setIsShuffling] = useState(false);
   const [nameInput, setNameInput] = useState('');
+  const [avatar, setAvatar] = useState('azorius');
+  const avatars = [
+    { id: 'azorius', label: 'Azorius', src: '/avatar-azorius.png' },
+    { id: 'orzhov', label: 'Orzhov', src: '/avatar-orzhov.png' },
+    { id: 'izzet', label: 'Izzet', src: '/avatar-izzet.png' },
+    { id: 'rakdos', label: 'Rakdos', src: '/avatar-rakdos.png' },
+    { id: 'golgari', label: 'Golgari', src: '/avatar-golgari.png' }
+  ];
 
   if (!roomState) return null;
 
@@ -75,7 +83,7 @@ export function PlayerLobby({
     if (!nameInput.trim()) return;
     sound.playSelect();
     if (onJoinRoomAsPlayer) {
-      onJoinRoomAsPlayer(nameInput.trim());
+      onJoinRoomAsPlayer({ playerName: nameInput.trim(), avatar });
     }
   };
 
@@ -100,7 +108,7 @@ export function PlayerLobby({
     <div className="w-full flex flex-col justify-center items-center py-6 px-3 sm:px-4 font-manrope text-slate-200">
       
       {/* Main Glass/Obsidian Card */}
-      <div className="relative w-full max-w-3xl bg-[#181b24] rounded-2xl p-5 sm:p-7 md:p-8 shadow-2xl flex flex-col gap-5 border border-[#272a33]/80 overflow-hidden my-auto">
+      <div className="setup-panel relative w-full max-w-3xl rounded-2xl p-5 sm:p-7 md:p-8 flex flex-col gap-5 overflow-hidden my-auto">
         
         {/* Ambient Gold Bloom Glow */}
         <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-80 h-80 rounded-full bg-[#ffd580]/5 blur-[100px] pointer-events-none" />
@@ -204,6 +212,9 @@ export function PlayerLobby({
                 maxLength={24}
                 className="w-full px-3.5 py-2 bg-[#0b0e17] border border-[#272a33] rounded-lg text-[#e0e2ef] placeholder-[#d2c5b1]/40 text-xs sm:text-sm focus:outline-none focus:border-[#ffd580] focus:ring-1 focus:ring-[#ffd580] transition-all font-manrope"
               />
+              <div className="avatar-picker compact" aria-label="Elige tu avatar">
+                {avatars.map(option => <button key={option.id} type="button" className={`avatar-choice ${avatar === option.id ? 'selected' : ''}`} onClick={() => setAvatar(option.id)} aria-label={`Avatar ${option.label}`} aria-pressed={avatar === option.id}><img src={option.src} alt="" /><span>{option.label}</span></button>)}
+              </div>
             </div>
             <button
               type="submit"
@@ -305,7 +316,7 @@ export function PlayerLobby({
                         }`}
                       >
                         {isOccupied ? (
-                          isPlayerHost ? <Crown className="w-3.5 h-3.5" /> : <User className="w-3.5 h-3.5" />
+                          player.avatar ? <img className="seat-avatar" src={`/avatar-${player.avatar}.png`} alt="" /> : (isPlayerHost ? <Crown className="w-3.5 h-3.5" /> : <User className="w-3.5 h-3.5" />)
                         ) : (
                           <Bot className="w-3.5 h-3.5" />
                         )}

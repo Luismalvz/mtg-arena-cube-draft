@@ -21,7 +21,7 @@ export function DraftPicksDrawer({
   onHoverStart,
   onHoverEnd
 }) {
-  const [groupBy, setGroupBy] = useState('cmc'); // 'cmc' | 'color' | 'type'
+  const [groupBy, setGroupBy] = useState('color'); // 'cmc' | 'color' | 'type'
   const [copied, setCopied] = useState(false);
 
   // Generate TTS plaintext decklist
@@ -83,15 +83,6 @@ export function DraftPicksDrawer({
 
   // Grouped cards
   const getGroupedCards = () => {
-    if (groupBy === 'cmc') {
-      const groups = {};
-      draftPicks.forEach(c => {
-        const key = `CMC ${Math.min(c.cmc || 0, 7)}`;
-        if (!groups[key]) groups[key] = [];
-        groups[key].push(c);
-      });
-      return groups;
-    }
     if (groupBy === 'color') {
       const groups = {
         Blanco: [],
@@ -275,7 +266,6 @@ export function DraftPicksDrawer({
               <span>Agrupar cartas por:</span>
               <div className="flex items-center gap-1 bg-slate-900 p-0.5 rounded-lg border border-slate-800">
                 {[
-                  { id: 'cmc', label: 'Coste (CMC)' },
                   { id: 'color', label: 'Color' },
                   { id: 'type', label: 'Tipo' }
                 ].map(g => (

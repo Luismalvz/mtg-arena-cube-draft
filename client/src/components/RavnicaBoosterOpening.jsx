@@ -99,7 +99,7 @@ export function RavnicaBoosterOpening({
   return (
     <div
       onClick={handleStageClick}
-      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-slate-950/94 backdrop-blur-2xl font-sans select-none overflow-hidden"
+      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-slate-950/94 backdrop-blur-2xl font-sans select-none overflow-y-auto overflow-x-hidden"
     >
       <div className="w-full max-w-5xl flex flex-col items-center text-center my-auto">
         {/* Header Eyebrow */}
@@ -122,7 +122,7 @@ export function RavnicaBoosterOpening({
           {stage === 'sealed' && '¡TU SOBRE ESTÁ SELLADO!'}
           {stage === 'ripping' && '¡RASGANDO EL ENVOLTORIO!'}
           {stage === 'cards_emerging' && '¡REVELANDO LAS CARTAS!'}
-          {stage === 'fanned' && '¡15 CARTAS DE RAVNICA REVELADAS!'}
+          {stage === 'fanned' && '¡CARTAS DE RAVNICA REVELADAS!'}
         </motion.h1>
 
         <div className="h-2" aria-hidden="true" />
@@ -214,7 +214,7 @@ export function RavnicaBoosterOpening({
 
             {/* Bottom Foil Body */}
             <div
-              className="absolute inset-0 rounded-[6px] overflow-hidden shadow-[0_25px_60px_rgba(0,0,0,0.9)]"
+              className="absolute inset-0 z-10 rounded-[6px] overflow-hidden shadow-[0_25px_60px_rgba(0,0,0,0.9)]"
               style={{
                 clipPath: stage === 'sealed'
                   ? 'none'
@@ -256,10 +256,10 @@ export function RavnicaBoosterOpening({
                           opacity: 0
                         }}
                         animate={{
-                          y,
+                          y: hoveredCardIdx === i ? y - 45 : y,
                           x,
                           rotateZ,
-                          scale,
+                          scale: hoveredCardIdx === i ? 1.3 : scale,
                           opacity: 1
                         }}
                         transition={{
@@ -329,7 +329,7 @@ export function RavnicaBoosterOpening({
               }}
               className="px-8 py-3.5 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-orange-500 text-slate-950 font-black text-sm uppercase tracking-wider shadow-[0_0_35px_rgba(251,191,36,0.6)] flex items-center gap-2.5 cursor-pointer hover:brightness-110 active:scale-95 transition-all"
             >
-              <span>TOMAR 15 CARTAS Y DRAFTEAR</span>
+              <span>CONTINUAR AL DRAFT</span>
               <ArrowRight className="w-4 h-4" />
             </motion.button>
           ) : stage === 'sealed' ? (

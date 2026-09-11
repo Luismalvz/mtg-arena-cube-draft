@@ -187,7 +187,12 @@
 }
 
 .fanned-card:hover {
-  transform: translateY(-36px) scale(1.2) !important;
+
   z-index: 70 !important;
   filter: brightness(1.15) drop-shadow(0 20px 30px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 15px rgba(251, 191, 36, 0.65));
+}
+
+@media (max-height: 760px) {
+  .booster-stage { height: 52dvh; min-height: 260px; }
+  .booster-pack-wrapper { width: 190px; height: 327px; }
 }

@@ -21,7 +21,8 @@ export function Card({
   // Proportional 5:7 MTG Card aspect ratios (Enlarged)
   const dimensions = {
     sm: 'w-[130px] h-[182px] sm:w-[145px] sm:h-[203px] md:w-[155px] md:h-[217px]',
-    plaza: 'w-[104px] h-[146px] sm:w-[116px] sm:h-[163px] md:w-[128px] md:h-[179px]',
+    plaza: 'plaza-card',
+    golem: 'golem-card',
     md: 'w-[142px] h-[199px] sm:w-[156px] sm:h-[218px] md:w-[168px] md:h-[235px]',
     lg: 'w-[250px] h-[350px] sm:w-[300px] sm:h-[420px]'
   }[size] || 'w-[142px] h-[199px] sm:w-[156px] sm:h-[218px] md:w-[168px] md:h-[235px]';

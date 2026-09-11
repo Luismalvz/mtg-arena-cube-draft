@@ -86,21 +86,7 @@ export function DraftHand({
     <section className="hand-surface w-full bg-[#141721] border-t border-[#252936] p-3 sm:p-4 shadow-2xl space-y-3 font-manrope relative overflow-visible">
       
       {/* Hand Header & Mode Switcher (Archidekt Style) */}
-      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border-b border-[#252936] pb-3 relative z-20">
-        <div className="flex items-center gap-3">
-          <div className="text-xs sm:text-sm font-space text-slate-300 tracking-wide font-medium">
-            Cards in hand: <span className="text-[#ffd580] font-bold font-mono text-sm sm:text-base ml-1">{totalCards}</span>
-          </div>
-          <span className="hidden sm:inline text-[11px] font-space text-slate-500">
-            (Mantén <kbd className="px-1.5 py-0.5 rounded bg-slate-800 text-amber-300 border border-slate-700 font-mono text-[10px]">Alt</kbd> para ampliar)
-          </span>
-          {isReady && (
-            <span className="px-2 py-0.5 rounded-full text-[10px] font-space font-bold bg-emerald-500/15 text-emerald-400 border border-emerald-500/30">
-              Listo / Bloqueado
-            </span>
-          )}
-        </div>
-
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 relative z-20">
         {/* Action A vs Action B Selector Buttons */}
         {!isReady && (
           <div className="flex bg-[#0d1017] p-1 rounded-xl border border-[#252936] self-stretch sm:self-auto font-space text-xs">

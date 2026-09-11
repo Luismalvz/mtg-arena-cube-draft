@@ -9,19 +9,10 @@ import { SwapConflictModal } from './components/SwapConflictModal';
 import { SwapAnimationOverlay } from './components/SwapAnimationOverlay';
 import { DraftPicksDrawer } from './components/DraftPicksDrawer';
 import { RavnicaBoosterOpening } from './components/RavnicaBoosterOpening';
+import { DeckBuilder } from './components/DeckBuilder';
 import { AltCardZoom } from './components/AltCardZoom';
 import { sound } from './utils/audio';
-import {
-  Layers,
-  Sparkles,
-  Trophy,
-  Copy,
-  Check,
-  RotateCcw,
-  AlertCircle,
-  Download,
-  Share2
-} from 'lucide-react';
+import { Layers, AlertCircle } from 'lucide-react';
 
 const SOCKET_SERVER_URL = window.location.port === '5173'
   ? 'http://localhost:3001'
@@ -40,7 +31,6 @@ export default function App() {
   const [isAltPressed, setIsAltPressed] = useState(false);
   const [openedRounds, setOpenedRounds] = useState({});
   const [toastMessage, setToastMessage] = useState(null);
-  const [copiedTTS, setCopiedTTS] = useState(false);
   const [initialRoomId, setInitialRoomId] = useState('');
 
   // Global Left Alt Detection for Card Zoom (Zero Focus Loss & Auto Hardware Sync)
@@ -176,7 +166,7 @@ export default function App() {
     s.on('draft_completed', () => {
       sound.playFanfare();
       showToast('¡Draft completado! Revisa tu mazo y expórtalo para Tabletop Simulator.', 'info');
-      setIsDrawerOpen(true);
+      setIsDrawerOpen(false);
     });
 
     s.on('seating_randomized', () => {
@@ -233,14 +223,14 @@ export default function App() {
   };
 
   // Socket Actions
-  const handleCreateRoom = ({ playerName, options }) => {
+  const handleCreateRoom = ({ playerName, avatar, options }) => {
     if (!socket) return;
-    socket.emit('create_room', { playerName, options });
+    socket.emit('create_room', { playerName, avatar, options });
   };
 
-  const handleJoinRoom = ({ roomId, playerName }) => {
+  const handleJoinRoom = ({ roomId, playerName, avatar }) => {
     if (!socket) return;
-    socket.emit('join_room', { roomId, playerName });
+    socket.emit('join_room', { roomId, playerName, avatar });
   };
 
   const handleStartDraft = () => {
@@ -253,9 +243,9 @@ export default function App() {
     socket.emit('randomize_seating', { roomId: roomState.id });
   };
 
-  const handleJoinRoomAsPlayer = (playerName) => {
+  const handleJoinRoomAsPlayer = ({ playerName, avatar }) => {
     if (!socket || !roomState?.id) return;
-    socket.emit('join_room', { roomId: roomState.id, playerName });
+    socket.emit('join_room', { roomId: roomState.id, playerName, avatar });
   };
 
   const handleOpenPack = () => {
@@ -307,45 +297,6 @@ export default function App() {
   };
 
 
-  // TTS Decklist Generator
-  const generateTTSDecklist = (picks) => {
-    const counts = {};
-    for (const card of picks || []) {
-      const name = card.name || 'Unknown Card';
-      counts[name] = (counts[name] || 0) + 1;
-    }
-    return Object.entries(counts)
-      .map(([name, count]) => `${count} ${name}`)
-      .join('\n');
-  };
-
-  const handleCopyTTSGlobal = async () => {
-    sound.playSelect();
-    const text = generateTTSDecklist(roomState?.me?.draftPicks || []);
-    try {
-      await navigator.clipboard.writeText(text);
-      setCopiedTTS(true);
-      setTimeout(() => setCopiedTTS(false), 2500);
-      showToast('¡Lista copiada al portapapeles en formato Tabletop Simulator!', 'info');
-    } catch (e) {}
-  };
-
-  const handleDownloadTTS = () => {
-    sound.playSelect();
-    const text = generateTTSDecklist(roomState?.me?.draftPicks || []);
-    const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `getaway_draft_tts_decklist_${Date.now()}.txt`;
-    a.click();
-    URL.revokeObjectURL(url);
-  };
-
-  const handleResetDraft = () => {
-    window.location.href = window.location.pathname;
-  };
-
   // State derivation
   const isLobby = !roomState || roomState.status === 'lobby';
   const isDecisionOrResolution =
@@ -384,6 +335,20 @@ export default function App() {
         {/* VIEW 3: Active Drafting View (Decision & Resolution Phases) */}
         {isDecisionOrResolution && (
           <div className="draft-board flex flex-col gap-0">
+            {/* ZONE 2 (Mid-Board): Turn Timeline & Priority Indicators */}
+            <TurnTimeline
+              currentRound={roomState.currentRound || 1}
+              currentPickNumber={roomState.currentPickNumber || 1}
+              totalPacks={roomState.config?.packCount || 3}
+              passDirection={roomState.passDirection || 'clockwise'}
+              timerRemaining={timerRemaining}
+              maxTimerSeconds={roomState.config?.timerSeconds ?? 45}
+              players={roomState.players || []}
+              myId={roomState.me?.id}
+              currentResolvingPlayerId={roomState.currentResolvingPlayerId}
+              status={roomState.status}
+            />
+
             {/* ZONE 1 (Top Center): Getaway Plaza */}
             <GetawayPlaza
               plazaCards={roomState.getawayPlaza || []}
@@ -408,20 +373,6 @@ export default function App() {
               disabled={roomState.me?.isReady || false}
             />
 
-            {/* ZONE 2 (Mid-Board): Turn Timeline & Priority Indicators */}
-            <TurnTimeline
-              currentRound={roomState.currentRound || 1}
-              currentPickNumber={roomState.currentPickNumber || 1}
-              totalPacks={roomState.config?.packCount || 3}
-              passDirection={roomState.passDirection || 'clockwise'}
-              timerRemaining={timerRemaining}
-              maxTimerSeconds={roomState.config?.timerSeconds || 45}
-              players={roomState.players || []}
-              myId={roomState.me?.id}
-              currentResolvingPlayerId={roomState.currentResolvingPlayerId}
-              status={roomState.status}
-            />
-
             {/* ZONE 3 (Bottom Area): "Tu Sobre Actual" Hand Tray */}
             <DraftHand
               activePack={roomState.me?.activePack || []}
@@ -438,66 +389,13 @@ export default function App() {
           </div>
         )}
 
-        {/* VIEW 5: Draft Complete Screen */}
-        {isComplete && (
-          <div className="max-w-4xl mx-auto w-full py-8 space-y-6">
-            <div className="text-center space-y-3 bg-gradient-to-b from-amber-950/40 via-slate-900 to-slate-950 p-8 rounded-3xl border border-amber-500/40 shadow-2xl">
-              <div className="w-16 h-16 rounded-2xl bg-amber-500/20 text-amber-400 border border-amber-500/40 mx-auto flex items-center justify-center shadow-lg shadow-amber-500/20 mb-2">
-                <Trophy className="w-8 h-8 animate-bounce" />
-              </div>
-              <h2 className="text-3xl font-black text-white">¡DRAFT COMPLETADO!</h2>
-              <p className="text-sm text-slate-400 max-w-md mx-auto">
-                Has seleccionado {roomState.me?.draftPicks?.length || 0} cartas de tu Cube 360 con la mecánica Getaway Plaza.
-              </p>
-
-              {/* TTS Quick Copy & Export buttons */}
-              <div className="pt-4 flex flex-wrap items-center justify-center gap-3">
-                <button
-                  onClick={handleCopyTTSGlobal}
-                  className={`px-6 py-3 rounded-xl font-black text-sm tracking-wide transition-all shadow-xl flex items-center gap-2 cursor-pointer ${
-                    copiedTTS
-                      ? 'bg-emerald-600 text-white shadow-emerald-600/30'
-                      : 'bg-gradient-to-r from-amber-500 to-orange-500 text-slate-950 shadow-amber-500/30 hover:scale-105'
-                  }`}
-                >
-                  {copiedTTS ? <Check className="w-5 h-5" /> : <Copy className="w-5 h-5" />}
-                  <span>{copiedTTS ? '¡Copiado a Portapapeles!' : 'Copiar Decklist Tabletop Simulator'}</span>
-                </button>
-
-                <button
-                  onClick={handleDownloadTTS}
-                  className="px-5 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-sm font-bold flex items-center gap-2 cursor-pointer"
-                >
-                  <Download className="w-4 h-4" />
-                  <span>Descargar .txt</span>
-                </button>
-
-                <button
-                  onClick={() => setIsDrawerOpen(true)}
-                  className="px-5 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-amber-300 border border-amber-500/40 text-sm font-bold flex items-center gap-2 cursor-pointer"
-                >
-                  <Layers className="w-4 h-4" />
-                  <span>Ver Mazo y Curva de Maná</span>
-                </button>
-              </div>
-            </div>
-
-            {/* Plaintext Preview Box */}
-            <div className="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-xl">
-              <div className="flex items-center justify-between mb-3 text-xs font-semibold text-slate-400 border-b border-slate-800 pb-2">
-                <span>Formato Tabletop Simulator (TTS):</span>
-                <span>{roomState.me?.draftPicks?.length || 0} cartas</span>
-              </div>
-              <pre className="font-mono text-xs text-amber-200/90 bg-slate-950 p-4 rounded-xl max-h-64 overflow-y-auto border border-slate-800/80 leading-relaxed select-all">
-                {generateTTSDecklist(roomState.me?.draftPicks || [])}
-              </pre>
-            </div>
-          </div>
+        {isComplete && roomState.me && (
+          <DeckBuilder key={`${roomState.id}:${roomState.me.id}`} storageKey={`getaway-deck:${roomState.id}:${roomState.me.id}`} picks={roomState.me.draftPicks || []} onHoverStart={handleCardHoverStart} onHoverEnd={handleCardHoverEnd} />
         )}
       </main>
 
       {/* ZONE 4: Collapsed Right-Edge Slide-Over "Tus Picks" Tab Trigger */}
-      {roomState?.me && (
+      {roomState?.me && !isComplete && (
         <div className="fixed right-0 top-1/2 -translate-y-1/2 z-40">
           <button
             onClick={() => {
@@ -552,6 +450,7 @@ export default function App() {
             totalPacks={roomState.config?.packCount || 3}
             cards={roomState.me?.activePack || []}
             onFinishOpening={() => {
+              handleOpenPack();
               setOpenedRounds((prev) => ({
                 ...prev,
                 [roomState.currentRound]: true

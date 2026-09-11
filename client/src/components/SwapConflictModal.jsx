@@ -11,11 +11,17 @@ export function SwapConflictModal({
   onHoverStart,
   onHoverEnd
 }) {
-  if (!conflictData) return null;
-
   const [tab, setTab] = useState('plaza'); // 'plaza' | 'hand'
   const [chosenPlazaCard, setChosenPlazaCard] = useState(null);
   const [chosenHandCard, setChosenHandCard] = useState(null);
+
+  React.useEffect(() => {
+    setTab('plaza');
+    setChosenPlazaCard(null);
+    setChosenHandCard(null);
+  }, [conflictData]);
+
+  if (!conflictData) return null;
 
   const handleSelectPlaza = (card) => {
     sound.playSelect();
@@ -48,7 +54,8 @@ export function SwapConflictModal({
       <motion.div
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
-        className="w-full max-w-3xl bg-slate-900 border border-rose-500/50 rounded-3xl p-6 shadow-2xl shadow-rose-950/40 space-y-5"
+        role="dialog" aria-modal="true" aria-label="Conflicto de prioridad"
+        className="conflict-dialog w-full max-w-6xl bg-slate-900 border border-rose-500/50 rounded-3xl p-6 shadow-2xl shadow-rose-950/40 space-y-5"
       >
         {/* Modal Header */}
         <div className="flex items-start gap-3 border-b border-slate-800 pb-4">
@@ -93,13 +100,13 @@ export function SwapConflictModal({
         </div>
 
         {/* Cards Selection View */}
-        <div className="min-h-[260px] p-2 bg-slate-950/60 rounded-2xl border border-slate-800/80">
+        <div className="conflict-cards min-h-0 p-2 bg-slate-950/60 rounded-2xl border border-slate-800/80">
           {tab === 'plaza' ? (
             <div>
               <div className="text-xs text-slate-400 mb-2 font-medium">
                 Cartas disponibles actualmente en el Getaway Plaza:
               </div>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 justify-items-center">
+              <div className="conflict-grid">
                 {(conflictData.plaza || []).map((card) => (
                   <Card
                     key={card.instanceId}
@@ -119,7 +126,7 @@ export function SwapConflictModal({
               <div className="text-xs text-slate-400 mb-2 font-medium">
                 Selecciona una carta de tu sobre para tomar directamente:
               </div>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 justify-items-center">
+              <div className="conflict-grid">
                 {activePack.map((card) => (
                   <Card
                     key={card.instanceId}

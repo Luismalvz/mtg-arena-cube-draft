@@ -27,6 +27,7 @@ export function AdminSetup({
   const [playerCount, setPlayerCount] = useState(8);
   const [packCount, setPackCount] = useState(3);
   const [timerSeconds, setTimerSeconds] = useState(45);
+  const [avatar, setAvatar] = useState('azorius');
   const [copiedLink, setCopiedLink] = useState(false);
 
   // Pre-generate a stylish room code for preview
@@ -83,7 +84,8 @@ export function AdminSetup({
       options: {
         playerCount,
         packCount,
-        timerSeconds
+        timerSeconds,
+        avatar
       }
     });
   };
@@ -95,7 +97,8 @@ export function AdminSetup({
     const cleanName = joinPlayerName.trim() || 'Drafter';
     onJoinRoom({
       roomId: roomIdInput.trim().toUpperCase(),
-      playerName: cleanName
+      playerName: cleanName,
+      avatar
     });
   };
 
@@ -107,6 +110,13 @@ export function AdminSetup({
     { count: 6, label: 'Ágil' },
     { count: 7, label: 'Mesa' },
     { count: 8, label: 'Estándar', isRecommended: true }
+  ];
+  const avatars = [
+    { id: 'azorius', label: 'Azorius', src: '/avatar-azorius.png' },
+    { id: 'orzhov', label: 'Orzhov', src: '/avatar-orzhov.png' },
+    { id: 'izzet', label: 'Izzet', src: '/avatar-izzet.png' },
+    { id: 'rakdos', label: 'Rakdos', src: '/avatar-rakdos.png' },
+    { id: 'golgari', label: 'Golgari', src: '/avatar-golgari.png' }
   ];
 
   return (
@@ -148,7 +158,7 @@ export function AdminSetup({
       </div>
 
       {/* Main Glass/Obsidian Card */}
-      <div className="relative w-full max-w-2xl bg-[#181b24] rounded-2xl p-5 sm:p-7 md:p-8 shadow-2xl flex flex-col gap-5 border border-[#272a33]/80 overflow-hidden my-auto">
+      <div className="setup-panel relative w-full max-w-2xl rounded-2xl p-5 sm:p-7 md:p-8 flex flex-col gap-5 overflow-hidden my-auto">
         
         {/* Subtle Ambient Gold Bloom Glow */}
         <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-80 h-80 rounded-full bg-[#ffd580]/5 blur-[100px] pointer-events-none" />
@@ -189,6 +199,9 @@ export function AdminSetup({
                 maxLength={24}
                 className="w-full px-3.5 py-2.5 bg-[#1c1f29] border border-[#272a33] rounded-lg text-[#e0e2ef] placeholder-[#d2c5b1]/40 text-xs sm:text-sm focus:outline-none focus:border-[#ffd580] focus:ring-1 focus:ring-[#ffd580] transition-all font-manrope"
               />
+              <div className="avatar-picker" aria-label="Elige tu avatar">
+                {avatars.map(option => <button key={option.id} type="button" className={`avatar-choice ${avatar === option.id ? 'selected' : ''}`} onClick={() => setAvatar(option.id)} aria-label={`Avatar ${option.label}`} aria-pressed={avatar === option.id}><img src={option.src} alt="" /><span>{option.label}</span></button>)}
+              </div>
             </div>
 
             {/* 1. NÚMERO DE JUGADORES */}
@@ -405,6 +418,9 @@ export function AdminSetup({
                 maxLength={24}
                 className="w-full px-3.5 py-2.5 bg-[#1c1f29] border border-[#272a33] rounded-lg text-[#e0e2ef] placeholder-[#d2c5b1]/40 text-xs sm:text-sm focus:outline-none focus:border-[#ffd580] focus:ring-1 focus:ring-[#ffd580] transition-all font-manrope"
               />
+              <div className="avatar-picker" aria-label="Elige tu avatar">
+                {avatars.map(option => <button key={option.id} type="button" className={`avatar-choice ${avatar === option.id ? 'selected' : ''}`} onClick={() => setAvatar(option.id)} aria-label={`Avatar ${option.label}`} aria-pressed={avatar === option.id}><img src={option.src} alt="" /><span>{option.label}</span></button>)}
+              </div>
             </div>
 
             <div className="pt-2 flex flex-col gap-2">

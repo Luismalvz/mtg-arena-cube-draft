@@ -64,6 +64,7 @@ class GameManager {
       id: 'p_' + Math.random().toString(36).substring(2, 9),
       socketId: adminSocketId,
       name: adminName || 'Admin Drafter',
+      avatar: options.avatar || 'azorius',
       isAdmin: true,
       isBot: false,
       seatIndex: 0,
@@ -84,7 +85,7 @@ class GameManager {
     return this.rooms.get(roomId);
   }
 
-  joinRoom(roomId, playerName, socketId) {
+  joinRoom(roomId, playerName, socketId, avatar = 'azorius') {
     const room = this.rooms.get(roomId);
     if (!room) return { error: 'Sala no encontrada' };
     if (room.status !== 'lobby') return { error: 'El draft ya ha comenzado' };
@@ -92,6 +93,7 @@ class GameManager {
     const existing = room.players.find(p => p.socketId === socketId);
     if (existing) {
       existing.name = playerName;
+      existing.avatar = avatar || existing.avatar || 'azorius';
       return { room, player: existing };
     }
 
@@ -103,6 +105,7 @@ class GameManager {
       id: 'p_' + Math.random().toString(36).substring(2, 9),
       socketId,
       name: playerName || `Jugador ${room.players.length + 1}`,
+      avatar: avatar || 'azorius',
       isAdmin: false,
       isBot: false,
       seatIndex: room.players.length,
