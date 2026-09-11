@@ -114,10 +114,10 @@ export function AdminSetup({
   ];
 
   return (
-    <div className="w-full flex flex-col justify-center items-center py-6 px-3 sm:px-4 font-sans text-slate-200">
+    <div className="w-full flex flex-col justify-center items-center py-6 px-3 sm:px-4 font-sans text-[#ecd8b7]">
       
       {/* Mode Switcher Pills (Top) */}
-      <div className="flex bg-slate-900/50 backdrop-blur-md p-1 rounded-xl border border-slate-800/60 mb-4 shadow-lg text-xs font-sans">
+      <div className="flex bg-[#2a1a0f]/60 backdrop-blur-md p-1 rounded-xl border border-[#4a3219]/60 mb-4 shadow-lg text-xs font-sans">
         <button
           type="button"
           onClick={() => {
@@ -127,7 +127,7 @@ export function AdminSetup({
           className={`py-1.5 px-4 rounded-lg font-semibold transition-all flex items-center gap-1.5 cursor-pointer ${
             mode === 'create'
               ? 'bg-amber-500 text-amber-950 font-bold shadow-md shadow-amber-500/20'
-              : 'text-slate-400 hover:text-white'
+              : 'text-[#cbb593] hover:text-white'
           }`}
         >
           <Sliders className="w-3.5 h-3.5" />
@@ -143,7 +143,7 @@ export function AdminSetup({
           className={`py-1.5 px-4 rounded-lg font-semibold transition-all flex items-center gap-1.5 cursor-pointer ${
             mode === 'join'
               ? 'bg-amber-500 text-amber-950 font-bold shadow-md shadow-amber-500/20'
-              : 'text-slate-400 hover:text-white'
+              : 'text-[#cbb593] hover:text-white'
           }`}
         >
           <LogIn className="w-3.5 h-3.5" />
@@ -152,27 +152,20 @@ export function AdminSetup({
       </div>
 
       {/* Main Glass/Obsidian Card */}
-      <div className="setup-panel relative w-full max-w-2xl rounded-2xl p-5 sm:p-7 md:p-8 flex flex-col gap-5 overflow-hidden my-auto">
+      <div className="relative w-full max-w-2xl rounded-2xl p-5 sm:p-7 md:p-8 flex flex-col gap-5 overflow-hidden my-auto bg-[#1a0f08]/90 backdrop-blur-xl border border-[#4a3219]/80 shadow-[0_0_50px_rgba(42,26,15,0.7)]">
         
         {/* Subtle Ambient Gold Bloom Glow */}
         <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-80 h-80 rounded-full bg-amber-500/5 blur-[100px] pointer-events-none" />
 
         {/* Card Header */}
         <div className="flex flex-col items-center text-center gap-1 relative z-10">
-          <div className="flex items-center gap-1 text-amber-400 font-sans text-[10px] sm:text-xs uppercase tracking-widest font-semibold">
-            <span className="material-symbols-outlined text-[16px]">tune</span>
-            <span>Inicialización</span>
-          </div>
+          
 
           <h1 className="font-cinzel text-3xl sm:text-4xl text-amber-400 tracking-wider uppercase font-bold drop-shadow-md">
             Cube Setup
           </h1>
 
-          <p className="text-xs sm:text-sm text-slate-400 font-sans">
-            {mode === 'create'
-              ? 'Configura los parámetros de la sesión antes de comenzar el draft'
-              : 'Ingresa tus datos para unirte a la mesa del draft'}
-          </p>
+          
         </div>
 
         {mode === 'create' ? (
@@ -181,9 +174,9 @@ export function AdminSetup({
             
             {/* Host Display Name Input */}
             <div className="flex flex-col gap-1.5">
-              <label className="font-sans text-xs text-slate-200 uppercase tracking-wider font-semibold flex items-center justify-between">
+              <label className="font-sans text-xs text-[#ecd8b7] uppercase tracking-wider font-semibold">
                 <span>Nombre del Anfitrión</span>
-                <span className="text-[10px] text-amber-400 font-normal uppercase">Drafter Líder</span>
+                
               </label>
               <input
                 type="text"
@@ -191,7 +184,7 @@ export function AdminSetup({
                 value={adminName}
                 onChange={(e) => setAdminName(e.target.value)}
                 maxLength={24}
-                className="w-full px-3.5 py-2.5 bg-slate-900/80 backdrop-blur-sm border border-slate-800/60 rounded-lg text-slate-200 placeholder-[#d2c5b1]/40 text-xs sm:text-sm focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all font-sans"
+                className="w-full px-3.5 py-2.5 bg-[#2a1a0f]/90 backdrop-blur-sm border border-[#4a3219]/60 rounded-lg text-[#ecd8b7] placeholder-[#d2c5b1]/40 text-xs sm:text-sm focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all font-sans"
               />
               <div className="avatar-picker" aria-label="Elige tu avatar">
                 {TOKEN_AVATARS.map((option) => (
@@ -212,11 +205,11 @@ export function AdminSetup({
             {/* 1. NÚMERO DE JUGADORES */}
             <div className="flex flex-col gap-1.5">
               <div className="flex items-center justify-between">
-                <label className="font-sans text-xs text-slate-200 uppercase tracking-wider font-semibold">
+                <label className="font-sans text-xs text-[#ecd8b7] uppercase tracking-wider font-semibold">
                   Número de Jugadores
                 </label>
                 <span className="font-sans text-xs text-amber-400 uppercase font-semibold">
-                  {playerCount} Jugadores {playerCount === 8 ? '(Recomendado)' : ''}
+                  {playerCount} Jugadores 
                 </span>
               </div>
 
@@ -232,14 +225,14 @@ export function AdminSetup({
                         sound.playHover();
                         setPlayerCount(p.count);
                       }}
-                      className={`py-2 px-1 rounded-lg font-sans text-xs transition-all flex flex-col items-center justify-center cursor-pointer ${
+                      className={`py-2 px-1 rounded-lg font-sans text-xs transition-all flex items-center justify-center cursor-pointer ${
                         isSelected
                           ? 'bg-amber-500 text-amber-950 font-bold shadow-md shadow-amber-500/20'
-                          : 'bg-slate-900/80 backdrop-blur-sm text-slate-400 hover:bg-slate-800 border border-white/5'
+                          : 'bg-[#2a1a0f]/90 backdrop-blur-sm text-[#cbb593] hover:bg-[#3d2616] border border-[#ffd580]/10'
                       }`}
                     >
                       <span className="text-sm font-bold">{p.count}</span>
-                      <span className={`text-[9px] sm:text-[10px] ${isSelected ? 'text-amber-950 font-bold' : 'text-slate-400'}`}>
+                      <span className={`text-[9px] sm:text-[10px] ${isSelected ? 'text-amber-950 font-bold' : 'text-[#cbb593]'}`}>
                         {p.label}
                       </span>
                     </button>
@@ -249,61 +242,12 @@ export function AdminSetup({
             </div>
 
             {/* 2. TWO COLUMNS: SOBRES POR JUGADOR + LÍMITE DE TIEMPO */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+            <div className="grid grid-cols-1 gap-3 sm:gap-4">
               
-              {/* SOBRES POR JUGADOR */}
-              <div className="bg-slate-900/80 backdrop-blur-sm p-3.5 rounded-xl flex flex-col gap-1.5 border border-slate-800/60">
-                <div className="flex items-center justify-between">
-                  <span className="font-sans text-xs text-slate-200 uppercase font-semibold">
-                    Sobres por Jugador
-                  </span>
-                  <span className="material-symbols-outlined text-sky-400 text-[20px]">layers</span>
-                </div>
-
-                <div className="flex items-center justify-between mt-0.5">
-                  <div className="flex items-baseline gap-1.5">
-                    <span className="font-cinzel text-2xl text-amber-400 font-bold">
-                      {packCount}
-                    </span>
-                    <span className="font-sans text-xs text-slate-400">
-                      × 15 cartas
-                    </span>
-                  </div>
-
-                  {/* Pack Selector Buttons */}
-                  <div className="flex items-center gap-1">
-                    {availablePackChoices.map((num) => {
-                      const isSelected = packCount === num;
-                      return (
-                        <button
-                          key={num}
-                          type="button"
-                          onClick={() => {
-                            sound.playSelect();
-                            setPackCount(num);
-                          }}
-                          className={`py-1 px-2.5 rounded font-sans text-xs font-bold transition-all cursor-pointer ${
-                            isSelected
-                              ? 'bg-amber-500 text-amber-950 shadow-sm'
-                              : 'bg-slate-800 text-slate-400 hover:text-white'
-                          }`}
-                        >
-                          {num}
-                        </button>
-                      );
-                    })}
-                  </div>
-                </div>
-
-                <span className="font-sans text-[10px] text-slate-400 mt-0.5">
-                  {packCount * 15} picks totales por participante
-                </span>
-              </div>
-
               {/* LÍMITE DE TIEMPO */}
-              <div className="bg-slate-900/80 backdrop-blur-sm p-3.5 rounded-xl flex flex-col gap-1.5 border border-slate-800/60">
+              <div className="bg-[#2a1a0f]/90 backdrop-blur-sm p-3.5 rounded-xl flex flex-col gap-1.5 border border-[#4a3219]/60">
                 <div className="flex items-center justify-between">
-                  <span className="font-sans text-xs text-slate-200 uppercase font-semibold">
+                  <span className="font-sans text-xs text-[#ecd8b7] uppercase font-semibold">
                     Límite de Tiempo
                   </span>
                   <span className="material-symbols-outlined text-amber-400 text-[20px]">hourglass_top</span>
@@ -328,7 +272,7 @@ export function AdminSetup({
                         className={`py-1.5 rounded font-sans text-xs font-bold transition-all text-center cursor-pointer ${
                           isSelected
                             ? 'bg-amber-500 text-amber-950 shadow-[0_0_8px_rgba(229,184,90,0.3)]'
-                            : 'bg-slate-800 text-slate-400 hover:text-white'
+                            : 'bg-[#3d2616] text-[#cbb593] hover:text-white'
                         }`}
                       >
                         {t.label}
@@ -337,16 +281,16 @@ export function AdminSetup({
                   })}
                 </div>
 
-                <span className="font-sans text-[10px] text-slate-400 mt-0.5">
+                <span className="font-sans text-[10px] text-[#cbb593] mt-0.5">
                   Timer de selección por sobre
                 </span>
               </div>
             </div>
 
             {/* 3. ENLACE DE INVITACIÓN WEB */}
-            <div className="bg-slate-900/80 backdrop-blur-sm p-3.5 rounded-xl flex flex-col gap-1.5 border border-slate-800/60">
+            <div className="bg-[#2a1a0f]/90 backdrop-blur-sm p-3.5 rounded-xl flex flex-col gap-1.5 border border-[#4a3219]/60">
               <div className="flex items-center justify-between">
-                <span className="font-sans text-[11px] text-slate-400 uppercase tracking-wider font-semibold">
+                <span className="font-sans text-[11px] text-[#cbb593] uppercase tracking-wider font-semibold">
                   Enlace de Invitación Web
                 </span>
                 <span className="font-sans text-[11px] text-amber-400 uppercase font-bold tracking-wider">
@@ -354,8 +298,8 @@ export function AdminSetup({
                 </span>
               </div>
 
-              <div className="flex items-center gap-2 bg-slate-950/50 p-1.5 rounded-lg border border-white/5">
-                <span className="font-sans text-xs text-slate-400 truncate pl-2 flex-1 select-all font-mono">
+              <div className="flex items-center gap-2 bg-[#1a0f08]/80 p-1.5 rounded-lg border border-[#ffd580]/10">
+                <span className="font-sans text-xs text-[#cbb593] truncate pl-2 flex-1 select-all font-mono">
                   {inviteUrl}
                 </span>
 
@@ -384,12 +328,7 @@ export function AdminSetup({
                 <span className="material-symbols-outlined text-[20px]">east</span>
               </button>
 
-              <div className="flex items-center justify-center gap-1 text-slate-400 text-center">
-                <span className="material-symbols-outlined text-[15px]">lock_reset</span>
-                <span className="font-sans text-[10px] sm:text-[11px] uppercase tracking-wider">
-                  El código expirará tras 3 horas de inactividad
-                </span>
-              </div>
+              
             </div>
           </div>
         ) : (
@@ -397,7 +336,7 @@ export function AdminSetup({
           <div className="flex flex-col gap-4 relative z-10">
             {/* Room Code */}
             <div className="flex flex-col gap-1.5">
-              <label className="font-sans text-xs text-slate-200 uppercase tracking-wider font-semibold">
+              <label className="font-sans text-xs text-[#ecd8b7] uppercase tracking-wider font-semibold">
                 Código de Sala
               </label>
               <input
@@ -406,13 +345,13 @@ export function AdminSetup({
                 value={roomIdInput}
                 onChange={(e) => setRoomIdInput(e.target.value.toUpperCase())}
                 maxLength={16}
-                className="w-full px-3.5 py-3 bg-slate-900/80 backdrop-blur-sm border border-slate-800/60 rounded-lg text-amber-400 font-mono text-center tracking-widest text-base sm:text-lg uppercase placeholder-[#d2c5b1]/40 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all font-bold"
+                className="w-full px-3.5 py-3 bg-[#2a1a0f]/90 backdrop-blur-sm border border-[#4a3219]/60 rounded-lg text-amber-400 font-mono text-center tracking-widest text-base sm:text-lg uppercase placeholder-[#d2c5b1]/40 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all font-bold"
               />
             </div>
 
             {/* Player Name */}
             <div className="flex flex-col gap-1.5">
-              <label className="font-sans text-xs text-slate-200 uppercase tracking-wider font-semibold">
+              <label className="font-sans text-xs text-[#ecd8b7] uppercase tracking-wider font-semibold">
                 Tu Nombre de Jugador
               </label>
               <input
@@ -421,7 +360,7 @@ export function AdminSetup({
                 value={joinPlayerName}
                 onChange={(e) => setJoinPlayerName(e.target.value)}
                 maxLength={24}
-                className="w-full px-3.5 py-2.5 bg-slate-900/80 backdrop-blur-sm border border-slate-800/60 rounded-lg text-slate-200 placeholder-[#d2c5b1]/40 text-xs sm:text-sm focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all font-sans"
+                className="w-full px-3.5 py-2.5 bg-[#2a1a0f]/90 backdrop-blur-sm border border-[#4a3219]/60 rounded-lg text-[#ecd8b7] placeholder-[#d2c5b1]/40 text-xs sm:text-sm focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all font-sans"
               />
               <div className="avatar-picker" aria-label="Elige tu avatar">
                 {TOKEN_AVATARS.map((option) => (
@@ -454,19 +393,7 @@ export function AdminSetup({
         )}
       </div>
 
-      {/* Footer Branding matching mockup */}
-      <footer className="w-full max-w-2xl mt-6 px-2 flex flex-col sm:flex-row items-center justify-between gap-2 text-slate-400 font-sans text-[10px] sm:text-[11px]">
-        <div className="flex items-center gap-1.5">
-          <span className="uppercase">Getaway Draft Engine v2.4</span>
-          <span>•</span>
-          <span>Synchronized via WebSocket</span>
-        </div>
-        <div className="flex items-center gap-1.5">
-          <span className="uppercase">Magic: The Gathering ™ WotC</span>
-          <span>•</span>
-          <span className="text-amber-400 hover:underline cursor-pointer">Cube 360</span>
-        </div>
-      </footer>
+      
     </div>
   );
 }
