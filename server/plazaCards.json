@@ -14,7 +14,10 @@
     "power": null,
     "toughness": null,
     "rarity": "uncommon",
-    "image_url": "https://cards.scryfall.io/normal/front/5/0/50ef0ac3-e911-4d67-a751-8d86160ae843.jpg?1783909580"
+    "image_url": "https://cards.scryfall.io/normal/front/e/e/eed7cbd5-c462-40c3-8a79-ce5e95561116.jpg?1783933559",
+    "set": "GK2",
+    "collector_number": "25",
+    "isFixer": false
   },
   {
     "id": "plaza_002",
@@ -31,7 +34,10 @@
     "power": null,
     "toughness": null,
     "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/f/9/f98a7264-0a83-42c8-a94d-05ad4c234242.jpg?1783908907"
+    "image_url": "https://cards.scryfall.io/normal/front/2/e/2e1138d3-f0e1-4fb3-b5c3-1c89cd000aab.jpg?1783913259",
+    "set": "RVR",
+    "collector_number": "272",
+    "isFixer": false
   },
   {
     "id": "plaza_003",
@@ -48,7 +54,10 @@
     "power": null,
     "toughness": null,
     "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/f/9/f98a7264-0a83-42c8-a94d-05ad4c234242.jpg?1783908907"
+    "image_url": "https://cards.scryfall.io/normal/front/2/e/2e1138d3-f0e1-4fb3-b5c3-1c89cd000aab.jpg?1783913259",
+    "set": "RVR",
+    "collector_number": "272",
+    "isFixer": false
   },
   {
     "id": "plaza_004",
@@ -65,7 +74,10 @@
     "power": null,
     "toughness": null,
     "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/7/6/76ec3366-98f3-4903-8f7b-cfcdd60e3be1.jpg?1783912508"
+    "image_url": "https://cards.scryfall.io/normal/front/a/d/adab83d0-780b-4a6a-aa0b-c9a639708083.jpg?1783934022",
+    "set": "GK1",
+    "collector_number": "98",
+    "isFixer": false
   },
   {
     "id": "plaza_005",
@@ -82,7 +94,10 @@
     "power": null,
     "toughness": null,
     "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/3/e/3e3c74ea-40e9-4ad9-a491-c208403b68ad.jpg?1783908903"
+    "image_url": "https://cards.scryfall.io/normal/front/3/2/321dd23d-0a61-44c9-8a0c-4de4311734fc.jpg?1783913185",
+    "set": "RVR",
+    "collector_number": "398",
+    "isFixer": false
   },
   {
     "id": "plaza_006",
@@ -99,7 +114,10 @@
     "power": null,
     "toughness": null,
     "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/3/e/3e3c74ea-40e9-4ad9-a491-c208403b68ad.jpg?1783908903"
+    "image_url": "https://cards.scryfall.io/normal/front/3/2/321dd23d-0a61-44c9-8a0c-4de4311734fc.jpg?1783913185",
+    "set": "RVR",
+    "collector_number": "398",
+    "isFixer": false
   },
   {
     "id": "plaza_007",
@@ -115,8 +133,11 @@
     "oracle_text": "This land enters tapped.\nWhen this land enters, return a land you control to its owner's hand.\n{T}: Add {U}{B}.",
     "power": null,
     "toughness": null,
-    "rarity": "uncommon",
-    "image_url": "https://cards.scryfall.io/normal/front/8/4/84bf9d60-64b8-4209-acfe-e07eefc6bf1f.jpg?1783909578"
+    "rarity": "common",
+    "image_url": "https://cards.scryfall.io/normal/front/1/8/1891640d-eb2f-4494-a93a-cf7c0db1a8f8.jpg?1783934049",
+    "set": "GK1",
+    "collector_number": "23",
+    "isFixer": false
   },
   {
     "id": "plaza_008",
@@ -133,7 +154,10 @@
     "power": null,
     "toughness": null,
     "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/f/9/f9b8a159-5e58-4432-8ecd-62f39afa96da.jpg?1783908901"
+    "image_url": "https://cards.scryfall.io/normal/front/0/5/056bfc03-16de-4682-974c-7f4af0fe90e9.jpg?1783913186",
+    "set": "RVR",
+    "collector_number": "400",
+    "isFixer": false
   },
   {
     "id": "plaza_009",
@@ -150,7 +174,10 @@
     "power": null,
     "toughness": null,
     "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/f/9/f9b8a159-5e58-4432-8ecd-62f39afa96da.jpg?1783908901"
+    "image_url": "https://cards.scryfall.io/normal/front/0/5/056bfc03-16de-4682-974c-7f4af0fe90e9.jpg?1783913186",
+    "set": "RVR",
+    "collector_number": "400",
+    "isFixer": false
   },
   {
     "id": "plaza_010",
@@ -164,7 +191,10 @@
     "power": "8",
     "toughness": "8",
     "rarity": "uncommon",
-    "image_url": "https://cards.scryfall.io/normal/front/b/c/bc49d9cb-8c7a-4a8f-96ea-bbe6ade8ae00.jpg?1783908905"
+    "image_url": "https://cards.scryfall.io/normal/front/a/b/abcab748-bc0a-4c57-942b-47526016c363.jpg?1783913265",
+    "set": "RVR",
+    "collector_number": "257",
+    "isFixer": false
   },
   {
     "id": "plaza_011",
@@ -178,7 +208,10 @@
     "power": "8",
     "toughness": "8",
     "rarity": "uncommon",
-    "image_url": "https://cards.scryfall.io/normal/front/b/c/bc49d9cb-8c7a-4a8f-96ea-bbe6ade8ae00.jpg?1783908905"
+    "image_url": "https://cards.scryfall.io/normal/front/a/b/abcab748-bc0a-4c57-942b-47526016c363.jpg?1783913265",
+    "set": "RVR",
+    "collector_number": "257",
+    "isFixer": false
   },
   {
     "id": "plaza_012",
@@ -195,7 +228,10 @@
     "power": null,
     "toughness": null,
     "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/9/2/92d4646c-a375-4835-aa58-8bb77d1a5abf.jpg?1783908900"
+    "image_url": "https://cards.scryfall.io/normal/front/2/4/24f834a9-1f6b-45d8-a9ed-cd83bb118471.jpg?1783913183",
+    "set": "RVR",
+    "collector_number": "402",
+    "isFixer": false
   },
   {
     "id": "plaza_013",
@@ -212,7 +248,10 @@
     "power": null,
     "toughness": null,
     "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/9/2/92d4646c-a375-4835-aa58-8bb77d1a5abf.jpg?1783908900"
+    "image_url": "https://cards.scryfall.io/normal/front/2/4/24f834a9-1f6b-45d8-a9ed-cd83bb118471.jpg?1783913183",
+    "set": "RVR",
+    "collector_number": "402",
+    "isFixer": false
   },
   {
     "id": "plaza_014",
@@ -229,7 +268,10 @@
     "power": null,
     "toughness": null,
     "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/3/a/3ab6c240-c97d-4a5c-bc39-860c2d9901c2.jpg?1783908900"
+    "image_url": "https://cards.scryfall.io/normal/front/8/9/891da971-f893-4409-9339-c769f42e5014.jpg?1783913182",
+    "set": "RVR",
+    "collector_number": "403",
+    "isFixer": false
   },
   {
     "id": "plaza_015",
@@ -246,7 +288,10 @@
     "power": null,
     "toughness": null,
     "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/3/a/3ab6c240-c97d-4a5c-bc39-860c2d9901c2.jpg?1783908900"
+    "image_url": "https://cards.scryfall.io/normal/front/8/9/891da971-f893-4409-9339-c769f42e5014.jpg?1783913182",
+    "set": "RVR",
+    "collector_number": "403",
+    "isFixer": false
   },
   {
     "id": "plaza_016",
@@ -262,8 +307,11 @@
     "oracle_text": "This land enters tapped.\nWhen this land enters, return a land you control to its owner's hand.\n{T}: Add {U}{R}.",
     "power": null,
     "toughness": null,
-    "rarity": "uncommon",
-    "image_url": "https://cards.scryfall.io/normal/front/b/f/bfac9395-7ca5-48dd-ab83-7c26ada12f61.jpg?1783911875"
+    "rarity": "common",
+    "image_url": "https://cards.scryfall.io/normal/front/1/6/16e5c214-1896-4aa0-8d83-7cb0eeb5aad4.jpg?1783934041",
+    "set": "GK1",
+    "collector_number": "47",
+    "isFixer": false
   },
   {
     "id": "plaza_017",
@@ -280,7 +328,10 @@
     "power": null,
     "toughness": null,
     "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/d/b/db9e6fc9-813d-4a71-8a68-8e0f83fa945d.jpg?1783908899"
+    "image_url": "https://cards.scryfall.io/normal/front/8/0/807cf839-7768-4076-a788-665ff5b1d076.jpg?1783913179",
+    "set": "RVR",
+    "collector_number": "405",
+    "isFixer": false
   },
   {
     "id": "plaza_018",
@@ -297,7 +348,10 @@
     "power": null,
     "toughness": null,
     "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/d/b/db9e6fc9-813d-4a71-8a68-8e0f83fa945d.jpg?1783908899"
+    "image_url": "https://cards.scryfall.io/normal/front/8/0/807cf839-7768-4076-a788-665ff5b1d076.jpg?1783913179",
+    "set": "RVR",
+    "collector_number": "405",
+    "isFixer": false
   },
   {
     "id": "plaza_019",
@@ -314,7 +368,10 @@
     "power": null,
     "toughness": null,
     "rarity": "uncommon",
-    "image_url": "https://cards.scryfall.io/normal/front/9/a/9a1e15e7-4ba6-41ad-b27b-aee2d037b6a7.jpg?1783927488"
+    "image_url": "https://cards.scryfall.io/normal/front/e/d/ed595b59-b5c7-4335-a3c4-1c24c5a9cba2.jpg?1783943376",
+    "set": "DIS",
+    "collector_number": "175",
+    "isFixer": false
   },
   {
     "id": "plaza_020",
@@ -330,8 +387,11 @@
     "oracle_text": "This land enters tapped.\nWhen this land enters, return a land you control to its owner's hand.\n{T}: Add {W}{B}.",
     "power": null,
     "toughness": null,
-    "rarity": "uncommon",
-    "image_url": "https://cards.scryfall.io/normal/front/9/c/9c7c08fc-b6ee-498c-8ab6-fd6be27c9d97.jpg?1783909569"
+    "rarity": "common",
+    "image_url": "https://cards.scryfall.io/normal/front/8/d/8d9f6e53-f04f-442c-be1a-a3634ce86101.jpg?1783933549",
+    "set": "GK2",
+    "collector_number": "49",
+    "isFixer": false
   },
   {
     "id": "plaza_021",
@@ -348,7 +408,10 @@
     "power": null,
     "toughness": null,
     "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/a/9/a917be03-0c17-4454-b044-c4375e5c8085.jpg?1783908900"
+    "image_url": "https://cards.scryfall.io/normal/front/9/5/95e6f30b-aba8-41b9-bb26-bc549b136d0c.jpg?1783913180",
+    "set": "RVR",
+    "collector_number": "406",
+    "isFixer": false
   },
   {
     "id": "plaza_022",
@@ -365,7 +428,10 @@
     "power": null,
     "toughness": null,
     "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/a/9/a917be03-0c17-4454-b044-c4375e5c8085.jpg?1783908900"
+    "image_url": "https://cards.scryfall.io/normal/front/9/5/95e6f30b-aba8-41b9-bb26-bc549b136d0c.jpg?1783913180",
+    "set": "RVR",
+    "collector_number": "406",
+    "isFixer": false
   },
   {
     "id": "plaza_023",
@@ -382,7 +448,10 @@
     "power": null,
     "toughness": null,
     "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/e/1/e1f01964-c610-4d0f-a2b4-f52e46dc50d2.jpg?1783908899"
+    "image_url": "https://cards.scryfall.io/normal/front/b/d/bd8e123b-c8f6-4b57-b7d7-5450311493f0.jpg?1783913180",
+    "set": "RVR",
+    "collector_number": "408",
+    "isFixer": false
   },
   {
     "id": "plaza_024",
@@ -399,7 +468,10 @@
     "power": null,
     "toughness": null,
     "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/e/1/e1f01964-c610-4d0f-a2b4-f52e46dc50d2.jpg?1783908899"
+    "image_url": "https://cards.scryfall.io/normal/front/b/d/bd8e123b-c8f6-4b57-b7d7-5450311493f0.jpg?1783913180",
+    "set": "RVR",
+    "collector_number": "408",
+    "isFixer": false
   },
   {
     "id": "plaza_025",
@@ -416,7 +488,10 @@
     "power": null,
     "toughness": null,
     "rarity": "uncommon",
-    "image_url": "https://cards.scryfall.io/normal/front/f/8/f8429762-e756-43e0-81b4-9d0a34270040.jpg?1783932703"
+    "image_url": "https://cards.scryfall.io/normal/front/c/0/c0f56ce7-1974-417e-a4cb-c9d9a9509039.jpg?1783943377",
+    "set": "DIS",
+    "collector_number": "179",
+    "isFixer": false
   },
   {
     "id": "plaza_026",
@@ -433,7 +508,10 @@
     "power": null,
     "toughness": null,
     "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/6/7/6718d4e7-768e-473f-8064-a68422e977f6.jpg?1783908899"
+    "image_url": "https://cards.scryfall.io/normal/front/e/3/e31ce388-316a-4b50-aa77-888c8975ba21.jpg?1783913178",
+    "set": "RVR",
+    "collector_number": "410",
+    "isFixer": false
   },
   {
     "id": "plaza_027",
@@ -450,7 +528,10 @@
     "power": null,
     "toughness": null,
     "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/6/7/6718d4e7-768e-473f-8064-a68422e977f6.jpg?1783908899"
+    "image_url": "https://cards.scryfall.io/normal/front/e/3/e31ce388-316a-4b50-aa77-888c8975ba21.jpg?1783913178",
+    "set": "RVR",
+    "collector_number": "410",
+    "isFixer": false
   },
   {
     "id": "plaza_028",
@@ -467,7 +548,10 @@
     "power": null,
     "toughness": null,
     "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/9/6/96590855-1ee5-4d69-9070-776e23f71976.jpg?1783908898"
+    "image_url": "https://cards.scryfall.io/normal/front/e/6/e69f770c-9535-4ff1-a353-932139a8e269.jpg?1783913178",
+    "set": "RVR",
+    "collector_number": "411",
+    "isFixer": false
   },
   {
     "id": "plaza_029",
@@ -484,7 +568,10 @@
     "power": null,
     "toughness": null,
     "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/9/6/96590855-1ee5-4d69-9070-776e23f71976.jpg?1783908898"
+    "image_url": "https://cards.scryfall.io/normal/front/e/6/e69f770c-9535-4ff1-a353-932139a8e269.jpg?1783913178",
+    "set": "RVR",
+    "collector_number": "411",
+    "isFixer": false
   },
   {
     "id": "plaza_030",
@@ -501,7 +588,10 @@
     "power": null,
     "toughness": null,
     "rarity": "uncommon",
-    "image_url": "https://cards.scryfall.io/normal/front/3/3/3340d094-fe13-4087-abba-27e8c9a7f3c7.jpg?1783936812"
+    "image_url": "https://cards.scryfall.io/normal/front/3/4/342dcdde-e4cc-4a49-a818-9283002aba1a.jpg?1783943455",
+    "set": "GPT",
+    "collector_number": "163",
+    "isFixer": false
   },
   {
     "id": "plaza_031",
@@ -518,7 +608,10 @@
     "power": null,
     "toughness": null,
     "rarity": "uncommon",
-    "image_url": "https://cards.scryfall.io/normal/front/f/f/ffe08b0f-bb53-40b9-8057-10b60070459b.jpg?1783934679"
+    "image_url": "https://cards.scryfall.io/normal/front/5/c/5cf3ba87-93a0-44db-83d9-92e23a677a62.jpg?1783943589",
+    "set": "RAV",
+    "collector_number": "283",
+    "isFixer": false
   },
   {
     "id": "plaza_032",
@@ -535,6 +628,9 @@
     "power": null,
     "toughness": null,
     "rarity": "uncommon",
-    "image_url": "https://cards.scryfall.io/normal/front/3/3/33145080-077e-4231-96ca-e8b1852b6380.jpg?1783926142"
+    "image_url": "https://cards.scryfall.io/normal/front/a/f/afc35026-a29e-4fb0-931f-5e90faf41802.jpg?1783943589",
+    "set": "RAV",
+    "collector_number": "285",
+    "isFixer": false
   }
 ]

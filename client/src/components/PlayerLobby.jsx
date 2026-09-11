@@ -16,6 +16,8 @@ import {
   Shield,
   Zap
 } from 'lucide-react';
+import { PlayerTokenCard } from './PlayerTokenCard';
+import { TOKEN_AVATARS } from '../utils/tokenAvatars';
 
 export function PlayerLobby({
   roomState,
@@ -28,14 +30,7 @@ export function PlayerLobby({
   const [copiedLink, setCopiedLink] = useState(false);
   const [isShuffling, setIsShuffling] = useState(false);
   const [nameInput, setNameInput] = useState('');
-  const [avatar, setAvatar] = useState('azorius');
-  const avatars = [
-    { id: 'azorius', label: 'Azorius', src: '/avatar-azorius.png' },
-    { id: 'orzhov', label: 'Orzhov', src: '/avatar-orzhov.png' },
-    { id: 'izzet', label: 'Izzet', src: '/avatar-izzet.png' },
-    { id: 'rakdos', label: 'Rakdos', src: '/avatar-rakdos.png' },
-    { id: 'golgari', label: 'Golgari', src: '/avatar-golgari.png' }
-  ];
+  const [avatar, setAvatar] = useState('046');
 
   if (!roomState) return null;
 
@@ -213,7 +208,18 @@ export function PlayerLobby({
                 className="w-full px-3.5 py-2 bg-[#0b0e17] border border-[#272a33] rounded-lg text-[#e0e2ef] placeholder-[#d2c5b1]/40 text-xs sm:text-sm focus:outline-none focus:border-[#ffd580] focus:ring-1 focus:ring-[#ffd580] transition-all font-manrope"
               />
               <div className="avatar-picker compact" aria-label="Elige tu avatar">
-                {avatars.map(option => <button key={option.id} type="button" className={`avatar-choice ${avatar === option.id ? 'selected' : ''}`} onClick={() => setAvatar(option.id)} aria-label={`Avatar ${option.label}`} aria-pressed={avatar === option.id}><img src={option.src} alt="" /><span>{option.label}</span></button>)}
+                {TOKEN_AVATARS.map((option) => (
+                  <button
+                    key={option.id}
+                    type="button"
+                    className={`avatar-choice ${avatar === option.id ? 'selected' : ''}`}
+                    onClick={() => setAvatar(option.id)}
+                    aria-label={`Avatar ${option.id}`}
+                    aria-pressed={avatar === option.id}
+                  >
+                    <img src={option.src} alt="" />
+                  </button>
+                ))}
               </div>
             </div>
             <button
@@ -252,98 +258,18 @@ export function PlayerLobby({
             )}
           </div>
 
-          {/* Grid of Seats */}
-          <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2.5">
+          {/* Grid of Seats as MTG Token Cards */}
+          <motion.div layout className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
             <AnimatePresence>
-              {totalSeats.map((seat, idx) => {
-                const isOccupied = seat.type === 'player';
-                const player = seat.data;
-                const isMe = isOccupied && player.id === myId;
-                const isPlayerHost = isOccupied && player.isAdmin;
-
-                return (
-                  <motion.div
-                    key={isOccupied ? player.id : `seat_empty_${idx}`}
-                    layout
-                    initial={{ scale: 0.95, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    exit={{ scale: 0.95, opacity: 0 }}
-                    transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-                    className={`p-3 rounded-xl border flex flex-col justify-between min-h-[96px] transition-all relative overflow-hidden ${
-                      isOccupied
-                        ? isMe
-                          ? 'bg-[#1c1f29] border-[#ffd580] shadow-[0_0_15px_rgba(255,213,128,0.15)] ring-1 ring-[#ffd580]/50'
-                          : 'bg-[#1c1f29] border-[#272a33]'
-                        : 'bg-[#10131c]/70 border-dashed border-[#272a33] opacity-60'
-                    }`}
-                  >
-                    {/* Top Seat Header: Seat Number + Status Ring */}
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-1.5">
-                        <span className="font-cinzel text-xs font-bold text-[#ffd580]">
-                          #{idx + 1}
-                        </span>
-                        <span className="font-space text-[10px] uppercase tracking-wider text-[#d2c5b1]/60">
-                          Asiento
-                        </span>
-                      </div>
-
-                      {isOccupied ? (
-                        <div className="flex items-center gap-1">
-                          {isPlayerHost && (
-                            <span title="Anfitrión de la sala">
-                              <Crown className="w-3.5 h-3.5 text-[#ffd580]" />
-                            </span>
-                          )}
-                          <span className="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_6px_#34d399]" />
-                        </div>
-                      ) : (
-                        <span className="font-space text-[9px] uppercase tracking-wider text-[#d2c5b1]/40">
-                          Vacío
-                        </span>
-                      )}
-                    </div>
-
-                    {/* Middle Player Identity */}
-                    <div className="my-1 flex items-center gap-2">
-                      <div
-                        className={`w-7 h-7 rounded-lg flex items-center justify-center font-bold text-xs shrink-0 ${
-                          isOccupied
-                            ? isMe
-                              ? 'bg-[#ffd580] text-[#402d00]'
-                              : 'bg-[#272a33] text-[#ffd580]'
-                            : 'bg-[#181b24] text-[#d2c5b1]/30 border border-white/5'
-                        }`}
-                      >
-                        {isOccupied ? (
-                          player.avatar ? <img className="seat-avatar" src={`/avatar-${player.avatar}.png`} alt="" /> : (isPlayerHost ? <Crown className="w-3.5 h-3.5" /> : <User className="w-3.5 h-3.5" />)
-                        ) : (
-                          <Bot className="w-3.5 h-3.5" />
-                        )}
-                      </div>
-
-                      <div className="min-w-0 flex-1">
-                        <div className="font-space font-bold text-xs truncate text-[#e0e2ef]">
-                          {isOccupied ? player.name : 'Slot Disponible'}
-                        </div>
-                        <div className="text-[10px] text-[#d2c5b1]/60 truncate font-manrope">
-                          {isOccupied
-                            ? isMe ? 'Tú (En mesa)' : (isPlayerHost ? 'Anfitrión' : 'Drafter')
-                            : 'Se rellenará con IA'}
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Bottom Priority Tag */}
-                    <div className="flex items-center justify-between text-[9px] font-space border-t border-white/5 pt-1.5 text-[#d2c5b1]/50 uppercase">
-                      <span>Prioridad #{idx + 1}</span>
-                      {idx === 0 && (
-                        <span className="text-[#ffd580] font-bold">1er Turno</span>
-                      )}
-                    </div>
-                  </motion.div>
-                );
-              })}
+              {totalSeats.map((seat, idx) => (
+                <PlayerTokenCard
+                  key={seat.type === 'player' ? seat.data.id : `seat_empty_${idx}`}
+                  seat={seat}
+                  seatIndex={idx}
+                  myId={myId}
+                  isHost={isHost}
+                />
+              ))}
             </AnimatePresence>
           </motion.div>
 

@@ -13,6 +13,7 @@ import {
   Hourglass,
   Sparkles
 } from 'lucide-react';
+import { TOKEN_AVATARS } from '../utils/tokenAvatars';
 
 export function AdminSetup({
   onCreateRoom,
@@ -27,7 +28,7 @@ export function AdminSetup({
   const [playerCount, setPlayerCount] = useState(8);
   const [packCount, setPackCount] = useState(3);
   const [timerSeconds, setTimerSeconds] = useState(45);
-  const [avatar, setAvatar] = useState('azorius');
+  const [avatar, setAvatar] = useState('046');
   const [copiedLink, setCopiedLink] = useState(false);
 
   // Pre-generate a stylish room code for preview
@@ -111,13 +112,6 @@ export function AdminSetup({
     { count: 7, label: 'Mesa' },
     { count: 8, label: 'Estándar', isRecommended: true }
   ];
-  const avatars = [
-    { id: 'azorius', label: 'Azorius', src: '/avatar-azorius.png' },
-    { id: 'orzhov', label: 'Orzhov', src: '/avatar-orzhov.png' },
-    { id: 'izzet', label: 'Izzet', src: '/avatar-izzet.png' },
-    { id: 'rakdos', label: 'Rakdos', src: '/avatar-rakdos.png' },
-    { id: 'golgari', label: 'Golgari', src: '/avatar-golgari.png' }
-  ];
 
   return (
     <div className="w-full flex flex-col justify-center items-center py-6 px-3 sm:px-4 font-manrope text-slate-200">
@@ -200,7 +194,18 @@ export function AdminSetup({
                 className="w-full px-3.5 py-2.5 bg-[#1c1f29] border border-[#272a33] rounded-lg text-[#e0e2ef] placeholder-[#d2c5b1]/40 text-xs sm:text-sm focus:outline-none focus:border-[#ffd580] focus:ring-1 focus:ring-[#ffd580] transition-all font-manrope"
               />
               <div className="avatar-picker" aria-label="Elige tu avatar">
-                {avatars.map(option => <button key={option.id} type="button" className={`avatar-choice ${avatar === option.id ? 'selected' : ''}`} onClick={() => setAvatar(option.id)} aria-label={`Avatar ${option.label}`} aria-pressed={avatar === option.id}><img src={option.src} alt="" /><span>{option.label}</span></button>)}
+                {TOKEN_AVATARS.map((option) => (
+                  <button
+                    key={option.id}
+                    type="button"
+                    className={`avatar-choice ${avatar === option.id ? 'selected' : ''}`}
+                    onClick={() => setAvatar(option.id)}
+                    aria-label={`Avatar ${option.id}`}
+                    aria-pressed={avatar === option.id}
+                  >
+                    <img src={option.src} alt="" />
+                  </button>
+                ))}
               </div>
             </div>
 
@@ -419,7 +424,18 @@ export function AdminSetup({
                 className="w-full px-3.5 py-2.5 bg-[#1c1f29] border border-[#272a33] rounded-lg text-[#e0e2ef] placeholder-[#d2c5b1]/40 text-xs sm:text-sm focus:outline-none focus:border-[#ffd580] focus:ring-1 focus:ring-[#ffd580] transition-all font-manrope"
               />
               <div className="avatar-picker" aria-label="Elige tu avatar">
-                {avatars.map(option => <button key={option.id} type="button" className={`avatar-choice ${avatar === option.id ? 'selected' : ''}`} onClick={() => setAvatar(option.id)} aria-label={`Avatar ${option.label}`} aria-pressed={avatar === option.id}><img src={option.src} alt="" /><span>{option.label}</span></button>)}
+                {TOKEN_AVATARS.map((option) => (
+                  <button
+                    key={option.id}
+                    type="button"
+                    className={`avatar-choice ${avatar === option.id ? 'selected' : ''}`}
+                    onClick={() => setAvatar(option.id)}
+                    aria-label={`Avatar ${option.id}`}
+                    aria-pressed={avatar === option.id}
+                  >
+                    <img src={option.src} alt="" />
+                  </button>
+                ))}
               </div>
             </div>
 

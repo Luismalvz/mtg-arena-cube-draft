@@ -64,7 +64,7 @@ class GameManager {
       id: 'p_' + Math.random().toString(36).substring(2, 9),
       socketId: adminSocketId,
       name: adminName || 'Admin Drafter',
-      avatar: options.avatar || 'azorius',
+      avatar: options.avatar || '046',
       isAdmin: true,
       isBot: false,
       seatIndex: 0,
@@ -85,7 +85,7 @@ class GameManager {
     return this.rooms.get(roomId);
   }
 
-  joinRoom(roomId, playerName, socketId, avatar = 'azorius') {
+  joinRoom(roomId, playerName, socketId, avatar = '046') {
     const room = this.rooms.get(roomId);
     if (!room) return { error: 'Sala no encontrada' };
     if (room.status !== 'lobby') return { error: 'El draft ya ha comenzado' };
@@ -93,7 +93,7 @@ class GameManager {
     const existing = room.players.find(p => p.socketId === socketId);
     if (existing) {
       existing.name = playerName;
-      existing.avatar = avatar || existing.avatar || 'azorius';
+      existing.avatar = avatar || existing.avatar || '046';
       return { room, player: existing };
     }
 
@@ -105,7 +105,7 @@ class GameManager {
       id: 'p_' + Math.random().toString(36).substring(2, 9),
       socketId,
       name: playerName || `Jugador ${room.players.length + 1}`,
-      avatar: avatar || 'azorius',
+      avatar: avatar || '046',
       isAdmin: false,
       isBot: false,
       seatIndex: room.players.length,
@@ -174,11 +174,13 @@ class GameManager {
     const botsNeeded = Math.max(0, room.config.playerCount - humanCount);
 
     const botNames = ['Jace AI', 'Chandra AI', 'Liliana AI', 'Garruk AI', 'Teferi AI', 'Nicol AI', 'Karn AI'];
+    const botAvatars = ['046', '050', '110', '112', '117', '140', '197', '204'];
     for (let i = 0; i < botsNeeded; i++) {
       room.players.push({
         id: 'bot_' + (i + 1) + '_' + Math.random().toString(36).substring(2, 6),
         socketId: null,
         name: botNames[i % botNames.length],
+        avatar: botAvatars[i % botAvatars.length],
         isAdmin: false,
         isBot: true,
         seatIndex: room.players.length,

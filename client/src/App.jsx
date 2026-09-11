@@ -11,6 +11,7 @@ import { DraftPicksDrawer } from './components/DraftPicksDrawer';
 import { RavnicaBoosterOpening } from './components/RavnicaBoosterOpening';
 import { DeckBuilder } from './components/DeckBuilder';
 import { AltCardZoom } from './components/AltCardZoom';
+import { MagicBackground } from './components/MagicBackground';
 import { sound } from './utils/audio';
 import { Layers, AlertCircle } from 'lucide-react';
 
@@ -307,6 +308,9 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans selection:bg-amber-500 selection:text-slate-950 relative">
+      {/* Main Content Area */}
+      <MagicBackground />
+
       {/* Main Content Area */}
       <main className={`flex-1 w-full max-w-none mx-auto p-0 flex flex-col gap-0 draft-stage ${isDecisionOrResolution ? 'draft-shell' : ''}`}>
         
