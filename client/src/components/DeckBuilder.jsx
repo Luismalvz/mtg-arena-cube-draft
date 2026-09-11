@@ -52,6 +52,14 @@ export function DeckBuilder({ picks, storageKey, onHoverStart, onHoverEnd }) {
             <span><b>{LAND_NAMES[card.name]}</b><small>{card.set.toUpperCase()} · {card.collector_number}</small></span><strong>{card.quantity}</strong>
           </button>)}</div>
         </section>}
+
+        {deck.tokens.length > 0 && <section className="deck-tokens" aria-label="Tokens incluidos automáticamente">
+          <div className="deck-tokens-heading"><h3>Tokens</h3><strong>{deck.tokens.length}</strong></div>
+          <div className="deck-token-grid">{deck.tokens.map(token => <article className="deck-token-card" key={token.id}>
+            <Card card={token} size="deck" onHoverStart={onHoverStart} onHoverEnd={onHoverEnd} />
+            <span>{token.name}</span>
+          </article>)}</div>
+        </section>}
       </aside>
     </div>
   </div>;

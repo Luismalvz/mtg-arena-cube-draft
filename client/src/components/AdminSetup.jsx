@@ -32,6 +32,15 @@ export function AdminSetup({ onCreateRoom, onJoinRoom, initialRoomId = '', isCon
       <div className="setup-layout">
         <h1 className="sr-only">Magic: The Gathering — Ravnica Cube. Creado por Luis Alvarez y Jorge Schifferli</h1>
 
+        <div className="setup-title-art" aria-hidden="true">
+          <div className="setup-magic-mark">
+            <img src="/magic-the-gathering-logo.webp" alt="" className="setup-magic-logo" />
+          </div>
+          <div className="setup-ravnica-mark">
+            <img src="/ravnica-cube-title.png" alt="" className="setup-ravnica-logo" />
+          </div>
+        </div>
+
         <div className="setup-panel rounded-[28px] border border-white/10 bg-[#0d110f]/92 p-3 shadow-[0_36px_100px_rgba(0,0,0,.62)] backdrop-blur-2xl sm:p-4">
           <div className="mb-3 grid grid-cols-2 rounded-2xl bg-black/25 p-1" role="tablist">
             {[['create', Plus, 'Crear'], ['join', LogIn, 'Entrar']].map(([value, Icon, label]) => (
