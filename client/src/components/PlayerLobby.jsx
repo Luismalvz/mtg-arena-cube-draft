@@ -100,16 +100,16 @@ export function PlayerLobby({
   }
 
   return (
-    <div className="w-full flex flex-col justify-center items-center py-6 px-3 sm:px-4 font-manrope text-slate-200">
+    <div className="w-full h-full flex flex-col justify-center items-center py-6 px-4 sm:px-8 font-manrope text-slate-200">
       
-      {/* Main Glass/Obsidian Card */}
-      <div className="setup-panel relative w-full max-w-3xl rounded-2xl p-5 sm:p-7 md:p-8 flex flex-col gap-5 overflow-hidden my-auto">
+      {/* Seamless Full-width Container */}
+      <div className="relative w-full max-w-screen-2xl flex flex-col gap-6 my-auto">
         
         {/* Ambient Gold Bloom Glow */}
-        <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-80 h-80 rounded-full bg-[#ffd580]/5 blur-[100px] pointer-events-none" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] rounded-full bg-[#ffd580]/5 blur-[120px] pointer-events-none" />
 
-        {/* Card Header */}
-        <div className="flex flex-col items-center text-center gap-1 relative z-10">
+        {/* Header */}
+        <div className="flex flex-col items-center text-center gap-1.5 relative z-10">
           <div className="flex items-center gap-1.5 text-[#ffd580] font-space text-[10px] sm:text-xs uppercase tracking-widest font-semibold">
             <span className="material-symbols-outlined text-[16px]">groups</span>
             <span>Sala de Espera</span>
@@ -259,7 +259,7 @@ export function PlayerLobby({
           </div>
 
           {/* Grid of Seats as MTG Token Cards */}
-          <motion.div layout className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
+          <motion.div layout className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-8 gap-3 sm:gap-4 lg:gap-5 w-full">
             <AnimatePresence>
               {totalSeats.map((seat, idx) => (
                 <PlayerTokenCard

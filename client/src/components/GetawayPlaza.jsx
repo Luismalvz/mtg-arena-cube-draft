@@ -77,9 +77,14 @@ export function GetawayPlaza({
       return (
         <div
           key={slot.id}
-          className="flex flex-col items-center justify-center p-3 rounded-2xl border border-dashed border-white/10 bg-black/20 min-w-[130px] min-h-[190px] opacity-40 select-none"
+          className="flex flex-col items-center justify-center p-3 rounded-2xl border border-dashed border-white/10 bg-black/20 min-w-[130px] min-h-[190px] opacity-40 select-none transition-all hover:opacity-60"
         >
-          <span className="font-space text-[10px] text-slate-500 uppercase tracking-wider">{slot.name}</span>
+          {isFlank ? (
+            <span className="font-space text-[10px] text-slate-500 uppercase tracking-wider">{slot.name}</span>
+          ) : (
+            <img src={`/avatar-${slot.id}.png`} alt={slot.name} className="w-12 h-12 object-cover rounded-full opacity-50 mb-2 shadow-inner grayscale contrast-125" onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'block'; }} />
+          )}
+          <span className="font-space text-[10px] text-slate-500 uppercase tracking-wider hidden" style={{ display: 'none' }}>{slot.name}</span>
           <span className="font-space text-[9px] text-slate-600">Vacío</span>
         </div>
       );
@@ -120,12 +125,19 @@ export function GetawayPlaza({
           })}
         </div>
 
-        {/* Guild Name & Stack Count Pill beneath the pile */}
-        <div className="plaza-label mt-2.5 flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-slate-900/80 border border-white/10 backdrop-blur-xs shadow-md">
-          <span className={`font-space font-bold text-[10px] uppercase tracking-wider ${theme.text}`}>
-            {slot.name}
-          </span>
-          <span className="font-mono text-[9px] font-bold text-amber-300/80 bg-slate-950 px-1.5 py-0.2 rounded border border-white/5">
+        {/* Guild Emblem & Stack Count Pill beneath the pile */}
+        <div className="plaza-label mt-2.5 flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900/80 border border-white/10 backdrop-blur-xs shadow-md">
+          {isFlank ? (
+            <span className={`font-space font-bold text-[10px] uppercase tracking-wider ${theme.text}`}>
+              {slot.name}
+            </span>
+          ) : (
+            <div className="relative">
+              <img src={`/avatar-${slot.id}.png`} alt={slot.name} className="w-6 h-6 object-cover rounded-full shadow-[0_0_8px_rgba(255,255,255,0.15)] ring-1 ring-white/10" onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'block'; }} />
+              <span className={`font-space font-bold text-[10px] uppercase tracking-wider ${theme.text} hidden`} style={{ display: 'none' }}>{slot.name}</span>
+            </div>
+          )}
+          <span className="font-mono text-[10px] font-bold text-amber-300/90 bg-slate-950 px-1.5 py-0.5 rounded border border-white/5 shadow-inner">
             {isFlank ? count : `${count}/3`}
           </span>
         </div>
