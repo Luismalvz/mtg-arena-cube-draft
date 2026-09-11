@@ -1,5 +1,6 @@
 const cubeCards = require('./ravnicaCube.json');
 const plazaCards = require('./plazaCards.json');
+const { buildBoosterPacks } = require('./packBuilder.js');
 
 const PLAZA_SLOT_DEFS = [
   { id: 'colossus_left', name: 'Gate Colossus', guild: 'Colorless', type: 'flank', colors: [] },
@@ -210,30 +211,14 @@ class GameManager {
     const fixerCards = cubeCards.filter(c => c.isFixer).map(makeInstance);
     const generalCards = cubeCards.filter(c => !c.isFixer).map(makeInstance);
 
-    const shuffledFixers = [...fixerCards].sort(() => Math.random() - 0.5);
-    const shuffledGeneral = [...generalCards].sort(() => Math.random() - 0.5);
-
     // 4. Calculate total booster packs needed in this draft
     const totalPacksNeeded = room.players.length * room.config.packCount;
-    const baseFixersPerPack = Math.floor(shuffledFixers.length / totalPacksNeeded);
-
-    // Initialize all pack slots
-    const packs = Array.from({ length: totalPacksNeeded }, () => []);
-
-    // Evenly distribute guaranteed fixers into each pack
-    for (let i = 0; i < totalPacksNeeded; i++) {
-      for (let f = 0; f < baseFixersPerPack; f++) {
-        if (shuffledFixers.length > 0) {
-          packs[i].push(shuffledFixers.pop());
-        }
-      }
-    }
-
-    // Remainder fixers that could not be divided evenly go back into the general pool to be randomly distributed
-    if (shuffledFixers.length > 0) {
-      shuffledGeneral.push(...shuffledFixers);
-      shuffledGeneral.sort(() => Math.random() - 0.5);
-    }
+    const packs = buildBoosterPacks({
+      fixerCards,
+      generalCards,
+      totalPacks: totalPacksNeeded,
+      packSize: 15
+    });
 
     // 5. Initialize Getaway Plaza with 12 slots: 10 guild piles (3 cards each) + 2 Gate Colossus flanks (1 card each)
     const slotMap = new Map();
@@ -279,16 +264,7 @@ class GameManager {
     room.plazaSlots = Array.from(slotMap.values());
     room.getawayPlaza = room.plazaSlots.flatMap(s => s.cards);
 
-    // 6. Complete each pack up to 15 cards with the shuffled general pool
-    for (let i = 0; i < totalPacksNeeded; i++) {
-      while (packs[i].length < 15 && shuffledGeneral.length > 0) {
-        packs[i].push(shuffledGeneral.pop());
-      }
-      // Shuffle each pack so fixers are mixed randomly among the other cards
-      packs[i].sort(() => Math.random() - 0.5);
-    }
-
-    // 7. Deal packs to each player
+    // 6. Deal packs to each player
     for (let pIdx = 0; pIdx < room.players.length; pIdx++) {
       const player = room.players[pIdx];
       player.draftPicks = [];
