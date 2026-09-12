@@ -1,25 +1,37 @@
-import { useEffect, useRef } from 'react';
+import { useCallback, useRef } from 'react';
 
 export function useHorizontalWheelScroll() {
-  const ref = useRef(null);
+  const cleanupRef = useRef(null);
 
-  useEffect(() => {
-    const element = ref.current;
-    if (!element) return undefined;
+  const ref = useCallback((element) => {
+    // Cleanup previous listener if it exists
+    if (cleanupRef.current) {
+      cleanupRef.current();
+      cleanupRef.current = null;
+    }
 
-    const handleWheel = (event) => {
-      if (element.scrollWidth <= element.clientWidth) return;
-      const delta = Math.abs(event.deltaX) > Math.abs(event.deltaY) ? event.deltaX : event.deltaY;
-      if (!delta) return;
-      const previous = element.scrollLeft;
-      element.scrollLeft += delta * 2.5;
-      if (element.scrollLeft !== previous) {
-        event.preventDefault();
-      }
-    };
+    if (element) {
+      const handleWheel = (event) => {
+        if (element.scrollWidth <= element.clientWidth) return;
+        
+        const delta = Math.abs(event.deltaX) > Math.abs(event.deltaY) ? event.deltaX : event.deltaY;
+        if (!delta) return;
+        
+        const previous = element.scrollLeft;
+        element.scrollLeft += delta * 2.5;
+        
+        if (element.scrollLeft !== previous) {
+          event.preventDefault();
+        }
+      };
 
-    element.addEventListener('wheel', handleWheel, { passive: false });
-    return () => element.removeEventListener('wheel', handleWheel);
+      element.addEventListener('wheel', handleWheel, { passive: false });
+      
+      // Store the cleanup function for when the element unmounts or changes
+      cleanupRef.current = () => {
+        element.removeEventListener('wheel', handleWheel);
+      };
+    }
   }, []);
 
   return ref;
