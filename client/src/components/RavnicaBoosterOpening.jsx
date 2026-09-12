@@ -174,29 +174,28 @@ export function RavnicaBoosterOpening({ round = 1, totalPacks = 3, cards = [], o
 
   const onPointerDown = e => {
     if (cutState.current.done || cutState.current.inProgress) return;
-    if (e.pointerType !== 'mouse') {
-      isDown.current = true;
-      gestureBuf.current = [];
-      pushGesturePoint(e);
-      e.currentTarget.setPointerCapture?.(e.pointerId);
-    }
+    isDown.current = true;
+    gestureBuf.current = [];
+    pushGesturePoint(e);
+    e.currentTarget.setPointerCapture?.(e.pointerId);
   };
   const onPointerMove = e => {
     if (cutState.current.done || cutState.current.inProgress) return;
-    if (e.pointerType === 'mouse' || isDown.current) {
+    if (isDown.current) {
       pushGesturePoint(e);
       tryEvaluate();
     }
   };
   const onPointerUp = e => {
-    if (e.pointerType !== 'mouse') {
-      isDown.current = false;
-      tryEvaluate();
-      gestureBuf.current = [];
-    }
+    isDown.current = false;
+    tryEvaluate();
+    gestureBuf.current = [];
   };
   const onPointerLeave = () => {
-    if (!cutState.current.done && !cutState.current.inProgress) gestureBuf.current = [];
+    if (!cutState.current.done && !cutState.current.inProgress) {
+      isDown.current = false;
+      gestureBuf.current = [];
+    }
   };
 
   const manualCut = () => {
@@ -274,18 +273,9 @@ export function RavnicaBoosterOpening({ round = 1, totalPacks = 3, cards = [], o
           <canvas ref={canvasRef} className="trail-canvas" />
           <div ref={packStage} className="pack-stage">
             <div ref={packArt} className="pack-art">
-              <div className="pack-foil" />
+              <img src={BOOSTER_IMAGE} alt="Sobre Ravnica Remastered" style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block', backgroundColor: '#111' }} />
+              <div className="pack-foil" style={{ mixBlendMode: 'color-dodge', opacity: 0.4 }} />
               <div className="pack-shine" />
-              <div className="pack-frame">
-                <div className="pack-brand">RAVNICA</div>
-                <div className="pack-emblem" aria-hidden="true">
-                  <svg viewBox="0 0 64 64" fill="none">
-                    <polygon points="32,4 54,20 46,52 18,52 10,20" stroke="#fff" strokeWidth="2" strokeOpacity=".9" />
-                    <polygon points="32,16 44,25 39,44 25,44 20,25" fill="#fff" fillOpacity=".85" />
-                  </svg>
-                </div>
-                <div className="pack-type">Sobre Booster<br />Ravnica Cube</div>
-              </div>
             </div>
           </div>
         </div>
