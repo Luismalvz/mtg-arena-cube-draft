@@ -8,7 +8,7 @@
     "server": "node server/index.js",
     "client": "npm run dev --prefix client",
     "install:all": "npm install && npm install --prefix server && npm install --prefix client",
-    "build": "npm run install:all && npm run build --prefix client",
+    "build": "npm run install:all && node --check server/index.js && npm run build --prefix client",
     "start": "node server/index.js"
   },
   "keywords": [],
