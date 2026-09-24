@@ -33,6 +33,16 @@ export default function App() {
   const [openedRounds, setOpenedRounds] = useState({});
   const [toastMessage, setToastMessage] = useState(null);
   const [initialRoomId, setInitialRoomId] = useState('');
+  const playerIdRef = useRef('');
+
+  useEffect(() => {
+    let pid = localStorage.getItem('getaway_player_id');
+    if (!pid) {
+      pid = 'p_' + Math.random().toString(36).substring(2, 9);
+      localStorage.setItem('getaway_player_id', pid);
+    }
+    playerIdRef.current = pid;
+  }, []);
 
   // Global Left Alt Detection for Card Zoom (Zero Focus Loss & Auto Hardware Sync)
   const isAltPressedRef = useRef(false);
@@ -200,7 +210,7 @@ export default function App() {
   // Fetch room state directly if URL contains ?room=XYZ
   useEffect(() => {
     if (socket && isConnected && initialRoomId && (!roomState || roomState.id !== initialRoomId)) {
-      socket.emit('get_room_state', { roomId: initialRoomId });
+      socket.emit('get_room_state', { roomId: initialRoomId, playerId: playerIdRef.current });
     }
   }, [socket, isConnected, initialRoomId, roomState?.id]);
 
@@ -225,12 +235,12 @@ export default function App() {
   // Socket Actions
   const handleCreateRoom = ({ playerName, avatar, options }) => {
     if (!socket) return;
-    socket.emit('create_room', { playerName, avatar, options });
+    socket.emit('create_room', { playerName, avatar, options, playerId: playerIdRef.current });
   };
 
   const handleJoinRoom = ({ roomId, playerName, avatar }) => {
     if (!socket) return;
-    socket.emit('join_room', { roomId, playerName, avatar });
+    socket.emit('join_room', { roomId, playerName, avatar, playerId: playerIdRef.current });
   };
 
   const handleStartDraft = () => {
@@ -245,7 +255,7 @@ export default function App() {
 
   const handleJoinRoomAsPlayer = ({ playerName, avatar }) => {
     if (!socket || !roomState?.id) return;
-    socket.emit('join_room', { roomId: roomState.id, playerName, avatar });
+    socket.emit('join_room', { roomId: roomState.id, playerName, avatar, playerId: playerIdRef.current });
   };
 
   const handleOpenPack = () => {
@@ -280,8 +290,8 @@ export default function App() {
   };
 
   const handleCancelDecision = () => {
-    if (!roomState?.me) return;
-    // Allow player to re-select if decision phase is still open
+    if (!socket || !roomState?.me || !roomState?.id) return;
+    socket.emit('cancel_decision', { roomId: roomState.id });
     setSelectedPlazaCard(null);
     showToast('Selección desmarcada. Elige nuevamente.', 'info');
   };

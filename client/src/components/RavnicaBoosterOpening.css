@@ -1,5 +1,5 @@
 :root {
-  --pack-w: clamp(190px, 52vw, 240px);
+  --pack-w: clamp(200px, 30vw, 270px);
   --violet: #7C5CFF;
   --teal: #29D9C2;
   --amber: #FFB627;
@@ -17,8 +17,14 @@
   align-items: center;
   justify-content: center;
   padding: 40px 16px;
-  overflow-x: hidden;
+  overflow: hidden;
   font-family: 'Space Grotesk', sans-serif;
+}
+
+.booster-overlay.is-sealed .fanned-cards-container {
+  min-height: 0;
+  height: 0;
+  pointer-events: none;
 }
 
 .booster-copy {
@@ -46,18 +52,95 @@
 .pack-hitzone {
   position: relative;
   width: calc(var(--pack-w) + 140px);
-  height: calc(var(--pack-w) / 0.68 + 140px);
+  height: calc(var(--pack-w) / 0.5625 + 140px);
   margin: 6px auto 0;
   touch-action: none;
   cursor: crosshair;
+  --cursor-x: 50%;
+  --cursor-y: 50%;
+  perspective: 1200px;
+}
+
+.pack-hitzone::before {
+  content: '';
+  position: absolute;
+  left: var(--cursor-x);
+  top: var(--cursor-y);
+  width: 170px;
+  height: 170px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(41, 217, 194, .16) 0%, rgba(41, 217, 194, .06) 28%, transparent 70%);
+  filter: blur(2px);
+  opacity: .22;
+  transition: opacity .2s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.pack-hitzone.is-cutting::before {
+  opacity: .72;
+}
+
+.cut-reticle {
+  position: absolute;
+  left: var(--cursor-x);
+  top: var(--cursor-y);
+  width: 18px;
+  height: 18px;
+  border: 1px solid rgba(255, 255, 255, .78);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(.7);
+  opacity: 0;
+  transition: opacity .15s ease, transform .15s ease;
+  pointer-events: none;
+  z-index: 7;
+}
+
+.cut-reticle::before,
+.cut-reticle::after {
+  content: '';
+  position: absolute;
+  background: rgba(255, 255, 255, .76);
+}
+.cut-reticle::before { width: 32px; height: 1px; left: -8px; top: 8px; }
+.cut-reticle::after { width: 1px; height: 32px; left: 8px; top: -8px; }
+.pack-hitzone.is-cutting .cut-reticle { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+
+.cursor-particle {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: var(--particle-size, 3px);
+  height: var(--particle-size, 3px);
+  border-radius: 50%;
+  background: var(--particle-hue, #29D9C2);
+  box-shadow: 0 0 8px 2px color-mix(in srgb, var(--particle-hue, #29D9C2) 65%, transparent);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 8;
+  animation: cursorParticle .7s cubic-bezier(.2,.7,.3,1) forwards;
+}
+
+@keyframes cursorParticle {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(.55); }
+  18% { opacity: 1; }
+  100% { opacity: 0; transform: translate(calc(-50% + var(--particle-dx)), calc(-50% + var(--particle-dy))) scale(.1); }
 }
 
 .pack-stage {
   position: absolute;
   top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) rotateX(var(--tilt-y, 0deg)) rotateY(var(--tilt-x, 0deg));
   width: var(--pack-w);
-  aspect-ratio: 0.68;
+  aspect-ratio: 0.5625;
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform .22s cubic-bezier(.2,.75,.3,1);
+}
+
+.pack-hitzone.is-cutting .pack-stage {
+  transform: translate(-50%, -50%) rotateX(var(--tilt-y, 0deg)) rotateY(var(--tilt-x, 0deg)) scale(1.025);
 }
 
 .pack-stage::before,
@@ -68,9 +151,10 @@
   border-radius: 14px;
   background: linear-gradient(160deg, #1c2340, #12162a);
   box-shadow: 0 10px 24px rgba(0, 0, 0, .5);
+  transform-style: preserve-3d;
 }
-.pack-stage::before { transform: translate(6px, 10px) rotate(2deg); }
-.pack-stage::after { transform: translate(-5px, 7px) rotate(-1.6deg); }
+.pack-stage::before { transform: translate3d(7px, 12px, -16px) rotate(2deg); filter: brightness(.78); }
+.pack-stage::after { transform: translate3d(-5px, 8px, -9px) rotate(-1.6deg); filter: brightness(.9); }
 
 .pack-art {
   position: absolute;
@@ -80,7 +164,35 @@
   overflow: hidden;
   box-shadow: 0 18px 40px rgba(0,0,0,.55), 0 0 0 1px rgba(255,255,255,.06) inset;
   transition: opacity .15s ease;
+  transform: translateZ(18px);
+  transform-style: preserve-3d;
+  background: #10152a;
 }
+
+.pack-art::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  border-radius: inherit;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .15), inset 0 -18px 32px rgba(0, 0, 0, .2);
+  pointer-events: none;
+}
+
+.pack-seam {
+  position: absolute;
+  left: 4%;
+  right: 4%;
+  z-index: 5;
+  height: 10px;
+  border-top: 1px solid rgba(255, 255, 255, .38);
+  border-bottom: 1px solid rgba(7, 28, 46, .7);
+  opacity: .82;
+  pointer-events: none;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, .55));
+}
+.pack-seam-top { top: 4.5%; }
+.pack-seam-bottom { bottom: 4.5%; }
 
 .pack-foil {
   position: absolute;
@@ -138,7 +250,16 @@
 .pack-emblem svg { width: 52px; height: 52px; filter: drop-shadow(0 4px 10px rgba(0,0,0,.4)); display: block; }
 .pack-type { font-size: 12px; line-height: 1.45; color: rgba(255,255,255,.88); text-align: center; }
 
-.pack-half { position: absolute; inset: 0; z-index: 3; will-change: transform, opacity; }
+.pack-half {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  overflow: hidden;
+  border-radius: 16px;
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, .55);
+}
 
 .trail-canvas { position: absolute; inset: 0; z-index: 4; pointer-events: none; }
 
@@ -150,6 +271,14 @@
   filter: drop-shadow(0 0 12px #fff) drop-shadow(0 0 22px var(--teal));
   pointer-events: none;
   opacity: 0;
+}
+.cut-flash::after {
+  content: '';
+  position: absolute;
+  inset: -7px 12%;
+  border-radius: inherit;
+  background: rgba(255, 255, 255, .48);
+  filter: blur(7px);
 }
 
 .spark {
@@ -251,3 +380,19 @@
 }
 .booster-continue:hover { transform: translateY(-2px); }
 .booster-continue:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
+
+@media (max-width: 450px) {
+  .rbo-pack-container {
+    transform: scale(0.75);
+    margin: 0 auto;
+  }
+  .rbo-card-display {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+}
+@media (max-width: 360px) {
+  .rbo-pack-container {
+    transform: scale(0.65);
+  }
+}

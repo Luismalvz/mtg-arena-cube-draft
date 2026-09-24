@@ -47,12 +47,22 @@ export function Card({
 
   const hasImage = !imageError && Boolean(card.image_url);
 
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      handleClick();
+    }
+  };
+
   return (
     <div
+      role="button"
+      tabIndex={disabled ? -1 : 0}
+      onKeyDown={handleKeyDown}
       onClick={handleClick}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className={`relative select-none transition-all duration-200 cursor-pointer rounded-[7px] ${dimensions} ${
+      className={`relative select-none transition-all duration-200 cursor-pointer rounded-[7px] ${dimensions} focus:outline-none focus-visible:ring-4 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#080b09] ${
         isSelected
           ? 'ring-2 ring-[#e5c681] ring-offset-2 ring-offset-[#080b09] shadow-[0_0_24px_rgba(216,183,112,.36)] z-30 -translate-y-2'
           : isSwapSource

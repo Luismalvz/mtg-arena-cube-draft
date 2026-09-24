@@ -1,6 +1,8 @@
 const cubeCards = require('./ravnicaCube.json');
 const plazaCards = require('./plazaCards.json');
 const { buildBoosterPacks } = require('./packBuilder.js');
+const fs = require('fs');
+const path = require('path');
 
 const PLAZA_SLOT_DEFS = [
   { id: 'colossus_left', name: 'Gate Colossus', guild: 'Colorless', type: 'flank', colors: [] },
@@ -20,7 +22,27 @@ const PLAZA_SLOT_DEFS = [
 class GameManager {
   constructor() {
     this.rooms = new Map();
+    this.stateFile = path.join(__dirname, 'rooms_backup.json');
+    this.loadState();
   }
+
+  saveState() {
+    try {
+      const state = Array.from(this.rooms.entries());
+      fs.writeFileSync(this.stateFile, JSON.stringify(state), 'utf8');
+    } catch (e) { console.error('Error saving state:', e); }
+  }
+
+  loadState() {
+    try {
+      if (fs.existsSync(this.stateFile)) {
+        const data = fs.readFileSync(this.stateFile, 'utf8');
+        const parsed = JSON.parse(data);
+        this.rooms = new Map(parsed);
+      }
+    } catch (e) { console.error('Error loading state:', e); }
+  }
+
 
   // Calculate dynamic pack bounds based on 360-card cube and player count
   getPackLimits(playerCount) {
@@ -30,6 +52,8 @@ class GameManager {
   }
 
   createRoom(roomId, adminName, adminSocketId, options = {}) {
+    if (this.rooms.has(roomId)) return { error: 'La sala ya existe' };
+
     const playerCount = Math.min(8, Math.max(2, options.playerCount || 4));
     const limits = this.getPackLimits(playerCount);
     const packCount = Math.min(limits.maxPacks, Math.max(limits.minPacks, options.packCount || 3));
@@ -62,7 +86,7 @@ class GameManager {
     };
 
     const admin = {
-      id: 'p_' + Math.random().toString(36).substring(2, 9),
+      id: options.playerId || 'p_' + Math.random().toString(36).substring(2, 9),
       socketId: adminSocketId,
       name: adminName || 'Admin Drafter',
       avatar: options.avatar || '046',
@@ -79,6 +103,7 @@ class GameManager {
 
     room.players.push(admin);
     this.rooms.set(roomId, room);
+    this.saveState();
     return room;
   }
 
@@ -86,12 +111,19 @@ class GameManager {
     return this.rooms.get(roomId);
   }
 
-  joinRoom(roomId, playerName, socketId, avatar = '046') {
+  joinRoom(roomId, playerName, socketId, avatar = '046', playerId = null) {
     const room = this.rooms.get(roomId);
     if (!room) return { error: 'Sala no encontrada' };
     if (room.status !== 'lobby') return { error: 'El draft ya ha comenzado' };
 
-    const existing = room.players.find(p => p.socketId === socketId);
+    let existing = room.players.find(p => p.socketId === socketId);
+    if (!existing && playerId) {
+      existing = room.players.find(p => p.id === playerId);
+      if (existing && existing.isBot) {
+         existing.socketId = socketId;
+         existing.isBot = false;
+      }
+    }
     if (existing) {
       existing.name = playerName;
       existing.avatar = avatar || existing.avatar || '046';
@@ -103,7 +135,7 @@ class GameManager {
     }
 
     const player = {
-      id: 'p_' + Math.random().toString(36).substring(2, 9),
+      id: playerId || 'p_' + Math.random().toString(36).substring(2, 9),
       socketId,
       name: playerName || `Jugador ${room.players.length + 1}`,
       avatar: avatar || '046',
@@ -119,6 +151,7 @@ class GameManager {
     };
 
     room.players.push(player);
+    this.saveState();
     return { room, player };
   }
 
@@ -287,9 +320,7 @@ class GameManager {
     room.currentRound = 1; // Pack 1
     room.currentPickNumber = 1;
     room.passDirection = 'clockwise';
-    room.status = 'decision_phase';
-    room.timerRemaining = room.config.timerSeconds;
-    this.processBotDecisions(room);
+    room.status = 'pack_opening';
 
     room.activityLog = [
       {
@@ -318,7 +349,8 @@ class GameManager {
       room.timerRemaining = room.config.timerSeconds;
       this.processBotDecisions(room);
     }
-
+    
+    this.saveState();
     return { room, player, allOpened };
   }
   submitDecision(roomId, socketId, decision) {
@@ -360,7 +392,20 @@ class GameManager {
     // Check if all players are ready
     const allReady = room.players.every(p => p.isReady);
 
+    this.saveState();
     return { success: true, room, player, allReady };
+  }
+
+  cancelDecision(roomId, socketId) {
+    const room = this.rooms.get(roomId);
+    if (!room) return { error: 'Sala no encontrada' };
+    if (room.status !== 'decision_phase') return { error: 'No es la fase de decisión' };
+    const player = room.players.find(p => p.socketId === socketId);
+    if (!player) return { error: 'Jugador no encontrado' };
+    player.pendingDecision = null;
+    player.isReady = false;
+    this.saveState();
+    return { success: true, room };
   }
 
   processBotDecisions(room) {
@@ -640,9 +685,7 @@ class GameManager {
           player.packOpened = true;
         }
 
-        room.status = 'decision_phase';
-        room.timerRemaining = room.config.timerSeconds;
-        this.processBotDecisions(room);
+        room.status = 'pack_opening';
 
         room.activityLog.unshift({
           id: 'log_' + Date.now(),
@@ -650,6 +693,7 @@ class GameManager {
           text: `¡Sobre completado! Comienza el Sobre ${room.currentRound} de ${room.config.packCount}.`
         });
 
+        this.saveState();
         return { type: 'round_advanced', round: room.currentRound };
       } else {
         // Draft Complete!
@@ -659,6 +703,7 @@ class GameManager {
           type: 'complete',
           text: `¡DRAFT FINALIZADO! Todos los sobres han sido drafteados.`
         });
+        this.saveState();
         return { type: 'draft_complete' };
       }
     } else {
@@ -683,6 +728,7 @@ class GameManager {
 
       this.processBotDecisions(room);
 
+      this.saveState();
       return { type: 'pick_step_completed', pickNumber: room.currentPickNumber };
     }
   }

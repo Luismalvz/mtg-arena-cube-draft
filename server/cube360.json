@@ -3634,7 +3634,7 @@
   },
   {
     "id": "cube_174",
-    "name": "Crocanura",
+    "name": "Evolution Witness",
     "cmc": 3,
     "mana_cost": "{2}{G}",
     "colors": [
@@ -3643,14 +3643,14 @@
     "color_identity": [
       "G"
     ],
-    "type_line": "Creature — Crocodile Frog",
-    "oracle_text": "Reach (This creature can block creatures with flying.)\nEvolve (Whenever a creature you control enters, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.)",
-    "power": "1",
-    "toughness": "3",
+    "type_line": "Creature — Elf Shaman Mutant",
+    "oracle_text": "{1}{G}: Adapt 2. (If this creature has no +1/+1 counters on it, put two +1/+1 counters on it.)\nWhenever one or more +1/+1 counters are put on this creature, return target permanent card from your graveyard to your hand.",
+    "power": "2",
+    "toughness": "1",
     "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/9/d/9de9515a-8845-4eba-922f-438dea46a22a.jpg?1783913306",
-    "set": "RVR",
-    "collector_number": "135",
+    "image_url": "https://cards.scryfall.io/normal/front/4/d/4d89283e-9783-4006-9294-4ae0473d2ce6.jpg?1783911262",
+    "set": "MH3",
+    "collector_number": "151",
     "isFixer": false
   },
   {
@@ -4714,7 +4714,7 @@
   },
   {
     "id": "cube_224",
-    "name": "Thief of Sanity",
+    "name": "Dimir Doppelganger",
     "cmc": 3,
     "mana_cost": "{1}{U}{B}",
     "colors": [
@@ -4725,14 +4725,14 @@
       "B",
       "U"
     ],
-    "type_line": "Creature — Specter",
-    "oracle_text": "Flying\nWhenever this creature deals combat damage to a player, look at the top three cards of that player's library, exile one of them face down, then put the rest into their graveyard. You may cast that card for as long as it remains exiled, and mana of any type can be spent to cast that spell.",
-    "power": "2",
+    "type_line": "Creature — Shapeshifter",
+    "oracle_text": "{1}{U}{B}: Exile target creature card from a graveyard. This creature becomes a copy of that card, except it has this ability.",
+    "power": "0",
     "toughness": "2",
     "rarity": "rare",
-    "image_url": "https://cards.scryfall.io/normal/front/3/0/307543ca-8e17-433f-9758-4c77da6c0870.jpg?1783934119",
-    "set": "GRN",
-    "collector_number": "205",
+    "image_url": "https://cards.scryfall.io/normal/front/c/8/c8edd576-7cc8-44d9-a0f8-6aa12e4f79cf.jpg?1783934055",
+    "set": "GK1",
+    "collector_number": "12",
     "isFixer": false
   },
   {
@@ -4760,9 +4760,9 @@
   },
   {
     "id": "cube_226",
-    "name": "Whisper Agent",
+    "name": "Thief of Sanity",
     "cmc": 3,
-    "mana_cost": "{1}{U/B}{U/B}",
+    "mana_cost": "{1}{U}{B}",
     "colors": [
       "B",
       "U"
@@ -4771,14 +4771,14 @@
       "B",
       "U"
     ],
-    "type_line": "Creature — Human Rogue",
-    "oracle_text": "Flash\nWhen this creature enters, surveil 1. (Look at the top card of your library. You may put it into your graveyard.)",
-    "power": "3",
+    "type_line": "Creature — Specter",
+    "oracle_text": "Flying\nWhenever this creature deals combat damage to a player, look at the top three cards of that player's library, exile one of them face down, then put the rest into their graveyard. You may cast that card for as long as it remains exiled, and mana of any type can be spent to cast that spell.",
+    "power": "2",
     "toughness": "2",
-    "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/d/8/d81e07d6-71d7-408e-be20-8e20a29d84cc.jpg?1783913270",
-    "set": "RVR",
-    "collector_number": "238",
+    "rarity": "rare",
+    "image_url": "https://cards.scryfall.io/normal/front/3/0/307543ca-8e17-433f-9758-4c77da6c0870.jpg?1783934119",
+    "set": "GRN",
+    "collector_number": "205",
     "isFixer": false
   },
   {
@@ -4829,6 +4829,29 @@
   },
   {
     "id": "cube_229",
+    "name": "Whisper Agent",
+    "cmc": 3,
+    "mana_cost": "{1}{U/B}{U/B}",
+    "colors": [
+      "B",
+      "U"
+    ],
+    "color_identity": [
+      "B",
+      "U"
+    ],
+    "type_line": "Creature — Human Rogue",
+    "oracle_text": "Flash\nWhen this creature enters, surveil 1. (Look at the top card of your library. You may put it into your graveyard.)",
+    "power": "3",
+    "toughness": "2",
+    "rarity": "common",
+    "image_url": "https://cards.scryfall.io/normal/front/d/8/d81e07d6-71d7-408e-be20-8e20a29d84cc.jpg?1783913270",
+    "set": "RVR",
+    "collector_number": "238",
+    "isFixer": false
+  },
+  {
+    "id": "cube_230",
     "name": "Lazav, Dimir Mastermind",
     "cmc": 4,
     "mana_cost": "{U}{U}{B}{B}",
@@ -4848,29 +4871,6 @@
     "image_url": "https://cards.scryfall.io/normal/front/6/9/69c8fcdb-4798-4961-995a-e128a3ff431a.jpg?1783940106",
     "set": "GTC",
     "collector_number": "174",
-    "isFixer": false
-  },
-  {
-    "id": "cube_230",
-    "name": "Whispering Madness",
-    "cmc": 4,
-    "mana_cost": "{2}{U}{B}",
-    "colors": [
-      "B",
-      "U"
-    ],
-    "color_identity": [
-      "B",
-      "U"
-    ],
-    "type_line": "Sorcery",
-    "oracle_text": "Each player discards their hand, then draws cards equal to the greatest number of cards a player discarded this way.\nCipher (Then you may exile this spell card encoded on a creature you control. Whenever that creature deals combat damage to a player, its controller may cast a copy of the encoded card without paying its mana cost.)",
-    "power": null,
-    "toughness": null,
-    "rarity": "rare",
-    "image_url": "https://cards.scryfall.io/normal/front/6/4/64e4b0cc-e611-4a4b-8392-b37bfc3a77e1.jpg?1783940098",
-    "set": "GTC",
-    "collector_number": "207",
     "isFixer": false
   },
   {
@@ -7266,29 +7266,6 @@
   },
   {
     "id": "cube_336",
-    "name": "Frilled Mystic",
-    "cmc": 4,
-    "mana_cost": "{G}{G}{U}{U}",
-    "colors": [
-      "G",
-      "U"
-    ],
-    "color_identity": [
-      "G",
-      "U"
-    ],
-    "type_line": "Creature — Elf Lizard Wizard",
-    "oracle_text": "Flash\nWhen this creature enters, you may counter target spell.",
-    "power": "3",
-    "toughness": "2",
-    "rarity": "uncommon",
-    "image_url": "https://cards.scryfall.io/normal/front/5/b/5bf655ce-c841-42b2-9578-56ab401bf4de.jpg?1783913289",
-    "set": "RVR",
-    "collector_number": "183",
-    "isFixer": false
-  },
-  {
-    "id": "cube_337",
     "name": "Master Biomancer",
     "cmc": 4,
     "mana_cost": "{2}{G}{U}",
@@ -7308,6 +7285,29 @@
     "image_url": "https://cards.scryfall.io/normal/front/6/f/6f4436d1-7c6a-4ad2-8eba-d5949f960650.jpg?1783912516",
     "set": "CLU",
     "collector_number": "200",
+    "isFixer": false
+  },
+  {
+    "id": "cube_337",
+    "name": "Sharktocrab",
+    "cmc": 4,
+    "mana_cost": "{2}{G}{U}",
+    "colors": [
+      "G",
+      "U"
+    ],
+    "color_identity": [
+      "G",
+      "U"
+    ],
+    "type_line": "Creature — Shark Octopus Crab",
+    "oracle_text": "{2}{G}{U}: Adapt 1. (If this creature has no +1/+1 counters on it, put a +1/+1 counter on it.)\nWhenever one or more +1/+1 counters are put on this creature, tap target creature an opponent controls. That creature doesn't untap during its controller's next untap step.",
+    "power": "4",
+    "toughness": "4",
+    "rarity": "uncommon",
+    "image_url": "https://cards.scryfall.io/normal/front/e/c/ec7933b5-15de-4ed7-af0c-626f81726338.jpg?1783913276",
+    "set": "RVR",
+    "collector_number": "222",
     "isFixer": false
   },
   {
@@ -7335,29 +7335,6 @@
   },
   {
     "id": "cube_339",
-    "name": "Sharktocrab",
-    "cmc": 4,
-    "mana_cost": "{2}{G}{U}",
-    "colors": [
-      "G",
-      "U"
-    ],
-    "color_identity": [
-      "G",
-      "U"
-    ],
-    "type_line": "Creature — Shark Octopus Crab",
-    "oracle_text": "{2}{G}{U}: Adapt 1. (If this creature has no +1/+1 counters on it, put a +1/+1 counter on it.)\nWhenever one or more +1/+1 counters are put on this creature, tap target creature an opponent controls. That creature doesn't untap during its controller's next untap step.",
-    "power": "4",
-    "toughness": "4",
-    "rarity": "uncommon",
-    "image_url": "https://cards.scryfall.io/normal/front/e/c/ec7933b5-15de-4ed7-af0c-626f81726338.jpg?1783913276",
-    "set": "RVR",
-    "collector_number": "222",
-    "isFixer": false
-  },
-  {
-    "id": "cube_340",
     "name": "Zegana, Utopian Speaker",
     "cmc": 4,
     "mana_cost": "{2}{G}{U}",
@@ -7377,6 +7354,29 @@
     "image_url": "https://cards.scryfall.io/normal/front/d/d/dd199a48-5ac8-4ab9-a33c-bbce6f7c9d1b.jpg?1783933632",
     "set": "RNA",
     "collector_number": "214",
+    "isFixer": false
+  },
+  {
+    "id": "cube_340",
+    "name": "Momir Vig, Simic Visionary",
+    "cmc": 5,
+    "mana_cost": "{3}{G}{U}",
+    "colors": [
+      "G",
+      "U"
+    ],
+    "color_identity": [
+      "G",
+      "U"
+    ],
+    "type_line": "Legendary Creature — Elf Wizard",
+    "oracle_text": "Whenever you cast a green creature spell, you may search your library for a creature card, reveal it, then shuffle and put that card on top.\nWhenever you cast a blue creature spell, reveal the top card of your library. If it's a creature card, put that card into your hand.",
+    "power": "2",
+    "toughness": "2",
+    "rarity": "rare",
+    "image_url": "https://cards.scryfall.io/normal/front/d/d/dd62b042-779c-4a74-b64c-4f0481733398.jpg?1783933521",
+    "set": "GK2",
+    "collector_number": "119",
     "isFixer": false
   },
   {

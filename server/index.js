@@ -140,7 +140,7 @@ function processNextResolutionStep(roomId, stepResult) {
   } else if (stepResult.type === 'round_advanced') {
     io.to(roomId).emit('round_advanced', { round: stepResult.round });
     broadcastRoomState(roomId);
-    startDecisionTimer(roomId);
+    // startDecisionTimer(roomId); removed for AUD-004, timer starts when packs are opened
   } else if (stepResult.type === 'draft_complete') {
     io.to(roomId).emit('draft_completed');
     broadcastRoomState(roomId);
@@ -184,10 +184,182 @@ app.post('/api/export-tts', (req, res) => {
 io.on('connection', (socket) => {
   console.log(`[Socket] Conectado: ${socket.id}`);
 
-  // Create room
-  socket.on('create_room', ({ roomId, playerName, avatar, options }) => {
-    const cleanRoomId = (roomId || Math.random().toString(36).substring(2, 7)).toUpperCase();
-    const room = gameManager.createRoom(cleanRoomId, playerName, socket.id, { ...options, avatar });
+  socket.on('create_room', (payload) => {
+    try {
+      const { roomId, playerName, avatar, options, playerId } = payload || {};
+      let cleanRoomId = (roomId || Math.random().toString(36).substring(2, 7)).toUpperCase();
+      
+      if (!roomId) {
+        while (gameManager.rooms.has(cleanRoomId)) {
+          cleanRoomId = Math.random().toString(36).substring(2, 7).toUpperCase();
+        }
+      } else if (gameManager.rooms.has(cleanRoomId)) {
+        return socket.emit('error_notification', { message: 'La sala ya existe' });
+      }
+
+      const room = gameManager.createRoom(cleanRoomId, playerName, socket.id, { ...options, avatar, playerId });
+      if (room.error) return socket.emit('error_notification', { message: room.error });
+      socket.join(cleanRoomId);
+      console.log(`[Getaway Draft] Sala creada: ${cleanRoomId} por ${playerName}`);
+      broadcastRoomState(cleanRoomId);
+    } catch (e) { console.error(e); }
+  });
+
+  socket.on('join_room', (payload) => {
+    try {
+      const { roomId, playerName, avatar, playerId } = payload || {};
+      const cleanRoomId = (roomId || '').toUpperCase().trim();
+      const result = gameManager.joinRoom(cleanRoomId, playerName, socket.id, avatar, playerId);
+      if (result.error) {
+        return socket.emit('error_notification', { message: result.error });
+      }
+      socket.join(cleanRoomId);
+      console.log(`[Getaway Draft] ${playerName} unido a sala ${cleanRoomId}`);
+      broadcastRoomState(cleanRoomId);
+    } catch (e) { console.error(e); }
+  });
+
+  socket.on('update_config', (payload) => {
+    try {
+      const { roomId, config } = payload || {};
+      const result = gameManager.updateConfig(roomId, socket.id, config);
+      if (result.error) {
+        return socket.emit('error_notification', { message: result.error });
+      }
+      broadcastRoomState(roomId);
+    } catch (e) { console.error(e); }
+  });
+
+  socket.on('randomize_seating', (payload) => {
+    try {
+      const { roomId } = payload || {};
+      const result = gameManager.randomizeSeating(roomId, socket.id);
+      if (result.error) {
+        return socket.emit('error_notification', { message: result.error });
+      }
+      io.to(roomId).emit('seating_randomized');
+      broadcastRoomState(roomId);
+    } catch (e) { console.error(e); }
+  });
+
+  socket.on('get_room_state', (payload) => {
+    try {
+      const { roomId, playerId } = payload || {};
+      const cleanRoomId = (roomId || '').toUpperCase().trim();
+      const room = gameManager.getRoom(cleanRoomId);
+      if (room) {
+        if (playerId) {
+          const p = room.players.find(player => player.id === playerId);
+          if (p && (p.isBot || p.socketId !== socket.id)) {
+            p.socketId = socket.id;
+            p.isBot = false;
+          }
+        }
+        socket.join(cleanRoomId);
+        const clientState = gameManager.getClientState(room, socket.id);
+        socket.emit('room_state_update', clientState);
+      } else {
+        socket.emit('room_not_found', { roomId: cleanRoomId });
+      }
+    } catch (e) { console.error(e); }
+  });
+
+  socket.on('start_draft', (payload) => {
+    try {
+      const { roomId } = payload || {};
+      const result = gameManager.startDraft(roomId, socket.id);
+      if (result.error) {
+        return socket.emit('error_notification', { message: result.error });
+      }
+      console.log(`[Getaway Draft] Draft iniciado en sala ${roomId}`);
+      io.to(roomId).emit('draft_started');
+      broadcastRoomState(roomId);
+      // startDecisionTimer(roomId); // Removed for AUD-004
+    } catch (e) { console.error(e); }
+  });
+
+  socket.on('open_pack', (payload) => {
+    try {
+      const { roomId } = payload || {};
+      const result = gameManager.openPack(roomId, socket.id);
+      if (result.error) {
+        return socket.emit('error_notification', { message: result.error });
+      }
+      broadcastRoomState(roomId);
+      if (result.allOpened) {
+        io.to(roomId).emit('all_packs_opened');
+        startDecisionTimer(roomId);
+      }
+    } catch (e) { console.error(e); }
+  });
+
+  socket.on('submit_decision', (payload) => {
+    try {
+      const { roomId, decision } = payload || {};
+      const result = gameManager.submitDecision(roomId, socket.id, decision);
+      if (result.error) {
+        return socket.emit('error_notification', { message: result.error });
+      }
+
+      broadcastRoomState(roomId);
+
+      if (result.allReady) {
+        const room = gameManager.getRoom(roomId);
+        if (room && room.timerInterval) {
+          clearInterval(room.timerInterval);
+          room.timerInterval = null;
+        }
+        handleResolutionChain(roomId);
+      }
+    } catch (e) { console.error(e); }
+  });
+  
+  socket.on('cancel_decision', (payload) => {
+    try {
+      const { roomId } = payload || {};
+      const result = gameManager.cancelDecision(roomId, socket.id);
+      if (result.error) {
+        return socket.emit('error_notification', { message: result.error });
+      }
+      broadcastRoomState(roomId);
+    } catch (e) { console.error(e); }
+  });
+
+  socket.on('resolve_swap_conflict', (payload) => {
+    try {
+      const { roomId, resolution } = payload || {};
+      const nextStep = gameManager.resolveSwapConflict(roomId, socket.id, resolution);
+      if (nextStep && nextStep.error) {
+        return socket.emit('error_notification', { message: nextStep.error });
+      }
+      processNextResolutionStep(roomId, nextStep);
+    } catch (e) { console.error(e); }
+  });
+
+  socket.on('disconnect', () => {
+    try {
+      for (const [roomId, room] of gameManager.rooms.entries()) {
+        const p = room.players.find(player => player.socketId === socket.id);
+        if (p) {
+          if (room.status === 'lobby') {
+            room.players = room.players.filter(player => player.socketId !== socket.id);
+            if (room.players.length === 0) {
+              gameManager.rooms.delete(roomId);
+              gameManager.saveState();
+            } else if (p.isAdmin) {
+              room.players[0].isAdmin = true;
+              room.adminId = room.players[0].socketId;
+            }
+          } else {
+            p.isBot = true;
+            p.socketId = null;
+          }
+          broadcastRoomState(roomId);
+        }
+      }
+    } catch (e) { console.error(e); }
+  });
+});
     socket.join(cleanRoomId);
     console.log(`[Getaway Draft] Sala creada: ${cleanRoomId} por ${playerName}`);
     broadcastRoomState(cleanRoomId);

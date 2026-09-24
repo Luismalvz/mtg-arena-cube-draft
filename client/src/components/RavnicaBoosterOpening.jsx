@@ -1,9 +1,14 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { sound } from '../utils/audio';
 import { ManaCost } from '../utils/manaSymbols';
 import './RavnicaBoosterOpening.css';
+
+// Keep the opening overlay self-contained and point it at the bundled booster art.
+// The previous render referenced this value without defining it, which caused a
+// runtime error as soon as the opening screen mounted and left the viewport blank.
+const BOOSTER_IMAGE = '/collector-booster.png';
 
 // Geometry helpers
 const normalize = v => {
@@ -35,10 +40,28 @@ const polyToClipPath = (poly, w, h) => {
   const pts = poly.map(p => `${(p.x / w * 100).toFixed(2)}% ${(p.y / h * 100).toFixed(2)}%`);
   return `polygon(${pts.join(',')})`;
 };
+const lineIntersectsRect = (a, b, w, h) => {
+  const dx = b.x - a.x, dy = b.y - a.y;
+  let t0 = 0, t1 = 1;
+  const clip = (p, q) => {
+    if (Math.abs(p) < 1e-8) return q >= 0;
+    const r = q / p;
+    if (p < 0) {
+      if (r > t1) return false;
+      if (r > t0) t0 = r;
+    } else {
+      if (r < t0) return false;
+      if (r < t1) t1 = r;
+    }
+    return true;
+  };
+  return clip(-dx, a.x) && clip(dx, w - a.x) && clip(-dy, a.y) && clip(dy, h - a.y);
+};
 
 export function RavnicaBoosterOpening({ round = 1, totalPacks = 3, cards = [], onFinishOpening }) {
   const [stage, setStage] = useState('sealed'); // sealed, ripping, emerging, fanned
   const [hovered, setHovered] = useState(null);
+  const [cutMode, setCutMode] = useState(false);
 
   const packHitzone = useRef(null);
   const packStage = useRef(null);
@@ -47,6 +70,7 @@ export function RavnicaBoosterOpening({ round = 1, totalPacks = 3, cards = [], o
   
   const gestureBuf = useRef([]);
   const trailBuf = useRef([]);
+  const lastParticleAt = useRef(0);
   const isDown = useRef(false);
   const cutState = useRef({ inProgress: false, done: false });
 
@@ -56,6 +80,12 @@ export function RavnicaBoosterOpening({ round = 1, totalPacks = 3, cards = [], o
   const displayCards = cards.length ? cards : Array.from({ length: 15 }, (_, i) => ({ instanceId: `placeholder-${i}`, name: `Carta ${i + 1}`, type_line: 'Ravnica', mana_cost: '{2}{U}{B}' }));
   const mid = (displayCards.length - 1) / 2;
   const spacing = Math.min(30, Math.max(17, ((typeof window !== 'undefined' ? window.innerWidth : 1200) - 130) / Math.max(1, displayCards.length)));
+
+  useEffect(() => {
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => { document.body.style.overflow = previousOverflow; };
+  }, []);
 
   const spawnFlash = (A, B) => {
     if (!packStage.current) return;
@@ -91,8 +121,9 @@ export function RavnicaBoosterOpening({ round = 1, totalPacks = 3, cards = [], o
   };
 
   const triggerCut = (A, B) => {
-    if (cutState.current.inProgress || cutState.current.done) return;
+    if (cutState.current.inProgress || cutState.current.done || !packStage.current || !packArt.current) return;
     cutState.current.inProgress = true;
+    setCutMode(false);
     sound.playPackRip();
 
     const rect = packStage.current.getBoundingClientRect();
@@ -101,6 +132,8 @@ export function RavnicaBoosterOpening({ round = 1, totalPacks = 3, cards = [], o
     const rectPoly = [{ x: 0, y: 0 }, { x: w, y: 0 }, { x: w, y: h }, { x: 0, y: h }];
     const polyPos = clipBySide(rectPoly, A, d, true);
     const polyNeg = clipBySide(rectPoly, A, d, false);
+
+    packHitzone.current?.querySelectorAll('.cursor-particle').forEach(particle => particle.remove());
 
     const halfA = packArt.current.cloneNode(true);
     const halfB = packArt.current.cloneNode(true);
@@ -116,13 +149,13 @@ export function RavnicaBoosterOpening({ round = 1, totalPacks = 3, cards = [], o
     const throwDist = Math.max(w, h) * 0.85;
 
     halfA.animate([
-      { transform: 'translate(0px,0px) rotate(0deg)', opacity: 1 },
-      { transform: `translate(${n.x * throwDist}px,${n.y * throwDist + 50}px) rotate(12deg)`, opacity: 0 }
+      { transform: 'translate3d(0,0,0) rotateX(0deg) rotateY(0deg) rotateZ(0deg)', opacity: 1 },
+      { transform: `translate3d(${n.x * throwDist}px,${n.y * throwDist + 50}px,45px) rotateX(${n.y * 14}deg) rotateY(${n.x * 14}deg) rotateZ(12deg)`, opacity: 0 }
     ], { duration: 620, easing: 'cubic-bezier(.2,.7,.3,1)', fill: 'forwards' });
 
     const animB = halfB.animate([
-      { transform: 'translate(0px,0px) rotate(0deg)', opacity: 1 },
-      { transform: `translate(${-n.x * throwDist}px,${-n.y * throwDist + 50}px) rotate(-12deg)`, opacity: 0 }
+      { transform: 'translate3d(0,0,0) rotateX(0deg) rotateY(0deg) rotateZ(0deg)', opacity: 1 },
+      { transform: `translate3d(${-n.x * throwDist}px,${-n.y * throwDist + 50}px,20px) rotateX(${-n.y * 12}deg) rotateY(${-n.x * 12}deg) rotateZ(-12deg)`, opacity: 0 }
     ], { duration: 620, easing: 'cubic-bezier(.2,.7,.3,1)', fill: 'forwards' });
 
     spawnFlash(A, B);
@@ -153,14 +186,42 @@ export function RavnicaBoosterOpening({ round = 1, totalPacks = 3, cards = [], o
     }
     const straightness = pathLen > 0 ? net / pathLen : 0;
     const hitRect = packHitzone.current.getBoundingClientRect();
-    const diag = Math.hypot(hitRect.width, hitRect.height);
+    const minSwipe = Math.max(72, Math.min(hitRect.width, hitRect.height) * 0.18);
 
-    if (net > diag * 0.35 && straightness > 0.5) {
+    if (net > minSwipe && straightness > 0.42) {
       const stageRect = packStage.current.getBoundingClientRect();
       const A = { x: first.x - stageRect.left, y: first.y - stageRect.top };
       const B = { x: last.x - stageRect.left, y: last.y - stageRect.top };
-      triggerCut(A, B);
+      if (lineIntersectsRect(A, B, stageRect.width, stageRect.height)) triggerCut(A, B);
     }
+  };
+
+  const spawnCursorParticles = e => {
+    if (stage !== 'sealed' || !packHitzone.current) return;
+    const rect = packHitzone.current.getBoundingClientRect();
+    const x = e.clientX - rect.left, y = e.clientY - rect.top;
+    if (x < 0 || y < 0 || x > rect.width || y > rect.height) return;
+    packHitzone.current.style.setProperty('--cursor-x', `${x}px`);
+    packHitzone.current.style.setProperty('--cursor-y', `${y}px`);
+    if (packStage.current) {
+      const tiltX = ((x / rect.width) - 0.5) * 11;
+      const tiltY = -((y / rect.height) - 0.5) * 11;
+      packStage.current.style.setProperty('--tilt-x', `${tiltX.toFixed(2)}deg`);
+      packStage.current.style.setProperty('--tilt-y', `${tiltY.toFixed(2)}deg`);
+    }
+    const now = performance.now();
+    if (now - lastParticleAt.current < 42) return;
+    lastParticleAt.current = now;
+    const particle = document.createElement('span');
+    particle.className = 'cursor-particle';
+    particle.style.left = `${x}px`;
+    particle.style.top = `${y}px`;
+    particle.style.setProperty('--particle-dx', `${(Math.random() - 0.5) * 34}px`);
+    particle.style.setProperty('--particle-dy', `${-10 - Math.random() * 28}px`);
+    particle.style.setProperty('--particle-size', `${2 + Math.random() * 3}px`);
+    particle.style.setProperty('--particle-hue', Math.random() > 0.5 ? '#29D9C2' : '#FFB627');
+    particle.addEventListener('animationend', () => particle.remove(), { once: true });
+    packHitzone.current.appendChild(particle);
   };
 
   const pushGesturePoint = e => {
@@ -175,12 +236,15 @@ export function RavnicaBoosterOpening({ round = 1, totalPacks = 3, cards = [], o
   const onPointerDown = e => {
     if (cutState.current.done || cutState.current.inProgress) return;
     isDown.current = true;
+    setCutMode(true);
     gestureBuf.current = [];
     pushGesturePoint(e);
+    spawnCursorParticles(e);
     e.currentTarget.setPointerCapture?.(e.pointerId);
   };
   const onPointerMove = e => {
     if (cutState.current.done || cutState.current.inProgress) return;
+    spawnCursorParticles(e);
     if (isDown.current) {
       pushGesturePoint(e);
       tryEvaluate();
@@ -190,11 +254,15 @@ export function RavnicaBoosterOpening({ round = 1, totalPacks = 3, cards = [], o
     isDown.current = false;
     tryEvaluate();
     gestureBuf.current = [];
+    if (!cutState.current.inProgress && !cutState.current.done) setCutMode(false);
   };
   const onPointerLeave = () => {
     if (!cutState.current.done && !cutState.current.inProgress) {
       isDown.current = false;
       gestureBuf.current = [];
+      setCutMode(false);
+      packStage.current?.style.setProperty('--tilt-x', '0deg');
+      packStage.current?.style.setProperty('--tilt-y', '0deg');
     }
   };
 
@@ -261,7 +329,7 @@ export function RavnicaBoosterOpening({ round = 1, totalPacks = 3, cards = [], o
     return () => cancelAnimationFrame(animId);
   }, [stage]);
 
-  return <div className="booster-overlay" role="dialog" aria-modal="true" aria-label={`Abrir sobre ${round}`}>
+  return <div className={`booster-overlay ${stage === 'sealed' ? 'is-sealed' : 'is-open'}`} role="dialog" aria-modal="true" aria-label={`Abrir sobre ${round}`}>
     <div className="booster-copy">
       <span>{String(round).padStart(2, '0')} / {String(totalPacks).padStart(2, '0')}</span>
       <strong>{stage === 'fanned' ? 'Ravnica revelada' : 'Ravnica Remastered'}</strong>
@@ -269,13 +337,16 @@ export function RavnicaBoosterOpening({ round = 1, totalPacks = 3, cards = [], o
 
     <div className="pack-zone">
       {stage === 'sealed' && (
-        <div ref={packHitzone} className="pack-hitzone" onPointerDown={onPointerDown} onPointerMove={onPointerMove} onPointerUp={onPointerUp} onPointerCancel={onPointerUp} onPointerLeave={onPointerLeave}>
+        <div ref={packHitzone} className={`pack-hitzone${cutMode ? ' is-cutting' : ''}`} onPointerDown={onPointerDown} onPointerMove={onPointerMove} onPointerUp={onPointerUp} onPointerCancel={onPointerUp} onPointerLeave={onPointerLeave}>
           <canvas ref={canvasRef} className="trail-canvas" />
+          <div className="cut-reticle" aria-hidden="true" />
           <div ref={packStage} className="pack-stage">
             <div ref={packArt} className="pack-art">
               <img src={BOOSTER_IMAGE} alt="Sobre Ravnica Remastered" style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block', backgroundColor: '#111' }} />
               <div className="pack-foil" style={{ mixBlendMode: 'color-dodge', opacity: 0.4 }} />
               <div className="pack-shine" />
+              <div className="pack-seam pack-seam-top" />
+              <div className="pack-seam pack-seam-bottom" />
             </div>
           </div>
         </div>
