@@ -203,30 +203,30 @@
 1 Fists of Ironwood (RVR) 139
 1 Moldervine Cloak (RVR) 150
 1 Moldervine Cloak (RVR) 150
-1 Judge's Familiar (RVR) 192
-1 Judge's Familiar (RVR) 192
 1 Azorius Guildmage (RVR) 165
 1 Azorius Guildmage (RVR) 165
 1 Azorius Signet (RVR) 250
 1 Lyev Skyknight (RTR) 179
 1 Lyev Skyknight (RTR) 179
 1 Lyev Skyknight (RTR) 179
-1 Sphinx of New Prahv (RVR) 227
+1 Restore the Peace (DGM) 97
 1 Sphinx of New Prahv (RVR) 227
 1 Isperia the Inscrutable (GK2) 13
 1 Lavinia of the Tenth (CLU) 199
 1 Sky Hussar (RVR) 224
+1 Warrant // Warden (RVR) 240
+1 Warrant // Warden (RVR) 240
 1 Dimir Guildmage (RVR) 178
 1 Dimir Guildmage (RVR) 178
 1 Dimir Signet (RVR) 256
 1 House Guildmage (GRN) 177
+1 Thought Erasure (GRN) 206
+1 Thought Erasure (GRN) 206
+1 Thought Erasure (GRN) 206
 1 Dimir Doppelganger (GK1) 12
 1 Dimir Doppelganger (GK1) 12
 1 Thief of Sanity (GRN) 205
 1 Thief of Sanity (GRN) 205
-1 Whisper Agent (RVR) 238
-1 Whisper Agent (RVR) 238
-1 Whisper Agent (RVR) 238
 1 Lazav, Dimir Mastermind (GTC) 174
 1 Consuming Aberration (GTC) 152
 1 Mirko Vosk, Mind Drinker (GK1) 17
@@ -339,23 +339,22 @@
 1 Zegana, Utopian Speaker (RNA) 214
 1 Momir Vig, Simic Visionary (GK2) 119
 1 Azorius Guildgate (PLST) RNA-243
-1 Azorius Guildgate (PLST) RNA-243
+1 Hallowed Fountain (RVR) 280
 1 Dimir Guildgate (PLST) GRN-245
-1 Dimir Guildgate (PLST) GRN-245
-1 Rakdos Guildgate (PLST) RNA-256
+1 Watery Grave (RVR) 291
+1 Blood Crypt (RVR) 273
 1 Rakdos Guildgate (PLST) RNA-256
 1 Gruul Guildgate (PLST) RNA-249
-1 Gruul Guildgate (PLST) RNA-249
+1 Stomping Ground (RVR) 289
 1 Selesnya Guildgate (PLST) GRN-255
-1 Selesnya Guildgate (PLST) GRN-255
-1 Orzhov Guildgate (PLST) RNA-253
+1 Temple Garden (RVR) 290
+1 Godless Shrine (RVR) 277
 1 Orzhov Guildgate (PLST) RNA-253
 1 Izzet Guildgate (PLST) GRN-251
-1 Izzet Guildgate (PLST) GRN-251
+1 Steam Vents (RVR) 288
 1 Golgari Guildgate (PLST) GRN-248
-1 Golgari Guildgate (PLST) GRN-248
+1 Overgrown Tomb (RVR) 283
 1 Boros Guildgate (PLST) GRN-243
-1 Boros Guildgate (PLST) GRN-243
+1 Sacred Foundry (RVR) 285
+1 Breeding Pool (RVR) 275
 1 Simic Guildgate (PLST) RNA-257
-1 Simic Guildgate (PLST) RNA-257
-

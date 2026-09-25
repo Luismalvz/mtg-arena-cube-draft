@@ -4306,9 +4306,9 @@
   },
   {
     "id": "cube_206",
-    "name": "Judge's Familiar",
-    "cmc": 1,
-    "mana_cost": "{W/U}",
+    "name": "Azorius Guildmage",
+    "cmc": 2,
+    "mana_cost": "{W/U}{W/U}",
     "colors": [
       "U",
       "W"
@@ -4317,21 +4317,21 @@
       "U",
       "W"
     ],
-    "type_line": "Creature — Bird",
-    "oracle_text": "Flying\nSacrifice this creature: Counter target instant or sorcery spell unless its controller pays {1}.",
-    "power": "1",
-    "toughness": "1",
-    "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/e/d/ed363208-cf66-4205-8512-b999b67227d3.jpg?1783913286",
+    "type_line": "Creature — Vedalken Wizard",
+    "oracle_text": "{2}{W}: Tap target creature.\n{2}{U}: Counter target activated ability. (Mana abilities can't be targeted.)",
+    "power": "2",
+    "toughness": "2",
+    "rarity": "uncommon",
+    "image_url": "https://cards.scryfall.io/normal/front/2/8/288c751e-a042-45a9-adce-7001bb0ce512.jpg?1783913295",
     "set": "RVR",
-    "collector_number": "192",
+    "collector_number": "165",
     "isFixer": false
   },
   {
     "id": "cube_207",
-    "name": "Judge's Familiar",
-    "cmc": 1,
-    "mana_cost": "{W/U}",
+    "name": "Azorius Guildmage",
+    "cmc": 2,
+    "mana_cost": "{W/U}{W/U}",
     "colors": [
       "U",
       "W"
@@ -4340,64 +4340,18 @@
       "U",
       "W"
     ],
-    "type_line": "Creature — Bird",
-    "oracle_text": "Flying\nSacrifice this creature: Counter target instant or sorcery spell unless its controller pays {1}.",
-    "power": "1",
-    "toughness": "1",
-    "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/e/d/ed363208-cf66-4205-8512-b999b67227d3.jpg?1783913286",
+    "type_line": "Creature — Vedalken Wizard",
+    "oracle_text": "{2}{W}: Tap target creature.\n{2}{U}: Counter target activated ability. (Mana abilities can't be targeted.)",
+    "power": "2",
+    "toughness": "2",
+    "rarity": "uncommon",
+    "image_url": "https://cards.scryfall.io/normal/front/2/8/288c751e-a042-45a9-adce-7001bb0ce512.jpg?1783913295",
     "set": "RVR",
-    "collector_number": "192",
+    "collector_number": "165",
     "isFixer": false
   },
   {
     "id": "cube_208",
-    "name": "Azorius Guildmage",
-    "cmc": 2,
-    "mana_cost": "{W/U}{W/U}",
-    "colors": [
-      "U",
-      "W"
-    ],
-    "color_identity": [
-      "U",
-      "W"
-    ],
-    "type_line": "Creature — Vedalken Wizard",
-    "oracle_text": "{2}{W}: Tap target creature.\n{2}{U}: Counter target activated ability. (Mana abilities can't be targeted.)",
-    "power": "2",
-    "toughness": "2",
-    "rarity": "uncommon",
-    "image_url": "https://cards.scryfall.io/normal/front/2/8/288c751e-a042-45a9-adce-7001bb0ce512.jpg?1783913295",
-    "set": "RVR",
-    "collector_number": "165",
-    "isFixer": false
-  },
-  {
-    "id": "cube_209",
-    "name": "Azorius Guildmage",
-    "cmc": 2,
-    "mana_cost": "{W/U}{W/U}",
-    "colors": [
-      "U",
-      "W"
-    ],
-    "color_identity": [
-      "U",
-      "W"
-    ],
-    "type_line": "Creature — Vedalken Wizard",
-    "oracle_text": "{2}{W}: Tap target creature.\n{2}{U}: Counter target activated ability. (Mana abilities can't be targeted.)",
-    "power": "2",
-    "toughness": "2",
-    "rarity": "uncommon",
-    "image_url": "https://cards.scryfall.io/normal/front/2/8/288c751e-a042-45a9-adce-7001bb0ce512.jpg?1783913295",
-    "set": "RVR",
-    "collector_number": "165",
-    "isFixer": false
-  },
-  {
-    "id": "cube_210",
     "name": "Azorius Signet",
     "cmc": 2,
     "mana_cost": "{2}",
@@ -4415,6 +4369,52 @@
     "set": "RVR",
     "collector_number": "250",
     "isFixer": true
+  },
+  {
+    "id": "cube_209",
+    "name": "Lyev Skyknight",
+    "cmc": 3,
+    "mana_cost": "{1}{W}{U}",
+    "colors": [
+      "U",
+      "W"
+    ],
+    "color_identity": [
+      "U",
+      "W"
+    ],
+    "type_line": "Creature — Human Knight",
+    "oracle_text": "Flying\nWhen this creature enters, detain target nonland permanent an opponent controls. (Until your next turn, that permanent can't attack or block and its activated abilities can't be activated.)",
+    "power": "3",
+    "toughness": "1",
+    "rarity": "uncommon",
+    "image_url": "https://cards.scryfall.io/normal/front/1/1/11cbeb3b-1579-4318-a024-4a2c06896eaf.jpg?1783940337",
+    "set": "RTR",
+    "collector_number": "179",
+    "isFixer": false
+  },
+  {
+    "id": "cube_210",
+    "name": "Lyev Skyknight",
+    "cmc": 3,
+    "mana_cost": "{1}{W}{U}",
+    "colors": [
+      "U",
+      "W"
+    ],
+    "color_identity": [
+      "U",
+      "W"
+    ],
+    "type_line": "Creature — Human Knight",
+    "oracle_text": "Flying\nWhen this creature enters, detain target nonland permanent an opponent controls. (Until your next turn, that permanent can't attack or block and its activated abilities can't be activated.)",
+    "power": "3",
+    "toughness": "1",
+    "rarity": "uncommon",
+    "image_url": "https://cards.scryfall.io/normal/front/1/1/11cbeb3b-1579-4318-a024-4a2c06896eaf.jpg?1783940337",
+    "set": "RTR",
+    "collector_number": "179",
+    "isFixer": false
   },
   {
     "id": "cube_211",
@@ -4441,7 +4441,7 @@
   },
   {
     "id": "cube_212",
-    "name": "Lyev Skyknight",
+    "name": "Restore the Peace",
     "cmc": 3,
     "mana_cost": "{1}{W}{U}",
     "colors": [
@@ -4452,21 +4452,21 @@
       "U",
       "W"
     ],
-    "type_line": "Creature — Human Knight",
-    "oracle_text": "Flying\nWhen this creature enters, detain target nonland permanent an opponent controls. (Until your next turn, that permanent can't attack or block and its activated abilities can't be activated.)",
-    "power": "3",
-    "toughness": "1",
+    "type_line": "Instant",
+    "oracle_text": "Return each creature that dealt damage this turn to its owner's hand.",
+    "power": null,
+    "toughness": null,
     "rarity": "uncommon",
-    "image_url": "https://cards.scryfall.io/normal/front/1/1/11cbeb3b-1579-4318-a024-4a2c06896eaf.jpg?1783940337",
-    "set": "RTR",
-    "collector_number": "179",
+    "image_url": "https://cards.scryfall.io/normal/front/1/0/105902f6-99d0-4bee-9dfd-87a92ac04d91.jpg?1783940023",
+    "set": "DGM",
+    "collector_number": "97",
     "isFixer": false
   },
   {
     "id": "cube_213",
-    "name": "Lyev Skyknight",
-    "cmc": 3,
-    "mana_cost": "{1}{W}{U}",
+    "name": "Sphinx of New Prahv",
+    "cmc": 4,
+    "mana_cost": "{W}{W}{U}{U}",
     "colors": [
       "U",
       "W"
@@ -4475,64 +4475,18 @@
       "U",
       "W"
     ],
-    "type_line": "Creature — Human Knight",
-    "oracle_text": "Flying\nWhen this creature enters, detain target nonland permanent an opponent controls. (Until your next turn, that permanent can't attack or block and its activated abilities can't be activated.)",
-    "power": "3",
-    "toughness": "1",
+    "type_line": "Creature — Sphinx",
+    "oracle_text": "Flying, vigilance\nSpells your opponents cast that target this creature cost {2} more to cast.",
+    "power": "4",
+    "toughness": "3",
     "rarity": "uncommon",
-    "image_url": "https://cards.scryfall.io/normal/front/1/1/11cbeb3b-1579-4318-a024-4a2c06896eaf.jpg?1783940337",
-    "set": "RTR",
-    "collector_number": "179",
+    "image_url": "https://cards.scryfall.io/normal/front/8/e/8e858971-4084-47cc-8b13-a933891456b6.jpg?1783913275",
+    "set": "RVR",
+    "collector_number": "227",
     "isFixer": false
   },
   {
     "id": "cube_214",
-    "name": "Sphinx of New Prahv",
-    "cmc": 4,
-    "mana_cost": "{W}{W}{U}{U}",
-    "colors": [
-      "U",
-      "W"
-    ],
-    "color_identity": [
-      "U",
-      "W"
-    ],
-    "type_line": "Creature — Sphinx",
-    "oracle_text": "Flying, vigilance\nSpells your opponents cast that target this creature cost {2} more to cast.",
-    "power": "4",
-    "toughness": "3",
-    "rarity": "uncommon",
-    "image_url": "https://cards.scryfall.io/normal/front/8/e/8e858971-4084-47cc-8b13-a933891456b6.jpg?1783913275",
-    "set": "RVR",
-    "collector_number": "227",
-    "isFixer": false
-  },
-  {
-    "id": "cube_215",
-    "name": "Sphinx of New Prahv",
-    "cmc": 4,
-    "mana_cost": "{W}{W}{U}{U}",
-    "colors": [
-      "U",
-      "W"
-    ],
-    "color_identity": [
-      "U",
-      "W"
-    ],
-    "type_line": "Creature — Sphinx",
-    "oracle_text": "Flying, vigilance\nSpells your opponents cast that target this creature cost {2} more to cast.",
-    "power": "4",
-    "toughness": "3",
-    "rarity": "uncommon",
-    "image_url": "https://cards.scryfall.io/normal/front/8/e/8e858971-4084-47cc-8b13-a933891456b6.jpg?1783913275",
-    "set": "RVR",
-    "collector_number": "227",
-    "isFixer": false
-  },
-  {
-    "id": "cube_216",
     "name": "Isperia the Inscrutable",
     "cmc": 5,
     "mana_cost": "{1}{W}{W}{U}{U}",
@@ -4555,7 +4509,7 @@
     "isFixer": false
   },
   {
-    "id": "cube_217",
+    "id": "cube_215",
     "name": "Lavinia of the Tenth",
     "cmc": 5,
     "mana_cost": "{3}{W}{U}",
@@ -4578,7 +4532,7 @@
     "isFixer": false
   },
   {
-    "id": "cube_218",
+    "id": "cube_216",
     "name": "Sky Hussar",
     "cmc": 5,
     "mana_cost": "{3}{W}{U}",
@@ -4598,6 +4552,52 @@
     "image_url": "https://cards.scryfall.io/normal/front/c/c/cccfd565-99db-4c24-a16d-665b0823a159.jpg?1783913278",
     "set": "RVR",
     "collector_number": "224",
+    "isFixer": false
+  },
+  {
+    "id": "cube_217",
+    "name": "Warrant // Warden",
+    "cmc": 7,
+    "mana_cost": "{W/U}{W/U} // {3}{W}{U}",
+    "colors": [
+      "U",
+      "W"
+    ],
+    "color_identity": [
+      "U",
+      "W"
+    ],
+    "type_line": "Instant // Sorcery",
+    "oracle_text": "Put target attacking or blocking creature on top of its owner's library.",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://cards.scryfall.io/normal/front/7/e/7e565adc-32ec-4ba8-9220-1239c373f84f.jpg?1783913270",
+    "set": "RVR",
+    "collector_number": "240",
+    "isFixer": false
+  },
+  {
+    "id": "cube_218",
+    "name": "Warrant // Warden",
+    "cmc": 7,
+    "mana_cost": "{W/U}{W/U} // {3}{W}{U}",
+    "colors": [
+      "U",
+      "W"
+    ],
+    "color_identity": [
+      "U",
+      "W"
+    ],
+    "type_line": "Instant // Sorcery",
+    "oracle_text": "Put target attacking or blocking creature on top of its owner's library.",
+    "power": null,
+    "toughness": null,
+    "rarity": "rare",
+    "image_url": "https://cards.scryfall.io/normal/front/7/e/7e565adc-32ec-4ba8-9220-1239c373f84f.jpg?1783913270",
+    "set": "RVR",
+    "collector_number": "240",
     "isFixer": false
   },
   {
@@ -4691,9 +4691,9 @@
   },
   {
     "id": "cube_223",
-    "name": "Dimir Doppelganger",
-    "cmc": 3,
-    "mana_cost": "{1}{U}{B}",
+    "name": "Thought Erasure",
+    "cmc": 2,
+    "mana_cost": "{U}{B}",
     "colors": [
       "B",
       "U"
@@ -4702,18 +4702,64 @@
       "B",
       "U"
     ],
-    "type_line": "Creature — Shapeshifter",
-    "oracle_text": "{1}{U}{B}: Exile target creature card from a graveyard. This creature becomes a copy of that card, except it has this ability.",
-    "power": "0",
-    "toughness": "2",
-    "rarity": "rare",
-    "image_url": "https://cards.scryfall.io/normal/front/c/8/c8edd576-7cc8-44d9-a0f8-6aa12e4f79cf.jpg?1783934055",
-    "set": "GK1",
-    "collector_number": "12",
+    "type_line": "Sorcery",
+    "oracle_text": "Target opponent reveals their hand. You choose a nonland card from it. That player discards that card.\nSurveil 1. (Look at the top card of your library. You may put it into your graveyard.)",
+    "power": null,
+    "toughness": null,
+    "rarity": "uncommon",
+    "image_url": "https://cards.scryfall.io/normal/front/7/c/7ce226ad-cb1d-47f5-90fc-27704e181884.jpg?1783934119",
+    "set": "GRN",
+    "collector_number": "206",
     "isFixer": false
   },
   {
     "id": "cube_224",
+    "name": "Thought Erasure",
+    "cmc": 2,
+    "mana_cost": "{U}{B}",
+    "colors": [
+      "B",
+      "U"
+    ],
+    "color_identity": [
+      "B",
+      "U"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Target opponent reveals their hand. You choose a nonland card from it. That player discards that card.\nSurveil 1. (Look at the top card of your library. You may put it into your graveyard.)",
+    "power": null,
+    "toughness": null,
+    "rarity": "uncommon",
+    "image_url": "https://cards.scryfall.io/normal/front/7/c/7ce226ad-cb1d-47f5-90fc-27704e181884.jpg?1783934119",
+    "set": "GRN",
+    "collector_number": "206",
+    "isFixer": false
+  },
+  {
+    "id": "cube_225",
+    "name": "Thought Erasure",
+    "cmc": 2,
+    "mana_cost": "{U}{B}",
+    "colors": [
+      "B",
+      "U"
+    ],
+    "color_identity": [
+      "B",
+      "U"
+    ],
+    "type_line": "Sorcery",
+    "oracle_text": "Target opponent reveals their hand. You choose a nonland card from it. That player discards that card.\nSurveil 1. (Look at the top card of your library. You may put it into your graveyard.)",
+    "power": null,
+    "toughness": null,
+    "rarity": "uncommon",
+    "image_url": "https://cards.scryfall.io/normal/front/7/c/7ce226ad-cb1d-47f5-90fc-27704e181884.jpg?1783934119",
+    "set": "GRN",
+    "collector_number": "206",
+    "isFixer": false
+  },
+  {
+    "id": "cube_226",
     "name": "Dimir Doppelganger",
     "cmc": 3,
     "mana_cost": "{1}{U}{B}",
@@ -4736,56 +4782,10 @@
     "isFixer": false
   },
   {
-    "id": "cube_225",
-    "name": "Thief of Sanity",
-    "cmc": 3,
-    "mana_cost": "{1}{U}{B}",
-    "colors": [
-      "B",
-      "U"
-    ],
-    "color_identity": [
-      "B",
-      "U"
-    ],
-    "type_line": "Creature — Specter",
-    "oracle_text": "Flying\nWhenever this creature deals combat damage to a player, look at the top three cards of that player's library, exile one of them face down, then put the rest into their graveyard. You may cast that card for as long as it remains exiled, and mana of any type can be spent to cast that spell.",
-    "power": "2",
-    "toughness": "2",
-    "rarity": "rare",
-    "image_url": "https://cards.scryfall.io/normal/front/3/0/307543ca-8e17-433f-9758-4c77da6c0870.jpg?1783934119",
-    "set": "GRN",
-    "collector_number": "205",
-    "isFixer": false
-  },
-  {
-    "id": "cube_226",
-    "name": "Thief of Sanity",
-    "cmc": 3,
-    "mana_cost": "{1}{U}{B}",
-    "colors": [
-      "B",
-      "U"
-    ],
-    "color_identity": [
-      "B",
-      "U"
-    ],
-    "type_line": "Creature — Specter",
-    "oracle_text": "Flying\nWhenever this creature deals combat damage to a player, look at the top three cards of that player's library, exile one of them face down, then put the rest into their graveyard. You may cast that card for as long as it remains exiled, and mana of any type can be spent to cast that spell.",
-    "power": "2",
-    "toughness": "2",
-    "rarity": "rare",
-    "image_url": "https://cards.scryfall.io/normal/front/3/0/307543ca-8e17-433f-9758-4c77da6c0870.jpg?1783934119",
-    "set": "GRN",
-    "collector_number": "205",
-    "isFixer": false
-  },
-  {
     "id": "cube_227",
-    "name": "Whisper Agent",
+    "name": "Dimir Doppelganger",
     "cmc": 3,
-    "mana_cost": "{1}{U/B}{U/B}",
+    "mana_cost": "{1}{U}{B}",
     "colors": [
       "B",
       "U"
@@ -4794,21 +4794,21 @@
       "B",
       "U"
     ],
-    "type_line": "Creature — Human Rogue",
-    "oracle_text": "Flash\nWhen this creature enters, surveil 1. (Look at the top card of your library. You may put it into your graveyard.)",
-    "power": "3",
+    "type_line": "Creature — Shapeshifter",
+    "oracle_text": "{1}{U}{B}: Exile target creature card from a graveyard. This creature becomes a copy of that card, except it has this ability.",
+    "power": "0",
     "toughness": "2",
-    "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/d/8/d81e07d6-71d7-408e-be20-8e20a29d84cc.jpg?1783913270",
-    "set": "RVR",
-    "collector_number": "238",
+    "rarity": "rare",
+    "image_url": "https://cards.scryfall.io/normal/front/c/8/c8edd576-7cc8-44d9-a0f8-6aa12e4f79cf.jpg?1783934055",
+    "set": "GK1",
+    "collector_number": "12",
     "isFixer": false
   },
   {
     "id": "cube_228",
-    "name": "Whisper Agent",
+    "name": "Thief of Sanity",
     "cmc": 3,
-    "mana_cost": "{1}{U/B}{U/B}",
+    "mana_cost": "{1}{U}{B}",
     "colors": [
       "B",
       "U"
@@ -4817,21 +4817,21 @@
       "B",
       "U"
     ],
-    "type_line": "Creature — Human Rogue",
-    "oracle_text": "Flash\nWhen this creature enters, surveil 1. (Look at the top card of your library. You may put it into your graveyard.)",
-    "power": "3",
+    "type_line": "Creature — Specter",
+    "oracle_text": "Flying\nWhenever this creature deals combat damage to a player, look at the top three cards of that player's library, exile one of them face down, then put the rest into their graveyard. You may cast that card for as long as it remains exiled, and mana of any type can be spent to cast that spell.",
+    "power": "2",
     "toughness": "2",
-    "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/d/8/d81e07d6-71d7-408e-be20-8e20a29d84cc.jpg?1783913270",
-    "set": "RVR",
-    "collector_number": "238",
+    "rarity": "rare",
+    "image_url": "https://cards.scryfall.io/normal/front/3/0/307543ca-8e17-433f-9758-4c77da6c0870.jpg?1783934119",
+    "set": "GRN",
+    "collector_number": "205",
     "isFixer": false
   },
   {
     "id": "cube_229",
-    "name": "Whisper Agent",
+    "name": "Thief of Sanity",
     "cmc": 3,
-    "mana_cost": "{1}{U/B}{U/B}",
+    "mana_cost": "{1}{U}{B}",
     "colors": [
       "B",
       "U"
@@ -4840,14 +4840,14 @@
       "B",
       "U"
     ],
-    "type_line": "Creature — Human Rogue",
-    "oracle_text": "Flash\nWhen this creature enters, surveil 1. (Look at the top card of your library. You may put it into your graveyard.)",
-    "power": "3",
+    "type_line": "Creature — Specter",
+    "oracle_text": "Flying\nWhenever this creature deals combat damage to a player, look at the top three cards of that player's library, exile one of them face down, then put the rest into their graveyard. You may cast that card for as long as it remains exiled, and mana of any type can be spent to cast that spell.",
+    "power": "2",
     "toughness": "2",
-    "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/d/8/d81e07d6-71d7-408e-be20-8e20a29d84cc.jpg?1783913270",
-    "set": "RVR",
-    "collector_number": "238",
+    "rarity": "rare",
+    "image_url": "https://cards.scryfall.io/normal/front/3/0/307543ca-8e17-433f-9758-4c77da6c0870.jpg?1783934119",
+    "set": "GRN",
+    "collector_number": "205",
     "isFixer": false
   },
   {
@@ -7401,7 +7401,7 @@
   },
   {
     "id": "cube_342",
-    "name": "Azorius Guildgate",
+    "name": "Hallowed Fountain",
     "cmc": 0,
     "mana_cost": "",
     "colors": [],
@@ -7409,15 +7409,15 @@
       "U",
       "W"
     ],
-    "type_line": "Land — Gate",
-    "oracle_text": "This land enters tapped.\n{T}: Add {W} or {U}.",
+    "type_line": "Land — Plains Island",
+    "oracle_text": "({T}: Add {W} or {U}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
     "power": null,
     "toughness": null,
-    "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/c/1/c11f10dc-0636-4a48-8294-11c0c84480fa.jpg?1783908479",
-    "set": "PLST",
-    "collector_number": "RNA-243",
-    "isFixer": true
+    "rarity": "rare",
+    "image_url": "https://cards.scryfall.io/normal/front/c/d/cd70adab-39db-4cc9-ae37-a342f9109bec.jpg?1783913255",
+    "set": "RVR",
+    "collector_number": "280",
+    "isFixer": false
   },
   {
     "id": "cube_343",
@@ -7441,7 +7441,7 @@
   },
   {
     "id": "cube_344",
-    "name": "Dimir Guildgate",
+    "name": "Watery Grave",
     "cmc": 0,
     "mana_cost": "",
     "colors": [],
@@ -7449,19 +7449,19 @@
       "B",
       "U"
     ],
-    "type_line": "Land — Gate",
-    "oracle_text": "This land enters tapped.\n{T}: Add {U} or {B}.",
+    "type_line": "Land — Island Swamp",
+    "oracle_text": "({T}: Add {U} or {B}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
     "power": null,
     "toughness": null,
-    "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/f/7/f7678f13-d8d8-4932-88b6-c39dbad1188b.jpg?1783908478",
-    "set": "PLST",
-    "collector_number": "GRN-245",
-    "isFixer": true
+    "rarity": "rare",
+    "image_url": "https://cards.scryfall.io/normal/front/6/e/6e86eb36-f4cc-4a75-b43a-4dee463a3b33.jpg?1783913252",
+    "set": "RVR",
+    "collector_number": "291",
+    "isFixer": false
   },
   {
     "id": "cube_345",
-    "name": "Rakdos Guildgate",
+    "name": "Blood Crypt",
     "cmc": 0,
     "mana_cost": "",
     "colors": [],
@@ -7469,15 +7469,15 @@
       "B",
       "R"
     ],
-    "type_line": "Land — Gate",
-    "oracle_text": "This land enters tapped.\n{T}: Add {B} or {R}.",
+    "type_line": "Land — Swamp Mountain",
+    "oracle_text": "({T}: Add {B} or {R}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
     "power": null,
     "toughness": null,
-    "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/5/5/55909c50-8065-481d-b3df-00b0d6ef1ee8.jpg?1783908477",
-    "set": "PLST",
-    "collector_number": "RNA-256",
-    "isFixer": true
+    "rarity": "rare",
+    "image_url": "https://cards.scryfall.io/normal/front/0/9/0994aef4-b341-45f4-8881-523565a5956e.jpg?1783913259",
+    "set": "RVR",
+    "collector_number": "273",
+    "isFixer": false
   },
   {
     "id": "cube_346",
@@ -7521,7 +7521,7 @@
   },
   {
     "id": "cube_348",
-    "name": "Gruul Guildgate",
+    "name": "Stomping Ground",
     "cmc": 0,
     "mana_cost": "",
     "colors": [],
@@ -7529,15 +7529,15 @@
       "G",
       "R"
     ],
-    "type_line": "Land — Gate",
-    "oracle_text": "This land enters tapped.\n{T}: Add {R} or {G}.",
+    "type_line": "Land — Mountain Forest",
+    "oracle_text": "({T}: Add {R} or {G}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
     "power": null,
     "toughness": null,
-    "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/3/9/397805e8-f7c2-4b13-9454-5d526a429c88.jpg?1783908477",
-    "set": "PLST",
-    "collector_number": "RNA-249",
-    "isFixer": true
+    "rarity": "rare",
+    "image_url": "https://cards.scryfall.io/normal/front/8/7/872301b2-b6e7-4972-a479-66a7e304c1d3.jpg?1783913252",
+    "set": "RVR",
+    "collector_number": "289",
+    "isFixer": false
   },
   {
     "id": "cube_349",
@@ -7561,7 +7561,7 @@
   },
   {
     "id": "cube_350",
-    "name": "Selesnya Guildgate",
+    "name": "Temple Garden",
     "cmc": 0,
     "mana_cost": "",
     "colors": [],
@@ -7569,19 +7569,19 @@
       "G",
       "W"
     ],
-    "type_line": "Land — Gate",
-    "oracle_text": "This land enters tapped.\n{T}: Add {G} or {W}.",
+    "type_line": "Land — Forest Plains",
+    "oracle_text": "({T}: Add {G} or {W}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
     "power": null,
     "toughness": null,
-    "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/6/9/69ea39da-93c8-4806-8f93-10f71fb8c62e.jpg?1783908476",
-    "set": "PLST",
-    "collector_number": "GRN-255",
-    "isFixer": true
+    "rarity": "rare",
+    "image_url": "https://cards.scryfall.io/normal/front/1/8/18d2e383-d380-4d18-8aad-bd8ea093a16c.jpg?1783913251",
+    "set": "RVR",
+    "collector_number": "290",
+    "isFixer": false
   },
   {
     "id": "cube_351",
-    "name": "Orzhov Guildgate",
+    "name": "Godless Shrine",
     "cmc": 0,
     "mana_cost": "",
     "colors": [],
@@ -7589,15 +7589,15 @@
       "B",
       "W"
     ],
-    "type_line": "Land — Gate",
-    "oracle_text": "This land enters tapped.\n{T}: Add {W} or {B}.",
+    "type_line": "Land — Plains Swamp",
+    "oracle_text": "({T}: Add {W} or {B}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
     "power": null,
     "toughness": null,
-    "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/8/a/8ab96220-44e1-4c1d-8fb5-1fd44d8bdd8d.jpg?1783908478",
-    "set": "PLST",
-    "collector_number": "RNA-253",
-    "isFixer": true
+    "rarity": "rare",
+    "image_url": "https://cards.scryfall.io/normal/front/9/e/9e26f6ad-c1b8-4ec6-a179-e86ce09824c1.jpg?1783913256",
+    "set": "RVR",
+    "collector_number": "277",
+    "isFixer": false
   },
   {
     "id": "cube_352",
@@ -7641,7 +7641,7 @@
   },
   {
     "id": "cube_354",
-    "name": "Izzet Guildgate",
+    "name": "Steam Vents",
     "cmc": 0,
     "mana_cost": "",
     "colors": [],
@@ -7649,15 +7649,15 @@
       "R",
       "U"
     ],
-    "type_line": "Land — Gate",
-    "oracle_text": "This land enters tapped.\n{T}: Add {U} or {R}.",
+    "type_line": "Land — Island Mountain",
+    "oracle_text": "({T}: Add {U} or {R}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
     "power": null,
     "toughness": null,
-    "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/e/0/e0abeaf6-1ec9-4abb-a3a0-48afa475a946.jpg?1783908477",
-    "set": "PLST",
-    "collector_number": "GRN-251",
-    "isFixer": true
+    "rarity": "rare",
+    "image_url": "https://cards.scryfall.io/normal/front/6/6/66d618f4-443c-4a6c-8cbd-5d4ea96b2cd4.jpg?1783913252",
+    "set": "RVR",
+    "collector_number": "288",
+    "isFixer": false
   },
   {
     "id": "cube_355",
@@ -7681,7 +7681,7 @@
   },
   {
     "id": "cube_356",
-    "name": "Golgari Guildgate",
+    "name": "Overgrown Tomb",
     "cmc": 0,
     "mana_cost": "",
     "colors": [],
@@ -7689,15 +7689,15 @@
       "B",
       "G"
     ],
-    "type_line": "Land — Gate",
-    "oracle_text": "This land enters tapped.\n{T}: Add {B} or {G}.",
+    "type_line": "Land — Swamp Forest",
+    "oracle_text": "({T}: Add {B} or {G}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
     "power": null,
     "toughness": null,
-    "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/1/2/127226e7-d51c-4a85-9195-9bbb375ffc31.jpg?1783908479",
-    "set": "PLST",
-    "collector_number": "GRN-248",
-    "isFixer": true
+    "rarity": "rare",
+    "image_url": "https://cards.scryfall.io/normal/front/4/a/4a297ec1-0a7c-4f67-936b-d9227767e989.jpg?1783913254",
+    "set": "RVR",
+    "collector_number": "283",
+    "isFixer": false
   },
   {
     "id": "cube_357",
@@ -7721,7 +7721,7 @@
   },
   {
     "id": "cube_358",
-    "name": "Boros Guildgate",
+    "name": "Sacred Foundry",
     "cmc": 0,
     "mana_cost": "",
     "colors": [],
@@ -7729,19 +7729,19 @@
       "R",
       "W"
     ],
-    "type_line": "Land — Gate",
-    "oracle_text": "This land enters tapped.\n{T}: Add {R} or {W}.",
+    "type_line": "Land — Mountain Plains",
+    "oracle_text": "({T}: Add {R} or {W}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
     "power": null,
     "toughness": null,
-    "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/9/5/95940c4c-d600-4086-b5d8-fd84ce5cc2b5.jpg?1783908478",
-    "set": "PLST",
-    "collector_number": "GRN-243",
-    "isFixer": true
+    "rarity": "rare",
+    "image_url": "https://cards.scryfall.io/normal/front/8/0/8076a8c3-7c6c-4636-b5d8-9b09ee95f92c.jpg?1783913254",
+    "set": "RVR",
+    "collector_number": "285",
+    "isFixer": false
   },
   {
     "id": "cube_359",
-    "name": "Simic Guildgate",
+    "name": "Breeding Pool",
     "cmc": 0,
     "mana_cost": "",
     "colors": [],
@@ -7749,15 +7749,15 @@
       "G",
       "U"
     ],
-    "type_line": "Land — Gate",
-    "oracle_text": "This land enters tapped.\n{T}: Add {G} or {U}.",
+    "type_line": "Land — Forest Island",
+    "oracle_text": "({T}: Add {G} or {U}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
     "power": null,
     "toughness": null,
-    "rarity": "common",
-    "image_url": "https://cards.scryfall.io/normal/front/4/4/4485d30c-7471-474f-b2b4-cfa2c2144d89.jpg?1783908476",
-    "set": "PLST",
-    "collector_number": "RNA-257",
-    "isFixer": true
+    "rarity": "rare",
+    "image_url": "https://cards.scryfall.io/normal/front/9/b/9b35c030-029d-4286-ab79-0165c8688c6c.jpg?1783913258",
+    "set": "RVR",
+    "collector_number": "275",
+    "isFixer": false
   },
   {
     "id": "cube_360",
